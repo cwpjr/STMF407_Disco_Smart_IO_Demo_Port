@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>1785482351</fileChecksum>
+    <configuration>
+        <name>STMF407_Disco_Spi1FDM1NSS</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c</file>
+            <file>$PROJ_DIR$\..\Src\gpio.c</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.h</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c</file>
+            <file>$PROJ_DIR$\..\Src\usart.c</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.c</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\main_IAR_Smart-IO_STM32F407_port.c</file>
+            <file>$PROJ_DIR$\..\Src\rtc.c</file>
+            <file>$PROJ_DIR$\..\Src\main.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</file>
+            <file>$PROJ_DIR$\..\Src\tim.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c</file>
+            <file>$PROJ_DIR$\..\Src\stm32f4xx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</file>
+            <file>$PROJ_DIR$\startup_stm32f407xx.s</file>
+            <file>$PROJ_DIR$\..\Src\spi.c</file>
+            <file>$PROJ_DIR$\..\Src\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\system_stm32f4xx.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\rtc.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim_ex.pbi</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\usart.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_cortex.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cm4.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim_ex.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_uart.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\Smart-IO.main.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr.pbi</file>
+            <file>$PROJ_DIR$\..\Src\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\main.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_hardware_interface.o</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\UI Demo ST32F411-JumpStartC\STM32F411-ICCV8\main.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_gpio.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\Smart-IO.main.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr_ex.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ramfunc.o</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\LibSmartIO-AVR-M328P-JumpStartC\smartio_interface.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4_vectors.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_interface.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_cortex.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main_IAR_Smart-IO_STM32F407_port.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_hardware_interface.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc_ex.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\startup_stm32f407xx.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\usart.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_spi.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_msp.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_gpio.o</file>
+            <file>$PROJ_DIR$\..\Inc\stm32f4xx_hal_conf.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\usart.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_hardware_interface.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Inc\main.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\LibSmartIO-AVR-M328P-JumpStartC\smartio_interface.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_msp.pbi</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\Development Documentation.c</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.c</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmSimd.h</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main_IAR_Smart-IO_STM32_port.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\rtc.pbi</file>
+            <file>$PROJ_DIR$\stm32f407xx_flash.icf</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc_ex.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_uart.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_spi.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_it.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma_ex.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main_IAR_Smart-IO_STM32F407_port.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr_ex.pbi</file>
+            <file>$PROJ_DIR$\..\Inc\usart.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_it.pbi</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_api.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\STMF407_Disco_Spi1FDM1NSS.pbd</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_interface.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\tim.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc_ex.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_interface.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ctype.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\spi.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_spi.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h</file>
+            <file>$PROJ_DIR$\..\Inc\stm32f4xx_it.h</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_interface.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h</file>
+            <file>$PROJ_DIR$\..\Inc\rtc.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_api.pbi</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\gpio.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\List\STMF407_Disco_Spi1FDM1NSS.map</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc_ex.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_cortex.o</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\UI Demo ST32F411-JumpStartC\STM32F411-ICCV8\stm32f4_vectors.s</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\..\Inc\gpio.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_interface.pbi</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\tim.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\system_stm32f4xx.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ex.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\Smart-IO.main.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_api.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_uart.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_api.o</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim.pbi</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\spi.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc_ex.pbi</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main_IAR_Smart-IO_STM32F407_port.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma_ex.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_api.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ex.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ramfunc.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Exe\STMF407_Disco_Spi1FDM1NSS.out</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Command Demo-ST32F411-JumpStartC\main_IAR_Smart-IO_STM32_port.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_msp.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_it.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h</file>
+            <file>$PROJ_DIR$\..\Inc\spi.h</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\rtc.__cstat.et</file>
+            <file>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ramfunc.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\system_stm32f4xx.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\Drivers\CMSIS\Include\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\..\Inc\tim.h</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</file>
+            <file>$PROJ_DIR$\..\..\Smart-IO ST32F4x1 MCU-App-V104\Command Demo-ST32F411-JumpStartC\main.c</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr.o</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\spi.pbi</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\tim.__cstat.et</file>
+            <file>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Obj\main.o</file>
+            <file>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\Smart-IO.main.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 146</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 173</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 185</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 18 204 80 75 181 95 188 98</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 98 204 133 80 75 188 95</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 183</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 115</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 144</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97 93 67 88 51 55 92 201 122 101 177 41 147 138 197 160 199 155 188 204 133 174 163 142 47 98 175 80 75 159 53 48 145 186 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 196</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 177 155 93 197 205 147 41 138 160 199 159 124 88 92 51 201 97 122 55 67 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 210</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 197 93 177 155 205 147 41 138 160 199 159 124 88 92 51 201 97 122 55 67 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 202</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 70</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 189</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122 93 67 205 92 201 88 51 97 55 159 124 177 41 147 138 197 160 199 155 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 97 205 88 51 55 92 201 122 67 159 124 177 41 147 138 197 160 199 155 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 137</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 84</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 177 205 155 197 147 88 41 138 160 199 159 124 92 51 201 97 122 55 67 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 148</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 193</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 120</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 51 93 88 55 97 67 199 92 201 122 101 177 41 147 138 197 160 155 188 204 133 174 163 142 47 98 175 80 75 159 53 48 145 186 156 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 156 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 108</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 127</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 122 92 201 88 51 97 55 67 101 177 41 147 138 197 160 199 155 188 204 133 174 163 142 47 98 175 80 75 159 53 48 145 186 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 61</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 163 93 174 47 101 142 98 188 204 133 88 92 51 177 201 41 97 147 122 138 55 197 67 160 199 155 175 80 75 159 53 48 145 186 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\usart.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 83</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 93 128 142 98 204 92 174 163 47 205 159 124 156 199 88 51 177 201 41 97 147 122 138 55 197 67 160 155 165 129 36 118 175 101 80 75 188 53 48 145 186</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 118 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 132</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 204 133 53 18 46 8 134 168 9 80 75 188 98 160 45 152</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 204 133 80 75 188 53 134 46 45 168 152 18 98 9 8</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\main_IAR_Smart-IO_STM32F407_port.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 182</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 76</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 159 47 124 133 204 88 98 9 92 174 163 46 118 53 142 101 134 168 18 80 75 188 45 152 199 51 177 201 41 97 147 122 138 55 197 67 160 155 175 48 145 186 205 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 204 133 80 75 188 53 134 46 45 168 152 9 98 18 118 199 88 92 51 93 67 142 47 175 159 124 205 101 155 163 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\rtc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 200</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 142 98 101 92 174 163 47 188 204 133 199 88 51 177 201 41 97 147 122 138 55 197 67 160 155 175 80 75 159 53 48 145 186 143 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 213</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97 88 51 55 159 124 93 206 92 201 122 142 98 205 199 143 156 177 41 147 138 197 174 163 47 133 204 128 198 118 67 160 155 165 129 36 175 101 80 75 188 53 48 145 186</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92 199 88 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197 143 198 206 118 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 192</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 207</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 51 93 88 55 97 67 92 201 122 101 177 41 147 138 197 160 199 155 188 204 133 174 163 142 47 98 175 80 75 159 53 48 145 186 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 153</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 44</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 67 93 97 88 51 55 92 201 122 101 177 41 147 138 197 160 199 155 188 204 133 174 163 142 47 98 175 80 75 159 53 48 145 186 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\tim.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 162</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 212</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 93 174 163 128 92 47 204 142 98 205 159 124 156 199 88 51 177 201 41 97 147 122 138 55 197 67 160 155 165 129 36 206 175 101 80 75 188 53 48 145 186</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 206 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 117</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 69</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 91</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 47 205 174 163 159 124 142 98 133 204 88 92 51 177 201 41 97 147 122 138 55 197 67 160 199 155 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 187</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 166</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 103</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 171</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 141</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 197 93 177 155 205 147 41 138 160 199 159 124 88 92 51 201 97 122 55 67 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 179</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 150</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 47 93 205 174 163 159 124 142 98 133 204 88 92 51 177 201 41 97 147 122 138 55 197 67 160 199 155 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 184</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 107</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 205 142 98 159 124 174 163 47 133 204 88 92 51 177 201 41 97 147 122 138 55 197 67 160 199 155 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\stm32f4xx_hal_msp.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122 93 92 201 88 51 97 55 67 101 177 41 147 138 197 160 199 155 188 204 133 174 163 142 47 98 175 80 75 159 53 48 145 186 205 124 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 77</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 197 177 204 147 160 199 93 48 41 138 155 186 9 92 133 98 88 51 201 97 122 55 67 175 145 181 8 156 198 53 80 75 188 174 163 142 47 101 159 124 205 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 204 133 80 75 188 53 9 98 8 199 88 92 51 93 67 142 47 175 159 124 205 101 155 163 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197 156 198</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_stm32f407xx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 82</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\spi.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 211</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 135</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 178</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 199 122 93 92 201 128 88 51 97 55 67 204 177 41 147 138 197 160 155 205 159 124 156 174 163 142 47 98 165 129 36 198 175 101 80 75 188 53 48 145 186</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 198 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197 156</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\stm32f4xx_it.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 195</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 174 163 93 128 47 204 139 142 98 205 159 124 67 88 92 51 177 201 41 97 147 122 138 55 197 160 199 155 165 129 36 175 101 80 75 188 53 48 145 186</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197 139</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 176</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 119</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 136</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 205 41 88 138 160 199 177 147 197 155 159 124 92 51 201 97 122 55 67 133 204 174 163 142 47 98 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 49</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 113</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 205 142 98 159 124 174 163 47 133 204 88 92 51 177 201 41 97 147 122 138 55 197 67 160 199 155 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 172</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 110</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 205 47 174 163 159 124 142 98 133 204 88 92 51 177 201 41 97 147 122 138 55 197 67 160 199 155 48 145 186 175 101 80 75 188 53 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 199 88 92 51 93 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Src\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 203</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 164</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 163 93 175 174 159 199 155 204 80 75 133 142 47 98 101 188 53 48 145 186 67 205 124 88 92 51 177 201 41 97 147 122 138 55 197 160 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 142 47 98 204 133 80 75 188 175 159 124 205 101 155 199 88 92 51 93 163 160 53 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 213</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\UI Demo ST32F411-JumpStartC\STM32F411-ICCV8\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 213</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 77</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 67 205 188 93 133 159 128 199 53 158 92 204 80 75 160 155 181 180 156 98 88 51 177 201 41 97 147 122 138 55 197 174 163 142 47 165 129 36 175 101 124 48 145 186</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 146</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 185</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 151 204 80 75 181 71 188 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 188 53 151 133 46 180 204 80 75 134 168 71 98 160 45 152</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_api.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 146</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 169 204 80 75 181 140 188 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 157</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 188 53 169 133 46 85 204 80 75 134 168 140 98 160 45 152</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\UI Demo ST32F411-JumpStartC\STM32F411-ICCV8\stm32f4_vectors.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 72</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STMF407_Disco_Spi1FDM1NSS\Exe\STMF407_Disco_Spi1FDM1NSS.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 149</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 106 193 213 182 38 173 63 132 135 82 78 153 192 115 68 166 70 87 194 210 69 171 109 107 79 137 119 49 50 114 203 162 89 170 161 81 54</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Command Demo-ST32F411-JumpStartC\main_IAR_Smart-IO_STM32_port.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 104</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 159 80 124 53 133 75 67 140 204 88 46 118 188 45 152 199 160 155 101 134 168 169 98 92 51 177 201 41 97 147 122 138 55 197 174 163 142 47 175 48 145 186 205 165 129 36 128</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 67 205 188 93 133 159 128 199 53 140 92 204 80 75 160 155 181 85 156 98 88 51 177 201 41 97 147 122 138 55 197 174 163 142 47 165 129 36 175 101 124 48 145 186</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\Smart-IO ST32F4x1 MCU-App-V104\Command Demo-ST32F411-JumpStartC\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 213</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133 46 204 134 168 53 160 80 75 188 45 152</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\Smart-IO.main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 167</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 52</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 159 80 124 53 133 75 158 204 88 67 46 118 188 45 152 199 160 155 101 134 168 151 98 92 51 177 201 41 97 147 122 138 55 197 174 163 142 47 175 48 145 186 205 165 129 36 128</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160 204 133 80 75 188 53 134 46 45 168 152 158 98 151 118 199 88 92 51 93 67 142 47 175 159 124 205 101 155 163 174 177 165 201 129 41 97 36 48 147 145 122 128 138 55 186 197</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 190 149</file>
+                </tool>
+            </outputs>
+        </file>
+    </configuration>
+</project>
