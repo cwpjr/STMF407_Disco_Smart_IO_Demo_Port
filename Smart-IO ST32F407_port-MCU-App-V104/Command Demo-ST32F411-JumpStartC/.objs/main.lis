@@ -1,0 +1,2075 @@
+                        .module main.c
+                        .area text
+ 000000                 .dbfile "C:\Work\newtech\Smart.IO\MCU-App\Command Demo-ST32F411-JumpStartC\main.c"
+                        .area text
+ 000000                 .dbfile "C:\Work\newtech\Smart.IO\MCU-App\Command Demo-ST32F411-JumpStartC\main.c"
+ 000000                 .dbfunc e Button1 _Button1#Fvt fV 35 -173079576
+ 000000         ;            val -> R4
+ 000000         _Button1#Fvt::
+ 000000                 .dbprevlr 8
+ 000000 2DE91048        push {R4,R11,LR}
+ 000004 EB46            mov R11,R13
+ 000006 0446            mov R4,R0
+ 000008                 .dbblock 36
+ 000008                 .dbline 37
+ 000008 0248            ldr R0,LIT_Button1+0
+ 00000A A1B2            uxth R1,R4
+ 00000C 00F000F8        bl _printf#FiPKcz
+ 000010                 .dbblkend 38
+ 000010         L19:
+ 000010 BDE81088        pop {R4,R11,PC}
+ 000014                 .dbfuncend
+                        .align4
+ 000014                 .LITERAL
+ 000014         LIT_Button1:
+ 000014 6A060000        .long _20#A17_c
+ 000018         	.ENDLITERAL
+ 000018                 .dbsym r val 4 s p0
+ 000018                 .dbstacksize 0
+ 000018                 .dbfunc e Button2 _Button2#Fvt fV 40 2489468
+ 000018         ;            val -> R4
+ 000018         _Button2#Fvt::
+ 000018                 .dbprevlr 8
+ 000018 2DE91048        push {R4,R11,LR}
+ 00001C EB46            mov R11,R13
+ 00001E 0446            mov R4,R0
+ 000020                 .dbblock 41
+ 000020                 .dbline 42
+ 000020 0248            ldr R0,LIT_Button2+0
+ 000022 A1B2            uxth R1,R4
+ 000024 00F000F8        bl _printf#FiPKcz
+ 000028                 .dbblkend 43
+ 000028         L21:
+ 000028 BDE81088        pop {R4,R11,PC}
+ 00002C                 .dbfuncend
+                        .align4
+ 00002C                 .LITERAL
+ 00002C         LIT_Button2:
+ 00002C 59060000        .long _22#A17_c
+ 000030         	.ENDLITERAL
+ 000030                 .dbsym r val 4 s p0
+ 000030                 .dbstacksize 0
+ 000030                 .dbfunc e OK1 _OK1#Fvt fV 45 2489468
+ 000030         ;            val -> R4
+ 000030         _OK1#Fvt::
+ 000030                 .dbprevlr 8
+ 000030 2DE91048        push {R4,R11,LR}
+ 000034 EB46            mov R11,R13
+ 000036 0446            mov R4,R0
+ 000038                 .dbblock 46
+ 000038                 .dbline 47
+ 000038 0248            ldr R0,LIT_OK1+0
+ 00003A A1B2            uxth R1,R4
+ 00003C 00F000F8        bl _printf#FiPKcz
+ 000040                 .dbblkend 48
+ 000040         L23:
+ 000040 BDE81088        pop {R4,R11,PC}
+ 000044                 .dbfuncend
+                        .align4
+ 000044                 .LITERAL
+ 000044         LIT_OK1:
+ 000044 4C060000        .long _24#A13_c
+ 000048         	.ENDLITERAL
+ 000048                 .dbsym r val 4 s p0
+ 000048                 .dbstacksize 0
+ 000048                 .dbfunc e Slider1 _Slider1#Fvt fV 50 2489468
+ 000048         ;            val -> R4
+ 000048         _Slider1#Fvt::
+ 000048                 .dbprevlr 8
+ 000048 2DE91048        push {R4,R11,LR}
+ 00004C EB46            mov R11,R13
+ 00004E 0446            mov R4,R0
+ 000050                 .dbblock 51
+ 000050                 .dbline 52
+ 000050 0248            ldr R0,LIT_Slider1+0
+ 000052 A1B2            uxth R1,R4
+ 000054 00F000F8        bl _printf#FiPKcz
+ 000058                 .dbblkend 53
+ 000058         L25:
+ 000058 BDE81088        pop {R4,R11,PC}
+ 00005C                 .dbfuncend
+                        .align4
+ 00005C                 .LITERAL
+ 00005C         LIT_Slider1:
+ 00005C 3B060000        .long _26#A17_c
+ 000060         	.ENDLITERAL
+ 000060                 .dbsym r val 4 s p0
+ 000060                 .dbstacksize 0
+ 000060                 .dbfunc e text_entry1 _text_entry1#FvPc fV 55 2489468
+ 000060         ;              s -> R4
+ 000060         _text_entry1#FvPc::
+ 000060                 .dbprevlr 8
+ 000060 2DE91048        push {R4,R11,LR}
+ 000064 EB46            mov R11,R13
+ 000066 0446            mov R4,R0
+ 000068                 .dbblock 56
+ 000068                 .dbline 57
+ 000068 0248            ldr R0,LIT_text_entry1+0
+ 00006A 2146            mov R1,R4
+ 00006C 00F000F8        bl _printf#FiPKcz
+ 000070                 .dbblkend 58
+ 000070         L27:
+ 000070 BDE81088        pop {R4,R11,PC}
+ 000074                 .dbfuncend
+                        .align4
+ 000074                 .LITERAL
+ 000074         LIT_text_entry1:
+ 000074 27060000        .long _28#A20_c
+ 000078         	.ENDLITERAL
+ 000078                 .dbsym r s 4 pc p0
+ 000078                 .dbstacksize 0
+ 000078                 .dbfunc e menu_entry _menu_entry#Fvt fV 60 2489468
+ 000078         ;              i -> R4
+ 000078         _menu_entry#Fvt::
+ 000078                 .dbprevlr 8
+ 000078 2DE91048        push {R4,R11,LR}
+ 00007C EB46            mov R11,R13
+ 00007E 0446            mov R4,R0
+ 000080                 .dbblock 61
+ 000080                 .dbline 62
+ 000080 0248            ldr R0,LIT_menu_entry+0
+ 000082 A1B2            uxth R1,R4
+ 000084 00F000F8        bl _printf#FiPKcz
+ 000088                 .dbblkend 63
+ 000088         L29:
+ 000088 BDE81088        pop {R4,R11,PC}
+ 00008C                 .dbfuncend
+                        .align4
+ 00008C                 .LITERAL
+ 00008C         LIT_menu_entry:
+ 00008C 11060000        .long _30#A22_c
+ 000090         	.ENDLITERAL
+ 000090                 .dbsym r i 4 s p0
+ 000090                 .dbstacksize 0
+ 000090                 .dbfunc e checkbox1 _checkbox1#Fvt fV 65 2489468
+ 000090         ;              i -> R4
+ 000090         _checkbox1#Fvt::
+ 000090                 .dbprevlr 8
+ 000090 2DE91048        push {R4,R11,LR}
+ 000094 EB46            mov R11,R13
+ 000096 0446            mov R4,R0
+ 000098                 .dbblock 66
+ 000098                 .dbline 67
+ 000098 0248            ldr R0,LIT_checkbox1+0
+ 00009A A1B2            uxth R1,R4
+ 00009C 00F000F8        bl _printf#FiPKcz
+ 0000A0                 .dbblkend 68
+ 0000A0         L31:
+ 0000A0 BDE81088        pop {R4,R11,PC}
+ 0000A4                 .dbfuncend
+                        .align4
+ 0000A4                 .LITERAL
+ 0000A4         LIT_checkbox1:
+ 0000A4 ED050000        .long _32#A36_c
+ 0000A8         	.ENDLITERAL
+ 0000A8                 .dbsym r i 4 s p0
+ 0000A8                 .dbstacksize 0
+ 0000A8                 .dbfunc e radio_buttons1 _radio_buttons1#Fvt fV 70 2489468
+ 0000A8         ;              i -> R4
+ 0000A8         _radio_buttons1#Fvt::
+ 0000A8                 .dbprevlr 8
+ 0000A8 2DE91048        push {R4,R11,LR}
+ 0000AC EB46            mov R11,R13
+ 0000AE 0446            mov R4,R0
+ 0000B0                 .dbblock 71
+ 0000B0                 .dbline 72
+ 0000B0 0248            ldr R0,LIT_radio_buttons1+0
+ 0000B2 A1B2            uxth R1,R4
+ 0000B4 00F000F8        bl _printf#FiPKcz
+ 0000B8                 .dbblkend 73
+ 0000B8         L33:
+ 0000B8 BDE81088        pop {R4,R11,PC}
+ 0000BC                 .dbfuncend
+                        .align4
+ 0000BC                 .LITERAL
+ 0000BC         LIT_radio_buttons1:
+ 0000BC D3050000        .long _34#A26_c
+ 0000C0         	.ENDLITERAL
+ 0000C0                 .dbsym r i 4 s p0
+ 0000C0                 .dbstacksize 0
+ 0000C0                 .dbfunc e text_entry2 _text_entry2#FvPc fV 75 2489468
+ 0000C0         ;              s -> R4
+ 0000C0         _text_entry2#FvPc::
+ 0000C0                 .dbprevlr 8
+ 0000C0 2DE91048        push {R4,R11,LR}
+ 0000C4 EB46            mov R11,R13
+ 0000C6 0446            mov R4,R0
+ 0000C8                 .dbblock 76
+ 0000C8                 .dbline 77
+ 0000C8 0248            ldr R0,LIT_text_entry2+0
+ 0000CA 2146            mov R1,R4
+ 0000CC 00F000F8        bl _printf#FiPKcz
+ 0000D0                 .dbblkend 78
+ 0000D0         L35:
+ 0000D0 BDE81088        pop {R4,R11,PC}
+ 0000D4                 .dbfuncend
+                        .align4
+ 0000D4                 .LITERAL
+ 0000D4         LIT_text_entry2:
+ 0000D4 BF050000        .long _36#A20_c
+ 0000D8         	.ENDLITERAL
+ 0000D8                 .dbsym r s 4 pc p0
+ 0000D8                 .dbstacksize 0
+ 0000D8                 .dbfunc e number_entry1 _number_entry1#FvPc fV 80 2489468
+ 0000D8         ;              s -> R4
+ 0000D8         _number_entry1#FvPc::
+ 0000D8                 .dbprevlr 8
+ 0000D8 2DE91048        push {R4,R11,LR}
+ 0000DC EB46            mov R11,R13
+ 0000DE 0446            mov R4,R0
+ 0000E0                 .dbblock 81
+ 0000E0                 .dbline 82
+ 0000E0 0248            ldr R0,LIT_number_entry1+0
+ 0000E2 2146            mov R1,R4
+ 0000E4 00F000F8        bl _printf#FiPKcz
+ 0000E8                 .dbblkend 83
+ 0000E8         L37:
+ 0000E8 BDE81088        pop {R4,R11,PC}
+ 0000EC                 .dbfuncend
+                        .align4
+ 0000EC                 .LITERAL
+ 0000EC         LIT_number_entry1:
+ 0000EC AA050000        .long _38#A21_c
+ 0000F0         	.ENDLITERAL
+ 0000F0                 .dbsym r s 4 pc p0
+ 0000F0                 .dbstacksize 0
+ 0000F0                 .dbfunc e password_entry1 _password_entry1#FvPc fV 84 2489468
+ 0000F0         ;              s -> R4
+ 0000F0         _password_entry1#FvPc::
+ 0000F0                 .dbprevlr 8
+ 0000F0 2DE91048        push {R4,R11,LR}
+ 0000F4 EB46            mov R11,R13
+ 0000F6 0446            mov R4,R0
+ 0000F8                 .dbblock 85
+ 0000F8                 .dbline 86
+ 0000F8 0248            ldr R0,LIT_password_entry1+0
+ 0000FA 2146            mov R1,R4
+ 0000FC 00F000F8        bl _printf#FiPKcz
+ 000100                 .dbblkend 87
+ 000100         L39:
+ 000100 BDE81088        pop {R4,R11,PC}
+ 000104                 .dbfuncend
+                        .align4
+ 000104                 .LITERAL
+ 000104         LIT_password_entry1:
+ 000104 93050000        .long _40#A23_c
+ 000108         	.ENDLITERAL
+ 000108                 .dbsym r s 4 pc p0
+ 000108                 .dbstacksize 0
+ 000108                 .dbfunc e calendar_selector1 _calendar_selector1#FvPc fV 89 2489468
+ 000108         ;              s -> R4
+ 000108         _calendar_selector1#FvPc::
+ 000108                 .dbprevlr 8
+ 000108 2DE91048        push {R4,R11,LR}
+ 00010C EB46            mov R11,R13
+ 00010E 0446            mov R4,R0
+ 000110                 .dbblock 90
+ 000110                 .dbline 91
+ 000110 0248            ldr R0,LIT_calendar_selector1+0
+ 000112 2146            mov R1,R4
+ 000114 00F000F8        bl _printf#FiPKcz
+ 000118                 .dbblkend 92
+ 000118         L41:
+ 000118 BDE81088        pop {R4,R11,PC}
+ 00011C                 .dbfuncend
+                        .align4
+ 00011C                 .LITERAL
+ 00011C         LIT_calendar_selector1:
+ 00011C 7C050000        .long _42#A23_c
+ 000120         	.ENDLITERAL
+ 000120                 .dbsym r s 4 pc p0
+ 000120                 .dbstacksize 0
+ 000120                 .dbfunc e number_selector1 _number_selector1#Fvj fV 93 2489468
+ 000120         ;              n -> R4
+ 000120         _number_selector1#Fvj::
+ 000120                 .dbprevlr 8
+ 000120 2DE91048        push {R4,R11,LR}
+ 000124 EB46            mov R11,R13
+ 000126 0446            mov R4,R0
+ 000128                 .dbblock 94
+ 000128                 .dbline 95
+ 000128 0248            ldr R0,LIT_number_selector1+0
+ 00012A 2146            mov R1,R4
+ 00012C 00F000F8        bl _printf#FiPKcz
+ 000130                 .dbblkend 96
+ 000130         L43:
+ 000130 BDE81088        pop {R4,R11,PC}
+ 000134                 .dbfuncend
+                        .align4
+ 000134                 .LITERAL
+ 000134         LIT_number_selector1:
+ 000134 67050000        .long _44#A21_c
+ 000138         	.ENDLITERAL
+ 000138                 .dbsym r n 4 i p0
+ 000138                 .dbstacksize 0
+ 000138                 .dbfunc e time_selector1 _time_selector1#Fvtt fV 98 2489468
+ 000138         ;             mm -> R4
+ 000138         ;             hh -> R5
+ 000138         _time_selector1#Fvtt::
+ 000138                 .dbprevlr 12
+ 000138 2DE93048        push {R4,R5,R11,LR}
+ 00013C EB46            mov R11,R13
+ 00013E 0546            mov R5,R0
+ 000140 0C46            mov R4,R1
+ 000142                 .dbblock 99
+ 000142                 .dbline 100
+ 000142 0348            ldr R0,LIT_time_selector1+0
+ 000144 A9B2            uxth R1,R5
+ 000146 A2B2            uxth R2,R4
+ 000148 00F000F8        bl _printf#FiPKcz
+ 00014C                 .dbblkend 101
+ 00014C         L45:
+ 00014C BDE83088        pop {R4,R5,R11,PC}
+ 000150                 .dbfuncend
+                        .align4
+ 000150                 .LITERAL
+ 000150         LIT_time_selector1:
+ 000150 51050000        .long _46#A22_c
+ 000154         	.ENDLITERAL
+ 000154                 .dbsym r mm 4 s p1
+ 000154                 .dbsym r hh 5 s p0
+ 000154                 .dbstacksize 0
+ 000154                 .dbfunc e time_selector2 _time_selector2#Fvtt fV 103 2489468
+ 000154         ;             mm -> R4
+ 000154         ;             hh -> R5
+ 000154         _time_selector2#Fvtt::
+ 000154                 .dbprevlr 12
+ 000154 2DE93048        push {R4,R5,R11,LR}
+ 000158 EB46            mov R11,R13
+ 00015A 0546            mov R5,R0
+ 00015C 0C46            mov R4,R1
+ 00015E                 .dbblock 104
+ 00015E                 .dbline 105
+ 00015E 0348            ldr R0,LIT_time_selector2+0
+ 000160 A9B2            uxth R1,R5
+ 000162 A2B2            uxth R2,R4
+ 000164 00F000F8        bl _printf#FiPKcz
+ 000168                 .dbblkend 106
+ 000168         L47:
+ 000168 BDE83088        pop {R4,R5,R11,PC}
+ 00016C                 .dbfuncend
+                        .align4
+ 00016C                 .LITERAL
+ 00016C         LIT_time_selector2:
+ 00016C 3B050000        .long _48#A22_c
+ 000170         	.ENDLITERAL
+ 000170                 .dbsym r mm 4 s p1
+ 000170                 .dbsym r hh 5 s p0
+ 000170                 .dbstacksize 0
+ 000170                 .dbfunc e time_selector3 _time_selector3#Fvtt fV 108 2489468
+ 000170         ;             mm -> R4
+ 000170         ;             hh -> R5
+ 000170         _time_selector3#Fvtt::
+ 000170                 .dbprevlr 12
+ 000170 2DE93048        push {R4,R5,R11,LR}
+ 000174 EB46            mov R11,R13
+ 000176 0546            mov R5,R0
+ 000178 0C46            mov R4,R1
+ 00017A                 .dbblock 109
+ 00017A                 .dbline 110
+ 00017A 0348            ldr R0,LIT_time_selector3+0
+ 00017C A9B2            uxth R1,R5
+ 00017E A2B2            uxth R2,R4
+ 000180 00F000F8        bl _printf#FiPKcz
+ 000184                 .dbblkend 111
+ 000184         L49:
+ 000184 BDE83088        pop {R4,R5,R11,PC}
+ 000188                 .dbfuncend
+                        .align4
+ 000188                 .LITERAL
+ 000188         LIT_time_selector3:
+ 000188 25050000        .long _50#A22_c
+ 00018C         	.ENDLITERAL
+ 00018C                 .dbsym r mm 4 s p1
+ 00018C                 .dbsym r hh 5 s p0
+ 00018C                 .dbstacksize 0
+ 00018C                 .dbfunc e time_selector4 _time_selector4#Fvtt fV 113 2489468
+ 00018C         ;             mm -> R4
+ 00018C         ;             hh -> R5
+ 00018C         _time_selector4#Fvtt::
+ 00018C                 .dbprevlr 12
+ 00018C 2DE93048        push {R4,R5,R11,LR}
+ 000190 EB46            mov R11,R13
+ 000192 0546            mov R5,R0
+ 000194 0C46            mov R4,R1
+ 000196                 .dbblock 114
+ 000196                 .dbline 115
+ 000196 0348            ldr R0,LIT_time_selector4+0
+ 000198 A9B2            uxth R1,R5
+ 00019A A2B2            uxth R2,R4
+ 00019C 00F000F8        bl _printf#FiPKcz
+ 0001A0                 .dbblkend 116
+ 0001A0         L51:
+ 0001A0 BDE83088        pop {R4,R5,R11,PC}
+ 0001A4                 .dbfuncend
+                        .align4
+ 0001A4                 .LITERAL
+ 0001A4         LIT_time_selector4:
+ 0001A4 0F050000        .long _52#A22_c
+ 0001A8         	.ENDLITERAL
+ 0001A8                 .dbsym r mm 4 s p1
+ 0001A8                 .dbsym r hh 5 s p0
+ 0001A8                 .dbstacksize 0
+ 0001A8                 .dbfunc e _3pos_buttons1 __3pos_buttons1#Fvt fV 118 2489468
+ 0001A8         ;              i -> R4
+ 0001A8         __3pos_buttons1#Fvt::
+ 0001A8                 .dbprevlr 8
+ 0001A8 2DE91048        push {R4,R11,LR}
+ 0001AC EB46            mov R11,R13
+ 0001AE 0446            mov R4,R0
+ 0001B0                 .dbblock 119
+ 0001B0                 .dbline 120
+ 0001B0 0248            ldr R0,LIT__3pos_buttons1+0
+ 0001B2 A1B2            uxth R1,R4
+ 0001B4 00F000F8        bl _printf#FiPKcz
+ 0001B8                 .dbblkend 121
+ 0001B8         L53:
+ 0001B8 BDE81088        pop {R4,R11,PC}
+ 0001BC                 .dbfuncend
+                        .align4
+ 0001BC                 .LITERAL
+ 0001BC         LIT__3pos_buttons1:
+ 0001BC F5040000        .long _54#A26_c
+ 0001C0         	.ENDLITERAL
+ 0001C0                 .dbsym r i 4 s p0
+ 0001C0                 .dbstacksize 0
+ 0001C0                 .dbfunc e expandable_list1 _expandable_list1#Fvt fV 123 2489468
+ 0001C0         ;              i -> R4
+ 0001C0         _expandable_list1#Fvt::
+ 0001C0                 .dbprevlr 8
+ 0001C0 2DE91048        push {R4,R11,LR}
+ 0001C4 EB46            mov R11,R13
+ 0001C6 0446            mov R4,R0
+ 0001C8                 .dbblock 124
+ 0001C8                 .dbline 125
+ 0001C8 0248            ldr R0,LIT_expandable_list1+0
+ 0001CA A1B2            uxth R1,R4
+ 0001CC 00F000F8        bl _printf#FiPKcz
+ 0001D0                 .dbblkend 126
+ 0001D0         L55:
+ 0001D0 BDE81088        pop {R4,R11,PC}
+ 0001D4                 .dbfuncend
+                        .align4
+ 0001D4                 .LITERAL
+ 0001D4         LIT_expandable_list1:
+ 0001D4 D2040000        .long _56#A35_c
+ 0001D8         	.ENDLITERAL
+ 0001D8                 .dbsym r i 4 s p0
+ 0001D8                 .dbstacksize 0
+ 0001D8                 .dbfunc e doTest _doTest#Fvi fV 128 2489468
+                        .area lit
+                        .align4
+ 000000         _131#A9_Pv:
+ 000000 2C020000        .long L62
+ 000004 52020000        .long L66
+ 000008 78020000        .long L69
+ 00000C C2030000        .long L81
+ 000010 B6040000        .long L89
+ 000014 22060000        .long L91
+ 000018 9A060000        .long L97
+ 00001C 9A070000        .long L108
+ 000020 BE070000        .long L109
+                        .area text
+                ;              i -> R8
+                ;              i -> R8
+                ;              i -> R8
+                ;           val2 -> R9
+                ;           addr -> R10
+                ;           val1 -> R11,16
+                ;              p -> R8
+                ;            u10 -> <dead>
+                ;             p3 -> <dead>
+                ;             p2 -> <dead>
+                ;             p1 -> <dead>
+                ;             u6 -> R7
+                ;             u7 -> R8
+                ;             u3 -> R11,2
+                ;             u2 -> R11,4
+                ;             u9 -> R10
+                ;             u8 -> R9
+                ;             u5 -> R11,6
+                ;             u4 -> R11,8
+                ;             p0 -> R11,10
+                ;             u1 -> R11,12
+                ;             u0 -> R11,14
+                ;              i -> R11,56
+ 0001D8         _doTest#Fvi::
+ 0001D8                 .dbprevlr 92
+ 0001D8 2DE9F14F        push {r0,R4,R5,R6,R7,R8,R9,R10,R11,LR}
+ 0001DC ADF1380B        sub R11,R13,#56
+ 0001E0 92B0            sub R13,R13,#72
+ 0001E2                 .dbblock 129
+ 0001E2                 .dbline 133
+ 0001E2 DBF838C0        ldr R12,[R11,#+56]
+ 0001E6 BCF1080F        cmp R12,#8
+ 0001EA 07D0            beq L58
+ 0001EC                 .dbline 134
+ 0001EC 0220            movs R0,#2
+ 0001EE DBF838C0        ldr R12,[R11,#+56]
+ 0001F2 4CF4CA64        orr R4,R12,#1616
+ 0001F6 2146            mov R1,R4
+ 0001F8 00F000F8        bl _SmartIO_LoadCache#Fsjt
+ 0001FC         L58:
+ 0001FC                 .dbline 136
+ 0001FC 00F000F8        bl _SmartIO_MakePage#Ftv
+ 000200 ABF80A00        strh R0,[R11,#+10]
+ 000204                 .dbline 137
+ 000204 DBF838C0        ldr R12,[R11,#+56]
+ 000208 BCF1000F        cmp R12,#0
+ 00020C C0F23B83        blt L60
+ 000210 DBF838C0        ldr R12,[R11,#+56]
+ 000214 BCF1080F        cmp R12,#8
+ 000218 00F33583        bgt L60
+ 00021C DFF87847        ldr R4,LIT_doTest+252
+ 000220 DBF838C0        ldr R12,[R11,#+56]
+ 000224 4FEA8C05        lsl R5,R12,#2
+ 000228 2C59            ldr R4,[R5,R4]
+ 00022A A746            mov R15,R4
+ 00022C         X0:
+ 00022C                 .dbfile "C:\Work\newtech\Smart.IO\MCU-App\Command Demo-ST32F411-JumpStartC\main.c"
+ 00022C         L62:
+ 00022C                 .dbline 140
+ 00022C DFF86407        ldr R0,LIT_doTest+248
+ 000230 DFF85C17        ldr R1,LIT_doTest+244
+ 000234 00F000F8        bl _SmartIO_AddMenu#FtPcPFvtE
+ 000238 ABF80E00        strh R0,[R11,#+14]
+ 00023C                 .dbline 141
+ 00023C DFF84C17        ldr R1,LIT_doTest+240
+ 000240 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000244                 .dbline 142
+ 000244 BBF80E00        ldrh R0,[R11,#+14]
+ 000248 DFF83C17        ldr R1,LIT_doTest+236
+ 00024C 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000250                 .dbline 143
+ 000250 19E3            b L61
+ 000252         L66:
+ 000252                 .dbline 145
+ 000252 0020            movs R0,#0
+ 000254 C821            movs R1,#200
+ 000256 0622            movs R2,#6
+ 000258 DFF82837        ldr R3,LIT_doTest+232
+ 00025C 00F000F8        bl _SmartIO_MakeTextBox#FttttPc
+ 000260 ABF80E00        strh R0,[R11,#+14]
+ 000264                 .dbline 146
+ 000264 DFF81817        ldr R1,LIT_doTest+228
+ 000268 00F000F8        bl _SmartIO_AddText#FstPc
+ 00026C                 .dbline 147
+ 00026C BBF80E00        ldrh R0,[R11,#+14]
+ 000270 0421            movs R1,#4
+ 000272 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 000276                 .dbline 148
+ 000276 06E3            b L61
+ 000278         L69:
+ 000278                 .dbline 150
+ 000278 DFF8DC06        ldr R0,LIT_doTest+188
+ 00027C 00F000F8        bl _SmartIO_AppTitle#FsPc
+ 000280                 .dbline 151
+ 000280 0024            movs R4,#0
+ 000282 2046            mov R0,R4
+ 000284 2146            mov R1,R4
+ 000286 0122            movs R2,#1
+ 000288 DFF8C836        ldr R3,LIT_doTest+184
+ 00028C 00F000F8        bl _SmartIO_MakeOnOffButton#FttttPFvtE
+ 000290 ABF80E00        strh R0,[R11,#+14]
+ 000294                 .dbline 152
+ 000294 DFF8B816        ldr R1,LIT_doTest+180
+ 000298 00F000F8        bl _SmartIO_AddText#FstPc
+ 00029C                 .dbline 153
+ 00029C BBF80E00        ldrh R0,[R11,#+14]
+ 0002A0 0621            movs R1,#6
+ 0002A2 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 0002A6                 .dbline 154
+ 0002A6 0120            movs R0,#1
+ 0002A8 0021            movs R1,#0
+ 0002AA 1E22            movs R2,#30
+ 0002AC DFF82436        ldr R3,LIT_doTest+56
+ 0002B0 00F000F8        bl _SmartIO_MakeSlider#FttttPFvtE
+ 0002B4 ABF80C00        strh R0,[R11,#+12]
+ 0002B8                 .dbline 156
+ 0002B8 0220            movs R0,#2
+ 0002BA 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 0002BE                 .dbline 157
+ 0002BE 0020            movs R0,#0
+ 0002C0 0121            movs R1,#1
+ 0002C2 DFF88826        ldr R2,LIT_doTest+176
+ 0002C6 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 0002CA ABF80400        strh R0,[R11,#+4]
+ 0002CE                 .dbline 158
+ 0002CE 2046            mov R0,R4
+ 0002D0 2146            mov R1,R4
+ 0002D2 DFF87426        ldr R2,LIT_doTest+172
+ 0002D6 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 0002DA ABF80200        strh R0,[R11,#+2]
+ 0002DE                 .dbline 159
+ 0002DE 2046            mov R0,R4
+ 0002E0 2146            mov R1,R4
+ 0002E2 DFF86026        ldr R2,LIT_doTest+168
+ 0002E6 DFF85836        ldr R3,LIT_doTest+164
+ 0002EA 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 0002EE ABF80800        strh R0,[R11,#+8]
+ 0002F2                 .dbline 160
+ 0002F2 DFF82C16        ldr R1,LIT_doTest+132
+ 0002F6 00F000F8        bl _SmartIO_AddText#FstPc
+ 0002FA                 .dbline 161
+ 0002FA BBF80800        ldrh R0,[R11,#+8]
+ 0002FE 0821            movs R1,#8
+ 000300 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 000304                 .dbline 162
+ 000304 2046            mov R0,R4
+ 000306 2146            mov R1,R4
+ 000308 DFF83026        ldr R2,LIT_doTest+160
+ 00030C DFF82836        ldr R3,LIT_doTest+156
+ 000310 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 000314 ABF80600        strh R0,[R11,#+6]
+ 000318                 .dbline 163
+ 000318 DFF8F815        ldr R1,LIT_doTest+120
+ 00031C 00F000F8        bl _SmartIO_AddText#FstPc
+ 000320                 .dbline 164
+ 000320 BBF80600        ldrh R0,[R11,#+6]
+ 000324 0821            movs R1,#8
+ 000326 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 00032A                 .dbline 165
+ 00032A 0120            movs R0,#1
+ 00032C 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000330                 .dbline 167
+ 000330 2046            mov R0,R4
+ 000332 2146            mov R1,R4
+ 000334 DFF8F425        ldr R2,LIT_doTest+144
+ 000338 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 00033C 8046            mov R8,R0
+ 00033E                 .dbline 168
+ 00033E 2046            mov R0,R4
+ 000340 2146            mov R1,R4
+ 000342 DFF8E425        ldr R2,LIT_doTest+140
+ 000346 DFF8DC35        ldr R3,LIT_doTest+136
+ 00034A 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 00034E 8146            mov R9,R0
+ 000350                 .dbline 169
+ 000350 DFF8CC15        ldr R1,LIT_doTest+132
+ 000354 00F000F8        bl _SmartIO_AddText#FstPc
+ 000358                 .dbline 170
+ 000358 4846            mov R0,R9
+ 00035A 0821            movs R1,#8
+ 00035C 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 000360                 .dbline 171
+ 000360 2046            mov R0,R4
+ 000362 2146            mov R1,R4
+ 000364 DFF8B425        ldr R2,LIT_doTest+128
+ 000368 DFF8AC35        ldr R3,LIT_doTest+124
+ 00036C 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 000370 8246            mov R10,R0
+ 000372                 .dbline 172
+ 000372 DFF8A015        ldr R1,LIT_doTest+120
+ 000376 00F000F8        bl _SmartIO_AddText#FstPc
+ 00037A                 .dbline 173
+ 00037A 5046            mov R0,R10
+ 00037C 0821            movs R1,#8
+ 00037E 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 000382                 .dbline 174
+ 000382 0020            movs R0,#0
+ 000384 BBF80210        ldrh R1,[R11,#+2]
+ 000388 BBF808C0        ldrh R12,[R11,#+8]
+ 00038C 1FFA8CF2        uxth R2,R12
+ 000390 BBF806C0        ldrh R12,[R11,#+6]
+ 000394 1FFA8CF3        uxth R3,R12
+ 000398 1FFA88F4        uxth R4,R8
+ 00039C 0094            str R4,[R13,#0]
+ 00039E 1FFA89F4        uxth R4,R9
+ 0003A2 0194            str R4,[R13,#+4]
+ 0003A4 1FFA8AF4        uxth R4,R10
+ 0003A8 0294            str R4,[R13,#+8]
+ 0003AA 0024            movs R4,#0
+ 0003AC 0394            str R4,[R13,#+12]
+ 0003AE 00F000F8        bl _SmartIO_GroupObjects#Fsttz
+ 0003B2                 .dbline 175
+ 0003B2 0320            movs R0,#3
+ 0003B4 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 0003B8                 .dbline 176
+ 0003B8 BBF80A00        ldrh R0,[R11,#+10]
+ 0003BC 00F000F8        bl _SmartIO_AutoBalance#Fst
+ 0003C0                 .dbline 177
+ 0003C0 61E2            b L61
+ 0003C2         L81:
+ 0003C2                 .dbline 179
+ 0003C2 0020            movs R0,#0
+ 0003C4 0521            movs R1,#5
+ 0003C6 DFF8B425        ldr R2,LIT_doTest+224
+ 0003CA 00F000F8        bl _SmartIO_MakeCheckboxes#FtttPFvtE
+ 0003CE ABF80E00        strh R0,[R11,#+14]
+ 0003D2                 .dbline 180
+ 0003D2 BBF80EC0        ldrh R12,[R11,#+14]
+ 0003D6 1FFA8CF4        uxth R4,R12
+ 0003DA 641C            adds R4,R4,#1
+ 0003DC 2046            mov R0,R4
+ 0003DE DFF88C15        ldr R1,LIT_doTest+208
+ 0003E2 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0003E6                 .dbline 181
+ 0003E6 BBF80EC0        ldrh R12,[R11,#+14]
+ 0003EA 1FFA8CF4        uxth R4,R12
+ 0003EE 641C            adds R4,R4,#1
+ 0003F0 2046            mov R0,R4
+ 0003F2 DFF87415        ldr R1,LIT_doTest+204
+ 0003F6 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0003FA                 .dbline 182
+ 0003FA BBF80EC0        ldrh R12,[R11,#+14]
+ 0003FE 1FFA8CF4        uxth R4,R12
+ 000402 641C            adds R4,R4,#1
+ 000404 2046            mov R0,R4
+ 000406 DFF85C15        ldr R1,LIT_doTest+200
+ 00040A 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 00040E                 .dbline 183
+ 00040E BBF80EC0        ldrh R12,[R11,#+14]
+ 000412 1FFA8CF4        uxth R4,R12
+ 000416 641C            adds R4,R4,#1
+ 000418 2046            mov R0,R4
+ 00041A DFF84415        ldr R1,LIT_doTest+196
+ 00041E 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000422                 .dbline 184
+ 000422 BBF80EC0        ldrh R12,[R11,#+14]
+ 000426 1FFA8CF4        uxth R4,R12
+ 00042A 641C            adds R4,R4,#1
+ 00042C 2046            mov R0,R4
+ 00042E DFF84815        ldr R1,LIT_doTest+220
+ 000432 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000436                 .dbline 186
+ 000436 0720            movs R0,#7
+ 000438 DFF83815        ldr R1,LIT_doTest+216
+ 00043C 00F000F8        bl _SmartIO_MakeMultilineBox#FttPc
+ 000440                 .dbline 188
+ 000440 0020            movs R0,#0
+ 000442 0521            movs R1,#5
+ 000444 DFF82825        ldr R2,LIT_doTest+212
+ 000448 00F000F8        bl _SmartIO_MakeRadioButtons#FtttPFvtE
+ 00044C ABF80C00        strh R0,[R11,#+12]
+ 000450                 .dbline 189
+ 000450 BBF80CC0        ldrh R12,[R11,#+12]
+ 000454 1FFA8CF4        uxth R4,R12
+ 000458 641C            adds R4,R4,#1
+ 00045A 2046            mov R0,R4
+ 00045C DFF80C15        ldr R1,LIT_doTest+208
+ 000460 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000464                 .dbline 190
+ 000464 BBF80CC0        ldrh R12,[R11,#+12]
+ 000468 1FFA8CF4        uxth R4,R12
+ 00046C 641C            adds R4,R4,#1
+ 00046E 2046            mov R0,R4
+ 000470 DFF8F414        ldr R1,LIT_doTest+204
+ 000474 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000478                 .dbline 191
+ 000478 BBF80CC0        ldrh R12,[R11,#+12]
+ 00047C 1FFA8CF4        uxth R4,R12
+ 000480 641C            adds R4,R4,#1
+ 000482 2046            mov R0,R4
+ 000484 DFF8DC14        ldr R1,LIT_doTest+200
+ 000488 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 00048C                 .dbline 192
+ 00048C BBF80CC0        ldrh R12,[R11,#+12]
+ 000490 1FFA8CF4        uxth R4,R12
+ 000494 641C            adds R4,R4,#1
+ 000496 2046            mov R0,R4
+ 000498 DFF8C414        ldr R1,LIT_doTest+196
+ 00049C 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0004A0                 .dbline 193
+ 0004A0 BBF80CC0        ldrh R12,[R11,#+12]
+ 0004A4 1FFA8CF4        uxth R4,R12
+ 0004A8 641C            adds R4,R4,#1
+ 0004AA 2046            mov R0,R4
+ 0004AC DFF8AC14        ldr R1,LIT_doTest+192
+ 0004B0 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0004B4                 .dbline 194
+ 0004B4 E7E1            b L61
+ 0004B6         L89:
+ 0004B6                 .dbline 196
+ 0004B6 DFF8A004        ldr R0,LIT_doTest+188
+ 0004BA 00F000F8        bl _SmartIO_AppTitle#FsPc
+ 0004BE                 .dbline 197
+ 0004BE 0024            movs R4,#0
+ 0004C0 2046            mov R0,R4
+ 0004C2 2146            mov R1,R4
+ 0004C4 0122            movs R2,#1
+ 0004C6 DFF88C34        ldr R3,LIT_doTest+184
+ 0004CA 00F000F8        bl _SmartIO_MakeOnOffButton#FttttPFvtE
+ 0004CE ABF80E00        strh R0,[R11,#+14]
+ 0004D2                 .dbline 198
+ 0004D2 DFF87C14        ldr R1,LIT_doTest+180
+ 0004D6 00F000F8        bl _SmartIO_AddText#FstPc
+ 0004DA                 .dbline 199
+ 0004DA BBF80E00        ldrh R0,[R11,#+14]
+ 0004DE 0621            movs R1,#6
+ 0004E0 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 0004E4                 .dbline 200
+ 0004E4 0120            movs R0,#1
+ 0004E6 0021            movs R1,#0
+ 0004E8 1E22            movs R2,#30
+ 0004EA FA4B            ldr R3,LIT_doTest+56
+ 0004EC 00F000F8        bl _SmartIO_MakeSlider#FttttPFvtE
+ 0004F0 ABF80C00        strh R0,[R11,#+12]
+ 0004F4                 .dbline 201
+ 0004F4 BBF80EC0        ldrh R12,[R11,#+14]
+ 0004F8 1FFA8CF4        uxth R4,R12
+ 0004FC 641C            adds R4,R4,#1
+ 0004FE 2046            mov R0,R4
+ 000500 BBF80CC0        ldrh R12,[R11,#+12]
+ 000504 1FFA8CF4        uxth R4,R12
+ 000508 641C            adds R4,R4,#1
+ 00050A 2146            mov R1,R4
+ 00050C 0022            movs R2,#0
+ 00050E 00F000F8        bl _SmartIO_EnableIf#Fsttz
+ 000512                 .dbline 203
+ 000512 0220            movs R0,#2
+ 000514 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000518                 .dbline 204
+ 000518 0020            movs R0,#0
+ 00051A 0121            movs R1,#1
+ 00051C DFF82C24        ldr R2,LIT_doTest+176
+ 000520 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 000524 ABF80400        strh R0,[R11,#+4]
+ 000528                 .dbline 205
+ 000528 0024            movs R4,#0
+ 00052A 2046            mov R0,R4
+ 00052C 2146            mov R1,R4
+ 00052E DFF81824        ldr R2,LIT_doTest+172
+ 000532 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 000536 ABF80200        strh R0,[R11,#+2]
+ 00053A                 .dbline 206
+ 00053A 2046            mov R0,R4
+ 00053C 2146            mov R1,R4
+ 00053E DFF80424        ldr R2,LIT_doTest+168
+ 000542 FF4B            ldr R3,LIT_doTest+164
+ 000544 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 000548 ABF80800        strh R0,[R11,#+8]
+ 00054C                 .dbline 207
+ 00054C F449            ldr R1,LIT_doTest+132
+ 00054E 00F000F8        bl _SmartIO_AddText#FstPc
+ 000552                 .dbline 208
+ 000552 BBF80800        ldrh R0,[R11,#+8]
+ 000556 0821            movs R1,#8
+ 000558 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 00055C                 .dbline 209
+ 00055C 2046            mov R0,R4
+ 00055E 2146            mov R1,R4
+ 000560 F64A            ldr R2,LIT_doTest+160
+ 000562 F54B            ldr R3,LIT_doTest+156
+ 000564 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 000568 ABF80600        strh R0,[R11,#+6]
+ 00056C                 .dbline 210
+ 00056C E949            ldr R1,LIT_doTest+120
+ 00056E 00F000F8        bl _SmartIO_AddText#FstPc
+ 000572                 .dbline 211
+ 000572 BBF80600        ldrh R0,[R11,#+6]
+ 000576 0821            movs R1,#8
+ 000578 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 00057C                 .dbline 212
+ 00057C 0120            movs R0,#1
+ 00057E 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000582                 .dbline 214
+ 000582 0124            movs R4,#1
+ 000584 2046            mov R0,R4
+ 000586 2146            mov R1,R4
+ 000588 EA4A            ldr R2,LIT_doTest+152
+ 00058A 00F000F8        bl _SmartIO_MakeCheckboxes#FtttPFvtE
+ 00058E 0746            mov R7,R0
+ 000590                 .dbline 215
+ 000590 BCB2            uxth R4,R7
+ 000592 641C            adds R4,R4,#1
+ 000594 2046            mov R0,R4
+ 000596 E649            ldr R1,LIT_doTest+148
+ 000598 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 00059C                 .dbline 217
+ 00059C 0024            movs R4,#0
+ 00059E 2046            mov R0,R4
+ 0005A0 2146            mov R1,R4
+ 0005A2 E24A            ldr R2,LIT_doTest+144
+ 0005A4 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 0005A8 8046            mov R8,R0
+ 0005AA                 .dbline 218
+ 0005AA 2046            mov R0,R4
+ 0005AC 2146            mov R1,R4
+ 0005AE DE4A            ldr R2,LIT_doTest+140
+ 0005B0 DC4B            ldr R3,LIT_doTest+136
+ 0005B2 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 0005B6 8146            mov R9,R0
+ 0005B8                 .dbline 219
+ 0005B8 D949            ldr R1,LIT_doTest+132
+ 0005BA 00F000F8        bl _SmartIO_AddText#FstPc
+ 0005BE                 .dbline 220
+ 0005BE 4846            mov R0,R9
+ 0005C0 0821            movs R1,#8
+ 0005C2 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 0005C6                 .dbline 221
+ 0005C6 2046            mov R0,R4
+ 0005C8 2146            mov R1,R4
+ 0005CA D44A            ldr R2,LIT_doTest+128
+ 0005CC D24B            ldr R3,LIT_doTest+124
+ 0005CE 00F000F8        bl _SmartIO_MakeTimeSelector#FtttPcPFvttE
+ 0005D2 8246            mov R10,R0
+ 0005D4                 .dbline 222
+ 0005D4 CF49            ldr R1,LIT_doTest+120
+ 0005D6 00F000F8        bl _SmartIO_AddText#FstPc
+ 0005DA                 .dbline 223
+ 0005DA 5046            mov R0,R10
+ 0005DC 0821            movs R1,#8
+ 0005DE 00F000F8        bl _SmartIO_SetSliceIcon#Fstt
+ 0005E2                 .dbline 224
+ 0005E2 0020            movs R0,#0
+ 0005E4 BBF80210        ldrh R1,[R11,#+2]
+ 0005E8 BBF808C0        ldrh R12,[R11,#+8]
+ 0005EC 1FFA8CF2        uxth R2,R12
+ 0005F0 BBF806C0        ldrh R12,[R11,#+6]
+ 0005F4 1FFA8CF3        uxth R3,R12
+ 0005F8 1FFA88F4        uxth R4,R8
+ 0005FC 0094            str R4,[R13,#0]
+ 0005FE 1FFA89F4        uxth R4,R9
+ 000602 0194            str R4,[R13,#+4]
+ 000604 1FFA8AF4        uxth R4,R10
+ 000608 0294            str R4,[R13,#+8]
+ 00060A 0024            movs R4,#0
+ 00060C 0394            str R4,[R13,#+12]
+ 00060E 00F000F8        bl _SmartIO_GroupObjects#Fsttz
+ 000612                 .dbline 225
+ 000612 0320            movs R0,#3
+ 000614 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000618                 .dbline 226
+ 000618 BBF80A00        ldrh R0,[R11,#+10]
+ 00061C 00F000F8        bl _SmartIO_AutoBalance#Fst
+ 000620                 .dbline 227
+ 000620 31E1            b L61
+ 000622         L91:
+ 000622                 .dbline 229
+ 000622 BBF80A00        ldrh R0,[R11,#+10]
+ 000626 BA49            ldr R1,LIT_doTest+116
+ 000628 00F000F8        bl _SmartIO_PageTitle#FstPc
+ 00062C                 .dbline 231
+ 00062C 0024            movs R4,#0
+ 00062E 2046            mov R0,R4
+ 000630 2146            mov R1,R4
+ 000632 B64A            ldr R2,LIT_doTest+112
+ 000634 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 000638                 .dbline 232
+ 000638 0020            movs R0,#0
+ 00063A 0421            movs R1,#4
+ 00063C 0122            movs R2,#1
+ 00063E B24B            ldr R3,LIT_doTest+108
+ 000640 00F000F8        bl _SmartIO_Make3PosButton#FttttPFvtE
+ 000644 ABF80E00        strh R0,[R11,#+14]
+ 000648                 .dbline 233
+ 000648 AE49            ldr R1,LIT_doTest+104
+ 00064A 00F000F8        bl _SmartIO_AddText#FstPc
+ 00064E                 .dbline 234
+ 00064E 0320            movs R0,#3
+ 000650 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000654                 .dbline 235
+ 000654 2046            mov R0,R4
+ 000656 2146            mov R1,R4
+ 000658 2822            movs R2,#40
+ 00065A 00F000F8        bl _SmartIO_MakeHGauge#Ftttt
+ 00065E ABF80C00        strh R0,[R11,#+12]
+ 000662                 .dbline 236
+ 000662 A749            ldr R1,LIT_doTest+100
+ 000664 00F000F8        bl _SmartIO_AddText#FstPc
+ 000668                 .dbline 237
+ 000668 0120            movs R0,#1
+ 00066A 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 00066E                 .dbline 238
+ 00066E 0120            movs R0,#1
+ 000670 0021            movs R1,#0
+ 000672 A24A            ldr R2,LIT_doTest+96
+ 000674 00F000F8        bl _SmartIO_MakeLabel#FtttPc
+ 000678                 .dbline 239
+ 000678 0020            movs R0,#0
+ 00067A 0121            movs R1,#1
+ 00067C 5022            movs R2,#80
+ 00067E 00F000F8        bl _SmartIO_MakeBatteryLevel#Ftttt
+ 000682 ABF80400        strh R0,[R11,#+4]
+ 000686                 .dbline 240
+ 000686 00F000F8        bl _SmartIO_ClearText#Fst
+ 00068A                 .dbline 241
+ 00068A 0420            movs R0,#4
+ 00068C 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000690                 .dbline 242
+ 000690 BBF80A00        ldrh R0,[R11,#+10]
+ 000694 00F000F8        bl _SmartIO_AutoBalance#Fst
+ 000698                 .dbline 243
+ 000698 F5E0            b L61
+ 00069A         L97:
+ 00069A                 .dbline 245
+ 00069A 9748            ldr R0,LIT_doTest+92
+ 00069C 00F000F8        bl _SmartIO_AppTitle#FsPc
+ 0006A0                 .dbline 246
+ 0006A0 0020            movs R0,#0
+ 0006A2 0521            movs R1,#5
+ 0006A4 934A            ldr R2,LIT_doTest+88
+ 0006A6 00F000F8        bl _SmartIO_MakeExpandableList#FtttPFvtE
+ 0006AA ABF80E00        strh R0,[R11,#+14]
+ 0006AE                 .dbline 247
+ 0006AE BBF80EC0        ldrh R12,[R11,#+14]
+ 0006B2 1FFA8CF4        uxth R4,R12
+ 0006B6 641C            adds R4,R4,#1
+ 0006B8 2046            mov R0,R4
+ 0006BA 8D49            ldr R1,LIT_doTest+84
+ 0006BC 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0006C0                 .dbline 248
+ 0006C0 BBF80EC0        ldrh R12,[R11,#+14]
+ 0006C4 1FFA8CF4        uxth R4,R12
+ 0006C8 641C            adds R4,R4,#1
+ 0006CA 2046            mov R0,R4
+ 0006CC 8749            ldr R1,LIT_doTest+80
+ 0006CE 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0006D2                 .dbline 249
+ 0006D2 BBF80EC0        ldrh R12,[R11,#+14]
+ 0006D6 1FFA8CF4        uxth R4,R12
+ 0006DA 641C            adds R4,R4,#1
+ 0006DC 2046            mov R0,R4
+ 0006DE 8249            ldr R1,LIT_doTest+76
+ 0006E0 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0006E4                 .dbline 250
+ 0006E4 BBF80EC0        ldrh R12,[R11,#+14]
+ 0006E8 1FFA8CF4        uxth R4,R12
+ 0006EC 641C            adds R4,R4,#1
+ 0006EE 2046            mov R0,R4
+ 0006F0 7C49            ldr R1,LIT_doTest+72
+ 0006F2 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 0006F6                 .dbline 251
+ 0006F6 BBF80EC0        ldrh R12,[R11,#+14]
+ 0006FA 1FFA8CF4        uxth R4,R12
+ 0006FE 641C            adds R4,R4,#1
+ 000700 2046            mov R0,R4
+ 000702 7749            ldr R1,LIT_doTest+68
+ 000704 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 000708                 .dbline 252
+ 000708 BBF80EC0        ldrh R12,[R11,#+14]
+ 00070C 1FFA8CF4        uxth R4,R12
+ 000710 641C            adds R4,R4,#1
+ 000712 2046            mov R0,R4
+ 000714 7149            ldr R1,LIT_doTest+64
+ 000716 00F000F8        bl _SmartIO_AddListItem#FttPc
+ 00071A                 .dbline 253
+ 00071A 0420            movs R0,#4
+ 00071C 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000720                 .dbline 254
+ 000720 0020            movs R0,#0
+ 000722 0121            movs R1,#1
+ 000724 1E22            movs R2,#30
+ 000726 00F000F8        bl _SmartIO_MakeHGauge#Ftttt
+ 00072A ABF80400        strh R0,[R11,#+4]
+ 00072E                 .dbline 255
+ 00072E 6A49            ldr R1,LIT_doTest+60
+ 000730 00F000F8        bl _SmartIO_AddText#FstPc
+ 000734                 .dbline 256
+ 000734 0120            movs R0,#1
+ 000736 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 00073A                 .dbline 257
+ 00073A 0024            movs R4,#0
+ 00073C 2046            mov R0,R4
+ 00073E 2146            mov R1,R4
+ 000740 4622            movs R2,#70
+ 000742 644B            ldr R3,LIT_doTest+56
+ 000744 00F000F8        bl _SmartIO_MakeSlider#FttttPFvtE
+ 000748 ABF80C00        strh R0,[R11,#+12]
+ 00074C                 .dbline 258
+ 00074C 6049            ldr R1,LIT_doTest+52
+ 00074E 00F000F8        bl _SmartIO_AddText#FstPc
+ 000752                 .dbline 259
+ 000752 BBF80EC0        ldrh R12,[R11,#+14]
+ 000756 1FFA8CF4        uxth R4,R12
+ 00075A 641C            adds R4,R4,#1
+ 00075C 2046            mov R0,R4
+ 00075E BBF804C0        ldrh R12,[R11,#+4]
+ 000762 1FFA8CF4        uxth R4,R12
+ 000766 641C            adds R4,R4,#1
+ 000768 2146            mov R1,R4
+ 00076A BBF80CC0        ldrh R12,[R11,#+12]
+ 00076E 1FFA8CF4        uxth R4,R12
+ 000772 621C            adds R2,R4,#1
+ 000774 0023            movs R3,#0
+ 000776 00F000F8        bl _SmartIO_EnableIf#Fsttz
+ 00077A                 .dbline 260
+ 00077A 0120            movs R0,#1
+ 00077C 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000780                 .dbline 261
+ 000780 0220            movs R0,#2
+ 000782 5249            ldr R1,LIT_doTest+48
+ 000784 504A            ldr R2,LIT_doTest+44
+ 000786 00F000F8        bl _SmartIO_MakeOK#FttPcPFvtE
+ 00078A                 .dbline 262
+ 00078A 0120            movs R0,#1
+ 00078C 00F000F8        bl _SmartIO_MakeSpacerSlice#Fti
+ 000790                 .dbline 263
+ 000790 BBF80A00        ldrh R0,[R11,#+10]
+ 000794 00F000F8        bl _SmartIO_AutoBalance#Fst
+ 000798                 .dbline 264
+ 000798 75E0            b L61
+ 00079A         L108:
+ 00079A                 .dbline 266
+ 00079A 0024            movs R4,#0
+ 00079C 2046            mov R0,R4
+ 00079E 0121            movs R1,#1
+ 0007A0 2246            mov R2,R4
+ 0007A2 484B            ldr R3,LIT_doTest+40
+ 0007A4 00F000F8        bl _SmartIO_MakeTextEntry#FttttPFvPcE
+ 0007A8 ABF80E00        strh R0,[R11,#+14]
+ 0007AC                 .dbline 267
+ 0007AC 0020            movs R0,#0
+ 0007AE 0121            movs R1,#1
+ 0007B0 0322            movs R2,#3
+ 0007B2 434B            ldr R3,LIT_doTest+36
+ 0007B4 00F000F8        bl _SmartIO_MakeTextEntry#FttttPFvPcE
+ 0007B8 ABF80C00        strh R0,[R11,#+12]
+ 0007BC                 .dbline 268
+ 0007BC 63E0            b L61
+ 0007BE         L109:
+ 0007BE                 .dbline 270
+ 0007BE 3F48            ldr R0,LIT_doTest+32
+ 0007C0 00F000F8        bl _printf#FiPKcz
+ 0007C4                 .dbline 271
+ 0007C4 00F000F8        bl _SmartIO_GetUniqueID#FPjv
+ 0007C8 0446            mov R4,R0
+ 0007CA A046            mov R8,R4
+ 0007CC                 .dbline 272
+ 0007CC 3A48            ldr R0,LIT_doTest+28
+ 0007CE D8F80010        ldr R1,[R8,#0]
+ 0007D2 D8F80420        ldr R2,[R8,#+4]
+ 0007D6 00F000F8        bl _printf#FiPKcz
+ 0007DA                 .dbline 275
+ 0007DA 00F000F8        bl _SmartIO_GenRandomNumber#Fjv
+ 0007DE 0446            mov R4,R0
+ 0007E0 4FF4F761        mov R1,#1976
+ 0007E4 00F000F8        bl mod32u
+ 0007E8 8246            mov R10,R0
+ 0007EA                 .dbline 277
+ 0007EA 5FF00008        movs R8,#0
+ 0007EE 08E0            b L115
+ 0007F0         L112:
+ 0007F0                 .dbline 278
+ 0007F0 00F000F8        bl _SmartIO_GenRandomNumber#Fjv
+ 0007F4 4FEA8805        lsl R5,R8,#2
+ 0007F8 0BF11006        add R6,R11,#0x10
+ 0007FC A851            str R0,[R5,R6]
+ 0007FE         L113:
+ 0007FE                 .dbline 277
+ 0007FE 08F10108        add R8,R8,#1
+ 000802         L115:
+ 000802                 .dbline 277
+ 000802 B8F10A0F        cmp R8,#10
+ 000806 F3DB            blt L112
+ 000808                 .dbline 280
+ 000808 2A48            ldr R0,LIT_doTest+24
+ 00080A 00F000F8        bl _printf#FiPKcz
+ 00080E                 .dbline 281
+ 00080E 5046            mov R0,R10
+ 000810 2821            movs R1,#40
+ 000812 0BF11002        add R2,R11,#0x10
+ 000816 00F000F8        bl _SmartIO_WriteEEPROM#FsttPh
+ 00081A                 .dbline 282
+ 00081A 2548            ldr R0,LIT_doTest+20
+ 00081C 00F000F8        bl _printf#FiPKcz
+ 000820                 .dbline 283
+ 000820 5046            mov R0,R10
+ 000822 2821            movs R1,#40
+ 000824 00F000F8        bl _SmartIO_ReadEEPROM#FPhtt
+ 000828 8146            mov R9,R0
+ 00082A                 .dbline 285
+ 00082A 2048            ldr R0,LIT_doTest+16
+ 00082C 2821            movs R1,#40
+ 00082E 1FFA8AF2        uxth R2,R10
+ 000832 00F000F8        bl _printf#FiPKcz
+ 000836                 .dbline 286
+ 000836 5FF00008        movs R8,#0
+ 00083A 0CE0            b L122
+ 00083C         L119:
+ 00083C                 .dbline 287
+ 00083C 1A48            ldr R0,LIT_doTest+12
+ 00083E 4146            mov R1,R8
+ 000840 4FEA8804        lsl R4,R8,#2
+ 000844 0BF11005        add R5,R11,#0x10
+ 000848 6259            ldr R2,[R4,R5]
+ 00084A 54F80930        ldr R3,[R4,R9]
+ 00084E 00F000F8        bl _printf#FiPKcz
+ 000852         L120:
+ 000852                 .dbline 286
+ 000852 08F10108        add R8,R8,#1
+ 000856         L122:
+ 000856                 .dbline 286
+ 000856 B8F10A0F        cmp R8,#10
+ 00085A EFDB            blt L119
+ 00085C                 .dbline 289
+ 00085C 1148            ldr R0,LIT_doTest+8
+ 00085E 00F000F8        bl _printf#FiPKcz
+ 000862                 .dbline 290
+ 000862 5FF00008        movs R8,#0
+ 000866 08E0            b L128
+ 000868         L125:
+ 000868                 .dbline 291
+ 000868 00F000F8        bl _SmartIO_GenRandomNumber#Fjv
+ 00086C 0446            mov R4,R0
+ 00086E 0C48            ldr R0,LIT_doTest+4
+ 000870 2146            mov R1,R4
+ 000872 00F000F8        bl _printf#FiPKcz
+ 000876         L126:
+ 000876                 .dbline 290
+ 000876 08F10108        add R8,R8,#1
+ 00087A         L128:
+ 00087A                 .dbline 290
+ 00087A B8F1050F        cmp R8,#5
+ 00087E F3DB            blt L125
+ 000880                 .dbline 292
+ 000880 0648            ldr R0,LIT_doTest+0
+ 000882 00F000F8        bl _printf#FiPKcz
+ 000886         L60:
+ 000886         L61:
+ 000886                 .dbline 296
+ 000886 DBF838C0        ldr R12,[R11,#+56]
+ 00088A BCF1080F        cmp R12,#8
+ 00088E 01D0            beq L132
+ 000890                 .dbline 297
+ 000890 00F000F8        bl _SmartIO_SaveCache#Fsv
+ 000894         L132:
+ 000894                 .dbblkend 298
+ 000894         L57:
+ 000894 13B0            add R13,R13,#76
+ 000896 BDE8F08F        pop {R4,R5,R6,R7,R8,R9,R10,R11,PC}
+ 00089A                 .dbfuncend
+                        .align4
+ 00089C                 .LITERAL
+ 00089C         LIT_doTest:
+ 00089C 0F010000        .long _130#A2_c
+ 0008A0 11010000        .long _129#A4_c
+ 0008A4 15010000        .long _124#A20_c
+ 0008A8 29010000        .long _123#A14_c
+ 0008AC 37010000        .long _118#A41_c
+ 0008B0 60010000        .long _117#A18_c
+ 0008B4 72010000        .long _116#A18_c
+ 0008B8 84010000        .long _111#A8_c
+ 0008BC 8C010000        .long _110#A13_c
+ 0008C0 C1000000        .paddr _text_entry2#FvPc
+ 0008C4 61000000        .paddr _text_entry1#FvPc
+ 0008C8 31000000        .paddr _OK1#Fvt
+ 0008CC 99010000        .long _107#A6_c
+ 0008D0 9F010000        .long _106#A10_c
+ 0008D4 49000000        .paddr _Slider1#Fvt
+ 0008D8 A9010000        .long _105#A11_c
+ 0008DC B4010000        .long _104#A8_c
+ 0008E0 BC010000        .long _103#A10_c
+ 0008E4 C6010000        .long _102#A11_c
+ 0008E8 D1010000        .long _101#A9_c
+ 0008EC DA010000        .long _100#A8_c
+ 0008F0 E2010000        .long _99#A17_c
+ 0008F4 C1010000        .paddr _expandable_list1#Fvt
+ 0008F8 F3010000        .long _98#A16_c
+ 0008FC 03020000        .long _96#A16_c
+ 000900 13020000        .long _95#A20_c
+ 000904 27020000        .long _94#A17_c
+ 000908 A9010000        .paddr __3pos_buttons1#Fvt
+ 00090C 38020000        .long _93#A6_c
+ 000910 3E020000        .long _92#A16_c
+ 000914 BA030000        .long _77#A7_c
+ 000918 8D010000        .paddr _time_selector4#Fvtt
+ 00091C A6030000        .long _80#A5_c
+ 000920 C6030000        .long _75#A6_c
+ 000924 71010000        .paddr _time_selector3#Fvtt
+ 000928 AB030000        .long _79#A6_c
+ 00092C B1030000        .long _78#A9_c
+ 000930 4E020000        .long _90#A19_c
+ 000934 00000000        .long 0x0
+ 000938 55010000        .paddr _time_selector2#Fvtt
+ 00093C C1030000        .long _76#A5_c
+ 000940 39010000        .paddr _time_selector1#Fvtt
+ 000944 CC030000        .long _74#A6_c
+ 000948 D2030000        .long _73#A10_c
+ 00094C DC030000        .long _72#A21_c
+ 000950 F1030000        .long _71#A6_c
+ 000954 01000000        .paddr _Button1#Fvt
+ 000958 F7030000        .long _70#A16_c
+ 00095C 61020000        .long _88#A23_c
+ 000960 93030000        .long _85#A5_c
+ 000964 98030000        .long _84#A6_c
+ 000968 9E030000        .long _83#A4_c
+ 00096C A2030000        .long _82#A4_c
+ 000970 A9000000        .paddr _radio_buttons1#Fvt
+ 000974 78020000        .long _87#A278_c
+ 000978 8E030000        .long _86#A5_c
+ 00097C 91000000        .paddr _checkbox1#Fvt
+ 000980 07040000        .long _68#A18_c
+ 000984 19040000        .long _67#A121_c
+ 000988 92040000        .long _65#A25_c
+ 00098C AB040000        .long _64#A22_c
+ 000990 79000000        .paddr _menu_entry#Fvt
+ 000994 C1040000        .long _63#A17_c
+ 000998 00000000        .long _131#A9_Pv
+ 00099C         	.ENDLITERAL
+ 00099C                 .dbsym r i 8 I
+ 00099C                 .dbsym r i 8 I
+ 00099C                 .dbsym r i 8 I
+ 00099C                 .dbsym r val2 9 pi
+ 00099C                 .dbsym r addr 10 s
+ 00099C                 .dbsym l val1 16 A[40:10]i
+ 00099C                 .dbsym r p 8 pi
+ 00099C                 .dbsym l u10 55 s
+ 00099C                 .dbsym l p3 55 s
+ 00099C                 .dbsym l p2 55 s
+ 00099C                 .dbsym l p1 55 s
+ 00099C                 .dbsym r u6 7 s
+ 00099C                 .dbsym r u7 8 s
+ 00099C                 .dbsym l u3 2 s
+ 00099C                 .dbsym l u2 4 s
+ 00099C                 .dbsym r u9 10 s
+ 00099C                 .dbsym r u8 9 s
+ 00099C                 .dbsym l u5 6 s
+ 00099C                 .dbsym l u4 8 s
+ 00099C                 .dbsym l p0 10 s
+ 00099C                 .dbsym l u1 12 s
+ 00099C                 .dbsym l u0 14 s
+ 00099C                 .dbsym l i 56 I p0
+ 00099C                 .dbstacksize 72
+ 00099C                 .dbfunc e Connect_CB _Connect_CB#Fvv fV 300 2489468
+ 00099C         _Connect_CB#Fvv::
+ 00099C                 .dbprevlr 12
+ 00099C 2DE93048        push {R4,R5,R11,LR}
+ 0009A0 EB46            mov R11,R13
+ 0009A2                 .dbblock 301
+ 0009A2                 .dbline 302
+ 0009A2 0548            ldr R0,LIT_Connect_CB+4
+ 0009A4 00F000F8        bl _printf#FiPKcz
+ 0009A8                 .dbline 303
+ 0009A8 0124            movs R4,#1
+ 0009AA 024D            ldr R5,LIT_Connect_CB+0
+ 0009AC 2C60            str R4,[R5,#0]
+ 0009AE                 .dbblkend 304
+ 0009AE         L134:
+ 0009AE BDE83088        pop {R4,R5,R11,PC}
+ 0009B2                 .dbfuncend
+                        .align4
+ 0009B4                 .LITERAL
+ 0009B4         LIT_Connect_CB:
+ 0009B4 00000000        .long _connected#i
+ 0009B8 00010000        .long _135#A15_c
+ 0009BC         	.ENDLITERAL
+ 0009BC                 .dbstacksize 0
+ 0009BC                 .dbfunc e Disconnect_CB _Disconnect_CB#Fvv fV 306 2489468
+ 0009BC         _Disconnect_CB#Fvv::
+ 0009BC                 .dbprevlr 12
+ 0009BC 2DE93048        push {R4,R5,R11,LR}
+ 0009C0 EB46            mov R11,R13
+ 0009C2                 .dbblock 307
+ 0009C2                 .dbline 308
+ 0009C2 0748            ldr R0,LIT_Disconnect_CB+8
+ 0009C4 00F000F8        bl _printf#FiPKcz
+ 0009C8                 .dbline 309
+ 0009C8 0124            movs R4,#1
+ 0009CA 044D            ldr R5,LIT_Disconnect_CB+4
+ 0009CC 2C70            strb R4,[R5,#0]
+ 0009CE                 .dbline 310
+ 0009CE 0024            movs R4,#0
+ 0009D0 014D            ldr R5,LIT_Disconnect_CB+0
+ 0009D2 2C60            str R4,[R5,#0]
+ 0009D4                 .dbblkend 311
+ 0009D4         L136:
+ 0009D4 BDE83088        pop {R4,R5,R11,PC}
+ 0009D8                 .dbfuncend
+                        .align4
+ 0009D8                 .LITERAL
+ 0009D8         LIT_Disconnect_CB:
+ 0009D8 00000000        .long _connected#i
+ 0009DC 00000000        .long _SPI_State#h
+ 0009E0 EE000000        .long _137#A18_c
+ 0009E4         	.ENDLITERAL
+ 0009E4                 .dbstacksize 0
+ 0009E4                 .dbfunc e main _main#Fiv fI 313 2489468
+ 0009E4         ;              h -> R7
+ 0009E4         ;              n -> R7
+ 0009E4         ;        databuf -> R11,0
+ 0009E4         ; something_happened -> R6
+ 0009E4         _main#Fiv::
+ 0009E4                 .dbprevlr 1024
+ 0009E4 00B5            push {LR}
+ 0009E6 ADF5806B        sub R11,R13,#1024
+ 0009EA DD46            mov R13,R11
+ 0009EC                 .dbblock 314
+ 0009EC                 .dbline 315
+ 0009EC 00F050F9        bl _Setup#Fvv
+ 0009F0                 .dbline 316
+ 0009F0 3448            ldr R0,LIT_main+32
+ 0009F2 3349            ldr R1,LIT_main+28
+ 0009F4 00F000F8        bl _SmartIO_Init#FvPFvvEPFvvE
+ 0009F8                 .dbline 318
+ 0009F8 00F000F8        bl _SmartIO_GetVersion#FPcv
+ 0009FC 0446            mov R4,R0
+ 0009FE 2F48            ldr R0,LIT_main+24
+ 000A00 2146            mov R1,R4
+ 000A02 00F000F8        bl _printf#FiPKcz
+ 000A06                 .dbline 319
+ 000A06 0124            movs R4,#1
+ 000A08 264D            ldr R5,LIT_main+0
+ 000A0A 2C70            strb R4,[R5,#0]
+ 000A0C                 .dbblock 320
+ 000A0C                 .dbline 320
+ 000A0C 0126            movs R6,#1
+ 000A0E 44E0            b L141
+ 000A10         L140:
+ 000A10                 .dbline 326
+ 000A10 36B1            cbz R6,L143
+ 000A12                 .dbline 328
+ 000A12 3E20            movs R0,#62
+ 000A14 00F058F8        bl _putchar#Fih
+ 000A18                 .dbline 328
+ 000A18 2020            movs R0,#32
+ 000A1A 00F055F8        bl _putchar#Fih
+ 000A1E                 .dbline 329
+ 000A1E 0026            movs R6,#0
+ 000A20         L143:
+ 000A20                 .dbline 331
+ 000A20 204C            ldr R4,LIT_main+0
+ 000A22 2478            ldrb R4,[R4,#0]
+ 000A24 012C            cmp R4,#1
+ 000A26 32D1            bne L145
+ 000A28 2348            ldr R0,LIT_main+20
+ 000A2A 00F000F8        bl __Xm_11_JSAPI_USART5_kbhit#FiPus11_JSAPI_USART
+ 000A2E 0028            cmp R0,#0
+ 000A30 2DD0            beq L145
+ 000A32                 .dbline 333
+ 000A32 0126            movs R6,#1
+ 000A34                 .dbline 334
+ 000A34 5846            mov R0,R11
+ 000A36 4FF48061        mov R1,#1024
+ 000A3A 00F065F8        bl _GetCommandLine#FiPci
+ 000A3E 0746            mov R7,R0
+ 000A40                 .dbline 335
+ 000A40 002F            cmp R7,#0
+ 000A42                 .dbline 336
+ 000A42 2AD0            beq L141
+ 000A44         L147:
+ 000A44                 .dbline 338
+ 000A44 9BF80040        ldrb R4,[R11,#0]
+ 000A48 FF2C            cmp R4,#255
+ 000A4A 02D1            bne L149
+ 000A4C                 .dbline 339
+ 000A4C 00F000F8        bl _SmartIO_HardReset#Fvv
+ 000A50 23E0            b L146
+ 000A52         L149:
+ 000A52                 .dbline 340
+ 000A52 184C            ldr R4,LIT_main+16
+ 000A54 2468            ldr R4,[R4,#0]
+ 000A56 1CB9            cbnz R4,L151
+ 000A58                 .dbline 341
+ 000A58 1548            ldr R0,LIT_main+12
+ 000A5A 00F000F8        bl _printf#FiPKcz
+ 000A5E 1CE0            b L146
+ 000A60         L151:
+ 000A60                 .dbline 342
+ 000A60 9BF80040        ldrb R4,[R11,#0]
+ 000A64 802C            cmp R4,#128
+ 000A66 04D1            bne L154
+ 000A68                 .dbline 343
+ 000A68 9BF80200        ldrb R0,[R11,#+2]
+ 000A6C FFF7B4FB        bl _doTest#Fvi
+ 000A70 13E0            b L146
+ 000A72         L154:
+ 000A72                 .dbline 346
+ 000A72 0E48            ldr R0,LIT_main+8
+ 000A74 3946            mov R1,R7
+ 000A76 00F000F8        bl _printf#FiPKcz
+ 000A7A                 .dbline 347
+ 000A7A 5846            mov R0,R11
+ 000A7C 3946            mov R1,R7
+ 000A7E 00F000F8        bl _SmartIO__SendBytes#FjPhi
+ 000A82 0746            mov R7,R0
+ 000A84                 .dbline 348
+ 000A84 0848            ldr R0,LIT_main+4
+ 000A86 B9B2            uxth R1,R7
+ 000A88 00F000F8        bl _printf#FiPKcz
+ 000A8C                 .dbline 350
+ 000A8C 05E0            b L146
+ 000A8E         L145:
+ 000A8E                 .dbline 351
+ 000A8E 054C            ldr R4,LIT_main+0
+ 000A90 2478            ldrb R4,[R4,#0]
+ 000A92 042C            cmp R4,#4
+ 000A94 01D1            bne L159
+ 000A96                 .dbline 352
+ 000A96 00F000F8        bl _SmartIO_ProcessUserInput#Fvv
+ 000A9A         L159:
+ 000A9A         L146:
+ 000A9A         L141:
+ 000A9A                 .dbline 322
+ 000A9A B9E7            b L140
+ 000A9C         X1:
+ 000A9C                 .dbblkend 355
+ 000A9C                 .dbblkend 355
+ 000A9C         L138:
+ 000A9C 0DF5806D        add R13,R13,#1024
+ 000AA0 00BD            pop {PC}
+ 000AA2                 .dbfuncend
+                        .align4
+ 000AA4                 .LITERAL
+ 000AA4         LIT_main:
+ 000AA4 00000000        .long _SPI_State#h
+ 000AA8 71000000        .long _158#A11_c
+ 000AAC 7C000000        .long _157#A33_c
+ 000AB0 9D000000        .long _153#A49_c
+ 000AB4 00000000        .long _connected#i
+ 000AB8 00000000        .long _usart2#us11_JSAPI_USART
+ 000ABC CE000000        .long _139#A32_c
+ 000AC0 BD090000        .paddr _Disconnect_CB#Fvv
+ 000AC4 9D090000        .paddr _Connect_CB#Fvv
+ 000AC8         	.ENDLITERAL
+ 000AC8                 .dbsym r h 7 s
+ 000AC8                 .dbsym r n 7 I
+ 000AC8                 .dbsym l databuf 0 A[1024:1024]c
+ 000AC8                 .dbsym r something_happened 6 I
+ 000AC8                 .dbstacksize 1024
+ 000AC8                 .dbfunc e putchar _putchar#Fih fI 357 2489468
+ 000AC8         ;             ch -> R5
+ 000AC8         _putchar#Fih::
+ 000AC8                 .dbprevlr 12
+ 000AC8 2DE93048        push {R4,R5,R11,LR}
+ 000ACC EB46            mov R11,R13
+ 000ACE 0546            mov R5,R0
+ 000AD0                 .dbblock 358
+ 000AD0                 .dbline 359
+ 000AD0 ECB2            uxtb R4,R5
+ 000AD2 0A2C            cmp R4,#10
+ 000AD4 03D1            bne L162
+ 000AD6                 .dbline 360
+ 000AD6 0548            ldr R0,LIT_putchar+0
+ 000AD8 0D21            movs R1,#13
+ 000ADA 00F000F8        bl __Xm_11_JSAPI_USART7_putchar#FiPus11_JSAPI_USARTi
+ 000ADE         L162:
+ 000ADE                 .dbline 361
+ 000ADE 0348            ldr R0,LIT_putchar+0
+ 000AE0 E9B2            uxtb R1,R5
+ 000AE2 00F000F8        bl __Xm_11_JSAPI_USART7_putchar#FiPus11_JSAPI_USARTi
+ 000AE6                 .dbline 362
+ 000AE6 E8B2            uxtb R0,R5
+ 000AE8                 .dbblkend 363
+ 000AE8         L161:
+ 000AE8 BDE83088        pop {R4,R5,R11,PC}
+ 000AEC                 .dbfuncend
+                        .align4
+ 000AEC                 .LITERAL
+ 000AEC         LIT_putchar:
+ 000AEC 00000000        .long _usart2#us11_JSAPI_USART
+ 000AF0         	.ENDLITERAL
+ 000AF0                 .dbsym r ch 5 c p0
+ 000AF0                 .dbstacksize 0
+ 000AF0                 .dbfunc e getchar _getchar#Fiv fI 365 2489468
+ 000AF0         _getchar#Fiv::
+ 000AF0                 .dbprevlr 8
+ 000AF0 2DE91048        push {R4,R11,LR}
+ 000AF4 EB46            mov R11,R13
+ 000AF6                 .dbblock 366
+ 000AF6                 .dbline 367
+ 000AF6 0348            ldr R0,LIT_getchar+0
+ 000AF8 00F000F8        bl __Xm_11_JSAPI_USART7_getchar#FiPus11_JSAPI_USART
+ 000AFC 0446            mov R4,R0
+ 000AFE                 .dbblkend 368
+ 000AFE         L164:
+ 000AFE BDE81088        pop {R4,R11,PC}
+ 000B02                 .dbfuncend
+                        .align4
+ 000B04                 .LITERAL
+ 000B04         LIT_getchar:
+ 000B04 00000000        .long _usart2#us11_JSAPI_USART
+ 000B08         	.ENDLITERAL
+ 000B08                 .dbstacksize 0
+ 000B08                 .dbfunc e GetCommandLine _GetCommandLine#FiPci fI 370 2489468
+ 000B08         ;              n -> R7
+ 000B08         ;              s -> R11,4
+ 000B08         ;              c -> R10
+ 000B08         ;        cmdline -> R11,8
+ 000B08         ;  cmdline_index -> R8
+ 000B08         ;  databuf_index -> R11,0
+ 000B08         ;            len -> R11,1036
+ 000B08         ;        databuf -> R9
+ 000B08         _GetCommandLine#FiPci::
+ 000B08                 .dbprevlr 1072
+ 000B08 2DE9F34F        push {r0,r1,R4,R5,R6,R7,R8,R9,R10,R11,LR}
+ 000B0C ADF5816B        sub R11,R13,#1032
+ 000B10 DD46            mov R13,R11
+ 000B12 8146            mov R9,R0
+ 000B14                 .dbblock 371
+ 000B14                 .dbline 373
+ 000B14 5FF0000C        movs R12,#0
+ 000B18 CBF800C0        str R12,[R11,#0]
+ 000B1C                 .dbline 374
+ 000B1C 5FF00008        movs R8,#0
+ 000B20 ABE0            b L167
+ 000B22         L166:
+ 000B22                 .dbline 378
+ 000B22 FFF7E5FF        bl _getchar#Fiv
+ 000B26 8246            mov R10,R0
+ 000B28                 .dbline 379
+ 000B28 FFF7CEFF        bl _putchar#Fih
+ 000B2C                 .dbline 381
+ 000B2C BAF1080F        cmp R10,#8
+ 000B30 02D0            beq L171
+ 000B32 BAF17F0F        cmp R10,#127
+ 000B36 06D1            bne L169
+ 000B38         L171:
+ 000B38                 .dbline 383
+ 000B38 B8F1000F        cmp R8,#0
+ 000B3C 00F09D80        beq L170
+ 000B40                 .dbline 384
+ 000B40 A8F10108        sub R8,R8,#1
+ 000B44                 .dbline 385
+ 000B44 99E0            b L170
+ 000B46         L169:
+ 000B46                 .dbline 386
+ 000B46 BAF10D0F        cmp R10,#13
+ 000B4A 03D0            beq L176
+ 000B4C BAF10A0F        cmp R10,#10
+ 000B50 40F08C80        bne L174
+ 000B54         L176:
+ 000B54                 .dbline 388
+ 000B54 0A20            movs R0,#10
+ 000B56 FFF7B7FF        bl _putchar#Fih
+ 000B5A                 .dbline 389
+ 000B5A 0BF10804        add R4,R11,#0x8
+ 000B5E 0025            movs R5,#0
+ 000B60 08F80450        strb R5,[R8,R4]
+ 000B64                 .dbline 390
+ 000B64 0BF10804        add R4,R11,#0x8
+ 000B68 CBF80440        str R4,[R11,#+4]
+ 000B6C 71E0            b L180
+ 000B6E         L181:
+ 000B6E                 .dbline 393
+ 000B6E DBF80440        ldr R4,[R11,#+4]
+ 000B72 641C            adds R4,R4,#1
+ 000B74 CBF80440        str R4,[R11,#+4]
+ 000B78         L182:
+ 000B78                 .dbline 392
+ 000B78 DBF80440        ldr R4,[R11,#+4]
+ 000B7C 2078            ldrb R0,[R4,#0]
+ 000B7E 00F000F8        bl _isspace#Fii
+ 000B82 0028            cmp R0,#0
+ 000B84 F3D1            bne L181
+ 000B86                 .dbline 394
+ 000B86 DBF80440        ldr R4,[R11,#+4]
+ 000B8A 2478            ldrb R4,[R4,#0]
+ 000B8C 002C            cmp R4,#0
+ 000B8E                 .dbline 395
+ 000B8E 6AD0            beq L179
+ 000B90         L184:
+ 000B90                 .dbline 397
+ 000B90 DBF80440        ldr R4,[R11,#+4]
+ 000B94 2078            ldrb R0,[R4,#0]
+ 000B96 00F000F8        bl _isdigit#Fii
+ 000B9A D8B1            cbz R0,L186
+ 000B9C                 .dbline 399
+ 000B9C DBF80400        ldr R0,[R11,#+4]
+ 000BA0 0BF10401        add R1,R11,#0x4
+ 000BA4 0022            movs R2,#0
+ 000BA6 00F000F8        bl _strtol#FlPKcPPci
+ 000BAA 0746            mov R7,R0
+ 000BAC                 .dbline 400
+ 000BAC DBF80040        ldr R4,[R11,#0]
+ 000BB0 04F1010C        add R12,R4,#1
+ 000BB4 CBF800C0        str R12,[R11,#0]
+ 000BB8 07F0FF05        and R5,R7,#255
+ 000BBC 04F80950        strb R5,[R4,R9]
+ 000BC0                 .dbline 401
+ 000BC0 DBF80040        ldr R4,[R11,#0]
+ 000BC4 04F1010C        add R12,R4,#1
+ 000BC8 CBF800C0        str R12,[R11,#0]
+ 000BCC 3D12            asrs R5,R7,#8
+ 000BCE 04F80950        strb R5,[R4,R9]
+ 000BD2                 .dbline 402
+ 000BD2 3EE0            b L187
+ 000BD4         L186:
+ 000BD4                 .dbline 405
+ 000BD4 DBF80440        ldr R4,[R11,#+4]
+ 000BD8 2478            ldrb R4,[R4,#0]
+ 000BDA 222C            cmp R4,#34
+ 000BDC 34D1            bne L188
+ 000BDE                 .dbline 407
+ 000BDE DBF80440        ldr R4,[R11,#+4]
+ 000BE2 641C            adds R4,R4,#1
+ 000BE4 CBF80440        str R4,[R11,#+4]
+ 000BE8 0DE0            b L191
+ 000BEA         L190:
+ 000BEA                 .dbline 409
+ 000BEA DBF80040        ldr R4,[R11,#0]
+ 000BEE 04F1010C        add R12,R4,#1
+ 000BF2 CBF800C0        str R12,[R11,#0]
+ 000BF6 DBF80450        ldr R5,[R11,#+4]
+ 000BFA 6E1C            adds R6,R5,#1
+ 000BFC CBF80460        str R6,[R11,#+4]
+ 000C00 2D78            ldrb R5,[R5,#0]
+ 000C02 04F80950        strb R5,[R4,R9]
+ 000C06         L191:
+ 000C06                 .dbline 408
+ 000C06 DBF80440        ldr R4,[R11,#+4]
+ 000C0A 2478            ldrb R4,[R4,#0]
+ 000C0C 0CB1            cbz R4,L193
+ 000C0E 222C            cmp R4,#34
+ 000C10 EBD1            bne L190
+ 000C12         L193:
+ 000C12                 .dbline 411
+ 000C12 DBF80440        ldr R4,[R11,#+4]
+ 000C16 2478            ldrb R4,[R4,#0]
+ 000C18 222C            cmp R4,#34
+ 000C1A 07D0            beq L194
+ 000C1C                 .dbline 413
+ 000C1C 1B48            ldr R0,LIT_GetCommandLine+0
+ 000C1E 00F000F8        bl _printf#FiPKcz
+ 000C22                 .dbline 414
+ 000C22 5FF0000C        movs R12,#0
+ 000C26 CBF800C0        str R12,[R11,#0]
+ 000C2A                 .dbline 415
+ 000C2A 1CE0            b L179
+ 000C2C         L194:
+ 000C2C                 .dbline 418
+ 000C2C DBF800C0        ldr R12,[R11,#0]
+ 000C30 1CF0010F        tst R12,#1
+ 000C34 08D0            beq L197
+ 000C36                 .dbline 419
+ 000C36 DBF80040        ldr R4,[R11,#0]
+ 000C3A 04F1010C        add R12,R4,#1
+ 000C3E CBF800C0        str R12,[R11,#0]
+ 000C42 0025            movs R5,#0
+ 000C44 04F80950        strb R5,[R4,R9]
+ 000C48         L197:
+ 000C48         L188:
+ 000C48                 .dbline 421
+ 000C48 DBF80440        ldr R4,[R11,#+4]
+ 000C4C 641C            adds R4,R4,#1
+ 000C4E CBF80440        str R4,[R11,#+4]
+ 000C52         L187:
+ 000C52         L178:
+ 000C52         L180:
+ 000C52                 .dbline 390
+ 000C52 DBF80440        ldr R4,[R11,#+4]
+ 000C56 2478            ldrb R4,[R4,#0]
+ 000C58 2CB1            cbz R4,L199
+ 000C5A DBF800C0        ldr R12,[R11,#0]
+ 000C5E DBF80C34        ldr R3,[R11,#+1036]
+ 000C62 9C45            cmp R12,R3
+ 000C64 88DB            blt L182
+ 000C66         L199:
+ 000C66         L179:
+ 000C66                 .dbline 424
+ 000C66 DBF80000        ldr R0,[R11,#0]
+ 000C6A 0BE0            b L165
+ 000C6C         L174:
+ 000C6C                 .dbline 427
+ 000C6C 4446            mov R4,R8
+ 000C6E 04F10108        add R8,R4,#1
+ 000C72 0BF10805        add R5,R11,#0x8
+ 000C76 5646            mov R6,R10
+ 000C78 6655            strb R6,[R4,R5]
+ 000C7A         L170:
+ 000C7A         L167:
+ 000C7A                 .dbline 376
+ 000C7A B8F5806F        cmp R8,#1024
+ 000C7E FFF650AF        blt L166
+ 000C82                 .dbline 429
+ 000C82 0020            movs R0,#0
+ 000C84                 .dbblkend 430
+ 000C84         L165:
+ 000C84 0DF5826D        add R13,R13,#1040
+ 000C88 BDE8F08F        pop {R4,R5,R6,R7,R8,R9,R10,R11,PC}
+ 000C8C                 .dbfuncend
+                        .align4
+ 000C8C                 .LITERAL
+ 000C8C         LIT_GetCommandLine:
+ 000C8C 61000000        .long _196#A16_c
+ 000C90         	.ENDLITERAL
+ 000C90                 .dbsym r n 7 I
+ 000C90                 .dbsym l s 4 pc
+ 000C90                 .dbsym r c 10 I
+ 000C90                 .dbsym l cmdline 8 A[1024:1024]c
+ 000C90                 .dbsym r cmdline_index 8 I
+ 000C90                 .dbsym l databuf_index 0 I
+ 000C90                 .dbsym l len 1036 I p1
+ 000C90                 .dbsym r databuf 9 pc p0
+ 000C90                 .dbstacksize 1032
+ 000C90                 .dbfunc s Setup _Setup#Fvv fV 432 2489468
+ 000C90         _Setup#Fvv:
+ 000C90                 .dbprevlr 12
+ 000C90 2DE93048        push {R4,R5,R11,LR}
+ 000C94 EB46            mov R11,R13
+ 000C96 83B0            sub R13,R13,#12
+ 000C98                 .dbblock 433
+ 000C98                 .dbline 434
+ 000C98 1948            ldr R0,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+8
+ 000C9A 1021            movs R1,#16
+ 000C9C 0022            movs R2,#0
+ 000C9E 0023            movs R3,#0
+ 000CA0 5424            movs R4,#84
+ 000CA2 0094            str R4,[R13,#0]
+ 000CA4 0524            movs R4,#5
+ 000CA6 0194            str R4,[R13,#+4]
+ 000CA8 00F000F8        bl __Xm_11_JSAPI_CLOCK14_SetSystemClock#FiPus11_JSAPI_CLOCKjjijj
+ 000CAC                 .dbline 435
+ 000CAC 1748            ldr R0,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+20
+ 000CAE 0221            movs R1,#2
+ 000CB0 00F000F8        bl __Xm_17_JSAPI_CORTEX_CORE13_SysTick_Timer#FvPus17_JSAPI_CORTEX_COREh
+ 000CB4                 .dbline 437
+ 000CB4 1348            ldr R0,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+12
+ 000CB6 144C            ldr R4,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+16
+ 000CB8 2146            mov R1,R4
+ 000CBA 0222            movs R2,#2
+ 000CBC 0725            movs R5,#7
+ 000CBE 2B46            mov R3,R5
+ 000CC0 0094            str R4,[R13,#0]
+ 000CC2 0324            movs R4,#3
+ 000CC4 0194            str R4,[R13,#+4]
+ 000CC6 0295            str R5,[R13,#+8]
+ 000CC8 00F000F8        bl __Xm_11_JSAPI_USART7_SetPins#FvPus11_JSAPI_USARTPus10_JSAPI_GPIOjjPus10_JSAPI_GPIOjj
+ 000CCC                 .dbline 438
+ 000CCC 0D48            ldr R0,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+12
+ 000CCE 4FF41651        mov R1,#9600
+ 000CD2 0822            movs R2,#8
+ 000CD4 0123            movs R3,#1
+ 000CD6 0024            movs R4,#0
+ 000CD8 0094            str R4,[R13,#0]
+ 000CDA 00F000F8        bl __Xm_11_JSAPI_USART9_MakeUSART#FvPus11_JSAPI_USARTjjjh
+ 000CDE                 .dbline 440
+ 000CDE 0848            ldr R0,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+8
+ 000CE0 00F000F8        bl __Xm_11_JSAPI_CLOCK13_GetSysClkFreq#FjPus11_JSAPI_CLOCK
+ 000CE4 0446            mov R4,R0
+ 000CE6 0548            ldr R0,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+4
+ 000CE8 034D            ldr R5,LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main+0
+ 000CEA B4FBF5F1        udiv R1,R4,R5
+ 000CEE 00F000F8        bl _printf#FiPKcz
+ 000CF2                 .dbblkend 441
+ 000CF2         L200:
+ 000CF2 03B0            add R13,R13,#12
+ 000CF4 BDE83088        pop {R4,R5,R11,PC}
+ 000CF8                 .dbfuncend
+                        .align4
+ 000CF8                 .LITERAL
+ 000CF8         LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_Command_Demo_ST32F411_JumpStartC_main:
+ 000CF8 40420F00        .long 0xf4240
+ 000CFC 24000000        .long _201#A61_c
+ 000D00 00000000        .long _jsapi_clock#us11_JSAPI_CLOCK
+ 000D04 00000000        .long _usart2#us11_JSAPI_USART
+ 000D08 00000000        .long _porta#us10_JSAPI_GPIO
+ 000D0C 00000000        .long _jsapi_cortex_core#us17_JSAPI_CORTEX_CORE
+ 000D10         	.ENDLITERAL
+ 000D10                 .dbstacksize 12
+                        .area bss
+ 000000                 .dbfile "C:\Work\newtech\Smart.IO\MCU-App\Command Demo-ST32F411-JumpStartC\main.c"
+                        .align4
+ 000000         _connected#i::
+ 000000                 .blkb 4
+ 000004                 .dbsym e connected _connected#i I
+                        .area lit
+ 000024         _201#A61_c:
+ 000024 0D0A496D61676543726166742053544D        .byte 13,10,'I,'m,'a,'g,'e,'C,'r,'a,'f,'t,32,'S,'T,'M
+ 000034 3332463431312053542D4E75636C656F        .byte 51,50,'F,52,49,49,32,'S,'T,45,'N,'u,'c,'l,'e,'o
+ 000044 2E2E2E2053797374656D2072756E6E69        .byte 46,46,46,32,'S,'y,'s,'t,'e,'m,32,'r,'u,'n,'n,'i
+ 000054 6E672061742025644D687A0A00      .byte 'n,'g,32,'a,'t,32,37,'d,'M,'h,'z,10,0
+ 000061         _196#A16_c:
+ 000061 556E7465726D696E6174656420220A00        .byte 'U,'n,'t,'e,'r,'m,'i,'n,'a,'t,'e,'d,32,34,10,0
+ 000071         _158#A11_c:
+ 000071 72657475726E2025640A00  .byte 'r,'e,'t,'u,'r,'n,32,37,'d,10,0
+ 00007C         _157#A33_c:
+ 00007C 73656E64696E67202564206279746573        .byte 's,'e,'n,'d,'i,'n,'g,32,37,'d,32,'b,'y,'t,'e,'s
+ 00008C 20746F2053504920736C6176652E2E2E        .byte 32,'t,'o,32,'S,'P,'I,32,'s,'l,'a,'v,'e,46,46,46
+ 00009C 00              .byte 0
+ 00009D         _153#A49_c:
+ 00009D 4E6F7420636F6E6E656374656420746F        .byte 'N,'o,'t,32,'c,'o,'n,'n,'e,'c,'t,'e,'d,32,'t,'o
+ 0000AD 20536D6172742E494F2F424C452E2043        .byte 32,'S,'m,'a,'r,'t,46,'I,'O,47,'B,'L,'E,46,32,'C
+ 0000BD 6F6D6D616E64206E6F742073656E740A        .byte 'o,'m,'m,'a,'n,'d,32,'n,'o,'t,32,'s,'e,'n,'t,10
+ 0000CD 00              .byte 0
+ 0000CE         _139#A32_c:
+ 0000CE 436F6D6D616E64206472697665722066        .byte 'C,'o,'m,'m,'a,'n,'d,32,'d,'r,'i,'v,'e,'r,32,'f
+ 0000DE 6F7220536D6172742E494F2025730A00        .byte 'o,'r,32,'S,'m,'a,'r,'t,46,'I,'O,32,37,'s,10,0
+ 0000EE         _137#A18_c:
+ 0000EE 424C4520646973636F6E6E6563746564        .byte 'B,'L,'E,32,'d,'i,'s,'c,'o,'n,'n,'e,'c,'t,'e,'d
+ 0000FE 0A00            .byte 10,0
+ 000100         _135#A15_c:
+ 000100 424C4520636F6E6E65637465640A00  .byte 'B,'L,'E,32,'c,'o,'n,'n,'e,'c,'t,'e,'d,10,0
+ 00010F         _130#A2_c:
+ 00010F 0A00            .byte 10,0
+ 000111         _129#A4_c:
+ 000111 25582000        .byte 37,'X,32,0
+ 000115         _124#A20_c:
+ 000115 352072616E646F6D206E756D62657273        .byte 53,32,'r,'a,'n,'d,'o,'m,32,'n,'u,'m,'b,'e,'r,'s
+ 000125 2E2E2E00        .byte 46,46,46,0
+ 000129         _123#A14_c:
+ 000129 256420773A255820723A25580A00    .byte 37,'d,32,'w,58,37,'X,32,'r,58,37,'X,10,0
+ 000137         _118#A41_c:
+ 000137 0A646F6E652077726974652F72656164        .byte 10,'d,'o,'n,'e,32,'w,'r,'i,'t,'e,47,'r,'e,'a,'d
+ 000147 20256420627974657320454550524F4D        .byte 32,37,'d,32,'b,'y,'t,'e,'s,32,'E,'E,'P,'R,'O,'M
+ 000157 204025642E2E2E0A00      .byte 32,64,37,'d,46,46,46,10,0
+ 000160         _117#A18_c:
+ 000160 72656164696E6720656570726F6D2E2E        .byte 'r,'e,'a,'d,'i,'n,'g,32,'e,'e,'p,'r,'o,'m,46,46
+ 000170 2E00            .byte 46,0
+ 000172         _116#A18_c:
+ 000172 77726974696E6720656570726F6D2E2E        .byte 'w,'r,'i,'t,'i,'n,'g,32,'e,'e,'p,'r,'o,'m,46,46
+ 000182 2E00            .byte 46,0
+ 000184         _111#A8_c:
+ 000184 2025582025580A00        .byte 32,37,'X,32,37,'X,10,0
+ 00018C         _110#A13_c:
+ 00018C 556E6971756520494420697300      .byte 'U,'n,'i,'q,'u,'e,32,'I,'D,32,'i,'s,0
+ 000199         _107#A6_c:
+ 000199 4170706C7900    .byte 'A,'p,'p,'l,'y,0
+ 00019F         _106#A10_c:
+ 00019F 506F7765722055702100    .byte 'P,'o,'w,'e,'r,32,'U,'p,33,0
+ 0001A9         _105#A11_c:
+ 0001A9 63757272656E7420435000  .byte 'c,'u,'r,'r,'e,'n,'t,32,'C,'P,0
+ 0001B4         _104#A8_c:
+ 0001B4 536E6F726C617800        .byte 'S,'n,'o,'r,'l,'a,'x,0
+ 0001BC         _103#A10_c:
+ 0001BC 42756C62617361757200    .byte 'B,'u,'l,'b,'a,'s,'a,'u,'r,0
+ 0001C6         _102#A11_c:
+ 0001C6 436861726D616E64657200  .byte 'C,'h,'a,'r,'m,'a,'n,'d,'e,'r,0
+ 0001D1         _101#A9_c:
+ 0001D1 4D6167696B61727000      .byte 'M,'a,'g,'i,'k,'a,'r,'p,0
+ 0001DA         _100#A8_c:
+ 0001DA 50696B6163687500        .byte 'P,'i,'k,'a,'c,'h,'u,0
+ 0001E2         _99#A17_c:
+ 0001E2 53656C656374206120506F6B656D6F6E        .byte 'S,'e,'l,'e,'c,'t,32,'a,32,'P,'o,'k,'e,'m,'o,'n
+ 0001F2 00              .byte 0
+ 0001F3         _98#A16_c:
+ 0001F3 506F6B656D6F6E20436F6E74726F6C00        .byte 'P,'o,'k,'e,'m,'o,'n,32,'C,'o,'n,'t,'r,'o,'l,0
+ 000203         _96#A16_c:
+ 000203 42617474657279206C6576656C202000        .byte 'B,'a,'t,'t,'e,'r,'y,32,'l,'e,'v,'e,'l,32,32,0
+ 000213         _95#A20_c:
+ 000213 43757272656E7420696E707574206C65        .byte 'C,'u,'r,'r,'e,'n,'t,32,'i,'n,'p,'u,'t,32,'l,'e
+ 000223 76656C00        .byte 'v,'e,'l,0
+ 000227         _94#A17_c:
+ 000227 536C6F772F4E6F726D616C2F46617374        .byte 'S,'l,'o,'w,47,'N,'o,'r,'m,'a,'l,47,'F,'a,'s,'t
+ 000237 00              .byte 0
+ 000238         _93#A6_c:
+ 000238 496E70757400    .byte 'I,'n,'p,'u,'t,0
+ 00023E         _92#A16_c:
+ 00023E 4368617267696E672053746174757300        .byte 'C,'h,'a,'r,'g,'i,'n,'g,32,'S,'t,'a,'t,'u,'s,0
+ 00024E         _90#A19_c:
+ 00024E 53616D6520617320275765656B646179        .byte 'S,'a,'m,'e,32,'a,'s,32,39,'W,'e,'e,'k,'d,'a,'y
+ 00025E 732700          .byte 's,39,0
+ 000261         _88#A23_c:
+ 000261 46697665303132333435363738393031        .byte 'F,'i,'v,'e,48,49,50,51,52,53,54,55,56,57,48,49
+ 000271 32333435363700  .byte 50,51,52,53,54,55,0
+ 000278         _87#A278_c:
+ 000278 4E696768742077696C6C2066616C6C20        .byte 'N,'i,'g,'h,'t,32,'w,'i,'l,'l,32,'f,'a,'l,'l,32
+ 000288 616E642064726F776E20746865207375        .byte 'a,'n,'d,32,'d,'r,'o,'w,'n,32,'t,'h,'e,32,'s,'u
+ 000298 6E207768656E206120676F6F64206D61        .byte 'n,32,'w,'h,'e,'n,32,'a,32,'g,'o,'o,'d,32,'m,'a
+ 0002A8 6E20676F657320746F207761722E2046        .byte 'n,32,'g,'o,'e,'s,32,'t,'o,32,'w,'a,'r,46,32,'F
+ 0002B8 7269656E647368697020646965732061        .byte 'r,'i,'e,'n,'d,'s,'h,'i,'p,32,'d,'i,'e,'s,32,'a
+ 0002C8 6E642074727565206C6F7665206C6965        .byte 'n,'d,32,'t,'r,'u,'e,32,'l,'o,'v,'e,32,'l,'i,'e
+ 0002D8 732E204E696768742077696C6C206661        .byte 's,46,32,'N,'i,'g,'h,'t,32,'w,'i,'l,'l,32,'f,'a
+ 0002E8 6C6C20616E6420746865206461726B20        .byte 'l,'l,32,'a,'n,'d,32,'t,'h,'e,32,'d,'a,'r,'k,32
+ 0002F8 77696C6C2072697365207768656E2061        .byte 'w,'i,'l,'l,32,'r,'i,'s,'e,32,'w,'h,'e,'n,32,'a
+ 000308 20676F6F64206D616E20676F65732074        .byte 32,'g,'o,'o,'d,32,'m,'a,'n,32,'g,'o,'e,'s,32,'t
+ 000318 6F207761722E2044656D6F6E73207275        .byte 'o,32,'w,'a,'r,46,32,'D,'e,'m,'o,'n,'s,32,'r,'u
+ 000328 6E2062757420636F756E742074686520        .byte 'n,32,'b,'u,'t,32,'c,'o,'u,'n,'t,32,'t,'h,'e,32
+ 000338 636F73743B2074686520626174746C65        .byte 'c,'o,'s,'t,59,32,'t,'h,'e,32,'b,'a,'t,'t,'l,'e
+ 000348 277320776F6E20627574207468652063        .byte 39,'s,32,'w,'o,'n,32,'b,'u,'t,32,'t,'h,'e,32,'c
+ 000358 68696C64206973206C6F73742E204465        .byte 'h,'i,'l,'d,32,'i,'s,32,'l,'o,'s,'t,46,32,'D,'e
+ 000368 6D6F6E732072756E207768656E206120        .byte 'm,'o,'n,'s,32,'r,'u,'n,32,'w,'h,'e,'n,32,'a,32
+ 000378 676F6F64206D616E20676F657320746F        .byte 'g,'o,'o,'d,32,'m,'a,'n,32,'g,'o,'e,'s,32,'t,'o
+ 000388 207761722E00    .byte 32,'w,'a,'r,46,0
+ 00038E         _86#A5_c:
+ 00038E 4669766500      .byte 'F,'i,'v,'e,0
+ 000393         _85#A5_c:
+ 000393 466F757200      .byte 'F,'o,'u,'r,0
+ 000398         _84#A6_c:
+ 000398 546872656500    .byte 'T,'h,'r,'e,'e,0
+ 00039E         _83#A4_c:
+ 00039E 54776F00        .byte 'T,'w,'o,0
+ 0003A2         _82#A4_c:
+ 0003A2 4F6E6500        .byte 'O,'n,'e,0
+ 0003A6         _80#A5_c:
+ 0003A6 313A303000      .byte 49,58,48,48,0
+ 0003AB         _79#A6_c:
+ 0003AB 31383A303000    .byte 49,56,58,48,48,0
+ 0003B1         _78#A9_c:
+ 0003B1 205765656B656E6400      .byte 32,'W,'e,'e,'k,'e,'n,'d,0
+ 0003BA         _77#A7_c:
+ 0003BA 4F464620617400  .byte 'O,'F,'F,32,'a,'t,0
+ 0003C1         _76#A5_c:
+ 0003C1 303A303000      .byte 48,58,48,48,0
+ 0003C6         _75#A6_c:
+ 0003C6 4F4E20617400    .byte 'O,'N,32,'a,'t,0
+ 0003CC         _74#A6_c:
+ 0003CC 31373A303000    .byte 49,55,58,48,48,0
+ 0003D2         _73#A10_c:
+ 0003D2 205765656B6461797300    .byte 32,'W,'e,'e,'k,'d,'a,'y,'s,0
+ 0003DC         _72#A21_c:
+ 0003DC 4175746F204F6E2F4F66662053636865        .byte 'A,'u,'t,'o,32,'O,'n,47,'O,'f,'f,32,'S,'c,'h,'e
+ 0003EC 64756C6500      .byte 'd,'u,'l,'e,0
+ 0003F1         _71#A6_c:
+ 0003F1 506F77657200    .byte 'P,'o,'w,'e,'r,0
+ 0003F7         _70#A16_c:
+ 0003F7 536D6172742057616C6C20506C756700        .byte 'S,'m,'a,'r,'t,32,'W,'a,'l,'l,32,'P,'l,'u,'g,0
+ 000407         _68#A18_c:
+ 000407 4C696E636F6C6E277320616464726573        .byte 'L,'i,'n,'c,'o,'l,'n,39,'s,32,'a,'d,'d,'r,'e,'s
+ 000417 7300            .byte 's,0
+ 000419         _67#A121_c:
+ 000419 2542466F75722073636F726520616E64        .byte 37,'B,'F,'o,'u,'r,32,'s,'c,'o,'r,'e,32,'a,'n,'d
+ 000429 20736576656E2079656172732061676F        .byte 32,'s,'e,'v,'e,'n,32,'y,'e,'a,'r,'s,32,'a,'g,'o
+ 000439 2562206F757220666174686572732062        .byte 37,'b,32,'o,'u,'r,32,'f,'a,'t,'h,'e,'r,'s,32,'b
+ 000449 726F7567687420666F7274682C207570        .byte 'r,'o,'u,'g,'h,'t,32,'f,'o,'r,'t,'h,44,32,'u,'p
+ 000459 6F6E207468697320636F6E74696E656E        .byte 'o,'n,32,'t,'h,'i,'s,32,'c,'o,'n,'t,'i,'n,'e,'n
+ 000469 742C2061206E6577206E6174696F6E2C        .byte 't,44,32,'a,32,'n,'e,'w,32,'n,'a,'t,'i,'o,'n,44
+ 000479 20636F6E63656976656420696E206C69        .byte 32,'c,'o,'n,'c,'e,'i,'v,'e,'d,32,'i,'n,32,'l,'i
+ 000489 62657274792E2E2E00      .byte 'b,'e,'r,'t,'y,46,46,46,0
+ 000492         _65#A25_c:
+ 000492 456E61626C65204368616D656C656F6E        .byte 'E,'n,'a,'b,'l,'e,32,'C,'h,'a,'m,'e,'l,'e,'o,'n
+ 0004A2 204369726375697400      .byte 32,'C,'i,'r,'c,'u,'i,'t,0
+ 0004AB         _64#A22_c:
+ 0004AB 456E61626C6520466C75782043617061        .byte 'E,'n,'a,'b,'l,'e,32,'F,'l,'u,'x,32,'C,'a,'p,'a
+ 0004BB 6369746F7200    .byte 'c,'i,'t,'o,'r,0
+ 0004C1         _63#A17_c:
+ 0004C1 5465726D73206F662053657276696365        .byte 'T,'e,'r,'m,'s,32,'o,'f,32,'S,'e,'r,'v,'i,'c,'e
+ 0004D1 00              .byte 0
+ 0004D2         _56#A35_c:
+ 0004D2 657870616E6461626C65206C69737420        .byte 'e,'x,'p,'a,'n,'d,'a,'b,'l,'e,32,'l,'i,'s,'t,32
+ 0004E2 656E7472792025642073656C65637465        .byte 'e,'n,'t,'r,'y,32,37,'d,32,'s,'e,'l,'e,'c,'t,'e
+ 0004F2 640A00          .byte 'd,10,0
+ 0004F5         _54#A26_c:
+ 0004F5 3320706F7320627574746F6E20256420        .byte 51,32,'p,'o,'s,32,'b,'u,'t,'t,'o,'n,32,37,'d,32
+ 000505 73656C65637465640A00    .byte 's,'e,'l,'e,'c,'t,'e,'d,10,0
+ 00050F         _52#A22_c:
+ 00050F 74696D65342073656C65637465642025        .byte 't,'i,'m,'e,52,32,'s,'e,'l,'e,'c,'t,'e,'d,32,37
+ 00051F 643A25640A00    .byte 'd,58,37,'d,10,0
+ 000525         _50#A22_c:
+ 000525 74696D65332073656C65637465642025        .byte 't,'i,'m,'e,51,32,'s,'e,'l,'e,'c,'t,'e,'d,32,37
+ 000535 643A25640A00    .byte 'd,58,37,'d,10,0
+ 00053B         _48#A22_c:
+ 00053B 74696D65322073656C65637465642025        .byte 't,'i,'m,'e,50,32,'s,'e,'l,'e,'c,'t,'e,'d,32,37
+ 00054B 643A25640A00    .byte 'd,58,37,'d,10,0
+ 000551         _46#A22_c:
+ 000551 74696D65312073656C65637465642025        .byte 't,'i,'m,'e,49,32,'s,'e,'l,'e,'c,'t,'e,'d,32,37
+ 000561 643A25640A00    .byte 'd,58,37,'d,10,0
+ 000567         _44#A21_c:
+ 000567 6E756D6265722073656C65637465643A        .byte 'n,'u,'m,'b,'e,'r,32,'s,'e,'l,'e,'c,'t,'e,'d,58
+ 000577 2025640A00      .byte 32,37,'d,10,0
+ 00057C         _42#A23_c:
+ 00057C 63616C656E6461722073656C65637465        .byte 'c,'a,'l,'e,'n,'d,'a,'r,32,'s,'e,'l,'e,'c,'t,'e
+ 00058C 643A2025730A00  .byte 'd,58,32,37,'s,10,0
+ 000593         _40#A23_c:
+ 000593 70617373776F726420656E7465726564        .byte 'p,'a,'s,'s,'w,'o,'r,'d,32,'e,'n,'t,'e,'r,'e,'d
+ 0005A3 3A5B25735D0A00  .byte 58,91,37,'s,93,10,0
+ 0005AA         _38#A21_c:
+ 0005AA 6E756D62657220656E74657265643A5B        .byte 'n,'u,'m,'b,'e,'r,32,'e,'n,'t,'e,'r,'e,'d,58,91
+ 0005BA 25735D0A00      .byte 37,'s,93,10,0
+ 0005BF         _36#A20_c:
+ 0005BF 746578743220656E74657265643A5B25        .byte 't,'e,'x,'t,50,32,'e,'n,'t,'e,'r,'e,'d,58,91,37
+ 0005CF 735D0A00        .byte 's,93,10,0
+ 0005D3         _34#A26_c:
+ 0005D3 726164696F20627574746F6E20256420        .byte 'r,'a,'d,'i,'o,32,'b,'u,'t,'t,'o,'n,32,37,'d,32
+ 0005E3 73656C65637465640A00    .byte 's,'e,'l,'e,'c,'t,'e,'d,10,0
+ 0005ED         _32#A36_c:
+ 0005ED 636865636B626F78657320286269746D        .byte 'c,'h,'e,'c,'k,'b,'o,'x,'e,'s,32,40,'b,'i,'t,'m
+ 0005FD 61736B2920307825782073656C656374        .byte 'a,'s,'k,41,32,48,'x,37,'x,32,'s,'e,'l,'e,'c,'t
+ 00060D 65640A00        .byte 'e,'d,10,0
+ 000611         _30#A22_c:
+ 000611 6D656E7520656E747279202564206361        .byte 'm,'e,'n,'u,32,'e,'n,'t,'r,'y,32,37,'d,32,'c,'a
+ 000621 6C6C65640A00    .byte 'l,'l,'e,'d,10,0
+ 000627         _28#A20_c:
+ 000627 746578743120656E74657265643A5B25        .byte 't,'e,'x,'t,49,32,'e,'n,'t,'e,'r,'e,'d,58,91,37
+ 000637 735D0A00        .byte 's,93,10,0
+ 00063B         _26#A17_c:
+ 00063B 536C696465723120676574732025640A        .byte 'S,'l,'i,'d,'e,'r,49,32,'g,'e,'t,'s,32,37,'d,10
+ 00064B 00              .byte 0
+ 00064C         _24#A13_c:
+ 00064C 4F4B3120676574732025640A00      .byte 'O,'K,49,32,'g,'e,'t,'s,32,37,'d,10,0
+ 000659         _22#A17_c:
+ 000659 427574746F6E3220676574732025640A        .byte 'B,'u,'t,'t,'o,'n,50,32,'g,'e,'t,'s,32,37,'d,10
+ 000669 00              .byte 0
+ 00066A         _20#A17_c:
+ 00066A 427574746F6E3120676574732025640A        .byte 'B,'u,'t,'t,'o,'n,49,32,'g,'e,'t,'s,32,37,'d,10
+ 00067A 00              .byte 0

@@ -1,0 +1,276 @@
+EL
+H 3 areas 1C global symbols
+M smartio_interface.c
+S _SmartIO_SPI_ReadBytes#FiPhi Ref0000
+S _SmartIO_Error#Fviz Ref0000
+S _SmartIO_SPI_SendBytes#FvPhi Ref0000
+S _host_sram_block#Ph Ref0000
+S _SmartIO_HardwareInit#FvPFvvE Ref0000
+S _SmartIO_SPI_FinishRead#Fvv Ref0000
+A text size 2F8 flags 0
+dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_interface.c
+dbstruct 8 callback
+dbfield 0 argtype c
+dbfield 2 handle s
+dbfield 4 func pfV
+dbend
+dbfunc e SmartIO_Init 0 fV 1E
+dbprevlr 20
+dbsym r disconnect_callback 6 pfV p1
+dbsym r connect_callback 7 pfV p0
+dbblock 1F A
+dbline 20 A
+dbline 21 E
+dbline 22 12
+dbline 23 18
+dbblkend 24 1E
+dbfuncend 22
+dbfunc e SmartIO_ISR 34 fV 28
+dbprevlr -1
+dbblock 29 34
+dbline 2A 34
+dbline 2B 38
+dbline 2D 3A
+dbline 2E 42
+dbline 2F 4A
+dbline 30 52
+dbblkend 31 58
+dbfuncend 5A
+dbfunc e SmartIO__SendBytes 60 fi 33
+dbprevlr 32
+dbsym r handle2 7 s
+dbsym r handle 6 i
+dbsym r replylen 8 I
+dbsym r replybuf 7 pc
+dbsym r op 9 s
+dbsym r is_syscall A I
+dbsym r sendlen 6 I p1
+dbsym r sendbuf 7 pc p0
+dbblock 34 6A
+dbline 35 6A
+dbline 36 76
+dbline 37 86
+dbline 39 8C
+dbline 3B 94
+dbblock 3E 9C
+dbline 3E 9C
+dbline 3F A0
+dbline 41 AC
+dbline 43 B2
+dbline 44 B8
+dbblock 47 BC
+dbline 47 BC
+dbline 49 C6
+dbline 4B CC
+dbline 4C D8
+dbline 4D DC
+dbline 4E E2
+dbline 4F F0
+dbline 50 F2
+dbline 51 FE
+dbline 52 106
+dbline 54 10C
+dbline 56 118
+dbline 57 120
+dbline 60 126
+dbline 61 12C
+dbline 63 130
+dbblkend 64 132
+dbblkend 64 132
+dbblkend 64 132
+dbfuncend 136
+dbfunc e SmartIO__RegisterCallback 140 fV 66
+dbprevlr 32
+dbsym r p 7 pS[callback]
+dbsym r argtype 8 I p2
+dbsym r func 9 pfV p1
+dbsym r handle A s p0
+dbblock 67 14C
+dbline 68 14C
+dbline 6A 154
+dbline 6C 156
+dbline 6E 15E
+dbline 6F 164
+dbline 72 166
+dbline 74 174
+dbline 75 178
+dbline 76 17C
+dbblkend 77 180
+dbfuncend 184
+dbfunc s FindCallbackEntry 18C fpS[callback] 79
+dbprevlr -1
+dbsym r i 5 I
+dbsym r p 4 pS[callback]
+dbsym r handle 0 s p0
+dbblock 7A 18E
+dbline 7B 18E
+dbline 7D 190
+dbline 7F 194
+dbline 80 19C
+dbline 81 1A0
+dbline 7D 1A2
+dbline 7D 1A4
+dbline 83 1AC
+dbblkend 84 1AE
+dbfuncend 1B0
+dbfunc e SmartIO_ProcessUserInput 1BC fV 86
+dbprevlr 28
+dbsym r p 7 pS[callback]
+dbsym r opc 7 s
+dbsym r handle 9 s
+dbsym r replybuf 8 pc
+dbsym r replylen 6 I
+dbblock 87 1C2
+dbline 88 1C2
+dbline 89 1C8
+dbline 8A 1D6
+dbline 8B 1DA
+dbline 8D 1E0
+dbline 8F 1E4
+dbline 91 1F4
+dbline 93 1FC
+dbline 95 200
+dbline 97 210
+dbline 9A 220
+dbline 9B 228
+dbline 9C 22E
+dbline 9E 230
+dbline 9F 238
+dbline A3 23E
+dbline A5 240
+dbline A6 248
+dbline A7 24A
+dbline AA 256
+dbline AD 270
+dbline AE 274
+dbline B0 276
+dbline B1 27C
+dbline B2 284
+dbline B4 286
+dbline B5 28E
+dbline B7 290
+dbline B8 29E
+dbline BA 2A0
+dbline BB 2B2
+dbline BD 2B4
+dbline C0 2CA
+dbline C1 2CC
+dbline C2 2CE
+dbline C3 2D6
+dbline C4 2DA
+dbblkend C5 2E0
+dbfuncend 2E4
+S $lb$LIT_SmartIO__RegisterCallback Def0184
+S $le$LIT_SmartIO__RegisterCallback Def018C
+S _SmartIO__RegisterCallback#FvtPFvEi Def0140
+S _SmartIO_ProcessUserInput#Fvv Def01BC
+S _SmartIO__SendBytes#FjPhi Def0060
+S $lb$LIT_SmartIO_ISR Def005C
+S $lb$LIT_SmartIO__SendBytes Def0138
+S $le$LIT_SmartIO_ISR Def0060
+S $le$LIT_SmartIO__SendBytes Def0140
+S _SmartIO_Init#FvPFvvEPFvvE Def0000
+S _SmartIO_ISR#Fvv Def0034
+S $lb$LIT_FindCallbackEntry$C__Work_newtech_Smart.IO_MCU_App_Host_Interface_Layer_smartio_interface Def01B0
+S $le$LIT_FindCallbackEntry$C__Work_newtech_Smart.IO_MCU_App_Host_Interface_Layer_smartio_interface Def01BC
+S $lb$LIT_SmartIO_ProcessUserInput Def02E4
+S $le$LIT_SmartIO_ProcessUserInput Def02F8
+S $lb$LIT_SmartIO_Init Def0024
+S $le$LIT_SmartIO_Init Def0034
+A lit size 1C flags 0
+A bss size 32D flags 0
+dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_interface.c
+dbsym e SmartIO_Disconnect_Callback 0 pfV
+dbsym e SmartIO_Connect_Callback 4 pfV
+dbsym e callback_table_index 8 I
+dbsym e callback_table C A[800:100]S[callback]
+dbsym e SPI_State 32C c
+S _SPI_State#h Def032C
+S _SmartIO_Connect_Callback#PFvvE Def0004
+S _SmartIO_Disconnect_Callback#PFvvE Def0000
+S _callback_table#A100_us8_callback Def000C
+S _callback_table_index#i Def0008
+T 00 00 00 00 2D E9 F0 48 EB 46 07 46 0E 46 09 4C 27 60 07 4C 26 60 05 48
+R 00 00 00 00
+T 14 00 00 00 00 F0 00 F8 01 24 02 4D 2C 70 BD E8 F0 88
+R 00 00 00 00 0E 04 04 00
+T 24 00 00 00 2C 03 00 00 35 00 00 00 00 00 00 00 04 00 00 00 09 48 00 78
+R 00 00 00 00 60 04 02 00 60 08 00 00 60 0C 02 00 60 10 02 00
+T 38 00 00 00 70 B1 08 48 00 78 02 28 03 D1 03 20 05 49 08 70 06 E0 04 48
+R 00 00 00 00
+T 4C 00 00 00 00 78 01 28 02 D1 04 20 01 49 08 70 70 47
+R 00 00 00 00
+T 5C 00 00 00 2C 03 00 00 2D E9 F0 4F EB 46 07 46 0E 46 3C 78 7D 78 2D 02
+R 00 00 00 00 60 04 02 00
+T 70 00 00 00 45 EA 04 04 A1 46 7C 78 FF 2C 0C BF 4F F0 01 08 4F F0 00 08
+R 00 00 00 00
+T 84 00 00 00 C2 46 02 24 2B 4D 2C 70 38 46 31 46 00 F0 00 F8 28 4C 24 78
+R 00 00 00 00 0E 10 02 00
+T 98 00 00 00 03 2C FB D1 27 4C 27 68 38 46 4F F4 80 71 00 F0 00 F8 80 46
+R 00 00 00 00 0E 12 00 00
+T AC 00 00 00 B8 F1 00 0F 04 DA 06 20 00 F0 00 F8 00 20 3A E0 3C 78 7D 78
+R 00 00 00 00 0E 0C 01 00
+T C0 00 00 00 2D 02 45 EA 04 06 BA F1 00 0F 12 D0 4F F6 80 74 1F FA 89 F5
+R 00 00 00 00
+T D4 00 00 00 A5 42 01 DB 3E 46 24 E0 B8 F1 04 0F 21 D1 BC 78 FD 78 2D 02
+R 00 00 00 00
+T E8 00 00 00 45 EA 04 04 46 EA 04 46 19 E0 B8 F1 02 0F 06 D0 B8 F1 04 0F
+R 00 00 00 00
+T FC 00 00 00 03 D0 02 20 00 F0 00 F8 0F E0 B8 F1 04 0F 0C D1 BC 78 FD 78
+R 00 00 00 00 0E 08 01 00
+T 10 01 00 00 2D 02 45 EA 04 04 27 46 74 1C BD B2 A5 42 02 D0 07 20
+R 00 00 00 00
+T 22 01 00 00 00 F0 00 F8 01 24 03 4D 2C 70 00 F0 00 F8 30 46 BD E8 F0 8F
+R 00 00 00 00 0E 04 01 00 0E 0E 05 00
+T 38 01 00 00 2C 03 00 00 00 00 00 00 2D E9 F0 4F EB 46 82 46 89 46 90 46
+R 00 00 00 00 60 04 02 00 62 08 03 00
+T 4C 01 00 00 50 46 00 F0 1D F8 07 46 77 B9 0C 4C 24 68 64 2C 03 D1 04 20
+R 00 00 00 00
+T 60 01 00 00 00 F0 00 F8 0C E0 08 4C 25 68 6E 1C 26 60 05 4C ED 00 2F 19
+R 00 00 00 00 0E 04 01 00
+T 74 01 00 00 A7 F8 02 A0 C7 F8 04 90 44 46 3C 70 BD E8 F0 8F
+R 00 00 00 00
+T 84 01 00 00 0C 00 00 00 08 00 00 00 30 B5 0A 4C 00 25 07 E0 81 B2 62 88
+R 00 00 00 00 60 04 02 00 60 08 02 00
+T 98 01 00 00 8A 42 01 D1 20 46 06 E0 08 34 6D 1C 03 49 09 68 8D 42 F3 DB
+R 00 00 00 00
+T AC 01 00 00 00 48 30 BD
+R 00 00 00 00
+T B0 01 00 00 00 00 00 00 08 00 00 00 0C 00 00 00
+R 00 00 00 00 60 08 02 00 60 0C 02 00
+T 00 00 00 00 70 02 00 00 86 02 00 00 90 02 00 00 A0 02 00 00 B4 02 00 00
+R 00 00 01 00 60 04 00 00 60 08 00 00 60 0C 00 00 60 10 00 00 60 14 00 00
+T 14 00 00 00 E0 02 00 00 76 02 00 00
+R 00 00 01 00 60 04 00 00 60 08 00 00
+T BC 01 00 00 2D E9 F0 4B EB 46 4C 4C D4 F8 00 80 4A 4C 20 68 4F F4 80 71
+R 00 00 00 00
+T D0 01 00 00 00 F0 00 F8 06 46 00 F0 00 F8 01 24 44 4D 2C 70 00 2E 73 DD
+R 00 00 00 00 0E 04 00 00 0E 0A 05 00
+T E4 01 00 00 98 F8 00 40 98 F8 01 50 2D 02 45 EA 04 04 A1 46 1F FA 89 F4
+R 00 00 00 00
+T F8 01 00 00 00 2C 21 D1 04 2E 6F DB 98 F8 02 40 98 F8 03 50 2D 02 45 EA
+R 00 00 00 00
+T 0C 02 00 00 04 04 27 46 BF B2 B7 F5 80 7F 0B D0 40 F2 01 14 A7 42 5F D1
+R 00 00 00 00
+T 20 02 00 00 32 4C 24 68 00 2C 5B D0 30 4C 24 68 A0 47 57 E0 2D 4C 24 68
+R 00 00 00 00
+T 34 02 00 00 00 2C 53 D0 2B 4C 24 68 A0 47 4F E0 48 46 FF F7 A3 FF 07 46
+R 00 00 00 00
+T 48 02 00 00 2F B9 05 20 1F FA 89 F1 00 F0 00 F8 44 E0 97 F8 00 90 B9 F1
+R 00 00 00 00 0E 0C 01 00
+T 5C 02 00 00 00 0F 3F DB B9 F1 06 0F 3C DC 1F 4C 4F EA 89 05 2C 59 A7 46
+R 00 00 00 00
+T 70 02 00 00 7C 68 A0 47 34 E0 00 24 06 F8 08 40 08 F1 02 00 7C 68 A0 47
+R 00 00 00 00
+T 84 02 00 00 2C E0 B8 F8 02 00 7C 68 A0 47 27 E0 B8 F8 02 00 04 24 38 F8
+R 00 00 00 00
+T 98 02 00 00 04 10 3C 59 A0 47 1F E0 B8 F8 02 00 04 24 38 F8 04 10 B8 F8
+R 00 00 00 00
+T AC 02 00 00 06 20 3C 59 A0 47 15 E0 B8 F8 02 00 04 24 38 F8 04 10 B8 F8
+R 00 00 00 00
+T C0 02 00 00 06 20 B8 F8 08 30 3C 59 A0 47 09 E0 1E B9 03 20 00 F0 00 F8
+R 00 00 00 00 0E 14 01 00
+T D4 02 00 00 04 E0 00 2E 02 DA 06 20 00 F0 00 F8 BD E8 F0 8B
+R 00 00 00 00 0E 0C 01 00
+T E4 02 00 00 00 00 00 00 00 00 00 00 04 00 00 00 2C 03 00 00 00 00 00 00
+R 00 00 00 00 60 04 01 00 60 08 02 00 60 0C 02 00 60 10 02 00 62 14 03 00

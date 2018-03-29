@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.general.xcl" --backend -f "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.general.xcl" --backend -f "C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\settings\STMF407_Disco_Spi1FDM1NSS.STMF407_Disco_Spi1FDM1NSS.driver.xcl" 
 
 @echo off 
 :end

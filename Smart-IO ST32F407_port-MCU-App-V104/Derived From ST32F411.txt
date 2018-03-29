@@ -1,0 +1,14 @@
+As in the zip from Smart-IO
+Which uses their JumpStart Compiler.
+Call js it comes with their jsapi.
+2018 they should have a gcc
+with codeblocks ide to support
+porting of their jsapi like I'm trying.
+
+Smart-IO ST32F4x1 MCU-App-V104
+C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\IAR STMCube Device Init\UM1718 User manual STM32CubeMX for STM32.pdf
+C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\IAR STMCube Device Init\UM1467 User manual SW and FW environments for the STM32F4DISCOVERY Kit.pdf
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\doc\EWARM_IDEGuide.ENU.pdf
+
+IAR is still good but I have to get more 
+experience and understanding to do right.

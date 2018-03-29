@@ -1,21 +1,21 @@
-"C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\Src\gpio.c"
+"C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\Src\gpio.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../Inc
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../Inc
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/CMSIS/Device/ST/STM32F4xx/Include
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/CMSIS/Include
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../Drivers/CMSIS/Include
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../../IAR Port Smart-IO STM32 MCU-App-V104/Smart-IO ST32F407_port-MCU-App-V104/Host_Interface_Layer
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../../IAR Port Smart-IO STM32 MCU-App-V104/Smart-IO ST32F407_port-MCU-App-V104/Host_Interface_Layer
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/../../IAR Port Smart-IO STM32 MCU-App-V104/Smart-IO ST32F407_port-MCU-App-V104/Command Demo-ST32F411-JumpStartC
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/../../IAR Port Smart-IO STM32 MCU-App-V104/Smart-IO ST32F407_port-MCU-App-V104/Command Demo-ST32F411-JumpStartC
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Core\Include
 -I
@@ -25,19 +25,19 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\Inc
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\Inc
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\Drivers\STM32F4xx_HAL_Driver\Inc
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\Drivers\STM32F4xx_HAL_Driver\Inc
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\Drivers\CMSIS\Include
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\Drivers\CMSIS\Include
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer
+C:\Users\Clyde W Phillips Jr\Documents\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer
 -I
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC
+C:\Users\Clyde W Phillips Jr\Documents\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Core\Include
 -I

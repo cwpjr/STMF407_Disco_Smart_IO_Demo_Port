@@ -1,0 +1,4139 @@
+                        .module smartio_api.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0000           _host_sram_block#Ph::
+ 0000                   .blkw 1
+                        .area idata(rom)
+ 0000 0800              .word _host_sram_aligned_block#A32_m
+                        .area data(ram, con, rel)
+ 0002                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0002                   .dbsym e host_sram_block _host_sram_block#Ph pc
+ 0002           _Command#Pt:
+ 0002                   .blkw 1
+                        .area idata(rom)
+ 0002 0800              .word _host_sram_aligned_block#A32_m
+                        .area data(ram, con, rel)
+ 0004                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0004                   .dbsym s Command _Command#Pt ps
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0000           L160:
+ 0000                   .blkb 8
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0000                   .dbfunc e SmartIO_GetVersion _SmartIO_GetVersion#FPcv fpc 37 3714648
+                        .even
+ 0000           _SmartIO_GetVersion#FPcv::
+ 0000                   .dbblock 38
+ 0000                   .dbline 39
+ 0000 00E0              ldi R16,<_6#A5_c
+ 0002 10E0              ldi R17,>_6#A5_c
+ 0004                   .dbblkend 40
+ 0004           L5:
+ 0004 0895              ret
+ 0006                   .dbfuncend
+ 0006                   .dbstacksize -2
+ 0006                   .dbfunc e SmartIO_LoadCache _SmartIO_LoadCache#Fsmt fS 42 3714648
+ 0006           ;       build_id -> R10,R11
+ 0006           ;     product_id -> y+12
+                        .even
+ 0006           _SmartIO_LoadCache#Fsmt::
+ 0006 0E940000          xcall push_arg4
+ 000A AA92              st -y,R10
+ 000C BA92              st -y,R11
+ 000E 2A97              sbiw R28,10
+ 0010 A888              ldd R10,y+16
+ 0012 B988              ldd R11,y+17
+ 0014                   .dbblock 43
+ 0014                   .dbline 44
+ 0014 B986              std y+9,R11
+ 0016 A886              std y+8,R10
+ 0018 2C84              ldd R2,y+12
+ 001A 3D84              ldd R3,y+13
+ 001C 4E84              ldd R4,y+14
+ 001E 5F84              ldd R5,y+15
+ 0020 1201              movw R2,R4
+ 0022 4424              clr R4
+ 0024 5524              clr R5
+ 0026 2C82              std y+4,R2
+ 0028 3D82              std y+5,R3
+ 002A 4E82              std y+6,R4
+ 002C 5F82              std y+7,R5
+ 002E 2C84              ldd R2,y+12
+ 0030 3D84              ldd R3,y+13
+ 0032 4E84              ldd R4,y+14
+ 0034 5F84              ldd R5,y+15
+ 0036 C101              movw R24,R2
+ 0038 1C01              movw R2,R24
+ 003A 4424              clr R4
+ 003C 5524              clr R5
+ 003E 2882              std y+0,R2
+ 0040 3982              std y+1,R3
+ 0042 4A82              std y+2,R4
+ 0044 5B82              std y+3,R5
+ 0046 27E4              ldi R18,71
+ 0048 30E0              ldi R19,0
+ 004A 05E5              ldi R16,85
+ 004C 10E0              ldi R17,0
+ 004E 0E944B09          xcall _APICall#Fmjz
+ 0052                   .dbblkend 45
+ 0052           L7:
+ 0052 2A96              adiw R28,10
+ 0054 B990              ld R11,y+
+ 0056 A990              ld R10,y+
+ 0058 2496              adiw R28,4
+ 005A 0895              ret
+ 005C                   .dbfuncend
+ 005C                   .dbsym r build_id 10 s
+ 005C                   .dbsym l product_id 12 l
+ 005C                   .dbstacksize 10
+ 005C                   .dbfunc e SmartIO_SaveCache _SmartIO_SaveCache#Fsv fS 47 3714648
+                        .even
+ 005C           _SmartIO_SaveCache#Fsv::
+ 005C                   .dbblock 48
+ 005C                   .dbline 49
+ 005C 26E4              ldi R18,70
+ 005E 30E0              ldi R19,0
+ 0060 01E0              ldi R16,1
+ 0062 10E0              ldi R17,0
+ 0064                   .dbblkend 50
+ 0064           L8:
+ 0064 0C944B09          xjmp _APICall#Fmjz
+ 0068                   .dbfuncend
+ 0068                   .dbstacksize -2
+ 0068                   .dbfunc e SmartIO_AppTitle _SmartIO_AppTitle#FsPc fS 52 3714648
+ 0068           ;          title -> R10,R11
+                        .even
+ 0068           _SmartIO_AppTitle#FsPc::
+ 0068 AA92              st -y,R10
+ 006A BA92              st -y,R11
+ 006C 5801              movw R10,R16
+ 006E 2297              sbiw R28,2
+ 0070                   .dbblock 53
+ 0070                   .dbline 54
+ 0070 B982              std y+1,R11
+ 0072 A882              std y+0,R10
+ 0074 21E0              ldi R18,1
+ 0076 30E0              ldi R19,0
+ 0078 09E0              ldi R16,9
+ 007A 10E0              ldi R17,0
+ 007C 0E944B09          xcall _APICall#Fmjz
+ 0080                   .dbblkend 55
+ 0080           L9:
+ 0080 2296              adiw R28,2
+ 0082 B990              ld R11,y+
+ 0084 A990              ld R10,y+
+ 0086 0895              ret
+ 0088                   .dbfuncend
+ 0088                   .dbsym r title 10 pc
+ 0088                   .dbstacksize 0
+ 0088                   .dbfunc e SmartIO_AddMenu _SmartIO_AddMenu#FtPcPFvtE fs 57 3714648
+ 0088           ;              h -> R10,R11
+ 0088           ;       callback -> R12,R13
+ 0088           ;           item -> R10,R11
+                        .even
+ 0088           _SmartIO_AddMenu#FtPcPFvtE::
+ 0088 0E940000          xcall push_xgset003C
+ 008C 6901              movw R12,R18
+ 008E 5801              movw R10,R16
+ 0090 2297              sbiw R28,2
+ 0092                   .dbblock 58
+ 0092                   .dbline 59
+ 0092 B982              std y+1,R11
+ 0094 A882              std y+0,R10
+ 0096 22E0              ldi R18,2
+ 0098 30E0              ldi R19,0
+ 009A 09E0              ldi R16,9
+ 009C 10E0              ldi R17,0
+ 009E 0E944B09          xcall _APICall#Fmjz
+ 00A2 5801              movw R10,R16
+ 00A4                   .dbline 60
+ 00A4 CC20              tst R12
+ 00A6 11F4              brne X0
+ 00A8 DD20              tst R13
+ 00AA 39F0              breq L11
+ 00AC           X0:
+ 00AC                   .dbline 60
+ 00AC 81E0              ldi R24,1
+ 00AE 90E0              ldi R25,0
+ 00B0 9983              std y+1,R25
+ 00B2 8883              std y+0,R24
+ 00B4 9601              movw R18,R12
+ 00B6 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 00BA           L11:
+ 00BA                   .dbline 61
+ 00BA 8501              movw R16,R10
+ 00BC                   .dbblkend 62
+ 00BC           L10:
+ 00BC 2296              adiw R28,2
+ 00BE 0C940000          xjmp pop_xgset003C
+ 00C2 0895              ret
+ 00C4                   .dbfuncend
+ 00C4                   .dbsym r h 10 s
+ 00C4                   .dbsym r callback 12 pfV
+ 00C4                   .dbsym r item 10 pc
+ 00C4                   .dbstacksize 0
+ 00C4                   .dbfunc e SmartIO_Reset _SmartIO_Reset#Fsv fS 64 3714648
+                        .even
+ 00C4           _SmartIO_Reset#Fsv::
+ 00C4                   .dbblock 65
+ 00C4                   .dbline 66
+ 00C4 25E0              ldi R18,5
+ 00C6 30E0              ldi R19,0
+ 00C8 01E0              ldi R16,1
+ 00CA 10E0              ldi R17,0
+ 00CC                   .dbblkend 67
+ 00CC           L13:
+ 00CC 0C944B09          xjmp _APICall#Fmjz
+ 00D0                   .dbfuncend
+ 00D0                   .dbstacksize -2
+ 00D0                   .dbfunc e SmartIO_MakePage _SmartIO_MakePage#Ftv fs 69 3714648
+                        .even
+ 00D0           _SmartIO_MakePage#Ftv::
+ 00D0                   .dbblock 70
+ 00D0                   .dbline 71
+ 00D0 22E3              ldi R18,50
+ 00D2 30E0              ldi R19,0
+ 00D4 01E0              ldi R16,1
+ 00D6 10E0              ldi R17,0
+ 00D8                   .dbblkend 72
+ 00D8           L14:
+ 00D8 0C944B09          xjmp _APICall#Fmjz
+ 00DC                   .dbfuncend
+ 00DC                   .dbstacksize -2
+ 00DC                   .dbfunc e SmartIO_SetCurrentPage _SmartIO_SetCurrentPage#Fst fS 74 3714648
+ 00DC           ;        page_id -> R10,R11
+                        .even
+ 00DC           _SmartIO_SetCurrentPage#Fst::
+ 00DC AA92              st -y,R10
+ 00DE BA92              st -y,R11
+ 00E0 5801              movw R10,R16
+ 00E2 2297              sbiw R28,2
+ 00E4                   .dbblock 75
+ 00E4                   .dbline 76
+ 00E4 B982              std y+1,R11
+ 00E6 A882              std y+0,R10
+ 00E8 23E3              ldi R18,51
+ 00EA 30E0              ldi R19,0
+ 00EC 05E0              ldi R16,5
+ 00EE 10E0              ldi R17,0
+ 00F0 0E944B09          xcall _APICall#Fmjz
+ 00F4                   .dbblkend 77
+ 00F4           L15:
+ 00F4 2296              adiw R28,2
+ 00F6 B990              ld R11,y+
+ 00F8 A990              ld R10,y+
+ 00FA 0895              ret
+ 00FC                   .dbfuncend
+ 00FC                   .dbsym r page_id 10 s
+ 00FC                   .dbstacksize 0
+ 00FC                   .dbfunc e SmartIO_LockPage _SmartIO_LockPage#Fst fS 79 3714648
+ 00FC           ;         handle -> R10,R11
+                        .even
+ 00FC           _SmartIO_LockPage#Fst::
+ 00FC AA92              st -y,R10
+ 00FE BA92              st -y,R11
+ 0100 5801              movw R10,R16
+ 0102 2297              sbiw R28,2
+ 0104                   .dbblock 80
+ 0104                   .dbline 81
+ 0104 B982              std y+1,R11
+ 0106 A882              std y+0,R10
+ 0108 25E3              ldi R18,53
+ 010A 30E0              ldi R19,0
+ 010C 05E0              ldi R16,5
+ 010E 10E0              ldi R17,0
+ 0110 0E944B09          xcall _APICall#Fmjz
+ 0114                   .dbblkend 82
+ 0114           L16:
+ 0114 2296              adiw R28,2
+ 0116 B990              ld R11,y+
+ 0118 A990              ld R10,y+
+ 011A 0895              ret
+ 011C                   .dbfuncend
+ 011C                   .dbsym r handle 10 s
+ 011C                   .dbstacksize 0
+ 011C                   .dbfunc e SmartIO_UnlockPage _SmartIO_UnlockPage#Fsv fS 84 3714648
+                        .even
+ 011C           _SmartIO_UnlockPage#Fsv::
+ 011C                   .dbblock 85
+ 011C                   .dbline 86
+ 011C 26E3              ldi R18,54
+ 011E 30E0              ldi R19,0
+ 0120 01E0              ldi R16,1
+ 0122 10E0              ldi R17,0
+ 0124                   .dbblkend 87
+ 0124           L17:
+ 0124 0C944B09          xjmp _APICall#Fmjz
+ 0128                   .dbfuncend
+ 0128                   .dbstacksize -2
+ 0128                   .dbfunc e SmartIO_PageTitle _SmartIO_PageTitle#FstPc fS 89 3714648
+ 0128           ;          title -> R12,R13
+ 0128           ;        page_id -> R10,R11
+                        .even
+ 0128           _SmartIO_PageTitle#FstPc::
+ 0128 0E940000          xcall push_xgset003C
+ 012C 6901              movw R12,R18
+ 012E 5801              movw R10,R16
+ 0130 2497              sbiw R28,4
+ 0132                   .dbblock 90
+ 0132                   .dbline 91
+ 0132 DB82              std y+3,R13
+ 0134 CA82              std y+2,R12
+ 0136 B982              std y+1,R11
+ 0138 A882              std y+0,R10
+ 013A 24E3              ldi R18,52
+ 013C 30E0              ldi R19,0
+ 013E 05E2              ldi R16,37
+ 0140 10E0              ldi R17,0
+ 0142 0E944B09          xcall _APICall#Fmjz
+ 0146                   .dbblkend 92
+ 0146           L18:
+ 0146 2496              adiw R28,4
+ 0148 0C940000          xjmp pop_xgset003C
+ 014C 0895              ret
+ 014E                   .dbfuncend
+ 014E                   .dbsym r title 12 pc
+ 014E                   .dbsym r page_id 10 s
+ 014E                   .dbstacksize 2
+ 014E                   .dbfunc e SmartIO_PopupAlert _SmartIO_PopupAlert#Fst fS 94 3714648
+ 014E           ;      variation -> R10,R11
+                        .even
+ 014E           _SmartIO_PopupAlert#Fst::
+ 014E AA92              st -y,R10
+ 0150 BA92              st -y,R11
+ 0152 5801              movw R10,R16
+ 0154 2297              sbiw R28,2
+ 0156                   .dbblock 95
+ 0156                   .dbline 96
+ 0156 B982              std y+1,R11
+ 0158 A882              std y+0,R10
+ 015A 28E1              ldi R18,24
+ 015C 30E0              ldi R19,0
+ 015E 05E0              ldi R16,5
+ 0160 10E0              ldi R17,0
+ 0162 0E944B09          xcall _APICall#Fmjz
+ 0166                   .dbblkend 97
+ 0166           L19:
+ 0166 2296              adiw R28,2
+ 0168 B990              ld R11,y+
+ 016A A990              ld R10,y+
+ 016C 0895              ret
+ 016E                   .dbfuncend
+ 016E                   .dbsym r variation 10 s
+ 016E                   .dbstacksize 0
+ 016E                   .dbfunc e SmartIO_GroupObjects _SmartIO_GroupObjects#Fsttz fS 99 3714648
+ 016E           ;         status -> <dead>
+ 016E           ;          index -> R20,R21
+ 016E           ;           args -> R22,R23
+ 016E           ;              h -> R10,R11
+ 016E           ;             h1 -> y+8
+ 016E           ;         option -> y+6
+                        .even
+ 016E           _SmartIO_GroupObjects#Fsttz::
+ 016E 0E940000          xcall push_arg4
+ 0172 0E940000          xcall push_xgsetF00C
+ 0176                   .dbblock 100
+ 0176                   .dbline 105
+ 0176 BE01              movw R22,R28
+ 0178 665F              subi R22,246  ; offset = 10
+ 017A 7F4F              sbci R23,255
+ 017C                   .dbline 107
+ 017C 80E2              ldi R24,32
+ 017E 90E0              ldi R25,0
+ 0180 E0910200          lds R30,_Command#Pt
+ 0184 F0910300          lds R31,_Command#Pt+1
+ 0188 9183              std z+1,R25
+ 018A 8083              std z+0,R24
+ 018C                   .dbline 108
+ 018C 2E80              ldd R2,y+6
+ 018E 3F80              ldd R3,y+7
+ 0190 E0910200          lds R30,_Command#Pt
+ 0194 F0910300          lds R31,_Command#Pt+1
+ 0198 3382              std z+3,R3
+ 019A 2282              std z+2,R2
+ 019C                   .dbline 109
+ 019C 42E0              ldi R20,2
+ 019E 50E0              ldi R21,0
+ 01A0                   .dbline 110
+ 01A0 A884              ldd R10,y+8
+ 01A2 B984              ldd R11,y+9
+ 01A4           L22:
+ 01A4                   .dbline 113
+ 01A4 2A01              movw R4,R20
+ 01A6 4F5F              subi R20,255  ; offset = 1
+ 01A8 5F4F              sbci R21,255
+ 01AA 20900200          lds R2,_Command#Pt
+ 01AE 30900300          lds R3,_Command#Pt+1
+ 01B2 F201              movw R30,R4
+ 01B4 EE0F              lsl R30
+ 01B6 FF1F              rol R31
+ 01B8 E20D              add R30,R2
+ 01BA F31D              adc R31,R3
+ 01BC B182              std z+1,R11
+ 01BE A082              std z+0,R10
+ 01C0                   .dbline 114
+ 01C0 6E5F              subi R22,254  ; offset = 2
+ 01C2 7F4F              sbci R23,255
+ 01C4 FB01              movw R30,R22
+ 01C6 3297              sbiw R30,2
+ 01C8 A080              ldd R10,z+0
+ 01CA B180              ldd R11,z+1
+ 01CC           L23:
+ 01CC                   .dbline 115
+ 01CC AA20              tst R10
+ 01CE 51F7              brne L22
+ 01D0 BB20              tst R11
+ 01D2 41F7              brne L22
+ 01D4           X1:
+ 01D4                   .dbline 117
+ 01D4 9A01              movw R18,R20
+ 01D6 220F              lsl R18
+ 01D8 331F              rol R19
+ 01DA 00910200          lds R16,_Command#Pt
+ 01DE 10910300          lds R17,_Command#Pt+1
+ 01E2 0E940000          xcall _SmartIO__SendBytes#FmPhi
+ 01E6                   .dbblkend 118
+ 01E6           L20:
+ 01E6 0E940000          xcall pop_xgsetF00C
+ 01EA 2496              adiw R28,4
+ 01EC 0895              ret
+ 01EE                   .dbfuncend
+ 01EE                   .dbsym l status 1 S
+ 01EE                   .dbsym r index 20 I
+ 01EE                   .dbsym r args 22 pc
+ 01EE                   .dbsym r h 10 s
+ 01EE                   .dbsym l h1 8 s
+ 01EE                   .dbsym l option 6 s
+ 01EE                   .dbstacksize 4
+ 01EE                   .dbfunc e SmartIO_EnableIf _SmartIO_EnableIf#Fsttz fS 121 3714648
+ 01EE           ;         status -> <dead>
+ 01EE           ;          index -> R20,R21
+ 01EE           ;           args -> R22,R23
+ 01EE           ;              h -> R10,R11
+ 01EE           ;             h1 -> y+8
+ 01EE           ;        control -> y+6
+                        .even
+ 01EE           _SmartIO_EnableIf#Fsttz::
+ 01EE 0E940000          xcall push_arg4
+ 01F2 0E940000          xcall push_xgsetF00C
+ 01F6                   .dbblock 122
+ 01F6                   .dbline 127
+ 01F6 BE01              movw R22,R28
+ 01F8 665F              subi R22,246  ; offset = 10
+ 01FA 7F4F              sbci R23,255
+ 01FC                   .dbline 129
+ 01FC 8CE2              ldi R24,44
+ 01FE 90E0              ldi R25,0
+ 0200 E0910200          lds R30,_Command#Pt
+ 0204 F0910300          lds R31,_Command#Pt+1
+ 0208 9183              std z+1,R25
+ 020A 8083              std z+0,R24
+ 020C                   .dbline 130
+ 020C 2E80              ldd R2,y+6
+ 020E 3F80              ldd R3,y+7
+ 0210 E0910200          lds R30,_Command#Pt
+ 0214 F0910300          lds R31,_Command#Pt+1
+ 0218 3382              std z+3,R3
+ 021A 2282              std z+2,R2
+ 021C                   .dbline 131
+ 021C 42E0              ldi R20,2
+ 021E 50E0              ldi R21,0
+ 0220                   .dbline 132
+ 0220 A884              ldd R10,y+8
+ 0222 B984              ldd R11,y+9
+ 0224           L27:
+ 0224                   .dbline 135
+ 0224 2A01              movw R4,R20
+ 0226 4F5F              subi R20,255  ; offset = 1
+ 0228 5F4F              sbci R21,255
+ 022A 20900200          lds R2,_Command#Pt
+ 022E 30900300          lds R3,_Command#Pt+1
+ 0232 F201              movw R30,R4
+ 0234 EE0F              lsl R30
+ 0236 FF1F              rol R31
+ 0238 E20D              add R30,R2
+ 023A F31D              adc R31,R3
+ 023C B182              std z+1,R11
+ 023E A082              std z+0,R10
+ 0240                   .dbline 136
+ 0240 6E5F              subi R22,254  ; offset = 2
+ 0242 7F4F              sbci R23,255
+ 0244 FB01              movw R30,R22
+ 0246 3297              sbiw R30,2
+ 0248 A080              ldd R10,z+0
+ 024A B180              ldd R11,z+1
+ 024C           L28:
+ 024C                   .dbline 137
+ 024C AA20              tst R10
+ 024E 51F7              brne L27
+ 0250 BB20              tst R11
+ 0252 41F7              brne L27
+ 0254           X2:
+ 0254                   .dbline 139
+ 0254 9A01              movw R18,R20
+ 0256 220F              lsl R18
+ 0258 331F              rol R19
+ 025A 00910200          lds R16,_Command#Pt
+ 025E 10910300          lds R17,_Command#Pt+1
+ 0262 0E940000          xcall _SmartIO__SendBytes#FmPhi
+ 0266                   .dbblkend 140
+ 0266           L25:
+ 0266 0E940000          xcall pop_xgsetF00C
+ 026A 2496              adiw R28,4
+ 026C 0895              ret
+ 026E                   .dbfuncend
+ 026E                   .dbsym l status 1 S
+ 026E                   .dbsym r index 20 I
+ 026E                   .dbsym r args 22 pc
+ 026E                   .dbsym r h 10 s
+ 026E                   .dbsym l h1 8 s
+ 026E                   .dbsym l control 6 s
+ 026E                   .dbstacksize 4
+ 026E                   .dbfunc e SmartIO_StopResume _SmartIO_StopResume#Fsv fS 142 3714648
+                        .even
+ 026E           _SmartIO_StopResume#Fsv::
+ 026E                   .dbblock 143
+ 026E                   .dbline 144
+ 026E 2DE2              ldi R18,45
+ 0270 30E0              ldi R19,0
+ 0272 01E0              ldi R16,1
+ 0274 10E0              ldi R17,0
+ 0276                   .dbblkend 145
+ 0276           L30:
+ 0276 0C944B09          xjmp _APICall#Fmjz
+ 027A                   .dbfuncend
+ 027A                   .dbstacksize -2
+ 027A                   .dbfunc e SmartIO_MakeOnOffButton _SmartIO_MakeOnOffButton#FttttPFvtE fs 147 3714648
+ 027A           ;              h -> R20,R21
+ 027A           ;       callback -> R10,R11
+ 027A           ;  initial_value -> R20,R21
+ 027A           ;      variation -> R14,R15
+ 027A           ;      alignment -> R12,R13
+                        .even
+ 027A           _SmartIO_MakeOnOffButton#FttttPFvtE::
+ 027A 0E940000          xcall push_xgset30FC
+ 027E 7901              movw R14,R18
+ 0280 6801              movw R12,R16
+ 0282 2897              sbiw R28,8
+ 0284 4889              ldd R20,y+16
+ 0286 5989              ldd R21,y+17
+ 0288 AA88              ldd R10,y+18
+ 028A BB88              ldd R11,y+19
+ 028C                   .dbblock 148
+ 028C                   .dbline 149
+ 028C 5F83              std y+7,R21
+ 028E 4E83              std y+6,R20
+ 0290 FD82              std y+5,R15
+ 0292 EC82              std y+4,R14
+ 0294 88EC              ldi R24,200
+ 0296 90E0              ldi R25,0
+ 0298 9B83              std y+3,R25
+ 029A 8A83              std y+2,R24
+ 029C D982              std y+1,R13
+ 029E C882              std y+0,R12
+ 02A0 2AE0              ldi R18,10
+ 02A2 30E0              ldi R19,0
+ 02A4 05E5              ldi R16,341
+ 02A6 11E0              ldi R17,1
+ 02A8 F6D7              xcall _APICall#Fmjz
+ 02AA A801              movw R20,R16
+ 02AC                   .dbline 150
+ 02AC AA20              tst R10
+ 02AE 11F4              brne X3
+ 02B0 BB20              tst R11
+ 02B2 49F0              breq L32
+ 02B4           X3:
+ 02B4                   .dbline 150
+ 02B4 81E0              ldi R24,1
+ 02B6 90E0              ldi R25,0
+ 02B8 9983              std y+1,R25
+ 02BA 8883              std y+0,R24
+ 02BC 9501              movw R18,R10
+ 02BE 0F5F              subi R16,255  ; offset = 1
+ 02C0 1F4F              sbci R17,255
+ 02C2 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 02C6           L32:
+ 02C6                   .dbline 151
+ 02C6 8A01              movw R16,R20
+ 02C8                   .dbblkend 152
+ 02C8           L31:
+ 02C8 2896              adiw R28,8
+ 02CA 0C940000          xjmp pop_xgset30FC
+ 02CE 0895              ret
+ 02D0                   .dbfuncend
+ 02D0                   .dbsym r h 20 s
+ 02D0                   .dbsym r callback 10 pfV
+ 02D0                   .dbsym r initial_value 20 s
+ 02D0                   .dbsym r variation 14 s
+ 02D0                   .dbsym r alignment 12 s
+ 02D0                   .dbstacksize 10
+ 02D0                   .dbfunc e SmartIO_Make3PosButton _SmartIO_Make3PosButton#FttttPFvtE fs 154 3714648
+ 02D0           ;              h -> R20,R21
+ 02D0           ;       callback -> R10,R11
+ 02D0           ;  initial_value -> R20,R21
+ 02D0           ;      variation -> R14,R15
+ 02D0           ;      alignment -> R12,R13
+                        .even
+ 02D0           _SmartIO_Make3PosButton#FttttPFvtE::
+ 02D0 0E940000          xcall push_xgset30FC
+ 02D4 7901              movw R14,R18
+ 02D6 6801              movw R12,R16
+ 02D8 2897              sbiw R28,8
+ 02DA 4889              ldd R20,y+16
+ 02DC 5989              ldd R21,y+17
+ 02DE AA88              ldd R10,y+18
+ 02E0 BB88              ldd R11,y+19
+ 02E2                   .dbblock 155
+ 02E2                   .dbline 156
+ 02E2 5F83              std y+7,R21
+ 02E4 4E83              std y+6,R20
+ 02E6 FD82              std y+5,R15
+ 02E8 EC82              std y+4,R14
+ 02EA 89EC              ldi R24,201
+ 02EC 90E0              ldi R25,0
+ 02EE 9B83              std y+3,R25
+ 02F0 8A83              std y+2,R24
+ 02F2 D982              std y+1,R13
+ 02F4 C882              std y+0,R12
+ 02F6 2AE0              ldi R18,10
+ 02F8 30E0              ldi R19,0
+ 02FA 05E5              ldi R16,341
+ 02FC 11E0              ldi R17,1
+ 02FE CBD7              xcall _APICall#Fmjz
+ 0300 A801              movw R20,R16
+ 0302                   .dbline 157
+ 0302 AA20              tst R10
+ 0304 11F4              brne X4
+ 0306 BB20              tst R11
+ 0308 49F0              breq L35
+ 030A           X4:
+ 030A                   .dbline 157
+ 030A 81E0              ldi R24,1
+ 030C 90E0              ldi R25,0
+ 030E 9983              std y+1,R25
+ 0310 8883              std y+0,R24
+ 0312 9501              movw R18,R10
+ 0314 0F5F              subi R16,255  ; offset = 1
+ 0316 1F4F              sbci R17,255
+ 0318 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 031C           L35:
+ 031C                   .dbline 158
+ 031C 8A01              movw R16,R20
+ 031E                   .dbblkend 159
+ 031E           L34:
+ 031E 2896              adiw R28,8
+ 0320 0C940000          xjmp pop_xgset30FC
+ 0324 0895              ret
+ 0326                   .dbfuncend
+ 0326                   .dbsym r h 20 s
+ 0326                   .dbsym r callback 10 pfV
+ 0326                   .dbsym r initial_value 20 s
+ 0326                   .dbsym r variation 14 s
+ 0326                   .dbsym r alignment 12 s
+ 0326                   .dbstacksize 10
+ 0326                   .dbfunc e SmartIO_MakeIncrementer _SmartIO_MakeIncrementer#FttttPFvtE fs 161 3714648
+ 0326           ;              h -> R20,R21
+ 0326           ;       callback -> R10,R11
+ 0326           ;  initial_value -> R20,R21
+ 0326           ;      variation -> R14,R15
+ 0326           ;      alignment -> R12,R13
+                        .even
+ 0326           _SmartIO_MakeIncrementer#FttttPFvtE::
+ 0326 0E940000          xcall push_xgset30FC
+ 032A 7901              movw R14,R18
+ 032C 6801              movw R12,R16
+ 032E 2897              sbiw R28,8
+ 0330 4889              ldd R20,y+16
+ 0332 5989              ldd R21,y+17
+ 0334 AA88              ldd R10,y+18
+ 0336 BB88              ldd R11,y+19
+ 0338                   .dbblock 162
+ 0338                   .dbline 163
+ 0338 5F83              std y+7,R21
+ 033A 4E83              std y+6,R20
+ 033C FD82              std y+5,R15
+ 033E EC82              std y+4,R14
+ 0340 8AEC              ldi R24,202
+ 0342 90E0              ldi R25,0
+ 0344 9B83              std y+3,R25
+ 0346 8A83              std y+2,R24
+ 0348 D982              std y+1,R13
+ 034A C882              std y+0,R12
+ 034C 2AE0              ldi R18,10
+ 034E 30E0              ldi R19,0
+ 0350 05E5              ldi R16,341
+ 0352 11E0              ldi R17,1
+ 0354 A0D7              xcall _APICall#Fmjz
+ 0356 A801              movw R20,R16
+ 0358                   .dbline 164
+ 0358 AA20              tst R10
+ 035A 11F4              brne X5
+ 035C BB20              tst R11
+ 035E 49F0              breq L38
+ 0360           X5:
+ 0360                   .dbline 164
+ 0360 81E0              ldi R24,1
+ 0362 90E0              ldi R25,0
+ 0364 9983              std y+1,R25
+ 0366 8883              std y+0,R24
+ 0368 9501              movw R18,R10
+ 036A 0F5F              subi R16,255  ; offset = 1
+ 036C 1F4F              sbci R17,255
+ 036E 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0372           L38:
+ 0372                   .dbline 165
+ 0372 8A01              movw R16,R20
+ 0374                   .dbblkend 166
+ 0374           L37:
+ 0374 2896              adiw R28,8
+ 0376 0C940000          xjmp pop_xgset30FC
+ 037A 0895              ret
+ 037C                   .dbfuncend
+ 037C                   .dbsym r h 20 s
+ 037C                   .dbsym r callback 10 pfV
+ 037C                   .dbsym r initial_value 20 s
+ 037C                   .dbsym r variation 14 s
+ 037C                   .dbsym r alignment 12 s
+ 037C                   .dbstacksize 10
+ 037C                   .dbfunc e SmartIO_MakeSlider _SmartIO_MakeSlider#FttttPFvtE fs 168 3714648
+ 037C           ;              h -> R20,R21
+ 037C           ;       callback -> R10,R11
+ 037C           ;  initial_value -> R20,R21
+ 037C           ;      variation -> R14,R15
+ 037C           ;      alignment -> R12,R13
+                        .even
+ 037C           _SmartIO_MakeSlider#FttttPFvtE::
+ 037C 0E940000          xcall push_xgset30FC
+ 0380 7901              movw R14,R18
+ 0382 6801              movw R12,R16
+ 0384 2897              sbiw R28,8
+ 0386 4889              ldd R20,y+16
+ 0388 5989              ldd R21,y+17
+ 038A AA88              ldd R10,y+18
+ 038C BB88              ldd R11,y+19
+ 038E                   .dbblock 169
+ 038E                   .dbline 170
+ 038E 5F83              std y+7,R21
+ 0390 4E83              std y+6,R20
+ 0392 FD82              std y+5,R15
+ 0394 EC82              std y+4,R14
+ 0396 8BEC              ldi R24,203
+ 0398 90E0              ldi R25,0
+ 039A 9B83              std y+3,R25
+ 039C 8A83              std y+2,R24
+ 039E D982              std y+1,R13
+ 03A0 C882              std y+0,R12
+ 03A2 2AE0              ldi R18,10
+ 03A4 30E0              ldi R19,0
+ 03A6 05E5              ldi R16,341
+ 03A8 11E0              ldi R17,1
+ 03AA 75D7              xcall _APICall#Fmjz
+ 03AC A801              movw R20,R16
+ 03AE                   .dbline 171
+ 03AE AA20              tst R10
+ 03B0 11F4              brne X6
+ 03B2 BB20              tst R11
+ 03B4 49F0              breq L41
+ 03B6           X6:
+ 03B6                   .dbline 171
+ 03B6 81E0              ldi R24,1
+ 03B8 90E0              ldi R25,0
+ 03BA 9983              std y+1,R25
+ 03BC 8883              std y+0,R24
+ 03BE 9501              movw R18,R10
+ 03C0 0F5F              subi R16,255  ; offset = 1
+ 03C2 1F4F              sbci R17,255
+ 03C4 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 03C8           L41:
+ 03C8                   .dbline 172
+ 03C8 8A01              movw R16,R20
+ 03CA                   .dbblkend 173
+ 03CA           L40:
+ 03CA 2896              adiw R28,8
+ 03CC 0C940000          xjmp pop_xgset30FC
+ 03D0 0895              ret
+ 03D2                   .dbfuncend
+ 03D2                   .dbsym r h 20 s
+ 03D2                   .dbsym r callback 10 pfV
+ 03D2                   .dbsym r initial_value 20 s
+ 03D2                   .dbsym r variation 14 s
+ 03D2                   .dbsym r alignment 12 s
+ 03D2                   .dbstacksize 10
+ 03D2                   .dbfunc e SmartIO_MakeExpandableList _SmartIO_MakeExpandableList#FtttPFvtE fs 175 3714648
+ 03D2           ;              h -> R20,R21
+ 03D2           ;       callback -> R10,R11
+ 03D2           ;       nentries -> R14,R15
+ 03D2           ;      alignment -> R12,R13
+                        .even
+ 03D2           _SmartIO_MakeExpandableList#FtttPFvtE::
+ 03D2 0E940000          xcall push_xgset30FC
+ 03D6 7901              movw R14,R18
+ 03D8 6801              movw R12,R16
+ 03DA 2697              sbiw R28,6
+ 03DC AE84              ldd R10,y+14
+ 03DE BF84              ldd R11,y+15
+ 03E0                   .dbblock 176
+ 03E0                   .dbline 177
+ 03E0 FD82              std y+5,R15
+ 03E2 EC82              std y+4,R14
+ 03E4 8CEC              ldi R24,204
+ 03E6 90E0              ldi R25,0
+ 03E8 9B83              std y+3,R25
+ 03EA 8A83              std y+2,R24
+ 03EC D982              std y+1,R13
+ 03EE C882              std y+0,R12
+ 03F0 2AE0              ldi R18,10
+ 03F2 30E0              ldi R19,0
+ 03F4 05E5              ldi R16,85
+ 03F6 10E0              ldi R17,0
+ 03F8 4ED7              xcall _APICall#Fmjz
+ 03FA A801              movw R20,R16
+ 03FC                   .dbline 178
+ 03FC AA20              tst R10
+ 03FE 11F4              brne X7
+ 0400 BB20              tst R11
+ 0402 49F0              breq L44
+ 0404           X7:
+ 0404                   .dbline 178
+ 0404 81E0              ldi R24,1
+ 0406 90E0              ldi R25,0
+ 0408 9983              std y+1,R25
+ 040A 8883              std y+0,R24
+ 040C 9501              movw R18,R10
+ 040E 0F5F              subi R16,255  ; offset = 1
+ 0410 1F4F              sbci R17,255
+ 0412 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0416           L44:
+ 0416                   .dbline 179
+ 0416 8A01              movw R16,R20
+ 0418                   .dbblkend 180
+ 0418           L43:
+ 0418 2696              adiw R28,6
+ 041A 0C940000          xjmp pop_xgset30FC
+ 041E 0895              ret
+ 0420                   .dbfuncend
+ 0420                   .dbsym r h 20 s
+ 0420                   .dbsym r callback 10 pfV
+ 0420                   .dbsym r nentries 14 s
+ 0420                   .dbsym r alignment 12 s
+ 0420                   .dbstacksize 8
+ 0420                   .dbfunc e SmartIO_MakePicker _SmartIO_MakePicker#FtttPFvtE fs 182 3714648
+ 0420           ;              h -> R20,R21
+ 0420           ;       callback -> R10,R11
+ 0420           ;       nentries -> R14,R15
+ 0420           ;      alignment -> R12,R13
+                        .even
+ 0420           _SmartIO_MakePicker#FtttPFvtE::
+ 0420 0E940000          xcall push_xgset30FC
+ 0424 7901              movw R14,R18
+ 0426 6801              movw R12,R16
+ 0428 2697              sbiw R28,6
+ 042A AE84              ldd R10,y+14
+ 042C BF84              ldd R11,y+15
+ 042E                   .dbblock 183
+ 042E                   .dbline 184
+ 042E FD82              std y+5,R15
+ 0430 EC82              std y+4,R14
+ 0432 8DEC              ldi R24,205
+ 0434 90E0              ldi R25,0
+ 0436 9B83              std y+3,R25
+ 0438 8A83              std y+2,R24
+ 043A D982              std y+1,R13
+ 043C C882              std y+0,R12
+ 043E 2AE0              ldi R18,10
+ 0440 30E0              ldi R19,0
+ 0442 05E5              ldi R16,85
+ 0444 10E0              ldi R17,0
+ 0446 27D7              xcall _APICall#Fmjz
+ 0448 A801              movw R20,R16
+ 044A                   .dbline 185
+ 044A AA20              tst R10
+ 044C 11F4              brne X8
+ 044E BB20              tst R11
+ 0450 49F0              breq L47
+ 0452           X8:
+ 0452                   .dbline 185
+ 0452 81E0              ldi R24,1
+ 0454 90E0              ldi R25,0
+ 0456 9983              std y+1,R25
+ 0458 8883              std y+0,R24
+ 045A 9501              movw R18,R10
+ 045C 0F5F              subi R16,255  ; offset = 1
+ 045E 1F4F              sbci R17,255
+ 0460 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0464           L47:
+ 0464                   .dbline 186
+ 0464 8A01              movw R16,R20
+ 0466                   .dbblkend 187
+ 0466           L46:
+ 0466 2696              adiw R28,6
+ 0468 0C940000          xjmp pop_xgset30FC
+ 046C 0895              ret
+ 046E                   .dbfuncend
+ 046E                   .dbsym r h 20 s
+ 046E                   .dbsym r callback 10 pfV
+ 046E                   .dbsym r nentries 14 s
+ 046E                   .dbsym r alignment 12 s
+ 046E                   .dbstacksize 8
+ 046E                   .dbfunc e SmartIO_MakeMultiSelector _SmartIO_MakeMultiSelector#FttttPFvtE fs 189 3714648
+ 046E           ;              h -> R20,R21
+ 046E           ;       callback -> R10,R11
+ 046E           ; isSingleSelectOnly -> R20,R21
+ 046E           ;       nentries -> R14,R15
+ 046E           ;      alignment -> R12,R13
+                        .even
+ 046E           _SmartIO_MakeMultiSelector#FttttPFvtE::
+ 046E 0E940000          xcall push_xgset30FC
+ 0472 7901              movw R14,R18
+ 0474 6801              movw R12,R16
+ 0476 2897              sbiw R28,8
+ 0478 4889              ldd R20,y+16
+ 047A 5989              ldd R21,y+17
+ 047C AA88              ldd R10,y+18
+ 047E BB88              ldd R11,y+19
+ 0480                   .dbblock 190
+ 0480                   .dbline 191
+ 0480 5F83              std y+7,R21
+ 0482 4E83              std y+6,R20
+ 0484 FD82              std y+5,R15
+ 0486 EC82              std y+4,R14
+ 0488 8CED              ldi R24,220
+ 048A 90E0              ldi R25,0
+ 048C 9B83              std y+3,R25
+ 048E 8A83              std y+2,R24
+ 0490 D982              std y+1,R13
+ 0492 C882              std y+0,R12
+ 0494 2AE0              ldi R18,10
+ 0496 30E0              ldi R19,0
+ 0498 05E5              ldi R16,341
+ 049A 11E0              ldi R17,1
+ 049C FCD6              xcall _APICall#Fmjz
+ 049E A801              movw R20,R16
+ 04A0                   .dbline 192
+ 04A0 AA20              tst R10
+ 04A2 11F4              brne X9
+ 04A4 BB20              tst R11
+ 04A6 49F0              breq L50
+ 04A8           X9:
+ 04A8                   .dbline 192
+ 04A8 81E0              ldi R24,1
+ 04AA 90E0              ldi R25,0
+ 04AC 9983              std y+1,R25
+ 04AE 8883              std y+0,R24
+ 04B0 9501              movw R18,R10
+ 04B2 0F5F              subi R16,255  ; offset = 1
+ 04B4 1F4F              sbci R17,255
+ 04B6 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 04BA           L50:
+ 04BA                   .dbline 193
+ 04BA 8A01              movw R16,R20
+ 04BC                   .dbblkend 194
+ 04BC           L49:
+ 04BC 2896              adiw R28,8
+ 04BE 0C940000          xjmp pop_xgset30FC
+ 04C2 0895              ret
+ 04C4                   .dbfuncend
+ 04C4                   .dbsym r h 20 s
+ 04C4                   .dbsym r callback 10 pfV
+ 04C4                   .dbsym r isSingleSelectOnly 20 s
+ 04C4                   .dbsym r nentries 14 s
+ 04C4                   .dbsym r alignment 12 s
+ 04C4                   .dbstacksize 10
+ 04C4                   .dbfunc e SmartIO_MakeNumberSelector _SmartIO_MakeNumberSelector#FtttttPFvmE fs 196 3714648
+ 04C4           ;              h -> R20,R21
+ 04C4           ;       callback -> R10,R11
+ 04C4           ;           high -> R22,R23
+ 04C4           ;            low -> R20,R21
+ 04C4           ;    default_val -> R14,R15
+ 04C4           ;      alignment -> R12,R13
+                        .even
+ 04C4           _SmartIO_MakeNumberSelector#FtttttPFvmE::
+ 04C4 0E940000          xcall push_xgsetF0FC
+ 04C8 7901              movw R14,R18
+ 04CA 6801              movw R12,R16
+ 04CC 2A97              sbiw R28,10
+ 04CE 4C89              ldd R20,y+20
+ 04D0 5D89              ldd R21,y+21
+ 04D2 6E89              ldd R22,y+22
+ 04D4 7F89              ldd R23,y+23
+ 04D6 A88C              ldd R10,y+24
+ 04D8 B98C              ldd R11,y+25
+ 04DA                   .dbblock 197
+ 04DA                   .dbline 198
+ 04DA 7987              std y+9,R23
+ 04DC 6887              std y+8,R22
+ 04DE 5F83              std y+7,R21
+ 04E0 4E83              std y+6,R20
+ 04E2 FD82              std y+5,R15
+ 04E4 EC82              std y+4,R14
+ 04E6 8EEC              ldi R24,206
+ 04E8 90E0              ldi R25,0
+ 04EA 9B83              std y+3,R25
+ 04EC 8A83              std y+2,R24
+ 04EE D982              std y+1,R13
+ 04F0 C882              std y+0,R12
+ 04F2 2AE0              ldi R18,10
+ 04F4 30E0              ldi R19,0
+ 04F6 05E5              ldi R16,1365
+ 04F8 15E0              ldi R17,5
+ 04FA CDD6              xcall _APICall#Fmjz
+ 04FC A801              movw R20,R16
+ 04FE                   .dbline 199
+ 04FE AA20              tst R10
+ 0500 11F4              brne X10
+ 0502 BB20              tst R11
+ 0504 49F0              breq L53
+ 0506           X10:
+ 0506                   .dbline 199
+ 0506 85E0              ldi R24,5
+ 0508 90E0              ldi R25,0
+ 050A 9983              std y+1,R25
+ 050C 8883              std y+0,R24
+ 050E 9501              movw R18,R10
+ 0510 0F5F              subi R16,255  ; offset = 1
+ 0512 1F4F              sbci R17,255
+ 0514 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0518           L53:
+ 0518                   .dbline 200
+ 0518 8A01              movw R16,R20
+ 051A                   .dbblkend 201
+ 051A           L52:
+ 051A 2A96              adiw R28,10
+ 051C 0C940000          xjmp pop_xgsetF0FC
+ 0520 0895              ret
+ 0522                   .dbfuncend
+ 0522                   .dbsym r h 20 s
+ 0522                   .dbsym r callback 10 pfV
+ 0522                   .dbsym r high 22 s
+ 0522                   .dbsym r low 20 s
+ 0522                   .dbsym r default_val 14 s
+ 0522                   .dbsym r alignment 12 s
+ 0522                   .dbstacksize 14
+ 0522                   .dbfunc e SmartIO_MakeTimeSelector _SmartIO_MakeTimeSelector#FtttPcPFvttE fs 203 3714648
+ 0522           ;              h -> R20,R21
+ 0522           ;       callback -> R10,R11
+ 0522           ;  initial_value -> R20,R21
+ 0522           ;    display_24h -> R14,R15
+ 0522           ;      alignment -> R12,R13
+                        .even
+ 0522           _SmartIO_MakeTimeSelector#FtttPcPFvttE::
+ 0522 0E940000          xcall push_xgset30FC
+ 0526 7901              movw R14,R18
+ 0528 6801              movw R12,R16
+ 052A 2897              sbiw R28,8
+ 052C 4889              ldd R20,y+16
+ 052E 5989              ldd R21,y+17
+ 0530 AA88              ldd R10,y+18
+ 0532 BB88              ldd R11,y+19
+ 0534                   .dbblock 204
+ 0534                   .dbline 205
+ 0534 5F83              std y+7,R21
+ 0536 4E83              std y+6,R20
+ 0538 FD82              std y+5,R15
+ 053A EC82              std y+4,R14
+ 053C 8FEC              ldi R24,207
+ 053E 90E0              ldi R25,0
+ 0540 9B83              std y+3,R25
+ 0542 8A83              std y+2,R24
+ 0544 D982              std y+1,R13
+ 0546 C882              std y+0,R12
+ 0548 2AE0              ldi R18,10
+ 054A 30E0              ldi R19,0
+ 054C 05E5              ldi R16,597
+ 054E 12E0              ldi R17,2
+ 0550 A2D6              xcall _APICall#Fmjz
+ 0552 A801              movw R20,R16
+ 0554                   .dbline 206
+ 0554 AA20              tst R10
+ 0556 11F4              brne X11
+ 0558 BB20              tst R11
+ 055A 49F0              breq L56
+ 055C           X11:
+ 055C                   .dbline 206
+ 055C 82E0              ldi R24,2
+ 055E 90E0              ldi R25,0
+ 0560 9983              std y+1,R25
+ 0562 8883              std y+0,R24
+ 0564 9501              movw R18,R10
+ 0566 0F5F              subi R16,255  ; offset = 1
+ 0568 1F4F              sbci R17,255
+ 056A 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 056E           L56:
+ 056E                   .dbline 207
+ 056E 8A01              movw R16,R20
+ 0570                   .dbblkend 208
+ 0570           L55:
+ 0570 2896              adiw R28,8
+ 0572 0C940000          xjmp pop_xgset30FC
+ 0576 0895              ret
+ 0578                   .dbfuncend
+ 0578                   .dbsym r h 20 s
+ 0578                   .dbsym r callback 10 pfV
+ 0578                   .dbsym r initial_value 20 pc
+ 0578                   .dbsym r display_24h 14 s
+ 0578                   .dbsym r alignment 12 s
+ 0578                   .dbstacksize 10
+ 0578                   .dbfunc e SmartIO_MakeAnalogTimeSelector _SmartIO_MakeAnalogTimeSelector#FtttPcPFvttE fs 210 3714648
+ 0578           ;              h -> R20,R21
+ 0578           ;       callback -> R10,R11
+ 0578           ;  initial_value -> R20,R21
+ 0578           ;    display_24h -> R14,R15
+ 0578           ;      alignment -> R12,R13
+                        .even
+ 0578           _SmartIO_MakeAnalogTimeSelector#FtttPcPFvttE::
+ 0578 0E940000          xcall push_xgset30FC
+ 057C 7901              movw R14,R18
+ 057E 6801              movw R12,R16
+ 0580 2897              sbiw R28,8
+ 0582 4889              ldd R20,y+16
+ 0584 5989              ldd R21,y+17
+ 0586 AA88              ldd R10,y+18
+ 0588 BB88              ldd R11,y+19
+ 058A                   .dbblock 211
+ 058A                   .dbline 212
+ 058A 5F83              std y+7,R21
+ 058C 4E83              std y+6,R20
+ 058E FD82              std y+5,R15
+ 0590 EC82              std y+4,R14
+ 0592 82ED              ldi R24,210
+ 0594 90E0              ldi R25,0
+ 0596 9B83              std y+3,R25
+ 0598 8A83              std y+2,R24
+ 059A D982              std y+1,R13
+ 059C C882              std y+0,R12
+ 059E 2AE0              ldi R18,10
+ 05A0 30E0              ldi R19,0
+ 05A2 05E5              ldi R16,597
+ 05A4 12E0              ldi R17,2
+ 05A6 77D6              xcall _APICall#Fmjz
+ 05A8 A801              movw R20,R16
+ 05AA                   .dbline 213
+ 05AA AA20              tst R10
+ 05AC 11F4              brne X12
+ 05AE BB20              tst R11
+ 05B0 49F0              breq L59
+ 05B2           X12:
+ 05B2                   .dbline 213
+ 05B2 82E0              ldi R24,2
+ 05B4 90E0              ldi R25,0
+ 05B6 9983              std y+1,R25
+ 05B8 8883              std y+0,R24
+ 05BA 9501              movw R18,R10
+ 05BC 0F5F              subi R16,255  ; offset = 1
+ 05BE 1F4F              sbci R17,255
+ 05C0 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 05C4           L59:
+ 05C4                   .dbline 214
+ 05C4 8A01              movw R16,R20
+ 05C6                   .dbblkend 215
+ 05C6           L58:
+ 05C6 2896              adiw R28,8
+ 05C8 0C940000          xjmp pop_xgset30FC
+ 05CC 0895              ret
+ 05CE                   .dbfuncend
+ 05CE                   .dbsym r h 20 s
+ 05CE                   .dbsym r callback 10 pfV
+ 05CE                   .dbsym r initial_value 20 pc
+ 05CE                   .dbsym r display_24h 14 s
+ 05CE                   .dbsym r alignment 12 s
+ 05CE                   .dbstacksize 10
+ 05CE                   .dbfunc e SmartIO_MakeCalendarSelector _SmartIO_MakeCalendarSelector#FttPcPFvPcE fs 217 3714648
+ 05CE           ;              h -> R20,R21
+ 05CE           ;       callback -> R10,R11
+ 05CE           ;  initial_value -> R14,R15
+ 05CE           ;      alignment -> R12,R13
+                        .even
+ 05CE           _SmartIO_MakeCalendarSelector#FttPcPFvPcE::
+ 05CE 0E940000          xcall push_xgset30FC
+ 05D2 7901              movw R14,R18
+ 05D4 6801              movw R12,R16
+ 05D6 2697              sbiw R28,6
+ 05D8 AE84              ldd R10,y+14
+ 05DA BF84              ldd R11,y+15
+ 05DC                   .dbblock 218
+ 05DC                   .dbline 219
+ 05DC FD82              std y+5,R15
+ 05DE EC82              std y+4,R14
+ 05E0 80ED              ldi R24,208
+ 05E2 90E0              ldi R25,0
+ 05E4 9B83              std y+3,R25
+ 05E6 8A83              std y+2,R24
+ 05E8 D982              std y+1,R13
+ 05EA C882              std y+0,R12
+ 05EC 2AE0              ldi R18,10
+ 05EE 30E0              ldi R19,0
+ 05F0 05E9              ldi R16,149
+ 05F2 10E0              ldi R17,0
+ 05F4 50D6              xcall _APICall#Fmjz
+ 05F6 A801              movw R20,R16
+ 05F8                   .dbline 220
+ 05F8 AA20              tst R10
+ 05FA 11F4              brne X13
+ 05FC BB20              tst R11
+ 05FE 49F0              breq L62
+ 0600           X13:
+ 0600                   .dbline 220
+ 0600 86E0              ldi R24,6
+ 0602 90E0              ldi R25,0
+ 0604 9983              std y+1,R25
+ 0606 8883              std y+0,R24
+ 0608 9501              movw R18,R10
+ 060A 0F5F              subi R16,255  ; offset = 1
+ 060C 1F4F              sbci R17,255
+ 060E 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0612           L62:
+ 0612                   .dbline 221
+ 0612 8A01              movw R16,R20
+ 0614                   .dbblkend 222
+ 0614           L61:
+ 0614 2696              adiw R28,6
+ 0616 0C940000          xjmp pop_xgset30FC
+ 061A 0895              ret
+ 061C                   .dbfuncend
+ 061C                   .dbsym r h 20 s
+ 061C                   .dbsym r callback 10 pfV
+ 061C                   .dbsym r initial_value 14 pc
+ 061C                   .dbsym r alignment 12 s
+ 061C                   .dbstacksize 8
+ 061C                   .dbfunc e SmartIO_MakeWeekdaySelector _SmartIO_MakeWeekdaySelector#FtttPFvtE fs 224 3714648
+ 061C           ;              h -> R20,R21
+ 061C           ;       callback -> R10,R11
+ 061C           ;  initial_value -> R14,R15
+ 061C           ;      alignment -> R12,R13
+                        .even
+ 061C           _SmartIO_MakeWeekdaySelector#FtttPFvtE::
+ 061C 0E940000          xcall push_xgset30FC
+ 0620 7901              movw R14,R18
+ 0622 6801              movw R12,R16
+ 0624 2697              sbiw R28,6
+ 0626 AE84              ldd R10,y+14
+ 0628 BF84              ldd R11,y+15
+ 062A                   .dbblock 225
+ 062A                   .dbline 226
+ 062A FD82              std y+5,R15
+ 062C EC82              std y+4,R14
+ 062E 81ED              ldi R24,209
+ 0630 90E0              ldi R25,0
+ 0632 9B83              std y+3,R25
+ 0634 8A83              std y+2,R24
+ 0636 D982              std y+1,R13
+ 0638 C882              std y+0,R12
+ 063A 2AE0              ldi R18,10
+ 063C 30E0              ldi R19,0
+ 063E 05E5              ldi R16,85
+ 0640 10E0              ldi R17,0
+ 0642 29D6              xcall _APICall#Fmjz
+ 0644 A801              movw R20,R16
+ 0646                   .dbline 227
+ 0646 AA20              tst R10
+ 0648 11F4              brne X14
+ 064A BB20              tst R11
+ 064C 49F0              breq L65
+ 064E           X14:
+ 064E                   .dbline 227
+ 064E 81E0              ldi R24,1
+ 0650 90E0              ldi R25,0
+ 0652 9983              std y+1,R25
+ 0654 8883              std y+0,R24
+ 0656 9501              movw R18,R10
+ 0658 0F5F              subi R16,255  ; offset = 1
+ 065A 1F4F              sbci R17,255
+ 065C 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0660           L65:
+ 0660                   .dbline 228
+ 0660 8A01              movw R16,R20
+ 0662                   .dbblkend 229
+ 0662           L64:
+ 0662 2696              adiw R28,6
+ 0664 0C940000          xjmp pop_xgset30FC
+ 0668 0895              ret
+ 066A                   .dbfuncend
+ 066A                   .dbsym r h 20 s
+ 066A                   .dbsym r callback 10 pfV
+ 066A                   .dbsym r initial_value 14 s
+ 066A                   .dbsym r alignment 12 s
+ 066A                   .dbstacksize 8
+ 066A                   .dbfunc e SmartIO_MakeOK _SmartIO_MakeOK#FttPcPFvtE fs 231 3714648
+ 066A           ;              h -> R20,R21
+ 066A           ;       callback -> R10,R11
+ 066A           ;           text -> R14,R15
+ 066A           ;      alignment -> R12,R13
+                        .even
+ 066A           _SmartIO_MakeOK#FttPcPFvtE::
+ 066A 0E940000          xcall push_xgset30FC
+ 066E 7901              movw R14,R18
+ 0670 6801              movw R12,R16
+ 0672 2697              sbiw R28,6
+ 0674 AE84              ldd R10,y+14
+ 0676 BF84              ldd R11,y+15
+ 0678                   .dbblock 232
+ 0678                   .dbline 233
+ 0678 FD82              std y+5,R15
+ 067A EC82              std y+4,R14
+ 067C 87ED              ldi R24,215
+ 067E 90E0              ldi R25,0
+ 0680 9B83              std y+3,R25
+ 0682 8A83              std y+2,R24
+ 0684 D982              std y+1,R13
+ 0686 C882              std y+0,R12
+ 0688 2AE0              ldi R18,10
+ 068A 30E0              ldi R19,0
+ 068C 05E9              ldi R16,149
+ 068E 10E0              ldi R17,0
+ 0690 02D6              xcall _APICall#Fmjz
+ 0692 A801              movw R20,R16
+ 0694                   .dbline 234
+ 0694 AA20              tst R10
+ 0696 11F4              brne X15
+ 0698 BB20              tst R11
+ 069A 49F0              breq L68
+ 069C           X15:
+ 069C                   .dbline 234
+ 069C 81E0              ldi R24,1
+ 069E 90E0              ldi R25,0
+ 06A0 9983              std y+1,R25
+ 06A2 8883              std y+0,R24
+ 06A4 9501              movw R18,R10
+ 06A6 0F5F              subi R16,255  ; offset = 1
+ 06A8 1F4F              sbci R17,255
+ 06AA 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 06AE           L68:
+ 06AE                   .dbline 235
+ 06AE 8A01              movw R16,R20
+ 06B0                   .dbblkend 236
+ 06B0           L67:
+ 06B0 2696              adiw R28,6
+ 06B2 0C940000          xjmp pop_xgset30FC
+ 06B6 0895              ret
+ 06B8                   .dbfuncend
+ 06B8                   .dbsym r h 20 s
+ 06B8                   .dbsym r callback 10 pfV
+ 06B8                   .dbsym r text 14 pc
+ 06B8                   .dbsym r alignment 12 s
+ 06B8                   .dbstacksize 8
+ 06B8                   .dbfunc e SmartIO_MakeCancelOK _SmartIO_MakeCancelOK#FttPcPFvtE fs 238 3714648
+ 06B8           ;              h -> R20,R21
+ 06B8           ;       callback -> R10,R11
+ 06B8           ;           text -> R14,R15
+ 06B8           ;      alignment -> R12,R13
+                        .even
+ 06B8           _SmartIO_MakeCancelOK#FttPcPFvtE::
+ 06B8 0E940000          xcall push_xgset30FC
+ 06BC 7901              movw R14,R18
+ 06BE 6801              movw R12,R16
+ 06C0 2697              sbiw R28,6
+ 06C2 AE84              ldd R10,y+14
+ 06C4 BF84              ldd R11,y+15
+ 06C6                   .dbblock 239
+ 06C6                   .dbline 240
+ 06C6 FD82              std y+5,R15
+ 06C8 EC82              std y+4,R14
+ 06CA 89ED              ldi R24,217
+ 06CC 90E0              ldi R25,0
+ 06CE 9B83              std y+3,R25
+ 06D0 8A83              std y+2,R24
+ 06D2 D982              std y+1,R13
+ 06D4 C882              std y+0,R12
+ 06D6 2AE0              ldi R18,10
+ 06D8 30E0              ldi R19,0
+ 06DA 05E9              ldi R16,149
+ 06DC 10E0              ldi R17,0
+ 06DE DBD5              xcall _APICall#Fmjz
+ 06E0 A801              movw R20,R16
+ 06E2                   .dbline 241
+ 06E2 AA20              tst R10
+ 06E4 11F4              brne X16
+ 06E6 BB20              tst R11
+ 06E8 49F0              breq L71
+ 06EA           X16:
+ 06EA                   .dbline 241
+ 06EA 81E0              ldi R24,1
+ 06EC 90E0              ldi R25,0
+ 06EE 9983              std y+1,R25
+ 06F0 8883              std y+0,R24
+ 06F2 9501              movw R18,R10
+ 06F4 0F5F              subi R16,255  ; offset = 1
+ 06F6 1F4F              sbci R17,255
+ 06F8 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 06FC           L71:
+ 06FC                   .dbline 242
+ 06FC 8A01              movw R16,R20
+ 06FE                   .dbblkend 243
+ 06FE           L70:
+ 06FE 2696              adiw R28,6
+ 0700 0C940000          xjmp pop_xgset30FC
+ 0704 0895              ret
+ 0706                   .dbfuncend
+ 0706                   .dbsym r h 20 s
+ 0706                   .dbsym r callback 10 pfV
+ 0706                   .dbsym r text 14 pc
+ 0706                   .dbsym r alignment 12 s
+ 0706                   .dbstacksize 8
+ 0706                   .dbfunc e SmartIO_MakeOKLinkTo _SmartIO_MakeOKLinkTo#FtttPcPFvtE fs 245 3714648
+ 0706           ;              h -> R20,R21
+ 0706           ;       callback -> R10,R11
+ 0706           ;           text -> R20,R21
+ 0706           ;   popup_handle -> R14,R15
+ 0706           ;      alignment -> R12,R13
+                        .even
+ 0706           _SmartIO_MakeOKLinkTo#FtttPcPFvtE::
+ 0706 0E940000          xcall push_xgset30FC
+ 070A 7901              movw R14,R18
+ 070C 6801              movw R12,R16
+ 070E 2897              sbiw R28,8
+ 0710 4889              ldd R20,y+16
+ 0712 5989              ldd R21,y+17
+ 0714 AA88              ldd R10,y+18
+ 0716 BB88              ldd R11,y+19
+ 0718                   .dbblock 246
+ 0718                   .dbline 247
+ 0718 5F83              std y+7,R21
+ 071A 4E83              std y+6,R20
+ 071C FD82              std y+5,R15
+ 071E EC82              std y+4,R14
+ 0720 88ED              ldi R24,216
+ 0722 90E0              ldi R25,0
+ 0724 9B83              std y+3,R25
+ 0726 8A83              std y+2,R24
+ 0728 D982              std y+1,R13
+ 072A C882              std y+0,R12
+ 072C 2AE0              ldi R18,10
+ 072E 30E0              ldi R19,0
+ 0730 05E5              ldi R16,597
+ 0732 12E0              ldi R17,2
+ 0734 B0D5              xcall _APICall#Fmjz
+ 0736 A801              movw R20,R16
+ 0738                   .dbline 248
+ 0738 AA20              tst R10
+ 073A 11F4              brne X17
+ 073C BB20              tst R11
+ 073E 49F0              breq L74
+ 0740           X17:
+ 0740                   .dbline 248
+ 0740 81E0              ldi R24,1
+ 0742 90E0              ldi R25,0
+ 0744 9983              std y+1,R25
+ 0746 8883              std y+0,R24
+ 0748 9501              movw R18,R10
+ 074A 0F5F              subi R16,255  ; offset = 1
+ 074C 1F4F              sbci R17,255
+ 074E 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0752           L74:
+ 0752                   .dbline 249
+ 0752 8A01              movw R16,R20
+ 0754                   .dbblkend 250
+ 0754           L73:
+ 0754 2896              adiw R28,8
+ 0756 0C940000          xjmp pop_xgset30FC
+ 075A 0895              ret
+ 075C                   .dbfuncend
+ 075C                   .dbsym r h 20 s
+ 075C                   .dbsym r callback 10 pfV
+ 075C                   .dbsym r text 20 pc
+ 075C                   .dbsym r popup_handle 14 s
+ 075C                   .dbsym r alignment 12 s
+ 075C                   .dbstacksize 10
+ 075C                   .dbfunc e SmartIO_MakeCheckboxes _SmartIO_MakeCheckboxes#FtttPFvtE fs 252 3714648
+ 075C           ;              h -> R20,R21
+ 075C           ;       callback -> R10,R11
+ 075C           ;       nentries -> R14,R15
+ 075C           ;      alignment -> R12,R13
+                        .even
+ 075C           _SmartIO_MakeCheckboxes#FtttPFvtE::
+ 075C 0E940000          xcall push_xgset30FC
+ 0760 7901              movw R14,R18
+ 0762 6801              movw R12,R16
+ 0764 2697              sbiw R28,6
+ 0766 AE84              ldd R10,y+14
+ 0768 BF84              ldd R11,y+15
+ 076A                   .dbblock 253
+ 076A                   .dbline 254
+ 076A FD82              std y+5,R15
+ 076C EC82              std y+4,R14
+ 076E 8DED              ldi R24,221
+ 0770 90E0              ldi R25,0
+ 0772 9B83              std y+3,R25
+ 0774 8A83              std y+2,R24
+ 0776 D982              std y+1,R13
+ 0778 C882              std y+0,R12
+ 077A 2AE0              ldi R18,10
+ 077C 30E0              ldi R19,0
+ 077E 05E5              ldi R16,85
+ 0780 10E0              ldi R17,0
+ 0782 89D5              xcall _APICall#Fmjz
+ 0784 A801              movw R20,R16
+ 0786                   .dbline 255
+ 0786 AA20              tst R10
+ 0788 11F4              brne X18
+ 078A BB20              tst R11
+ 078C 49F0              breq L77
+ 078E           X18:
+ 078E                   .dbline 255
+ 078E 81E0              ldi R24,1
+ 0790 90E0              ldi R25,0
+ 0792 9983              std y+1,R25
+ 0794 8883              std y+0,R24
+ 0796 9501              movw R18,R10
+ 0798 0F5F              subi R16,255  ; offset = 1
+ 079A 1F4F              sbci R17,255
+ 079C 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 07A0           L77:
+ 07A0                   .dbline 256
+ 07A0 8A01              movw R16,R20
+ 07A2                   .dbblkend 257
+ 07A2           L76:
+ 07A2 2696              adiw R28,6
+ 07A4 0C940000          xjmp pop_xgset30FC
+ 07A8 0895              ret
+ 07AA                   .dbfuncend
+ 07AA                   .dbsym r h 20 s
+ 07AA                   .dbsym r callback 10 pfV
+ 07AA                   .dbsym r nentries 14 s
+ 07AA                   .dbsym r alignment 12 s
+ 07AA                   .dbstacksize 8
+ 07AA                   .dbfunc e SmartIO_MakeRadioButtons _SmartIO_MakeRadioButtons#FtttPFvtE fs 259 3714648
+ 07AA           ;              h -> R20,R21
+ 07AA           ;       callback -> R10,R11
+ 07AA           ;       nentries -> R14,R15
+ 07AA           ;      alignment -> R12,R13
+                        .even
+ 07AA           _SmartIO_MakeRadioButtons#FtttPFvtE::
+ 07AA 0E940000          xcall push_xgset30FC
+ 07AE 7901              movw R14,R18
+ 07B0 6801              movw R12,R16
+ 07B2 2697              sbiw R28,6
+ 07B4 AE84              ldd R10,y+14
+ 07B6 BF84              ldd R11,y+15
+ 07B8                   .dbblock 260
+ 07B8                   .dbline 261
+ 07B8 FD82              std y+5,R15
+ 07BA EC82              std y+4,R14
+ 07BC 8EED              ldi R24,222
+ 07BE 90E0              ldi R25,0
+ 07C0 9B83              std y+3,R25
+ 07C2 8A83              std y+2,R24
+ 07C4 D982              std y+1,R13
+ 07C6 C882              std y+0,R12
+ 07C8 2AE0              ldi R18,10
+ 07CA 30E0              ldi R19,0
+ 07CC 05E5              ldi R16,85
+ 07CE 10E0              ldi R17,0
+ 07D0 62D5              xcall _APICall#Fmjz
+ 07D2 A801              movw R20,R16
+ 07D4                   .dbline 262
+ 07D4 AA20              tst R10
+ 07D6 11F4              brne X19
+ 07D8 BB20              tst R11
+ 07DA 49F0              breq L80
+ 07DC           X19:
+ 07DC                   .dbline 262
+ 07DC 81E0              ldi R24,1
+ 07DE 90E0              ldi R25,0
+ 07E0 9983              std y+1,R25
+ 07E2 8883              std y+0,R24
+ 07E4 9501              movw R18,R10
+ 07E6 0F5F              subi R16,255  ; offset = 1
+ 07E8 1F4F              sbci R17,255
+ 07EA 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 07EE           L80:
+ 07EE                   .dbline 263
+ 07EE 8A01              movw R16,R20
+ 07F0                   .dbblkend 264
+ 07F0           L79:
+ 07F0 2696              adiw R28,6
+ 07F2 0C940000          xjmp pop_xgset30FC
+ 07F6 0895              ret
+ 07F8                   .dbfuncend
+ 07F8                   .dbsym r h 20 s
+ 07F8                   .dbsym r callback 10 pfV
+ 07F8                   .dbsym r nentries 14 s
+ 07F8                   .dbsym r alignment 12 s
+ 07F8                   .dbstacksize 8
+ 07F8                   .dbfunc e SmartIO_MakeTextEntry _SmartIO_MakeTextEntry#FttttPFvPcE fs 266 3714648
+ 07F8           ;              h -> R20,R21
+ 07F8           ;       callback -> R10,R11
+ 07F8           ;         nlines -> R22,R23
+ 07F8           ; isRoundCorners -> R14,R15
+ 07F8           ;      alignment -> R12,R13
+                        .even
+ 07F8           _SmartIO_MakeTextEntry#FttttPFvPcE::
+ 07F8 0E940000          xcall push_xgsetF0FC
+ 07FC 7901              movw R14,R18
+ 07FE 6801              movw R12,R16
+ 0800 2897              sbiw R28,8
+ 0802 6A89              ldd R22,y+18
+ 0804 7B89              ldd R23,y+19
+ 0806 AC88              ldd R10,y+20
+ 0808 BD88              ldd R11,y+21
+ 080A                   .dbblock 267
+ 080A                   .dbline 268
+ 080A 6030              cpi R22,0
+ 080C 6707              cpc R22,R23
+ 080E 19F4              brne L83
+ 0810           X20:
+ 0810 41E0              ldi R20,1
+ 0812 50E0              ldi R21,0
+ 0814 01C0              xjmp L84
+ 0816           L83:
+ 0816 AB01              movw R20,R22
+ 0818           L84:
+ 0818 5F83              std y+7,R21
+ 081A 4E83              std y+6,R20
+ 081C FD82              std y+5,R15
+ 081E EC82              std y+4,R14
+ 0820 8FED              ldi R24,223
+ 0822 90E0              ldi R25,0
+ 0824 9B83              std y+3,R25
+ 0826 8A83              std y+2,R24
+ 0828 D982              std y+1,R13
+ 082A C882              std y+0,R12
+ 082C 2AE0              ldi R18,10
+ 082E 30E0              ldi R19,0
+ 0830 05E5              ldi R16,85
+ 0832 10E0              ldi R17,0
+ 0834 30D5              xcall _APICall#Fmjz
+ 0836 A801              movw R20,R16
+ 0838                   .dbline 269
+ 0838 AA20              tst R10
+ 083A 11F4              brne X21
+ 083C BB20              tst R11
+ 083E 49F0              breq L85
+ 0840           X21:
+ 0840                   .dbline 269
+ 0840 86E0              ldi R24,6
+ 0842 90E0              ldi R25,0
+ 0844 9983              std y+1,R25
+ 0846 8883              std y+0,R24
+ 0848 9501              movw R18,R10
+ 084A 0F5F              subi R16,255  ; offset = 1
+ 084C 1F4F              sbci R17,255
+ 084E 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0852           L85:
+ 0852                   .dbline 270
+ 0852 8A01              movw R16,R20
+ 0854                   .dbblkend 271
+ 0854           L82:
+ 0854 2896              adiw R28,8
+ 0856 0C940000          xjmp pop_xgsetF0FC
+ 085A 0895              ret
+ 085C                   .dbfuncend
+ 085C                   .dbsym r h 20 s
+ 085C                   .dbsym r callback 10 pfV
+ 085C                   .dbsym r nlines 22 s
+ 085C                   .dbsym r isRoundCorners 14 s
+ 085C                   .dbsym r alignment 12 s
+ 085C                   .dbstacksize 12
+ 085C                   .dbfunc e SmartIO_MakeNumberEntry _SmartIO_MakeNumberEntry#FtttPFvmE fs 273 3714648
+ 085C           ;              h -> R20,R21
+ 085C           ;       callback -> R10,R11
+ 085C           ; isRoundCorners -> R14,R15
+ 085C           ;      alignment -> R12,R13
+                        .even
+ 085C           _SmartIO_MakeNumberEntry#FtttPFvmE::
+ 085C 0E940000          xcall push_xgset30FC
+ 0860 7901              movw R14,R18
+ 0862 6801              movw R12,R16
+ 0864 2697              sbiw R28,6
+ 0866 AE84              ldd R10,y+14
+ 0868 BF84              ldd R11,y+15
+ 086A                   .dbblock 274
+ 086A                   .dbline 275
+ 086A FD82              std y+5,R15
+ 086C EC82              std y+4,R14
+ 086E 80EE              ldi R24,224
+ 0870 90E0              ldi R25,0
+ 0872 9B83              std y+3,R25
+ 0874 8A83              std y+2,R24
+ 0876 D982              std y+1,R13
+ 0878 C882              std y+0,R12
+ 087A 2AE0              ldi R18,10
+ 087C 30E0              ldi R19,0
+ 087E 05E5              ldi R16,85
+ 0880 10E0              ldi R17,0
+ 0882 09D5              xcall _APICall#Fmjz
+ 0884 A801              movw R20,R16
+ 0886                   .dbline 276
+ 0886 AA20              tst R10
+ 0888 11F4              brne X22
+ 088A BB20              tst R11
+ 088C 49F0              breq L88
+ 088E           X22:
+ 088E                   .dbline 276
+ 088E 85E0              ldi R24,5
+ 0890 90E0              ldi R25,0
+ 0892 9983              std y+1,R25
+ 0894 8883              std y+0,R24
+ 0896 9501              movw R18,R10
+ 0898 0F5F              subi R16,255  ; offset = 1
+ 089A 1F4F              sbci R17,255
+ 089C 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 08A0           L88:
+ 08A0                   .dbline 277
+ 08A0 8A01              movw R16,R20
+ 08A2                   .dbblkend 278
+ 08A2           L87:
+ 08A2 2696              adiw R28,6
+ 08A4 0C940000          xjmp pop_xgset30FC
+ 08A8 0895              ret
+ 08AA                   .dbfuncend
+ 08AA                   .dbsym r h 20 s
+ 08AA                   .dbsym r callback 10 pfV
+ 08AA                   .dbsym r isRoundCorners 14 s
+ 08AA                   .dbsym r alignment 12 s
+ 08AA                   .dbstacksize 8
+ 08AA                   .dbfunc e SmartIO_MakePasswordEntry _SmartIO_MakePasswordEntry#FttPFvPcE fs 280 3714648
+ 08AA           ;              h -> R20,R21
+ 08AA           ;       callback -> R10,R11
+ 08AA           ;      alignment -> R12,R13
+                        .even
+ 08AA           _SmartIO_MakePasswordEntry#FttPFvPcE::
+ 08AA 0E940000          xcall push_xgset303C
+ 08AE 5901              movw R10,R18
+ 08B0 6801              movw R12,R16
+ 08B2 2497              sbiw R28,4
+ 08B4                   .dbblock 281
+ 08B4                   .dbline 282
+ 08B4 81EE              ldi R24,225
+ 08B6 90E0              ldi R25,0
+ 08B8 9B83              std y+3,R25
+ 08BA 8A83              std y+2,R24
+ 08BC D982              std y+1,R13
+ 08BE C882              std y+0,R12
+ 08C0 2AE0              ldi R18,10
+ 08C2 30E0              ldi R19,0
+ 08C4 05E1              ldi R16,21
+ 08C6 10E0              ldi R17,0
+ 08C8 E6D4              xcall _APICall#Fmjz
+ 08CA A801              movw R20,R16
+ 08CC                   .dbline 283
+ 08CC AA20              tst R10
+ 08CE 11F4              brne X23
+ 08D0 BB20              tst R11
+ 08D2 49F0              breq L91
+ 08D4           X23:
+ 08D4                   .dbline 283
+ 08D4 86E0              ldi R24,6
+ 08D6 90E0              ldi R25,0
+ 08D8 9983              std y+1,R25
+ 08DA 8883              std y+0,R24
+ 08DC 9501              movw R18,R10
+ 08DE 0F5F              subi R16,255  ; offset = 1
+ 08E0 1F4F              sbci R17,255
+ 08E2 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 08E6           L91:
+ 08E6                   .dbline 284
+ 08E6 8A01              movw R16,R20
+ 08E8                   .dbblkend 285
+ 08E8           L90:
+ 08E8 2496              adiw R28,4
+ 08EA 0C940000          xjmp pop_xgset303C
+ 08EE 0895              ret
+ 08F0                   .dbfuncend
+ 08F0                   .dbsym r h 20 s
+ 08F0                   .dbsym r callback 10 pfV
+ 08F0                   .dbsym r alignment 12 s
+ 08F0                   .dbstacksize 4
+ 08F0                   .dbfunc e SmartIO_MakeTextBox _SmartIO_MakeTextBox#FttttPc fs 287 3714648
+ 08F0           ;           text -> R20,R21
+ 08F0           ;         nlines -> R14,R15
+ 08F0           ;          width -> R12,R13
+ 08F0           ;      alignment -> R10,R11
+                        .even
+ 08F0           _SmartIO_MakeTextBox#FttttPc::
+ 08F0 0E940000          xcall push_xgset30FC
+ 08F4 6901              movw R12,R18
+ 08F6 5801              movw R10,R16
+ 08F8 2A97              sbiw R28,10
+ 08FA EA88              ldd R14,y+18
+ 08FC FB88              ldd R15,y+19
+ 08FE 4C89              ldd R20,y+20
+ 0900 5D89              ldd R21,y+21
+ 0902                   .dbblock 288
+ 0902                   .dbline 289
+ 0902 5987              std y+9,R21
+ 0904 4887              std y+8,R20
+ 0906 FF82              std y+7,R15
+ 0908 EE82              std y+6,R14
+ 090A DD82              std y+5,R13
+ 090C CC82              std y+4,R12
+ 090E 8CE2              ldi R24,300
+ 0910 91E0              ldi R25,1
+ 0912 9B83              std y+3,R25
+ 0914 8A83              std y+2,R24
+ 0916 B982              std y+1,R11
+ 0918 A882              std y+0,R10
+ 091A 2AE0              ldi R18,10
+ 091C 30E0              ldi R19,0
+ 091E 05E5              ldi R16,2389
+ 0920 19E0              ldi R17,9
+ 0922 B9D4              xcall _APICall#Fmjz
+ 0924                   .dbblkend 290
+ 0924           L93:
+ 0924 2A96              adiw R28,10
+ 0926 0C940000          xjmp pop_xgset30FC
+ 092A 0895              ret
+ 092C                   .dbfuncend
+ 092C                   .dbsym r text 20 pc
+ 092C                   .dbsym r nlines 14 s
+ 092C                   .dbsym r width 12 s
+ 092C                   .dbsym r alignment 10 s
+ 092C                   .dbstacksize 12
+ 092C                   .dbfunc e SmartIO_MakeMultilineBox _SmartIO_MakeMultilineBox#FttPc fs 292 3714648
+ 092C           ;           text -> R12,R13
+ 092C           ;         nlines -> R10,R11
+                        .even
+ 092C           _SmartIO_MakeMultilineBox#FttPc::
+ 092C 0E940000          xcall push_xgset003C
+ 0930 6901              movw R12,R18
+ 0932 5801              movw R10,R16
+ 0934 2897              sbiw R28,8
+ 0936                   .dbblock 293
+ 0936                   .dbline 294
+ 0936 DF82              std y+7,R13
+ 0938 CE82              std y+6,R12
+ 093A BD82              std y+5,R11
+ 093C AC82              std y+4,R10
+ 093E 81E9              ldi R24,401
+ 0940 91E0              ldi R25,1
+ 0942 9B83              std y+3,R25
+ 0944 8A83              std y+2,R24
+ 0946 2224              clr R2
+ 0948 3324              clr R3
+ 094A 3982              std y+1,R3
+ 094C 2882              std y+0,R2
+ 094E 2AE0              ldi R18,10
+ 0950 30E0              ldi R19,0
+ 0952 05E5              ldi R16,597
+ 0954 12E0              ldi R17,2
+ 0956 9FD4              xcall _APICall#Fmjz
+ 0958                   .dbblkend 295
+ 0958           L94:
+ 0958 2896              adiw R28,8
+ 095A 0C940000          xjmp pop_xgset003C
+ 095E 0895              ret
+ 0960                   .dbfuncend
+ 0960                   .dbsym r text 12 pc
+ 0960                   .dbsym r nlines 10 s
+ 0960                   .dbstacksize 6
+ 0960                   .dbfunc e SmartIO_MakeCounter _SmartIO_MakeCounter#Ftttm fs 297 3714648
+ 0960           ;  initial_value -> y+18
+ 0960           ;        ndigits -> R12,R13
+ 0960           ;      alignment -> R10,R11
+                        .even
+ 0960           _SmartIO_MakeCounter#Ftttm::
+ 0960 0E940000          xcall push_xgset003C
+ 0964 6901              movw R12,R18
+ 0966 5801              movw R10,R16
+ 0968 2E97              sbiw R28,14
+ 096A                   .dbblock 298
+ 096A                   .dbline 299
+ 096A 2A88              ldd R2,y+18
+ 096C 3B88              ldd R3,y+19
+ 096E 4C88              ldd R4,y+20
+ 0970 5D88              ldd R5,y+21
+ 0972 1201              movw R2,R4
+ 0974 4424              clr R4
+ 0976 5524              clr R5
+ 0978 2A86              std y+10,R2
+ 097A 3B86              std y+11,R3
+ 097C 4C86              std y+12,R4
+ 097E 5D86              std y+13,R5
+ 0980 2A88              ldd R2,y+18
+ 0982 3B88              ldd R3,y+19
+ 0984 4C88              ldd R4,y+20
+ 0986 5D88              ldd R5,y+21
+ 0988 2E82              std y+6,R2
+ 098A 3F82              std y+7,R3
+ 098C 4886              std y+8,R4
+ 098E 5986              std y+9,R5
+ 0990 DD82              std y+5,R13
+ 0992 CC82              std y+4,R12
+ 0994 80E4              ldi R24,320
+ 0996 91E0              ldi R25,1
+ 0998 9B83              std y+3,R25
+ 099A 8A83              std y+2,R24
+ 099C B982              std y+1,R11
+ 099E A882              std y+0,R10
+ 09A0 2AE0              ldi R18,10
+ 09A2 30E0              ldi R19,0
+ 09A4 05E5              ldi R16,1365
+ 09A6 15E0              ldi R17,5
+ 09A8 76D4              xcall _APICall#Fmjz
+ 09AA                   .dbblkend 300
+ 09AA           L95:
+ 09AA 2E96              adiw R28,14
+ 09AC 0C940000          xjmp pop_xgset003C
+ 09B0 0895              ret
+ 09B2                   .dbfuncend
+ 09B2                   .dbsym l initial_value 18 l
+ 09B2                   .dbsym r ndigits 12 s
+ 09B2                   .dbsym r alignment 10 s
+ 09B2                   .dbstacksize 12
+ 09B2                   .dbfunc e SmartIO_MakeProgressBar _SmartIO_MakeProgressBar#Ftttt fs 302 3714648
+ 09B2           ; initial_percentage -> R14,R15
+ 09B2           ;      variation -> R12,R13
+ 09B2           ;      alignment -> R10,R11
+                        .even
+ 09B2           _SmartIO_MakeProgressBar#Ftttt::
+ 09B2 0E940000          xcall push_xgset00FC
+ 09B6 6901              movw R12,R18
+ 09B8 5801              movw R10,R16
+ 09BA 2897              sbiw R28,8
+ 09BC EE84              ldd R14,y+14
+ 09BE FF84              ldd R15,y+15
+ 09C0                   .dbblock 303
+ 09C0                   .dbline 304
+ 09C0 FF82              std y+7,R15
+ 09C2 EE82              std y+6,R14
+ 09C4 DD82              std y+5,R13
+ 09C6 CC82              std y+4,R12
+ 09C8 8DE2              ldi R24,301
+ 09CA 91E0              ldi R25,1
+ 09CC 9B83              std y+3,R25
+ 09CE 8A83              std y+2,R24
+ 09D0 B982              std y+1,R11
+ 09D2 A882              std y+0,R10
+ 09D4 2AE0              ldi R18,10
+ 09D6 30E0              ldi R19,0
+ 09D8 05E5              ldi R16,341
+ 09DA 11E0              ldi R17,1
+ 09DC 5CD4              xcall _APICall#Fmjz
+ 09DE                   .dbblkend 305
+ 09DE           L96:
+ 09DE 2896              adiw R28,8
+ 09E0 0C940000          xjmp pop_xgset00FC
+ 09E4 0895              ret
+ 09E6                   .dbfuncend
+ 09E6                   .dbsym r initial_percentage 14 s
+ 09E6                   .dbsym r variation 12 s
+ 09E6                   .dbsym r alignment 10 s
+ 09E6                   .dbstacksize 8
+ 09E6                   .dbfunc e SmartIO_MakeProgressCircle _SmartIO_MakeProgressCircle#Ftttt fs 307 3714648
+ 09E6           ; initial_percentage -> R14,R15
+ 09E6           ;      variation -> R12,R13
+ 09E6           ;      alignment -> R10,R11
+                        .even
+ 09E6           _SmartIO_MakeProgressCircle#Ftttt::
+ 09E6 0E940000          xcall push_xgset00FC
+ 09EA 6901              movw R12,R18
+ 09EC 5801              movw R10,R16
+ 09EE 2897              sbiw R28,8
+ 09F0 EE84              ldd R14,y+14
+ 09F2 FF84              ldd R15,y+15
+ 09F4                   .dbblock 308
+ 09F4                   .dbline 309
+ 09F4 FF82              std y+7,R15
+ 09F6 EE82              std y+6,R14
+ 09F8 DD82              std y+5,R13
+ 09FA CC82              std y+4,R12
+ 09FC 8EE2              ldi R24,302
+ 09FE 91E0              ldi R25,1
+ 0A00 9B83              std y+3,R25
+ 0A02 8A83              std y+2,R24
+ 0A04 B982              std y+1,R11
+ 0A06 A882              std y+0,R10
+ 0A08 2AE0              ldi R18,10
+ 0A0A 30E0              ldi R19,0
+ 0A0C 05E5              ldi R16,341
+ 0A0E 11E0              ldi R17,1
+ 0A10 42D4              xcall _APICall#Fmjz
+ 0A12                   .dbblkend 310
+ 0A12           L97:
+ 0A12 2896              adiw R28,8
+ 0A14 0C940000          xjmp pop_xgset00FC
+ 0A18 0895              ret
+ 0A1A                   .dbfuncend
+ 0A1A                   .dbsym r initial_percentage 14 s
+ 0A1A                   .dbsym r variation 12 s
+ 0A1A                   .dbsym r alignment 10 s
+ 0A1A                   .dbstacksize 8
+ 0A1A                   .dbfunc e SmartIO_MakeHGauge _SmartIO_MakeHGauge#Ftttt fs 312 3714648
+ 0A1A           ; initial_percentage -> R14,R15
+ 0A1A           ;      variation -> R12,R13
+ 0A1A           ;      alignment -> R10,R11
+                        .even
+ 0A1A           _SmartIO_MakeHGauge#Ftttt::
+ 0A1A 0E940000          xcall push_xgset00FC
+ 0A1E 6901              movw R12,R18
+ 0A20 5801              movw R10,R16
+ 0A22 2897              sbiw R28,8
+ 0A24 EE84              ldd R14,y+14
+ 0A26 FF84              ldd R15,y+15
+ 0A28                   .dbblock 313
+ 0A28                   .dbline 314
+ 0A28 FF82              std y+7,R15
+ 0A2A EE82              std y+6,R14
+ 0A2C DD82              std y+5,R13
+ 0A2E CC82              std y+4,R12
+ 0A30 8FE2              ldi R24,303
+ 0A32 91E0              ldi R25,1
+ 0A34 9B83              std y+3,R25
+ 0A36 8A83              std y+2,R24
+ 0A38 B982              std y+1,R11
+ 0A3A A882              std y+0,R10
+ 0A3C 2AE0              ldi R18,10
+ 0A3E 30E0              ldi R19,0
+ 0A40 05E5              ldi R16,341
+ 0A42 11E0              ldi R17,1
+ 0A44 28D4              xcall _APICall#Fmjz
+ 0A46                   .dbblkend 315
+ 0A46           L98:
+ 0A46 2896              adiw R28,8
+ 0A48 0C940000          xjmp pop_xgset00FC
+ 0A4C 0895              ret
+ 0A4E                   .dbfuncend
+ 0A4E                   .dbsym r initial_percentage 14 s
+ 0A4E                   .dbsym r variation 12 s
+ 0A4E                   .dbsym r alignment 10 s
+ 0A4E                   .dbstacksize 8
+ 0A4E                   .dbfunc e SmartIO_MakeVGauge _SmartIO_MakeVGauge#Ftttt fs 317 3714648
+ 0A4E           ; initial_percentage -> R14,R15
+ 0A4E           ;      variation -> R12,R13
+ 0A4E           ;      alignment -> R10,R11
+                        .even
+ 0A4E           _SmartIO_MakeVGauge#Ftttt::
+ 0A4E 0E940000          xcall push_xgset00FC
+ 0A52 6901              movw R12,R18
+ 0A54 5801              movw R10,R16
+ 0A56 2897              sbiw R28,8
+ 0A58 EE84              ldd R14,y+14
+ 0A5A FF84              ldd R15,y+15
+ 0A5C                   .dbblock 318
+ 0A5C                   .dbline 319
+ 0A5C FF82              std y+7,R15
+ 0A5E EE82              std y+6,R14
+ 0A60 DD82              std y+5,R13
+ 0A62 CC82              std y+4,R12
+ 0A64 80E3              ldi R24,304
+ 0A66 91E0              ldi R25,1
+ 0A68 9B83              std y+3,R25
+ 0A6A 8A83              std y+2,R24
+ 0A6C B982              std y+1,R11
+ 0A6E A882              std y+0,R10
+ 0A70 2AE0              ldi R18,10
+ 0A72 30E0              ldi R19,0
+ 0A74 05E5              ldi R16,341
+ 0A76 11E0              ldi R17,1
+ 0A78 0ED4              xcall _APICall#Fmjz
+ 0A7A                   .dbblkend 320
+ 0A7A           L99:
+ 0A7A 2896              adiw R28,8
+ 0A7C 0C940000          xjmp pop_xgset00FC
+ 0A80 0895              ret
+ 0A82                   .dbfuncend
+ 0A82                   .dbsym r initial_percentage 14 s
+ 0A82                   .dbsym r variation 12 s
+ 0A82                   .dbsym r alignment 10 s
+ 0A82                   .dbstacksize 8
+ 0A82                   .dbfunc e SmartIO_MakeSemiCircularGauge _SmartIO_MakeSemiCircularGauge#Ftttt fs 322 3714648
+ 0A82           ; initial_percentage -> R14,R15
+ 0A82           ;       max_mark -> R12,R13
+ 0A82           ;      alignment -> R10,R11
+                        .even
+ 0A82           _SmartIO_MakeSemiCircularGauge#Ftttt::
+ 0A82 0E940000          xcall push_xgset00FC
+ 0A86 6901              movw R12,R18
+ 0A88 5801              movw R10,R16
+ 0A8A 2897              sbiw R28,8
+ 0A8C EE84              ldd R14,y+14
+ 0A8E FF84              ldd R15,y+15
+ 0A90                   .dbblock 323
+ 0A90                   .dbline 324
+ 0A90 FF82              std y+7,R15
+ 0A92 EE82              std y+6,R14
+ 0A94 DD82              std y+5,R13
+ 0A96 CC82              std y+4,R12
+ 0A98 81E3              ldi R24,305
+ 0A9A 91E0              ldi R25,1
+ 0A9C 9B83              std y+3,R25
+ 0A9E 8A83              std y+2,R24
+ 0AA0 B982              std y+1,R11
+ 0AA2 A882              std y+0,R10
+ 0AA4 2AE0              ldi R18,10
+ 0AA6 30E0              ldi R19,0
+ 0AA8 05E5              ldi R16,341
+ 0AAA 11E0              ldi R17,1
+ 0AAC F4D3              xcall _APICall#Fmjz
+ 0AAE                   .dbblkend 325
+ 0AAE           L100:
+ 0AAE 2896              adiw R28,8
+ 0AB0 0C940000          xjmp pop_xgset00FC
+ 0AB4 0895              ret
+ 0AB6                   .dbfuncend
+ 0AB6                   .dbsym r initial_percentage 14 s
+ 0AB6                   .dbsym r max_mark 12 s
+ 0AB6                   .dbsym r alignment 10 s
+ 0AB6                   .dbstacksize 8
+ 0AB6                   .dbfunc e SmartIO_MakeCircularGauge _SmartIO_MakeCircularGauge#Ftttt fs 327 3714648
+ 0AB6           ; initial_percentage -> R14,R15
+ 0AB6           ;       max_mark -> R12,R13
+ 0AB6           ;      alignment -> R10,R11
+                        .even
+ 0AB6           _SmartIO_MakeCircularGauge#Ftttt::
+ 0AB6 0E940000          xcall push_xgset00FC
+ 0ABA 6901              movw R12,R18
+ 0ABC 5801              movw R10,R16
+ 0ABE 2897              sbiw R28,8
+ 0AC0 EE84              ldd R14,y+14
+ 0AC2 FF84              ldd R15,y+15
+ 0AC4                   .dbblock 328
+ 0AC4                   .dbline 329
+ 0AC4 FF82              std y+7,R15
+ 0AC6 EE82              std y+6,R14
+ 0AC8 DD82              std y+5,R13
+ 0ACA CC82              std y+4,R12
+ 0ACC 82E3              ldi R24,306
+ 0ACE 91E0              ldi R25,1
+ 0AD0 9B83              std y+3,R25
+ 0AD2 8A83              std y+2,R24
+ 0AD4 B982              std y+1,R11
+ 0AD6 A882              std y+0,R10
+ 0AD8 2AE0              ldi R18,10
+ 0ADA 30E0              ldi R19,0
+ 0ADC 05E5              ldi R16,341
+ 0ADE 11E0              ldi R17,1
+ 0AE0 DAD3              xcall _APICall#Fmjz
+ 0AE2                   .dbblkend 330
+ 0AE2           L101:
+ 0AE2 2896              adiw R28,8
+ 0AE4 0C940000          xjmp pop_xgset00FC
+ 0AE8 0895              ret
+ 0AEA                   .dbfuncend
+ 0AEA                   .dbsym r initial_percentage 14 s
+ 0AEA                   .dbsym r max_mark 12 s
+ 0AEA                   .dbsym r alignment 10 s
+ 0AEA                   .dbstacksize 8
+ 0AEA                   .dbfunc e SmartIO_MakeBatteryLevel _SmartIO_MakeBatteryLevel#Ftttt fs 332 3714648
+ 0AEA           ; initial_percentage -> R14,R15
+ 0AEA           ;      variation -> R12,R13
+ 0AEA           ;      alignment -> R10,R11
+                        .even
+ 0AEA           _SmartIO_MakeBatteryLevel#Ftttt::
+ 0AEA 0E940000          xcall push_xgset00FC
+ 0AEE 6901              movw R12,R18
+ 0AF0 5801              movw R10,R16
+ 0AF2 2897              sbiw R28,8
+ 0AF4 EE84              ldd R14,y+14
+ 0AF6 FF84              ldd R15,y+15
+ 0AF8                   .dbblock 333
+ 0AF8                   .dbline 334
+ 0AF8 FF82              std y+7,R15
+ 0AFA EE82              std y+6,R14
+ 0AFC DD82              std y+5,R13
+ 0AFE CC82              std y+4,R12
+ 0B00 84E3              ldi R24,308
+ 0B02 91E0              ldi R25,1
+ 0B04 9B83              std y+3,R25
+ 0B06 8A83              std y+2,R24
+ 0B08 B982              std y+1,R11
+ 0B0A A882              std y+0,R10
+ 0B0C 2AE0              ldi R18,10
+ 0B0E 30E0              ldi R19,0
+ 0B10 05E5              ldi R16,341
+ 0B12 11E0              ldi R17,1
+ 0B14 C0D3              xcall _APICall#Fmjz
+ 0B16                   .dbblkend 335
+ 0B16           L102:
+ 0B16 2896              adiw R28,8
+ 0B18 0C940000          xjmp pop_xgset00FC
+ 0B1C 0895              ret
+ 0B1E                   .dbfuncend
+ 0B1E                   .dbsym r initial_percentage 14 s
+ 0B1E                   .dbsym r variation 12 s
+ 0B1E                   .dbsym r alignment 10 s
+ 0B1E                   .dbstacksize 8
+ 0B1E                   .dbfunc e SmartIO_MakeRGBLed _SmartIO_MakeRGBLed#Ftttt fs 337 3714648
+ 0B1E           ;  initial_state -> R14,R15
+ 0B1E           ;          color -> R12,R13
+ 0B1E           ;      alignment -> R10,R11
+                        .even
+ 0B1E           _SmartIO_MakeRGBLed#Ftttt::
+ 0B1E 0E940000          xcall push_xgset00FC
+ 0B22 6901              movw R12,R18
+ 0B24 5801              movw R10,R16
+ 0B26 2897              sbiw R28,8
+ 0B28 EE84              ldd R14,y+14
+ 0B2A FF84              ldd R15,y+15
+ 0B2C                   .dbblock 338
+ 0B2C                   .dbline 339
+ 0B2C FF82              std y+7,R15
+ 0B2E EE82              std y+6,R14
+ 0B30 DD82              std y+5,R13
+ 0B32 CC82              std y+4,R12
+ 0B34 83E3              ldi R24,307
+ 0B36 91E0              ldi R25,1
+ 0B38 9B83              std y+3,R25
+ 0B3A 8A83              std y+2,R24
+ 0B3C B982              std y+1,R11
+ 0B3E A882              std y+0,R10
+ 0B40 2AE0              ldi R18,10
+ 0B42 30E0              ldi R19,0
+ 0B44 05E5              ldi R16,341
+ 0B46 11E0              ldi R17,1
+ 0B48 A6D3              xcall _APICall#Fmjz
+ 0B4A                   .dbblkend 340
+ 0B4A           L103:
+ 0B4A 2896              adiw R28,8
+ 0B4C 0C940000          xjmp pop_xgset00FC
+ 0B50 0895              ret
+ 0B52                   .dbfuncend
+ 0B52                   .dbsym r initial_state 14 s
+ 0B52                   .dbsym r color 12 s
+ 0B52                   .dbsym r alignment 10 s
+ 0B52                   .dbstacksize 8
+ 0B52                   .dbfunc e SmartIO_MakeCustomHGauge _SmartIO_MakeCustomHGauge#Fttmmt fs 342 3714648
+ 0B52           ; initial_percentage -> R12,R13
+ 0B52           ;      end_color -> y+22
+ 0B52           ;    start_color -> y+18
+ 0B52           ;      alignment -> R10,R11
+                        .even
+ 0B52           _SmartIO_MakeCustomHGauge#Fttmmt::
+ 0B52 3A93              st -y,r19
+ 0B54 2A93              st -y,r18
+ 0B56 0E940000          xcall push_xgset003C
+ 0B5A 5801              movw R10,R16
+ 0B5C 2E97              sbiw R28,14
+ 0B5E CA8C              ldd R12,y+26
+ 0B60 DB8C              ldd R13,y+27
+ 0B62                   .dbblock 343
+ 0B62                   .dbline 344
+ 0B62 DD86              std y+13,R13
+ 0B64 CC86              std y+12,R12
+ 0B66 2E88              ldd R2,y+22
+ 0B68 3F88              ldd R3,y+23
+ 0B6A 488C              ldd R4,y+24
+ 0B6C 598C              ldd R5,y+25
+ 0B6E 2886              std y+8,R2
+ 0B70 3986              std y+9,R3
+ 0B72 4A86              std y+10,R4
+ 0B74 5B86              std y+11,R5
+ 0B76 2A88              ldd R2,y+18
+ 0B78 3B88              ldd R3,y+19
+ 0B7A 4C88              ldd R4,y+20
+ 0B7C 5D88              ldd R5,y+21
+ 0B7E 2C82              std y+4,R2
+ 0B80 3D82              std y+5,R3
+ 0B82 4E82              std y+6,R4
+ 0B84 5F82              std y+7,R5
+ 0B86 86E3              ldi R24,310
+ 0B88 91E0              ldi R25,1
+ 0B8A 9B83              std y+3,R25
+ 0B8C 8A83              std y+2,R24
+ 0B8E B982              std y+1,R11
+ 0B90 A882              std y+0,R10
+ 0B92 2AE0              ldi R18,10
+ 0B94 30E0              ldi R19,0
+ 0B96 05E5              ldi R16,8021
+ 0B98 1FE1              ldi R17,31
+ 0B9A 7DD3              xcall _APICall#Fmjz
+ 0B9C                   .dbblkend 345
+ 0B9C           L104:
+ 0B9C 2E96              adiw R28,14
+ 0B9E 0E940000          xcall pop_xgset003C
+ 0BA2 2296              adiw R28,2
+ 0BA4 0895              ret
+ 0BA6                   .dbfuncend
+ 0BA6                   .dbsym r initial_percentage 12 s
+ 0BA6                   .dbsym l end_color 22 l
+ 0BA6                   .dbsym l start_color 18 l
+ 0BA6                   .dbsym r alignment 10 s
+ 0BA6                   .dbstacksize 14
+ 0BA6                   .dbfunc e SmartIO_MakeCustomVGauge _SmartIO_MakeCustomVGauge#Fttmmt fs 347 3714648
+ 0BA6           ; initial_percentage -> R12,R13
+ 0BA6           ;      end_color -> y+22
+ 0BA6           ;    start_color -> y+18
+ 0BA6           ;      alignment -> R10,R11
+                        .even
+ 0BA6           _SmartIO_MakeCustomVGauge#Fttmmt::
+ 0BA6 3A93              st -y,r19
+ 0BA8 2A93              st -y,r18
+ 0BAA 0E940000          xcall push_xgset003C
+ 0BAE 5801              movw R10,R16
+ 0BB0 2E97              sbiw R28,14
+ 0BB2 CA8C              ldd R12,y+26
+ 0BB4 DB8C              ldd R13,y+27
+ 0BB6                   .dbblock 348
+ 0BB6                   .dbline 349
+ 0BB6 DD86              std y+13,R13
+ 0BB8 CC86              std y+12,R12
+ 0BBA 2E88              ldd R2,y+22
+ 0BBC 3F88              ldd R3,y+23
+ 0BBE 488C              ldd R4,y+24
+ 0BC0 598C              ldd R5,y+25
+ 0BC2 2886              std y+8,R2
+ 0BC4 3986              std y+9,R3
+ 0BC6 4A86              std y+10,R4
+ 0BC8 5B86              std y+11,R5
+ 0BCA 2A88              ldd R2,y+18
+ 0BCC 3B88              ldd R3,y+19
+ 0BCE 4C88              ldd R4,y+20
+ 0BD0 5D88              ldd R5,y+21
+ 0BD2 2C82              std y+4,R2
+ 0BD4 3D82              std y+5,R3
+ 0BD6 4E82              std y+6,R4
+ 0BD8 5F82              std y+7,R5
+ 0BDA 87E3              ldi R24,311
+ 0BDC 91E0              ldi R25,1
+ 0BDE 9B83              std y+3,R25
+ 0BE0 8A83              std y+2,R24
+ 0BE2 B982              std y+1,R11
+ 0BE4 A882              std y+0,R10
+ 0BE6 2AE0              ldi R18,10
+ 0BE8 30E0              ldi R19,0
+ 0BEA 05E5              ldi R16,8021
+ 0BEC 1FE1              ldi R17,31
+ 0BEE 53D3              xcall _APICall#Fmjz
+ 0BF0                   .dbblkend 350
+ 0BF0           L105:
+ 0BF0 2E96              adiw R28,14
+ 0BF2 0E940000          xcall pop_xgset003C
+ 0BF6 2296              adiw R28,2
+ 0BF8 0895              ret
+ 0BFA                   .dbfuncend
+ 0BFA                   .dbsym r initial_percentage 12 s
+ 0BFA                   .dbsym l end_color 22 l
+ 0BFA                   .dbsym l start_color 18 l
+ 0BFA                   .dbsym r alignment 10 s
+ 0BFA                   .dbstacksize 14
+ 0BFA                   .dbfunc e SmartIO_SetSliceIcon _SmartIO_SetSliceIcon#Fstt fS 352 3714648
+ 0BFA           ;      icon_enum -> R12,R13
+ 0BFA           ;         handle -> R10,R11
+                        .even
+ 0BFA           _SmartIO_SetSliceIcon#Fstt::
+ 0BFA 0E940000          xcall push_xgset003C
+ 0BFE 6901              movw R12,R18
+ 0C00 5801              movw R10,R16
+ 0C02 2497              sbiw R28,4
+ 0C04                   .dbblock 353
+ 0C04                   .dbline 354
+ 0C04 DB82              std y+3,R13
+ 0C06 CA82              std y+2,R12
+ 0C08 B982              std y+1,R11
+ 0C0A A882              std y+0,R10
+ 0C0C 2CE0              ldi R18,12
+ 0C0E 30E0              ldi R19,0
+ 0C10 05E1              ldi R16,21
+ 0C12 10E0              ldi R17,0
+ 0C14 40D3              xcall _APICall#Fmjz
+ 0C16                   .dbblkend 355
+ 0C16           L106:
+ 0C16 2496              adiw R28,4
+ 0C18 0C940000          xjmp pop_xgset003C
+ 0C1C 0895              ret
+ 0C1E                   .dbfuncend
+ 0C1E                   .dbsym r icon_enum 12 s
+ 0C1E                   .dbsym r handle 10 s
+ 0C1E                   .dbstacksize 2
+ 0C1E                   .dbfunc e SmartIO_MakeFreeformSlice _SmartIO_MakeFreeformSlice#Ftt fs 357 3714648
+ 0C1E           ;         y_size -> R10,R11
+                        .even
+ 0C1E           _SmartIO_MakeFreeformSlice#Ftt::
+ 0C1E AA92              st -y,R10
+ 0C20 BA92              st -y,R11
+ 0C22 5801              movw R10,R16
+ 0C24 2297              sbiw R28,2
+ 0C26                   .dbblock 358
+ 0C26                   .dbline 359
+ 0C26 B982              std y+1,R11
+ 0C28 A882              std y+0,R10
+ 0C2A 2EE0              ldi R18,14
+ 0C2C 30E0              ldi R19,0
+ 0C2E 05E0              ldi R16,5
+ 0C30 10E0              ldi R17,0
+ 0C32 31D3              xcall _APICall#Fmjz
+ 0C34                   .dbblkend 360
+ 0C34           L107:
+ 0C34 2296              adiw R28,2
+ 0C36 B990              ld R11,y+
+ 0C38 A990              ld R10,y+
+ 0C3A 0895              ret
+ 0C3C                   .dbfuncend
+ 0C3C                   .dbsym r y_size 10 s
+ 0C3C                   .dbstacksize 0
+ 0C3C                   .dbfunc e SmartIO_FFS_OnOffButton _SmartIO_FFS_OnOffButton#FttttttPFvtE fs 362 3714648
+ 0C3C           ;              h -> R10,R11
+ 0C3C           ;       callback -> R12,R13
+ 0C3C           ;  initial_value -> R14,R15
+ 0C3C           ;      variation -> R22,R23
+ 0C3C           ;          loc_y -> R20,R21
+ 0C3C           ;          loc_x -> y+22
+ 0C3C           ;     ffs_handle -> R10,R11
+                        .even
+ 0C3C           _SmartIO_FFS_OnOffButton#FttttttPFvtE::
+ 0C3C 3A93              st -y,r19
+ 0C3E 2A93              st -y,r18
+ 0C40 0E940000          xcall push_xgsetF0FC
+ 0C44 5801              movw R10,R16
+ 0C46 2C97              sbiw R28,12
+ 0C48 488D              ldd R20,y+24
+ 0C4A 598D              ldd R21,y+25
+ 0C4C 6A8D              ldd R22,y+26
+ 0C4E 7B8D              ldd R23,y+27
+ 0C50 EC8C              ldd R14,y+28
+ 0C52 FD8C              ldd R15,y+29
+ 0C54 CE8C              ldd R12,y+30
+ 0C56 DF8C              ldd R13,y+31
+ 0C58                   .dbblock 363
+ 0C58                   .dbline 364
+ 0C58 FB86              std y+11,R15
+ 0C5A EA86              std y+10,R14
+ 0C5C 7987              std y+9,R23
+ 0C5E 6887              std y+8,R22
+ 0C60 88EC              ldi R24,200
+ 0C62 90E0              ldi R25,0
+ 0C64 9F83              std y+7,R25
+ 0C66 8E83              std y+6,R24
+ 0C68 5D83              std y+5,R21
+ 0C6A 4C83              std y+4,R20
+ 0C6C 0E88              ldd R0,y+22
+ 0C6E 1F88              ldd R1,y+23
+ 0C70 1B82              std y+3,R1
+ 0C72 0A82              std y+2,R0
+ 0C74 B982              std y+1,R11
+ 0C76 A882              std y+0,R10
+ 0C78 2FE0              ldi R18,15
+ 0C7A 30E0              ldi R19,0
+ 0C7C 05E5              ldi R16,5461
+ 0C7E 15E1              ldi R17,21
+ 0C80 0AD3              xcall _APICall#Fmjz
+ 0C82 5801              movw R10,R16
+ 0C84                   .dbline 365
+ 0C84 CC20              tst R12
+ 0C86 11F4              brne X24
+ 0C88 DD20              tst R13
+ 0C8A 39F0              breq L109
+ 0C8C           X24:
+ 0C8C                   .dbline 365
+ 0C8C 81E0              ldi R24,1
+ 0C8E 90E0              ldi R25,0
+ 0C90 9983              std y+1,R25
+ 0C92 8883              std y+0,R24
+ 0C94 9601              movw R18,R12
+ 0C96 0E940000          xcall _SmartIO__RegisterCallback#FvtPFvEi
+ 0C9A           L109:
+ 0C9A                   .dbline 366
+ 0C9A 8501              movw R16,R10
+ 0C9C                   .dbblkend 367
+ 0C9C           L108:
+ 0C9C 2C96              adiw R28,12
+ 0C9E 0E940000          xcall pop_xgsetF0FC
+ 0CA2 2296              adiw R28,2
+ 0CA4 0895              ret
+ 0CA6                   .dbfuncend
+ 0CA6                   .dbsym r h 10 s
+ 0CA6                   .dbsym r callback 12 pfV
+ 0CA6                   .dbsym r initial_value 14 s
+ 0CA6                   .dbsym r variation 22 s
+ 0CA6                   .dbsym r loc_y 20 s
+ 0CA6                   .dbsym l loc_x 22 s
+ 0CA6                   .dbsym r ffs_handle 10 s
+ 0CA6                   .dbstacksize 18
+ 0CA6                   .dbfunc e SmartIO_AddText _SmartIO_AddText#FstPc fS 461 3714648
+ 0CA6           ;           text -> R12,R13
+ 0CA6           ;         handle -> R10,R11
+                        .even
+ 0CA6           _SmartIO_AddText#FstPc::
+ 0CA6 0E940000          xcall push_xgset003C
+ 0CAA 6901              movw R12,R18
+ 0CAC 5801              movw R10,R16
+ 0CAE 2497              sbiw R28,4
+ 0CB0                   .dbblock 462
+ 0CB0                   .dbline 463
+ 0CB0 DB82              std y+3,R13
+ 0CB2 CA82              std y+2,R12
+ 0CB4 B982              std y+1,R11
+ 0CB6 A882              std y+0,R10
+ 0CB8 2BE0              ldi R18,11
+ 0CBA 30E0              ldi R19,0
+ 0CBC 05E2              ldi R16,37
+ 0CBE 10E0              ldi R17,0
+ 0CC0 EAD2              xcall _APICall#Fmjz
+ 0CC2                   .dbblkend 464
+ 0CC2           L111:
+ 0CC2 2496              adiw R28,4
+ 0CC4 0C940000          xjmp pop_xgset003C
+ 0CC8 0895              ret
+ 0CCA                   .dbfuncend
+ 0CCA                   .dbsym r text 12 pc
+ 0CCA                   .dbsym r handle 10 s
+ 0CCA                   .dbstacksize 2
+ 0CCA                   .dbfunc e SmartIO_ClearText _SmartIO_ClearText#Fst fS 466 3714648
+ 0CCA           ;         handle -> R10,R11
+                        .even
+ 0CCA           _SmartIO_ClearText#Fst::
+ 0CCA AA92              st -y,R10
+ 0CCC BA92              st -y,R11
+ 0CCE 5801              movw R10,R16
+ 0CD0 2297              sbiw R28,2
+ 0CD2                   .dbblock 467
+ 0CD2                   .dbline 468
+ 0CD2 B982              std y+1,R11
+ 0CD4 A882              std y+0,R10
+ 0CD6 29E1              ldi R18,25
+ 0CD8 30E0              ldi R19,0
+ 0CDA 05E0              ldi R16,5
+ 0CDC 10E0              ldi R17,0
+ 0CDE DBD2              xcall _APICall#Fmjz
+ 0CE0                   .dbblkend 469
+ 0CE0           L112:
+ 0CE0 2296              adiw R28,2
+ 0CE2 B990              ld R11,y+
+ 0CE4 A990              ld R10,y+
+ 0CE6 0895              ret
+ 0CE8                   .dbfuncend
+ 0CE8                   .dbsym r handle 10 s
+ 0CE8                   .dbstacksize 0
+ 0CE8                   .dbfunc e SmartIO_AddListItem _SmartIO_AddListItem#FttPc fs 471 3714648
+ 0CE8           ;          label -> R12,R13
+ 0CE8           ;         handle -> R10,R11
+                        .even
+ 0CE8           _SmartIO_AddListItem#FttPc::
+ 0CE8 0E940000          xcall push_xgset003C
+ 0CEC 6901              movw R12,R18
+ 0CEE 5801              movw R10,R16
+ 0CF0 2497              sbiw R28,4
+ 0CF2                   .dbblock 472
+ 0CF2                   .dbline 473
+ 0CF2 DB82              std y+3,R13
+ 0CF4 CA82              std y+2,R12
+ 0CF6 B982              std y+1,R11
+ 0CF8 A882              std y+0,R10
+ 0CFA 27E1              ldi R18,23
+ 0CFC 30E0              ldi R19,0
+ 0CFE 05E2              ldi R16,37
+ 0D00 10E0              ldi R17,0
+ 0D02 C9D2              xcall _APICall#Fmjz
+ 0D04                   .dbblkend 474
+ 0D04           L113:
+ 0D04 2496              adiw R28,4
+ 0D06 0C940000          xjmp pop_xgset003C
+ 0D0A 0895              ret
+ 0D0C                   .dbfuncend
+ 0D0C                   .dbsym r label 12 pc
+ 0D0C                   .dbsym r handle 10 s
+ 0D0C                   .dbstacksize 2
+ 0D0C                   .dbfunc e SmartIO_FillColor _SmartIO_FillColor#Fstm fS 476 3714648
+ 0D0C           ;          color -> y+12
+ 0D0C           ;              h -> R10,R11
+                        .even
+ 0D0C           _SmartIO_FillColor#Fstm::
+ 0D0C 3A93              st -y,r19
+ 0D0E 2A93              st -y,r18
+ 0D10 AA92              st -y,R10
+ 0D12 BA92              st -y,R11
+ 0D14 5801              movw R10,R16
+ 0D16 2A97              sbiw R28,10
+ 0D18                   .dbblock 477
+ 0D18                   .dbline 478
+ 0D18 2C84              ldd R2,y+12
+ 0D1A 3D84              ldd R3,y+13
+ 0D1C 4E84              ldd R4,y+14
+ 0D1E 5F84              ldd R5,y+15
+ 0D20 C201              movw R24,R4
+ 0D22 1C01              movw R2,R24
+ 0D24 4424              clr R4
+ 0D26 5524              clr R5
+ 0D28 2E82              std y+6,R2
+ 0D2A 3F82              std y+7,R3
+ 0D2C 4886              std y+8,R4
+ 0D2E 5986              std y+9,R5
+ 0D30 2C84              ldd R2,y+12
+ 0D32 3D84              ldd R3,y+13
+ 0D34 4E84              ldd R4,y+14
+ 0D36 5F84              ldd R5,y+15
+ 0D38 C101              movw R24,R2
+ 0D3A 1C01              movw R2,R24
+ 0D3C 4424              clr R4
+ 0D3E 5524              clr R5
+ 0D40 2A82              std y+2,R2
+ 0D42 3B82              std y+3,R3
+ 0D44 4C82              std y+4,R4
+ 0D46 5D82              std y+5,R5
+ 0D48 B982              std y+1,R11
+ 0D4A A882              std y+0,R10
+ 0D4C 2FE1              ldi R18,31
+ 0D4E 30E0              ldi R19,0
+ 0D50 05E5              ldi R16,85
+ 0D52 10E0              ldi R17,0
+ 0D54 A0D2              xcall _APICall#Fmjz
+ 0D56                   .dbblkend 479
+ 0D56           L114:
+ 0D56 2A96              adiw R28,10
+ 0D58 B990              ld R11,y+
+ 0D5A A990              ld R10,y+
+ 0D5C 2296              adiw R28,2
+ 0D5E 0895              ret
+ 0D60                   .dbfuncend
+ 0D60                   .dbsym l color 12 l
+ 0D60                   .dbsym r h 10 s
+ 0D60                   .dbstacksize 8
+ 0D60                   .dbfunc e SmartIO_SetFont _SmartIO_SetFont#Fstttm fS 481 3714648
+ 0D60           ;          color -> y+22
+ 0D60           ;       fontsize -> R14,R15
+ 0D60           ; isSansSerifFont -> R12,R13
+ 0D60           ;              h -> R10,R11
+                        .even
+ 0D60           _SmartIO_SetFont#Fstttm::
+ 0D60 0E940000          xcall push_xgset00FC
+ 0D64 6901              movw R12,R18
+ 0D66 5801              movw R10,R16
+ 0D68 2E97              sbiw R28,14
+ 0D6A EC88              ldd R14,y+20
+ 0D6C FD88              ldd R15,y+21
+ 0D6E                   .dbblock 482
+ 0D6E                   .dbline 483
+ 0D6E 2E88              ldd R2,y+22
+ 0D70 3F88              ldd R3,y+23
+ 0D72 488C              ldd R4,y+24
+ 0D74 598C              ldd R5,y+25
+ 0D76 C201              movw R24,R4
+ 0D78 1C01              movw R2,R24
+ 0D7A 4424              clr R4
+ 0D7C 5524              clr R5
+ 0D7E 2A86              std y+10,R2
+ 0D80 3B86              std y+11,R3
+ 0D82 4C86              std y+12,R4
+ 0D84 5D86              std y+13,R5
+ 0D86 2E88              ldd R2,y+22
+ 0D88 3F88              ldd R3,y+23
+ 0D8A 488C              ldd R4,y+24
+ 0D8C 598C              ldd R5,y+25
+ 0D8E C101              movw R24,R2
+ 0D90 1C01              movw R2,R24
+ 0D92 4424              clr R4
+ 0D94 5524              clr R5
+ 0D96 2E82              std y+6,R2
+ 0D98 3F82              std y+7,R3
+ 0D9A 4886              std y+8,R4
+ 0D9C 5986              std y+9,R5
+ 0D9E FD82              std y+5,R15
+ 0DA0 EC82              std y+4,R14
+ 0DA2 DB82              std y+3,R13
+ 0DA4 CA82              std y+2,R12
+ 0DA6 B982              std y+1,R11
+ 0DA8 A882              std y+0,R10
+ 0DAA 2EE1              ldi R18,30
+ 0DAC 30E0              ldi R19,0
+ 0DAE 05E5              ldi R16,1365
+ 0DB0 15E0              ldi R17,5
+ 0DB2 71D2              xcall _APICall#Fmjz
+ 0DB4                   .dbblkend 484
+ 0DB4           L115:
+ 0DB4 2E96              adiw R28,14
+ 0DB6 0C940000          xjmp pop_xgset00FC
+ 0DBA 0895              ret
+ 0DBC                   .dbfuncend
+ 0DBC                   .dbsym l color 22 l
+ 0DBC                   .dbsym r fontsize 14 s
+ 0DBC                   .dbsym r isSansSerifFont 12 s
+ 0DBC                   .dbsym r h 10 s
+ 0DBC                   .dbstacksize 14
+ 0DBC                   .dbfunc e SmartIO_UpdateIntValue _SmartIO_UpdateIntValue#Fstt fS 486 3714648
+ 0DBC           ;          value -> R12,R13
+ 0DBC           ;         handle -> R10,R11
+                        .even
+ 0DBC           _SmartIO_UpdateIntValue#Fstt::
+ 0DBC 0E940000          xcall push_xgset003C
+ 0DC0 6901              movw R12,R18
+ 0DC2 5801              movw R10,R16
+ 0DC4 2497              sbiw R28,4
+ 0DC6                   .dbblock 487
+ 0DC6                   .dbline 488
+ 0DC6 DB82              std y+3,R13
+ 0DC8 CA82              std y+2,R12
+ 0DCA B982              std y+1,R11
+ 0DCC A882              std y+0,R10
+ 0DCE 24E1              ldi R18,20
+ 0DD0 30E0              ldi R19,0
+ 0DD2 05E1              ldi R16,21
+ 0DD4 10E0              ldi R17,0
+ 0DD6 5FD2              xcall _APICall#Fmjz
+ 0DD8                   .dbblkend 489
+ 0DD8           L116:
+ 0DD8 2496              adiw R28,4
+ 0DDA 0C940000          xjmp pop_xgset003C
+ 0DDE 0895              ret
+ 0DE0                   .dbfuncend
+ 0DE0                   .dbsym r value 12 s
+ 0DE0                   .dbsym r handle 10 s
+ 0DE0                   .dbstacksize 2
+ 0DE0                   .dbfunc e SmartIO_UpdateIntValue2 _SmartIO_UpdateIntValue2#Fsttt fS 491 3714648
+ 0DE0           ;         value2 -> R14,R15
+ 0DE0           ;         value1 -> R12,R13
+ 0DE0           ;         handle -> R10,R11
+                        .even
+ 0DE0           _SmartIO_UpdateIntValue2#Fsttt::
+ 0DE0 0E940000          xcall push_xgset00FC
+ 0DE4 6901              movw R12,R18
+ 0DE6 5801              movw R10,R16
+ 0DE8 2697              sbiw R28,6
+ 0DEA EC84              ldd R14,y+12
+ 0DEC FD84              ldd R15,y+13
+ 0DEE                   .dbblock 492
+ 0DEE                   .dbline 493
+ 0DEE FD82              std y+5,R15
+ 0DF0 EC82              std y+4,R14
+ 0DF2 DB82              std y+3,R13
+ 0DF4 CA82              std y+2,R12
+ 0DF6 B982              std y+1,R11
+ 0DF8 A882              std y+0,R10
+ 0DFA 24E1              ldi R18,20
+ 0DFC 30E0              ldi R19,0
+ 0DFE 05E5              ldi R16,85
+ 0E00 10E0              ldi R17,0
+ 0E02 49D2              xcall _APICall#Fmjz
+ 0E04                   .dbblkend 494
+ 0E04           L117:
+ 0E04 2696              adiw R28,6
+ 0E06 0C940000          xjmp pop_xgset00FC
+ 0E0A 0895              ret
+ 0E0C                   .dbfuncend
+ 0E0C                   .dbsym r value2 14 s
+ 0E0C                   .dbsym r value1 12 s
+ 0E0C                   .dbsym r handle 10 s
+ 0E0C                   .dbstacksize 6
+ 0E0C                   .dbfunc e SmartIO_UpdateIntValue3 _SmartIO_UpdateIntValue3#Fstttt fS 495 3714648
+ 0E0C           ;         value3 -> R20,R21
+ 0E0C           ;         value2 -> R14,R15
+ 0E0C           ;         value1 -> R12,R13
+ 0E0C           ;         handle -> R10,R11
+                        .even
+ 0E0C           _SmartIO_UpdateIntValue3#Fstttt::
+ 0E0C 0E940000          xcall push_xgset30FC
+ 0E10 6901              movw R12,R18
+ 0E12 5801              movw R10,R16
+ 0E14 2897              sbiw R28,8
+ 0E16 E888              ldd R14,y+16
+ 0E18 F988              ldd R15,y+17
+ 0E1A 4A89              ldd R20,y+18
+ 0E1C 5B89              ldd R21,y+19
+ 0E1E                   .dbblock 496
+ 0E1E                   .dbline 497
+ 0E1E 5F83              std y+7,R21
+ 0E20 4E83              std y+6,R20
+ 0E22 FD82              std y+5,R15
+ 0E24 EC82              std y+4,R14
+ 0E26 DB82              std y+3,R13
+ 0E28 CA82              std y+2,R12
+ 0E2A B982              std y+1,R11
+ 0E2C A882              std y+0,R10
+ 0E2E 24E1              ldi R18,20
+ 0E30 30E0              ldi R19,0
+ 0E32 05E5              ldi R16,341
+ 0E34 11E0              ldi R17,1
+ 0E36 2FD2              xcall _APICall#Fmjz
+ 0E38                   .dbblkend 498
+ 0E38           L118:
+ 0E38 2896              adiw R28,8
+ 0E3A 0C940000          xjmp pop_xgset30FC
+ 0E3E 0895              ret
+ 0E40                   .dbfuncend
+ 0E40                   .dbsym r value3 20 s
+ 0E40                   .dbsym r value2 14 s
+ 0E40                   .dbsym r value1 12 s
+ 0E40                   .dbsym r handle 10 s
+ 0E40                   .dbstacksize 10
+ 0E40                   .dbfunc e SmartIO_UpdateStringValue _SmartIO_UpdateStringValue#FstPc fS 500 3714648
+ 0E40           ;            str -> R12,R13
+ 0E40           ;         handle -> R10,R11
+                        .even
+ 0E40           _SmartIO_UpdateStringValue#FstPc::
+ 0E40 0E940000          xcall push_xgset003C
+ 0E44 6901              movw R12,R18
+ 0E46 5801              movw R10,R16
+ 0E48 2497              sbiw R28,4
+ 0E4A                   .dbblock 501
+ 0E4A                   .dbline 502
+ 0E4A DB82              std y+3,R13
+ 0E4C CA82              std y+2,R12
+ 0E4E B982              std y+1,R11
+ 0E50 A882              std y+0,R10
+ 0E52 24E1              ldi R18,20
+ 0E54 30E0              ldi R19,0
+ 0E56 05E2              ldi R16,37
+ 0E58 10E0              ldi R17,0
+ 0E5A 1DD2              xcall _APICall#Fmjz
+ 0E5C                   .dbblkend 503
+ 0E5C           L119:
+ 0E5C 2496              adiw R28,4
+ 0E5E 0C940000          xjmp pop_xgset003C
+ 0E62 0895              ret
+ 0E64                   .dbfuncend
+ 0E64                   .dbsym r str 12 pc
+ 0E64                   .dbsym r handle 10 s
+ 0E64                   .dbstacksize 2
+ 0E64                   .dbfunc e SmartIO_UpdateOnOffButton _SmartIO_UpdateOnOffButton#Fstt fS 505 3714648
+ 0E64           ;          value -> R12,R13
+ 0E64           ;         handle -> R10,R11
+                        .even
+ 0E64           _SmartIO_UpdateOnOffButton#Fstt::
+ 0E64 0E940000          xcall push_xgset003C
+ 0E68 6901              movw R12,R18
+ 0E6A 5801              movw R10,R16
+ 0E6C                   .dbblock 505
+ 0E6C                   .dbline 505
+ 0E6C 9601              movw R18,R12
+ 0E6E 8501              movw R16,R10
+ 0E70 A5DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0E72                   .dbblkend 505
+ 0E72           L120:
+ 0E72 0C940000          xjmp pop_xgset003C
+ 0E76 0895              ret
+ 0E78                   .dbfuncend
+ 0E78                   .dbsym r value 12 s
+ 0E78                   .dbsym r handle 10 s
+ 0E78                   .dbstacksize -2
+ 0E78                   .dbfunc e SmartIO_Update3PosButton _SmartIO_Update3PosButton#Fstt fS 506 3714648
+ 0E78           ;          value -> R12,R13
+ 0E78           ;         handle -> R10,R11
+                        .even
+ 0E78           _SmartIO_Update3PosButton#Fstt::
+ 0E78 0E940000          xcall push_xgset003C
+ 0E7C 6901              movw R12,R18
+ 0E7E 5801              movw R10,R16
+ 0E80                   .dbblock 506
+ 0E80                   .dbline 506
+ 0E80 9601              movw R18,R12
+ 0E82 8501              movw R16,R10
+ 0E84 9BDF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0E86                   .dbblkend 506
+ 0E86           L121:
+ 0E86 0C940000          xjmp pop_xgset003C
+ 0E8A 0895              ret
+ 0E8C                   .dbfuncend
+ 0E8C                   .dbsym r value 12 s
+ 0E8C                   .dbsym r handle 10 s
+ 0E8C                   .dbstacksize -2
+ 0E8C                   .dbfunc e SmartIO_UpdateIncrementer _SmartIO_UpdateIncrementer#Fstt fS 507 3714648
+ 0E8C           ;          value -> R12,R13
+ 0E8C           ;         handle -> R10,R11
+                        .even
+ 0E8C           _SmartIO_UpdateIncrementer#Fstt::
+ 0E8C 0E940000          xcall push_xgset003C
+ 0E90 6901              movw R12,R18
+ 0E92 5801              movw R10,R16
+ 0E94                   .dbblock 507
+ 0E94                   .dbline 507
+ 0E94 9601              movw R18,R12
+ 0E96 8501              movw R16,R10
+ 0E98 91DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0E9A                   .dbblkend 507
+ 0E9A           L122:
+ 0E9A 0C940000          xjmp pop_xgset003C
+ 0E9E 0895              ret
+ 0EA0                   .dbfuncend
+ 0EA0                   .dbsym r value 12 s
+ 0EA0                   .dbsym r handle 10 s
+ 0EA0                   .dbstacksize -2
+ 0EA0                   .dbfunc e SmartIO_UpdateSlider _SmartIO_UpdateSlider#Fstt fS 508 3714648
+ 0EA0           ;          value -> R12,R13
+ 0EA0           ;         handle -> R10,R11
+                        .even
+ 0EA0           _SmartIO_UpdateSlider#Fstt::
+ 0EA0 0E940000          xcall push_xgset003C
+ 0EA4 6901              movw R12,R18
+ 0EA6 5801              movw R10,R16
+ 0EA8                   .dbblock 508
+ 0EA8                   .dbline 508
+ 0EA8 9601              movw R18,R12
+ 0EAA 8501              movw R16,R10
+ 0EAC 87DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0EAE                   .dbblkend 508
+ 0EAE           L123:
+ 0EAE 0C940000          xjmp pop_xgset003C
+ 0EB2 0895              ret
+ 0EB4                   .dbfuncend
+ 0EB4                   .dbsym r value 12 s
+ 0EB4                   .dbsym r handle 10 s
+ 0EB4                   .dbstacksize -2
+ 0EB4                   .dbfunc e SmartIO_UpdateExpandableList _SmartIO_UpdateExpandableList#Fstt fS 509 3714648
+ 0EB4           ;          value -> R12,R13
+ 0EB4           ;         handle -> R10,R11
+                        .even
+ 0EB4           _SmartIO_UpdateExpandableList#Fstt::
+ 0EB4 0E940000          xcall push_xgset003C
+ 0EB8 6901              movw R12,R18
+ 0EBA 5801              movw R10,R16
+ 0EBC                   .dbblock 509
+ 0EBC                   .dbline 509
+ 0EBC 9601              movw R18,R12
+ 0EBE 8501              movw R16,R10
+ 0EC0 7DDF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0EC2                   .dbblkend 509
+ 0EC2           L124:
+ 0EC2 0C940000          xjmp pop_xgset003C
+ 0EC6 0895              ret
+ 0EC8                   .dbfuncend
+ 0EC8                   .dbsym r value 12 s
+ 0EC8                   .dbsym r handle 10 s
+ 0EC8                   .dbstacksize -2
+ 0EC8                   .dbfunc e SmartIO_UpdatePicker _SmartIO_UpdatePicker#Fstt fS 510 3714648
+ 0EC8           ;          value -> R12,R13
+ 0EC8           ;         handle -> R10,R11
+                        .even
+ 0EC8           _SmartIO_UpdatePicker#Fstt::
+ 0EC8 0E940000          xcall push_xgset003C
+ 0ECC 6901              movw R12,R18
+ 0ECE 5801              movw R10,R16
+ 0ED0                   .dbblock 510
+ 0ED0                   .dbline 510
+ 0ED0 9601              movw R18,R12
+ 0ED2 8501              movw R16,R10
+ 0ED4 73DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0ED6                   .dbblkend 510
+ 0ED6           L125:
+ 0ED6 0C940000          xjmp pop_xgset003C
+ 0EDA 0895              ret
+ 0EDC                   .dbfuncend
+ 0EDC                   .dbsym r value 12 s
+ 0EDC                   .dbsym r handle 10 s
+ 0EDC                   .dbstacksize -2
+ 0EDC                   .dbfunc e SmartIO_UpdateMultiSelector _SmartIO_UpdateMultiSelector#Fstt fS 511 3714648
+ 0EDC           ;          value -> R12,R13
+ 0EDC           ;         handle -> R10,R11
+                        .even
+ 0EDC           _SmartIO_UpdateMultiSelector#Fstt::
+ 0EDC 0E940000          xcall push_xgset003C
+ 0EE0 6901              movw R12,R18
+ 0EE2 5801              movw R10,R16
+ 0EE4                   .dbblock 511
+ 0EE4                   .dbline 511
+ 0EE4 9601              movw R18,R12
+ 0EE6 8501              movw R16,R10
+ 0EE8 69DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0EEA                   .dbblkend 511
+ 0EEA           L126:
+ 0EEA 0C940000          xjmp pop_xgset003C
+ 0EEE 0895              ret
+ 0EF0                   .dbfuncend
+ 0EF0                   .dbsym r value 12 s
+ 0EF0                   .dbsym r handle 10 s
+ 0EF0                   .dbstacksize -2
+ 0EF0                   .dbfunc e SmartIO_UpdateNumberSelector _SmartIO_UpdateNumberSelector#Fstt fS 512 3714648
+ 0EF0           ;          value -> R12,R13
+ 0EF0           ;         handle -> R10,R11
+                        .even
+ 0EF0           _SmartIO_UpdateNumberSelector#Fstt::
+ 0EF0 0E940000          xcall push_xgset003C
+ 0EF4 6901              movw R12,R18
+ 0EF6 5801              movw R10,R16
+ 0EF8                   .dbblock 512
+ 0EF8                   .dbline 512
+ 0EF8 9601              movw R18,R12
+ 0EFA 8501              movw R16,R10
+ 0EFC 5FDF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0EFE                   .dbblkend 512
+ 0EFE           L127:
+ 0EFE 0C940000          xjmp pop_xgset003C
+ 0F02 0895              ret
+ 0F04                   .dbfuncend
+ 0F04                   .dbsym r value 12 s
+ 0F04                   .dbsym r handle 10 s
+ 0F04                   .dbstacksize -2
+ 0F04                   .dbfunc e SmartIO_UpdateCheckboxes _SmartIO_UpdateCheckboxes#Fstt fS 513 3714648
+ 0F04           ;          value -> R12,R13
+ 0F04           ;         handle -> R10,R11
+                        .even
+ 0F04           _SmartIO_UpdateCheckboxes#Fstt::
+ 0F04 0E940000          xcall push_xgset003C
+ 0F08 6901              movw R12,R18
+ 0F0A 5801              movw R10,R16
+ 0F0C                   .dbblock 513
+ 0F0C                   .dbline 513
+ 0F0C 9601              movw R18,R12
+ 0F0E 8501              movw R16,R10
+ 0F10 55DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F12                   .dbblkend 513
+ 0F12           L128:
+ 0F12 0C940000          xjmp pop_xgset003C
+ 0F16 0895              ret
+ 0F18                   .dbfuncend
+ 0F18                   .dbsym r value 12 s
+ 0F18                   .dbsym r handle 10 s
+ 0F18                   .dbstacksize -2
+ 0F18                   .dbfunc e SmartIO_UpdateRadioButtons _SmartIO_UpdateRadioButtons#Fstt fS 514 3714648
+ 0F18           ;          value -> R12,R13
+ 0F18           ;         handle -> R10,R11
+                        .even
+ 0F18           _SmartIO_UpdateRadioButtons#Fstt::
+ 0F18 0E940000          xcall push_xgset003C
+ 0F1C 6901              movw R12,R18
+ 0F1E 5801              movw R10,R16
+ 0F20                   .dbblock 514
+ 0F20                   .dbline 514
+ 0F20 9601              movw R18,R12
+ 0F22 8501              movw R16,R10
+ 0F24 4BDF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F26                   .dbblkend 514
+ 0F26           L129:
+ 0F26 0C940000          xjmp pop_xgset003C
+ 0F2A 0895              ret
+ 0F2C                   .dbfuncend
+ 0F2C                   .dbsym r value 12 s
+ 0F2C                   .dbsym r handle 10 s
+ 0F2C                   .dbstacksize -2
+ 0F2C                   .dbfunc e SmartIO_UpdateCounter _SmartIO_UpdateCounter#Fstt fS 515 3714648
+ 0F2C           ;          value -> R12,R13
+ 0F2C           ;         handle -> R10,R11
+                        .even
+ 0F2C           _SmartIO_UpdateCounter#Fstt::
+ 0F2C 0E940000          xcall push_xgset003C
+ 0F30 6901              movw R12,R18
+ 0F32 5801              movw R10,R16
+ 0F34                   .dbblock 515
+ 0F34                   .dbline 515
+ 0F34 9601              movw R18,R12
+ 0F36 8501              movw R16,R10
+ 0F38 41DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F3A                   .dbblkend 515
+ 0F3A           L130:
+ 0F3A 0C940000          xjmp pop_xgset003C
+ 0F3E 0895              ret
+ 0F40                   .dbfuncend
+ 0F40                   .dbsym r value 12 s
+ 0F40                   .dbsym r handle 10 s
+ 0F40                   .dbstacksize -2
+ 0F40                   .dbfunc e SmartIO_UpdateProgressBar _SmartIO_UpdateProgressBar#Fstt fS 516 3714648
+ 0F40           ;          value -> R12,R13
+ 0F40           ;         handle -> R10,R11
+                        .even
+ 0F40           _SmartIO_UpdateProgressBar#Fstt::
+ 0F40 0E940000          xcall push_xgset003C
+ 0F44 6901              movw R12,R18
+ 0F46 5801              movw R10,R16
+ 0F48                   .dbblock 516
+ 0F48                   .dbline 516
+ 0F48 9601              movw R18,R12
+ 0F4A 8501              movw R16,R10
+ 0F4C 37DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F4E                   .dbblkend 516
+ 0F4E           L131:
+ 0F4E 0C940000          xjmp pop_xgset003C
+ 0F52 0895              ret
+ 0F54                   .dbfuncend
+ 0F54                   .dbsym r value 12 s
+ 0F54                   .dbsym r handle 10 s
+ 0F54                   .dbstacksize -2
+ 0F54                   .dbfunc e SmartIO_UpdateProgressCircle _SmartIO_UpdateProgressCircle#Fstt fS 517 3714648
+ 0F54           ;          value -> R12,R13
+ 0F54           ;         handle -> R10,R11
+                        .even
+ 0F54           _SmartIO_UpdateProgressCircle#Fstt::
+ 0F54 0E940000          xcall push_xgset003C
+ 0F58 6901              movw R12,R18
+ 0F5A 5801              movw R10,R16
+ 0F5C                   .dbblock 517
+ 0F5C                   .dbline 517
+ 0F5C 9601              movw R18,R12
+ 0F5E 8501              movw R16,R10
+ 0F60 2DDF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F62                   .dbblkend 517
+ 0F62           L132:
+ 0F62 0C940000          xjmp pop_xgset003C
+ 0F66 0895              ret
+ 0F68                   .dbfuncend
+ 0F68                   .dbsym r value 12 s
+ 0F68                   .dbsym r handle 10 s
+ 0F68                   .dbstacksize -2
+ 0F68                   .dbfunc e SmartIO_UpdateHGauge _SmartIO_UpdateHGauge#Fstt fS 518 3714648
+ 0F68           ;          value -> R12,R13
+ 0F68           ;         handle -> R10,R11
+                        .even
+ 0F68           _SmartIO_UpdateHGauge#Fstt::
+ 0F68 0E940000          xcall push_xgset003C
+ 0F6C 6901              movw R12,R18
+ 0F6E 5801              movw R10,R16
+ 0F70                   .dbblock 518
+ 0F70                   .dbline 518
+ 0F70 9601              movw R18,R12
+ 0F72 8501              movw R16,R10
+ 0F74 23DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F76                   .dbblkend 518
+ 0F76           L133:
+ 0F76 0C940000          xjmp pop_xgset003C
+ 0F7A 0895              ret
+ 0F7C                   .dbfuncend
+ 0F7C                   .dbsym r value 12 s
+ 0F7C                   .dbsym r handle 10 s
+ 0F7C                   .dbstacksize -2
+ 0F7C                   .dbfunc e SmartIO_UpdateVGauge _SmartIO_UpdateVGauge#Fstt fS 519 3714648
+ 0F7C           ;          value -> R12,R13
+ 0F7C           ;         handle -> R10,R11
+                        .even
+ 0F7C           _SmartIO_UpdateVGauge#Fstt::
+ 0F7C 0E940000          xcall push_xgset003C
+ 0F80 6901              movw R12,R18
+ 0F82 5801              movw R10,R16
+ 0F84                   .dbblock 519
+ 0F84                   .dbline 519
+ 0F84 9601              movw R18,R12
+ 0F86 8501              movw R16,R10
+ 0F88 19DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F8A                   .dbblkend 519
+ 0F8A           L134:
+ 0F8A 0C940000          xjmp pop_xgset003C
+ 0F8E 0895              ret
+ 0F90                   .dbfuncend
+ 0F90                   .dbsym r value 12 s
+ 0F90                   .dbsym r handle 10 s
+ 0F90                   .dbstacksize -2
+ 0F90                   .dbfunc e SmartIO_UpdateSemiCircularGauge _SmartIO_UpdateSemiCircularGauge#Fstt fS 520 3714648
+ 0F90           ;          value -> R12,R13
+ 0F90           ;         handle -> R10,R11
+                        .even
+ 0F90           _SmartIO_UpdateSemiCircularGauge#Fstt::
+ 0F90 0E940000          xcall push_xgset003C
+ 0F94 6901              movw R12,R18
+ 0F96 5801              movw R10,R16
+ 0F98                   .dbblock 521
+ 0F98                   .dbline 521
+ 0F98 9601              movw R18,R12
+ 0F9A 8501              movw R16,R10
+ 0F9C 0FDF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0F9E                   .dbblkend 521
+ 0F9E           L135:
+ 0F9E 0C940000          xjmp pop_xgset003C
+ 0FA2 0895              ret
+ 0FA4                   .dbfuncend
+ 0FA4                   .dbsym r value 12 s
+ 0FA4                   .dbsym r handle 10 s
+ 0FA4                   .dbstacksize -2
+ 0FA4                   .dbfunc e SmartIO_UpdateCircularGauge _SmartIO_UpdateCircularGauge#Fstt fS 522 3714648
+ 0FA4           ;          value -> R12,R13
+ 0FA4           ;         handle -> R10,R11
+                        .even
+ 0FA4           _SmartIO_UpdateCircularGauge#Fstt::
+ 0FA4 0E940000          xcall push_xgset003C
+ 0FA8 6901              movw R12,R18
+ 0FAA 5801              movw R10,R16
+ 0FAC                   .dbblock 522
+ 0FAC                   .dbline 522
+ 0FAC 9601              movw R18,R12
+ 0FAE 8501              movw R16,R10
+ 0FB0 05DF              xcall _SmartIO_UpdateIntValue#Fstt
+ 0FB2                   .dbblkend 522
+ 0FB2           L136:
+ 0FB2 0C940000          xjmp pop_xgset003C
+ 0FB6 0895              ret
+ 0FB8                   .dbfuncend
+ 0FB8                   .dbsym r value 12 s
+ 0FB8                   .dbsym r handle 10 s
+ 0FB8                   .dbstacksize -2
+ 0FB8                   .dbfunc e SmartIO_UpdateCustomHGauge _SmartIO_UpdateCustomHGauge#Fstt fS 523 3714648
+ 0FB8           ;          value -> R12,R13
+ 0FB8           ;         handle -> R10,R11
+                        .even
+ 0FB8           _SmartIO_UpdateCustomHGauge#Fstt::
+ 0FB8 0E940000          xcall push_xgset003C
+ 0FBC 6901              movw R12,R18
+ 0FBE 5801              movw R10,R16
+ 0FC0                   .dbblock 523
+ 0FC0                   .dbline 523
+ 0FC0 9601              movw R18,R12
+ 0FC2 8501              movw R16,R10
+ 0FC4 FBDE              xcall _SmartIO_UpdateIntValue#Fstt
+ 0FC6                   .dbblkend 523
+ 0FC6           L137:
+ 0FC6 0C940000          xjmp pop_xgset003C
+ 0FCA 0895              ret
+ 0FCC                   .dbfuncend
+ 0FCC                   .dbsym r value 12 s
+ 0FCC                   .dbsym r handle 10 s
+ 0FCC                   .dbstacksize -2
+ 0FCC                   .dbfunc e SmartIO_UpdateCustomVGauge _SmartIO_UpdateCustomVGauge#Fstt fS 524 3714648
+ 0FCC           ;          value -> R12,R13
+ 0FCC           ;         handle -> R10,R11
+                        .even
+ 0FCC           _SmartIO_UpdateCustomVGauge#Fstt::
+ 0FCC 0E940000          xcall push_xgset003C
+ 0FD0 6901              movw R12,R18
+ 0FD2 5801              movw R10,R16
+ 0FD4                   .dbblock 524
+ 0FD4                   .dbline 524
+ 0FD4 9601              movw R18,R12
+ 0FD6 8501              movw R16,R10
+ 0FD8 F1DE              xcall _SmartIO_UpdateIntValue#Fstt
+ 0FDA                   .dbblkend 524
+ 0FDA           L138:
+ 0FDA 0C940000          xjmp pop_xgset003C
+ 0FDE 0895              ret
+ 0FE0                   .dbfuncend
+ 0FE0                   .dbsym r value 12 s
+ 0FE0                   .dbsym r handle 10 s
+ 0FE0                   .dbstacksize -2
+ 0FE0                   .dbfunc e SmartIO_UpdateBatteryLevel _SmartIO_UpdateBatteryLevel#Fstt fS 525 3714648
+ 0FE0           ;          value -> R12,R13
+ 0FE0           ;         handle -> R10,R11
+                        .even
+ 0FE0           _SmartIO_UpdateBatteryLevel#Fstt::
+ 0FE0 0E940000          xcall push_xgset003C
+ 0FE4 6901              movw R12,R18
+ 0FE6 5801              movw R10,R16
+ 0FE8                   .dbblock 525
+ 0FE8                   .dbline 525
+ 0FE8 9601              movw R18,R12
+ 0FEA 8501              movw R16,R10
+ 0FEC E7DE              xcall _SmartIO_UpdateIntValue#Fstt
+ 0FEE                   .dbblkend 525
+ 0FEE           L139:
+ 0FEE 0C940000          xjmp pop_xgset003C
+ 0FF2 0895              ret
+ 0FF4                   .dbfuncend
+ 0FF4                   .dbsym r value 12 s
+ 0FF4                   .dbsym r handle 10 s
+ 0FF4                   .dbstacksize -2
+ 0FF4                   .dbfunc e SmartIO_UpdateRGBLed _SmartIO_UpdateRGBLed#Fsttt fS 527 3714648
+ 0FF4           ;         on_off -> R14,R15
+ 0FF4           ;          color -> R12,R13
+ 0FF4           ;         handle -> R10,R11
+                        .even
+ 0FF4           _SmartIO_UpdateRGBLed#Fsttt::
+ 0FF4 0E940000          xcall push_xgset00FC
+ 0FF8 6901              movw R12,R18
+ 0FFA 5801              movw R10,R16
+ 0FFC 2297              sbiw R28,2
+ 0FFE E884              ldd R14,y+8
+ 1000 F984              ldd R15,y+9
+ 1002                   .dbblock 528
+ 1002                   .dbline 528
+ 1002 F982              std y+1,R15
+ 1004 E882              std y+0,R14
+ 1006 9601              movw R18,R12
+ 1008 8501              movw R16,R10
+ 100A EADE              xcall _SmartIO_UpdateIntValue2#Fsttt
+ 100C                   .dbblkend 528
+ 100C           L140:
+ 100C 2296              adiw R28,2
+ 100E 0C940000          xjmp pop_xgset00FC
+ 1012 0895              ret
+ 1014                   .dbfuncend
+ 1014                   .dbsym r on_off 14 s
+ 1014                   .dbsym r color 12 s
+ 1014                   .dbsym r handle 10 s
+ 1014                   .dbstacksize 2
+ 1014                   .dbfunc e SmartIO_UpdateTextBox _SmartIO_UpdateTextBox#FstPc fS 530 3714648
+ 1014           ;          value -> R12,R13
+ 1014           ;         handle -> R10,R11
+                        .even
+ 1014           _SmartIO_UpdateTextBox#FstPc::
+ 1014 0E940000          xcall push_xgset003C
+ 1018 6901              movw R12,R18
+ 101A 5801              movw R10,R16
+ 101C                   .dbblock 531
+ 101C                   .dbline 532
+ 101C 9601              movw R18,R12
+ 101E 8501              movw R16,R10
+ 1020 0FDF              xcall _SmartIO_UpdateStringValue#FstPc
+ 1022                   .dbblkend 533
+ 1022           L141:
+ 1022 0C940000          xjmp pop_xgset003C
+ 1026 0895              ret
+ 1028                   .dbfuncend
+ 1028                   .dbsym r value 12 pc
+ 1028                   .dbsym r handle 10 s
+ 1028                   .dbstacksize -2
+ 1028                   .dbfunc e SmartIO_MakeSpacerSlice _SmartIO_MakeSpacerSlice#Fti fs 535 3714648
+ 1028           ;              h -> R10,R11
+ 1028           ;              i -> R20,R21
+                        .even
+ 1028           _SmartIO_MakeSpacerSlice#Fti::
+ 1028 0E940000          xcall push_xgset300C
+ 102C A801              movw R20,R16
+ 102E                   .dbblock 536
+ 102E           L143:
+ 102E                   .dbline 540
+ 102E 2DE0              ldi R18,13
+ 1030 30E0              ldi R19,0
+ 1032 01E0              ldi R16,1
+ 1034 10E0              ldi R17,0
+ 1036 2FD1              xcall _APICall#Fmjz
+ 1038 5801              movw R10,R16
+ 103A           L144:
+ 103A                   .dbline 541
+ 103A 2A01              movw R4,R20
+ 103C 4150              subi R20,1
+ 103E 5040              sbci R21,0
+ 1040 2224              clr R2
+ 1042 3324              clr R3
+ 1044 2414              cp R2,R4
+ 1046 3504              cpc R3,R5
+ 1048 94F3              brlt L143
+ 104A           X25:
+ 104A                   .dbline 542
+ 104A 8501              movw R16,R10
+ 104C                   .dbblkend 543
+ 104C           L142:
+ 104C 0C940000          xjmp pop_xgset300C
+ 1050 0895              ret
+ 1052                   .dbfuncend
+ 1052                   .dbsym r h 10 s
+ 1052                   .dbsym r i 20 I
+ 1052                   .dbstacksize 0
+ 1052                   .dbfunc e SmartIO_AutoBalance _SmartIO_AutoBalance#Fst fS 545 3714648
+ 1052           ;        page_id -> R10,R11
+                        .even
+ 1052           _SmartIO_AutoBalance#Fst::
+ 1052 AA92              st -y,R10
+ 1054 BA92              st -y,R11
+ 1056 5801              movw R10,R16
+ 1058 2297              sbiw R28,2
+ 105A                   .dbblock 546
+ 105A                   .dbline 547
+ 105A B982              std y+1,R11
+ 105C A882              std y+0,R10
+ 105E 2BE2              ldi R18,43
+ 1060 30E0              ldi R19,0
+ 1062 05E0              ldi R16,5
+ 1064 10E0              ldi R17,0
+ 1066 17D1              xcall _APICall#Fmjz
+ 1068                   .dbblkend 548
+ 1068           L146:
+ 1068 2296              adiw R28,2
+ 106A B990              ld R11,y+
+ 106C A990              ld R10,y+
+ 106E 0895              ret
+ 1070                   .dbfuncend
+ 1070                   .dbsym r page_id 10 s
+ 1070                   .dbstacksize 0
+ 1070                   .dbfunc e SmartIO_EnableObject _SmartIO_EnableObject#Fst fS 550 3714648
+ 1070           ;         handle -> R10,R11
+                        .even
+ 1070           _SmartIO_EnableObject#Fst::
+ 1070 AA92              st -y,R10
+ 1072 BA92              st -y,R11
+ 1074 5801              movw R10,R16
+ 1076 2497              sbiw R28,4
+ 1078                   .dbblock 551
+ 1078                   .dbline 552
+ 1078 81E0              ldi R24,1
+ 107A 90E0              ldi R25,0
+ 107C 9B83              std y+3,R25
+ 107E 8A83              std y+2,R24
+ 1080 B982              std y+1,R11
+ 1082 A882              std y+0,R10
+ 1084 28E2              ldi R18,40
+ 1086 30E0              ldi R19,0
+ 1088 05E1              ldi R16,21
+ 108A 10E0              ldi R17,0
+ 108C 04D1              xcall _APICall#Fmjz
+ 108E                   .dbblkend 553
+ 108E           L147:
+ 108E 2496              adiw R28,4
+ 1090 B990              ld R11,y+
+ 1092 A990              ld R10,y+
+ 1094 0895              ret
+ 1096                   .dbfuncend
+ 1096                   .dbsym r handle 10 s
+ 1096                   .dbstacksize 2
+ 1096                   .dbfunc e SmartIO_DisableObject _SmartIO_DisableObject#Fst fS 555 3714648
+ 1096           ;         handle -> R10,R11
+                        .even
+ 1096           _SmartIO_DisableObject#Fst::
+ 1096 AA92              st -y,R10
+ 1098 BA92              st -y,R11
+ 109A 5801              movw R10,R16
+ 109C 2497              sbiw R28,4
+ 109E                   .dbblock 556
+ 109E                   .dbline 557
+ 109E 2224              clr R2
+ 10A0 3324              clr R3
+ 10A2 3B82              std y+3,R3
+ 10A4 2A82              std y+2,R2
+ 10A6 B982              std y+1,R11
+ 10A8 A882              std y+0,R10
+ 10AA 28E2              ldi R18,40
+ 10AC 30E0              ldi R19,0
+ 10AE 05E1              ldi R16,21
+ 10B0 10E0              ldi R17,0
+ 10B2 F1D0              xcall _APICall#Fmjz
+ 10B4                   .dbblkend 558
+ 10B4           L148:
+ 10B4 2496              adiw R28,4
+ 10B6 B990              ld R11,y+
+ 10B8 A990              ld R10,y+
+ 10BA 0895              ret
+ 10BC                   .dbfuncend
+ 10BC                   .dbsym r handle 10 s
+ 10BC                   .dbstacksize 2
+ 10BC                   .dbfunc e SmartIO_ShowObject _SmartIO_ShowObject#Fst fS 560 3714648
+ 10BC           ;         handle -> R10,R11
+                        .even
+ 10BC           _SmartIO_ShowObject#Fst::
+ 10BC AA92              st -y,R10
+ 10BE BA92              st -y,R11
+ 10C0 5801              movw R10,R16
+ 10C2 2497              sbiw R28,4
+ 10C4                   .dbblock 561
+ 10C4                   .dbline 562
+ 10C4 81E0              ldi R24,1
+ 10C6 90E0              ldi R25,0
+ 10C8 9B83              std y+3,R25
+ 10CA 8A83              std y+2,R24
+ 10CC B982              std y+1,R11
+ 10CE A882              std y+0,R10
+ 10D0 29E2              ldi R18,41
+ 10D2 30E0              ldi R19,0
+ 10D4 05E1              ldi R16,21
+ 10D6 10E0              ldi R17,0
+ 10D8 DED0              xcall _APICall#Fmjz
+ 10DA                   .dbblkend 563
+ 10DA           L149:
+ 10DA 2496              adiw R28,4
+ 10DC B990              ld R11,y+
+ 10DE A990              ld R10,y+
+ 10E0 0895              ret
+ 10E2                   .dbfuncend
+ 10E2                   .dbsym r handle 10 s
+ 10E2                   .dbstacksize 2
+ 10E2                   .dbfunc e SmartIO_HideObject _SmartIO_HideObject#Fst fS 565 3714648
+ 10E2           ;         handle -> R10,R11
+                        .even
+ 10E2           _SmartIO_HideObject#Fst::
+ 10E2 AA92              st -y,R10
+ 10E4 BA92              st -y,R11
+ 10E6 5801              movw R10,R16
+ 10E8 2497              sbiw R28,4
+ 10EA                   .dbblock 566
+ 10EA                   .dbline 567
+ 10EA 2224              clr R2
+ 10EC 3324              clr R3
+ 10EE 3B82              std y+3,R3
+ 10F0 2A82              std y+2,R2
+ 10F2 B982              std y+1,R11
+ 10F4 A882              std y+0,R10
+ 10F6 29E2              ldi R18,41
+ 10F8 30E0              ldi R19,0
+ 10FA 05E1              ldi R16,21
+ 10FC 10E0              ldi R17,0
+ 10FE CBD0              xcall _APICall#Fmjz
+ 1100                   .dbblkend 568
+ 1100           L150:
+ 1100 2496              adiw R28,4
+ 1102 B990              ld R11,y+
+ 1104 A990              ld R10,y+
+ 1106 0895              ret
+ 1108                   .dbfuncend
+ 1108                   .dbsym r handle 10 s
+ 1108                   .dbstacksize 2
+ 1108                   .dbfunc e SmartIO_DeleteObject _SmartIO_DeleteObject#Fst fS 570 3714648
+ 1108           ;         handle -> R10,R11
+                        .even
+ 1108           _SmartIO_DeleteObject#Fst::
+ 1108 AA92              st -y,R10
+ 110A BA92              st -y,R11
+ 110C 5801              movw R10,R16
+ 110E 2297              sbiw R28,2
+ 1110                   .dbblock 571
+ 1110                   .dbline 572
+ 1110 B982              std y+1,R11
+ 1112 A882              std y+0,R10
+ 1114 2AE2              ldi R18,42
+ 1116 30E0              ldi R19,0
+ 1118 05E1              ldi R16,21
+ 111A 10E0              ldi R17,0
+ 111C BCD0              xcall _APICall#Fmjz
+ 111E                   .dbblkend 573
+ 111E           L151:
+ 111E 2296              adiw R28,2
+ 1120 B990              ld R11,y+
+ 1122 A990              ld R10,y+
+ 1124 0895              ret
+ 1126                   .dbfuncend
+ 1126                   .dbsym r handle 10 s
+ 1126                   .dbstacksize 0
+ 1126                   .dbfunc e SmartIO_MakeLabel _SmartIO_MakeLabel#FtttPc fs 576 3714648
+ 1126           ;          label -> R14,R15
+ 1126           ;         height -> R12,R13
+ 1126           ;      alignment -> R10,R11
+                        .even
+ 1126           _SmartIO_MakeLabel#FtttPc::
+ 1126 0E940000          xcall push_xgset00FC
+ 112A 6901              movw R12,R18
+ 112C 5801              movw R10,R16
+ 112E 2897              sbiw R28,8
+ 1130 EE84              ldd R14,y+14
+ 1132 FF84              ldd R15,y+15
+ 1134                   .dbblock 577
+ 1134                   .dbline 578
+ 1134 FF82              std y+7,R15
+ 1136 EE82              std y+6,R14
+ 1138 DD82              std y+5,R13
+ 113A CC82              std y+4,R12
+ 113C 80E9              ldi R24,400
+ 113E 91E0              ldi R25,1
+ 1140 9B83              std y+3,R25
+ 1142 8A83              std y+2,R24
+ 1144 B982              std y+1,R11
+ 1146 A882              std y+0,R10
+ 1148 2AE0              ldi R18,10
+ 114A 30E0              ldi R19,0
+ 114C 05E5              ldi R16,597
+ 114E 12E0              ldi R17,2
+ 1150 A2D0              xcall _APICall#Fmjz
+ 1152                   .dbblkend 579
+ 1152           L152:
+ 1152 2896              adiw R28,8
+ 1154 0C940000          xjmp pop_xgset00FC
+ 1158 0895              ret
+ 115A                   .dbfuncend
+ 115A                   .dbsym r label 14 pc
+ 115A                   .dbsym r height 12 s
+ 115A                   .dbsym r alignment 10 s
+ 115A                   .dbstacksize 8
+ 115A                   .dbfunc e SmartIO_ReadEEPROM _SmartIO_ReadEEPROM#FPhtt fpc 591 3714648
+ 115A           ;         length -> R12,R13
+ 115A           ;        address -> R10,R11
+                        .even
+ 115A           _SmartIO_ReadEEPROM#FPhtt::
+ 115A 0E940000          xcall push_xgset003C
+ 115E 6901              movw R12,R18
+ 1160 5801              movw R10,R16
+ 1162 2497              sbiw R28,4
+ 1164                   .dbblock 592
+ 1164                   .dbline 593
+ 1164 DB82              std y+3,R13
+ 1166 CA82              std y+2,R12
+ 1168 B982              std y+1,R11
+ 116A A882              std y+0,R10
+ 116C 20E8              ldi R18,-128
+ 116E 3FEF              ldi R19,-1
+ 1170 05E1              ldi R16,21
+ 1172 10E0              ldi R17,0
+ 1174 90D0              xcall _APICall#Fmjz
+ 1176                   .dbblkend 594
+ 1176           L153:
+ 1176 2496              adiw R28,4
+ 1178 0C940000          xjmp pop_xgset003C
+ 117C 0895              ret
+ 117E                   .dbfuncend
+ 117E                   .dbsym r length 12 s
+ 117E                   .dbsym r address 10 s
+ 117E                   .dbstacksize 2
+ 117E                   .dbfunc e SmartIO_WriteEEPROM _SmartIO_WriteEEPROM#FsttPh fS 596 3714648
+ 117E           ;         buffer -> R14,R15
+ 117E           ;         length -> R12,R13
+ 117E           ;        address -> R10,R11
+                        .even
+ 117E           _SmartIO_WriteEEPROM#FsttPh::
+ 117E 0E940000          xcall push_xgset00FC
+ 1182 6901              movw R12,R18
+ 1184 5801              movw R10,R16
+ 1186 2697              sbiw R28,6
+ 1188 EC84              ldd R14,y+12
+ 118A FD84              ldd R15,y+13
+ 118C                   .dbblock 597
+ 118C                   .dbline 598
+ 118C FD82              std y+5,R15
+ 118E EC82              std y+4,R14
+ 1190 DB82              std y+3,R13
+ 1192 CA82              std y+2,R12
+ 1194 B982              std y+1,R11
+ 1196 A882              std y+0,R10
+ 1198 20E0              ldi R18,-256
+ 119A 3FEF              ldi R19,-1
+ 119C 05E9              ldi R16,149
+ 119E 10E0              ldi R17,0
+ 11A0 7AD0              xcall _APICall#Fmjz
+ 11A2                   .dbblkend 599
+ 11A2           L154:
+ 11A2 2696              adiw R28,6
+ 11A4 0C940000          xjmp pop_xgset00FC
+ 11A8 0895              ret
+ 11AA                   .dbfuncend
+ 11AA                   .dbsym r buffer 14 pc
+ 11AA                   .dbsym r length 12 s
+ 11AA                   .dbsym r address 10 s
+ 11AA                   .dbstacksize 6
+ 11AA                   .dbfunc e SmartIO_SetLED _SmartIO_SetLED#Fst fS 601 3714648
+ 11AA           ;            led -> R10,R11
+                        .even
+ 11AA           _SmartIO_SetLED#Fst::
+ 11AA AA92              st -y,R10
+ 11AC BA92              st -y,R11
+ 11AE 5801              movw R10,R16
+ 11B0 2297              sbiw R28,2
+ 11B2                   .dbblock 602
+ 11B2                   .dbline 603
+ 11B2 B982              std y+1,R11
+ 11B4 A882              std y+0,R10
+ 11B6 21E0              ldi R18,-255
+ 11B8 3FEF              ldi R19,-1
+ 11BA 05E0              ldi R16,5
+ 11BC 10E0              ldi R17,0
+ 11BE 6BD0              xcall _APICall#Fmjz
+ 11C0                   .dbblkend 604
+ 11C0           L155:
+ 11C0 2296              adiw R28,2
+ 11C2 B990              ld R11,y+
+ 11C4 A990              ld R10,y+
+ 11C6 0895              ret
+ 11C8                   .dbfuncend
+ 11C8                   .dbsym r led 10 s
+ 11C8                   .dbstacksize 0
+ 11C8                   .dbfunc e SmartIO_ClearLED _SmartIO_ClearLED#Fst fS 606 3714648
+ 11C8           ;            led -> R10,R11
+                        .even
+ 11C8           _SmartIO_ClearLED#Fst::
+ 11C8 AA92              st -y,R10
+ 11CA BA92              st -y,R11
+ 11CC 5801              movw R10,R16
+ 11CE 2297              sbiw R28,2
+ 11D0                   .dbblock 607
+ 11D0                   .dbline 608
+ 11D0 B982              std y+1,R11
+ 11D2 A882              std y+0,R10
+ 11D4 22E0              ldi R18,-254
+ 11D6 3FEF              ldi R19,-1
+ 11D8 05E0              ldi R16,5
+ 11DA 10E0              ldi R17,0
+ 11DC 5CD0              xcall _APICall#Fmjz
+ 11DE                   .dbblkend 609
+ 11DE           L156:
+ 11DE 2296              adiw R28,2
+ 11E0 B990              ld R11,y+
+ 11E2 A990              ld R10,y+
+ 11E4 0895              ret
+ 11E6                   .dbfuncend
+ 11E6                   .dbsym r led 10 s
+ 11E6                   .dbstacksize 0
+ 11E6                   .dbfunc e SmartIO_ToggleLED _SmartIO_ToggleLED#Fst fS 611 3714648
+ 11E6           ;            led -> R10,R11
+                        .even
+ 11E6           _SmartIO_ToggleLED#Fst::
+ 11E6 AA92              st -y,R10
+ 11E8 BA92              st -y,R11
+ 11EA 5801              movw R10,R16
+ 11EC 2297              sbiw R28,2
+ 11EE                   .dbblock 612
+ 11EE                   .dbline 613
+ 11EE B982              std y+1,R11
+ 11F0 A882              std y+0,R10
+ 11F2 23E0              ldi R18,-253
+ 11F4 3FEF              ldi R19,-1
+ 11F6 05E0              ldi R16,5
+ 11F8 10E0              ldi R17,0
+ 11FA 4DD0              xcall _APICall#Fmjz
+ 11FC                   .dbblkend 614
+ 11FC           L157:
+ 11FC 2296              adiw R28,2
+ 11FE B990              ld R11,y+
+ 1200 A990              ld R10,y+
+ 1202 0895              ret
+ 1204                   .dbfuncend
+ 1204                   .dbsym r led 10 s
+ 1204                   .dbstacksize 0
+ 1204                   .dbfunc e SmartIO_GenRandomNumber _SmartIO_GenRandomNumber#Fmv fl 616 3714648
+                        .even
+ 1204           _SmartIO_GenRandomNumber#Fmv::
+ 1204                   .dbblock 617
+ 1204                   .dbline 618
+ 1204 24E0              ldi R18,-252
+ 1206 3FEF              ldi R19,-1
+ 1208 01E0              ldi R16,1
+ 120A 10E0              ldi R17,0
+ 120C                   .dbblkend 619
+ 120C           L158:
+ 120C 44C0              xjmp _APICall#Fmjz
+ 120E                   .dbfuncend
+ 120E                   .dbstacksize -2
+ 120E                   .dbfunc e SmartIO_GetUniqueID _SmartIO_GetUniqueID#FPmv fpl 621 3714648
+ 120E                   .dbsym s val L160 A[8:2]l
+ 120E           ;              p -> R20,R21
+                        .even
+ 120E           _SmartIO_GetUniqueID#FPmv::
+ 120E 4A93              st -y,R20
+ 1210 5A93              st -y,R21
+ 1212                   .dbblock 622
+ 1212                   .dbline 624
+ 1212 21E8              ldi R18,-127
+ 1214 3FEF              ldi R19,-1
+ 1216 01E0              ldi R16,1
+ 1218 10E0              ldi R17,0
+ 121A 3DD0              xcall _APICall#Fmjz
+ 121C A801              movw R20,R16
+ 121E                   .dbline 625
+ 121E FA01              movw R30,R20
+ 1220 2080              ldd R2,z+0
+ 1222 3180              ldd R3,z+1
+ 1224 4280              ldd R4,z+2
+ 1226 5380              ldd R5,z+3
+ 1228 30920100          sts L160+1,R3
+ 122C 20920000          sts L160,R2
+ 1230 50920300          sts L160+2+1,R5
+ 1234 40920200          sts L160+2,R4
+ 1238                   .dbline 626
+ 1238 2480              ldd R2,z+4
+ 123A 3580              ldd R3,z+5
+ 123C 4680              ldd R4,z+6
+ 123E 5780              ldd R5,z+7
+ 1240 30920500          sts L160+4+1,R3
+ 1244 20920400          sts L160+4,R2
+ 1248 50920700          sts L160+4+2+1,R5
+ 124C 40920600          sts L160+4+2,R4
+ 1250                   .dbline 627
+ 1250 00E0              ldi R16,<L160
+ 1252 10E0              ldi R17,>L160
+ 1254                   .dbblkend 628
+ 1254           L159:
+ 1254 5991              ld R21,y+
+ 1256 4991              ld R20,y+
+ 1258 0895              ret
+ 125A                   .dbfuncend
+ 125A                   .dbsym r p 20 pl
+ 125A                   .dbstacksize 0
+ 125A                   .dbfunc e SmartIO_DebugUART _SmartIO_DebugUART#Fst fS 630 3714648
+ 125A           ;         enable -> R10,R11
+                        .even
+ 125A           _SmartIO_DebugUART#Fst::
+ 125A AA92              st -y,R10
+ 125C BA92              st -y,R11
+ 125E 5801              movw R10,R16
+ 1260 2297              sbiw R28,2
+ 1262                   .dbblock 631
+ 1262                   .dbline 632
+ 1262 B982              std y+1,R11
+ 1264 A882              std y+0,R10
+ 1266 25E0              ldi R18,-251
+ 1268 3FEF              ldi R19,-1
+ 126A 05E0              ldi R16,5
+ 126C 10E0              ldi R17,0
+ 126E 13D0              xcall _APICall#Fmjz
+ 1270                   .dbblkend 633
+ 1270           L162:
+ 1270 2296              adiw R28,2
+ 1272 B990              ld R11,y+
+ 1274 A990              ld R10,y+
+ 1276 0895              ret
+ 1278                   .dbfuncend
+ 1278                   .dbsym r enable 10 s
+ 1278                   .dbstacksize 0
+ 1278                   .dbfunc e SmartIO_GetPhoneTime _SmartIO_GetPhoneTime#FPcv fpc 636 3714648
+                        .even
+ 1278           _SmartIO_GetPhoneTime#FPcv::
+ 1278                   .dbblock 637
+ 1278                   .dbline 638
+ 1278 22E8              ldi R18,-126
+ 127A 3FEF              ldi R19,-1
+ 127C 01E0              ldi R16,1
+ 127E 10E0              ldi R17,0
+ 1280                   .dbblkend 639
+ 1280           L163:
+ 1280 0AC0              xjmp _APICall#Fmjz
+ 1282                   .dbfuncend
+ 1282                   .dbstacksize -2
+ 1282                   .dbfunc e SmartIO_GetPhoneGPS _SmartIO_GetPhoneGPS#FPcv fpc 641 3714648
+                        .even
+ 1282           _SmartIO_GetPhoneGPS#FPcv::
+ 1282                   .dbblock 642
+ 1282                   .dbline 643
+ 1282 23E8              ldi R18,-125
+ 1284 3FEF              ldi R19,-1
+ 1286 01E0              ldi R16,1
+ 1288 10E0              ldi R17,0
+ 128A                   .dbblkend 644
+ 128A           L164:
+ 128A 05C0              xjmp _APICall#Fmjz
+ 128C                   .dbfuncend
+ 128C                   .dbstacksize -2
+ 128C                   .dbfunc e SmartIO_Beep _SmartIO_Beep#Fsv fS 646 3714648
+                        .even
+ 128C           _SmartIO_Beep#Fsv::
+ 128C                   .dbblock 647
+ 128C                   .dbline 648
+ 128C 26E0              ldi R18,-250
+ 128E 3FEF              ldi R19,-1
+ 1290 01E0              ldi R16,1
+ 1292 10E0              ldi R17,0
+ 1294                   .dbblkend 649
+ 1294           L165:
+ 1294 00C0              xjmp _APICall#Fmjz
+ 1296                   .dbfuncend
+ 1296                   .dbstacksize -2
+ 1296                   .dbfunc s APICall _APICall#Fmjz fl 651 3714648
+ 1296           ;              i -> R10,R11
+ 1296           ;            dst -> R14,R15
+ 1296           ;         length -> R22,R23
+ 1296           ;           mask -> y+6
+ 1296           ;              i -> y+4
+ 1296           ;         intarg -> R12,R13
+ 1296           ;           args -> y+2
+ 1296           ;          index -> y+0
+ 1296           ;         strarg -> R20,R21
+ 1296           ;        argmask -> y+18
+                        .even
+ 1296           _APICall#Fmjz:
+ 1296 0E940000          xcall push_arg4
+ 129A 0E940000          xcall push_xgsetF0FC
+ 129E 2897              sbiw R28,8
+ 12A0                   .dbblock 652
+ 12A0                   .dbline 653
+ 12A0 0024              clr R0
+ 12A2 1124              clr R1
+ 12A4 1982              std y+1,R1
+ 12A6 0882              std y+0,R0
+ 12A8                   .dbline 658
+ 12A8 CE01              movw R24,R28
+ 12AA 4496              adiw R24,20
+ 12AC 9B83              std y+3,R25
+ 12AE 8A83              std y+2,R24
+ 12B0                   .dbline 659
+ 12B0 1D82              std y+5,R1
+ 12B2 0C82              std y+4,R0
+ 12B4 F8C0              xjmp L171
+ 12B6           L168:
+ 12B6                   .dbline 661
+ 12B6 8A89              ldd R24,y+18
+ 12B8 8370              andi R24,3
+ 12BA 9927              clr R25
+ 12BC 9F83              std y+7,R25
+ 12BE 8E83              std y+6,R24
+ 12C0                   .dbline 662
+ 12C0 0C01              movw R0,R24
+ 12C2 8030              cpi R24,0
+ 12C4 8907              cpc R24,R25
+ 12C6 09F4              brne L172
+ 12C8           X26:
+ 12C8                   .dbline 663
+ 12C8 F6C0              xjmp L170
+ 12CA           L172:
+ 12CA                   .dbline 664
+ 12CA 8E81              ldd R24,y+6
+ 12CC 9F81              ldd R25,y+7
+ 12CE 8130              cpi R24,1
+ 12D0 E0E0              ldi R30,0
+ 12D2 9E07              cpc R25,R30
+ 12D4 B1F4              brne L174
+ 12D6           X27:
+ 12D6                   .dbline 666
+ 12D6 8A81              ldd R24,y+2
+ 12D8 9B81              ldd R25,y+3
+ 12DA 0296              adiw R24,2
+ 12DC 9B83              std y+3,R25
+ 12DE 8A83              std y+2,R24
+ 12E0 FC01              movw R30,R24
+ 12E2 3297              sbiw R30,2
+ 12E4 C080              ldd R12,z+0
+ 12E6 D180              ldd R13,z+1
+ 12E8                   .dbline 667
+ 12E8 20900200          lds R2,_Command#Pt
+ 12EC 30900300          lds R3,_Command#Pt+1
+ 12F0 E881              ldd R30,y+0
+ 12F2 F981              ldd R31,y+1
+ 12F4 EE0F              lsl R30
+ 12F6 FF1F              rol R31
+ 12F8 E20D              add R30,R2
+ 12FA F31D              adc R31,R3
+ 12FC D182              std z+1,R13
+ 12FE C082              std z+0,R12
+ 1300                   .dbline 668
+ 1300 C0C0              xjmp L175
+ 1302           L174:
+ 1302                   .dbline 669
+ 1302 8E81              ldd R24,y+6
+ 1304 9F81              ldd R25,y+7
+ 1306 8230              cpi R24,2
+ 1308 E0E0              ldi R30,0
+ 130A 9E07              cpc R25,R30
+ 130C 09F0              breq X39
+ 130E 41C0              xjmp L176
+ 1310           X39:
+ 1310           X28:
+ 1310 E0910200          lds R30,_Command#Pt
+ 1314 F0910300          lds R31,_Command#Pt+1
+ 1318 8081              ldd R24,z+0
+ 131A 9181              ldd R25,z+1
+ 131C 8030              cpi R24,0
+ 131E EFEF              ldi R30,255
+ 1320 9E07              cpc R25,R30
+ 1322 09F0              breq X40
+ 1324 36C0              xjmp L176
+ 1326           X40:
+ 1326           X29:
+ 1326                   .dbline 671
+ 1326 8881              ldd R24,y+0
+ 1328 9981              ldd R25,y+1
+ 132A 8330              cpi R24,3
+ 132C E0E0              ldi R30,0
+ 132E 9E07              cpc R25,R30
+ 1330 29F0              breq L178
+ 1332           X30:
+ 1332                   .dbline 672
+ 1332 0FEF              ldi R16,255
+ 1334 1FEF              ldi R17,255
+ 1336 2FEF              ldi R18,255
+ 1338 3FEF              ldi R19,255
+ 133A C7C0              xjmp L166
+ 133C           L178:
+ 133C                   .dbline 674
+ 133C 8A81              ldd R24,y+2
+ 133E 9B81              ldd R25,y+3
+ 1340 0296              adiw R24,2
+ 1342 9B83              std y+3,R25
+ 1344 8A83              std y+2,R24
+ 1346 FC01              movw R30,R24
+ 1348 3297              sbiw R30,2
+ 134A 4081              ldd R20,z+0
+ 134C 5181              ldd R21,z+1
+ 134E                   .dbline 675
+ 134E E0910200          lds R30,_Command#Pt
+ 1352 F0910300          lds R31,_Command#Pt+1
+ 1356 6481              ldd R22,z+4
+ 1358 7581              ldd R23,z+5
+ 135A                   .dbline 676
+ 135A CF01              movw R24,R30
+ 135C 0696              adiw R24,6
+ 135E 7C01              movw R14,R24
+ 1360                   .dbline 677
+ 1360 AA24              clr R10
+ 1362 BB24              clr R11
+ 1364 09C0              xjmp L183
+ 1366           L180:
+ 1366                   .dbline 678
+ 1366 FA01              movw R30,R20
+ 1368 D701              movw R26,R14
+ 136A 0190              ld R0,Z+
+ 136C AF01              movw R20,R30
+ 136E 0D92              st X+,R0
+ 1370 7D01              movw R14,R26
+ 1372           L181:
+ 1372                   .dbline 677
+ 1372 C501              movw R24,R10
+ 1374 0196              adiw R24,1
+ 1376 5C01              movw R10,R24
+ 1378           L183:
+ 1378                   .dbline 677
+ 1378 A616              cp R10,R22
+ 137A B706              cpc R11,R23
+ 137C A0F3              brlo L180
+ 137E           X31:
+ 137E                   .dbline 679
+ 137E 9B01              movw R18,R22
+ 1380 2A5F              subi R18,250  ; offset = 6
+ 1382 3F4F              sbci R19,255
+ 1384 00910200          lds R16,_Command#Pt
+ 1388 10910300          lds R17,_Command#Pt+1
+ 138C 0E940000          xcall _SmartIO__SendBytes#FmPhi
+ 1390 9CC0              xjmp L166
+ 1392           L176:
+ 1392                   .dbline 681
+ 1392 8E81              ldd R24,y+6
+ 1394 9F81              ldd R25,y+7
+ 1396 8230              cpi R24,2
+ 1398 E0E0              ldi R30,0
+ 139A 9E07              cpc R25,R30
+ 139C 09F0              breq X41
+ 139E 40C0              xjmp L184
+ 13A0           X41:
+ 13A0           X32:
+ 13A0                   .dbline 683
+ 13A0 8A81              ldd R24,y+2
+ 13A2 9B81              ldd R25,y+3
+ 13A4 0296              adiw R24,2
+ 13A6 9B83              std y+3,R25
+ 13A8 8A83              std y+2,R24
+ 13AA FC01              movw R30,R24
+ 13AC 3297              sbiw R30,2
+ 13AE 4081              ldd R20,z+0
+ 13B0 5181              ldd R21,z+1
+ 13B2 30C0              xjmp L187
+ 13B4           L186:
+ 13B4                   .dbline 686
+ 13B4 FA01              movw R30,R20
+ 13B6 2080              ldd R2,z+0
+ 13B8 3324              clr R3
+ 13BA 4180              ldd R4,z+1
+ 13BC 5524              clr R5
+ 13BE 542C              mov R5,R4
+ 13C0 4424              clr R4
+ 13C2 4228              or R4,R2
+ 13C4 5328              or R5,R3
+ 13C6 20900200          lds R2,_Command#Pt
+ 13CA 30900300          lds R3,_Command#Pt+1
+ 13CE E881              ldd R30,y+0
+ 13D0 F981              ldd R31,y+1
+ 13D2 EE0F              lsl R30
+ 13D4 FF1F              rol R31
+ 13D6 E20D              add R30,R2
+ 13D8 F31D              adc R31,R3
+ 13DA 5182              std z+1,R5
+ 13DC 4082              std z+0,R4
+ 13DE                   .dbline 687
+ 13DE FA01              movw R30,R20
+ 13E0 2180              ldd R2,z+1
+ 13E2 2220              tst R2
+ 13E4 19F0              breq L191
+ 13E6           X33:
+ 13E6 2280              ldd R2,z+2
+ 13E8 2220              tst R2
+ 13EA 09F4              brne L189
+ 13EC           X34:
+ 13EC           L191:
+ 13EC                   .dbline 688
+ 13EC 4AC0              xjmp L185
+ 13EE           L189:
+ 13EE                   .dbline 689
+ 13EE 4E5F              subi R20,254  ; offset = 2
+ 13F0 5F4F              sbci R21,255
+ 13F2                   .dbline 690
+ 13F2 8881              ldd R24,y+0
+ 13F4 9981              ldd R25,y+1
+ 13F6 0196              adiw R24,1
+ 13F8 9983              std y+1,R25
+ 13FA 8883              std y+0,R24
+ 13FC                   .dbline 692
+ 13FC 80E4              ldi R24,64
+ 13FE 90E0              ldi R25,0
+ 1400 2880              ldd R2,y+0
+ 1402 3980              ldd R3,y+1
+ 1404 2816              cp R2,R24
+ 1406 3906              cpc R3,R25
+ 1408 2CF0              brlt L192
+ 140A           X35:
+ 140A                   .dbline 694
+ 140A 09E0              ldi R16,9
+ 140C 10E0              ldi R17,0
+ 140E 0E940000          xcall _SmartIO_Error#Fi
+ 1412                   .dbline 695
+ 1412 37C0              xjmp L185
+ 1414           L192:
+ 1414           L187:
+ 1414                   .dbline 684
+ 1414 FA01              movw R30,R20
+ 1416 2080              ldd R2,z+0
+ 1418 2220              tst R2
+ 141A 09F0              breq X42
+ 141C CBCF              xjmp L186
+ 141E           X42:
+ 141E           X36:
+ 141E                   .dbline 698
+ 141E 31C0              xjmp L185
+ 1420           L184:
+ 1420                   .dbline 699
+ 1420 8E81              ldd R24,y+6
+ 1422 9F81              ldd R25,y+7
+ 1424 8330              cpi R24,3
+ 1426 E0E0              ldi R30,0
+ 1428 9E07              cpc R25,R30
+ 142A 59F5              brne L194
+ 142C           X37:
+ 142C                   .dbline 701
+ 142C 8A81              ldd R24,y+2
+ 142E 9B81              ldd R25,y+3
+ 1430 0296              adiw R24,2
+ 1432 9B83              std y+3,R25
+ 1434 8A83              std y+2,R24
+ 1436 FC01              movw R30,R24
+ 1438 3297              sbiw R30,2
+ 143A C080              ldd R12,z+0
+ 143C D180              ldd R13,z+1
+ 143E                   .dbline 702
+ 143E 4880              ldd R4,y+0
+ 1440 5980              ldd R5,y+1
+ 1442 C201              movw R24,R4
+ 1444 0196              adiw R24,1
+ 1446 9983              std y+1,R25
+ 1448 8883              std y+0,R24
+ 144A 20900200          lds R2,_Command#Pt
+ 144E 30900300          lds R3,_Command#Pt+1
+ 1452 F201              movw R30,R4
+ 1454 EE0F              lsl R30
+ 1456 FF1F              rol R31
+ 1458 E20D              add R30,R2
+ 145A F31D              adc R31,R3
+ 145C D182              std z+1,R13
+ 145E C082              std z+0,R12
+ 1460                   .dbline 703
+ 1460 20E1              ldi R18,16
+ 1462 30E0              ldi R19,0
+ 1464 8601              movw R16,R12
+ 1466 0E940000          xcall asr16
+ 146A 20900200          lds R2,_Command#Pt
+ 146E 30900300          lds R3,_Command#Pt+1
+ 1472 E881              ldd R30,y+0
+ 1474 F981              ldd R31,y+1
+ 1476 EE0F              lsl R30
+ 1478 FF1F              rol R31
+ 147A E20D              add R30,R2
+ 147C F31D              adc R31,R3
+ 147E 1183              std z+1,R17
+ 1480 0083              std z+0,R16
+ 1482           L194:
+ 1482           L185:
+ 1482           L175:
+ 1482                   .dbline 705
+ 1482 8881              ldd R24,y+0
+ 1484 9981              ldd R25,y+1
+ 1486 0196              adiw R24,1
+ 1488 9983              std y+1,R25
+ 148A 8883              std y+0,R24
+ 148C                   .dbline 706
+ 148C 2A88              ldd R2,y+18
+ 148E 3B88              ldd R3,y+19
+ 1490 3694              lsr R3
+ 1492 2794              ror R2
+ 1494 3694              lsr R3
+ 1496 2794              ror R2
+ 1498 3B8A              std y+19,R3
+ 149A 2A8A              std y+18,R2
+ 149C           L169:
+ 149C                   .dbline 659
+ 149C 8C81              ldd R24,y+4
+ 149E 9D81              ldd R25,y+5
+ 14A0 0196              adiw R24,1
+ 14A2 9D83              std y+5,R25
+ 14A4 8C83              std y+4,R24
+ 14A6           L171:
+ 14A6                   .dbline 659
+ 14A6 88E0              ldi R24,8
+ 14A8 90E0              ldi R25,0
+ 14AA 2C80              ldd R2,y+4
+ 14AC 3D80              ldd R3,y+5
+ 14AE 2816              cp R2,R24
+ 14B0 3906              cpc R3,R25
+ 14B2 0CF4              brge X43
+ 14B4 00CF              xjmp L168
+ 14B6           X43:
+ 14B6           X38:
+ 14B6           L170:
+ 14B6                   .dbline 708
+ 14B6 2881              ldd R18,y+0
+ 14B8 3981              ldd R19,y+1
+ 14BA 220F              lsl R18
+ 14BC 331F              rol R19
+ 14BE 00910200          lds R16,_Command#Pt
+ 14C2 10910300          lds R17,_Command#Pt+1
+ 14C6 0E940000          xcall _SmartIO__SendBytes#FmPhi
+ 14CA                   .dbblkend 709
+ 14CA           L166:
+ 14CA 2896              adiw R28,8
+ 14CC 0E940000          xcall pop_xgsetF0FC
+ 14D0 2496              adiw R28,4
+ 14D2 0895              ret
+ 14D4                   .dbfuncend
+ 14D4                   .dbsym r i 10 I
+ 14D4                   .dbsym r dst 14 pc
+ 14D4                   .dbsym r length 22 s
+ 14D4                   .dbsym l mask 6 i
+ 14D4                   .dbsym l i 4 I
+ 14D4                   .dbsym r intarg 12 I
+ 14D4                   .dbsym l args 2 pc
+ 14D4                   .dbsym l index 0 I
+ 14D4                   .dbsym r strarg 20 pc
+ 14D4                   .dbsym l argmask 18 i
+ 14D4                   .dbstacksize 16
+                        .area bss(ram, con, rel)
+ 0008                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0008           _host_sram_aligned_block#A32_m::
+ 0008                   .blkb 128
+ 0088                   .dbsym e host_sram_aligned_block _host_sram_aligned_block#A32_m A[128:32]l
+                        .area data(ram, con, rel)
+ 0004                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c
+ 0004           _6#A5_c:
+ 0004                   .blkb 5
+                        .area idata(rom)
+ 0004 312E303200        .byte 49,46,48,50,0
+                        .area data(ram, con, rel)
+ 0009                   .dbfile C:\Work\newtech\Smart.IO\MCU-App\Host_Interface_Layer\smartio_api.c

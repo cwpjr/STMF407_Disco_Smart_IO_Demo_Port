@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1470904666 source:c:\work\newtech\smart.io\mcu-app\command demo-st32f411-jumpstartc\stm32f4_vectors.s
+
+1510824510 source:c:\work\newtech\smart.io\mcu-app\command demo-st32f411-jumpstartc\main.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdlib.h>
+	<jsapi.h>
+	"smartio_interface.h"
+	"smartio_api.h"
+
+1509562617 c:\iccv8cortex\\include\jsapi\stm32f4\jsapi.h
+	<stdbool.h>
+	<core_cminstr.h>
+	"..\Portable\jsapi_fifoqueue.h"
+
+1462213910 c:\iccv8cortex\\include\jsapi\portable\jsapi_fifoqueue.h
+	<stdbool.h>
+
+1504130326 c:\work\newtech\smart.io\mcu-app\host_interface_layer\smartio_interface.h
+	<stdint.h>
+
+1510824690 c:\work\newtech\smart.io\mcu-app\host_interface_layer\smartio_api.h
+	<stdint.h>
+

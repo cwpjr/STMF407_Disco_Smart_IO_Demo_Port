@@ -1,0 +1,118 @@
+                        .area vectors(rom,rel)
+ 000000         __vectors::
+ 000000         	; you must use the .paddr directive so the correct form of the
+ 000000                 ; function address (i.e. with the low bit ON) is used
+ 000000 01000000        .paddr  _NMI_Handler    ; NMI_Handler
+ 000004 01000000        .paddr  _HardFault_Handler      ; HardFault_Handler
+ 000008 01000000        .paddr  _MemManage_Handler      ; MemManage_Handler
+ 00000C 01000000        .paddr  _BusFault_Handler       ; BusFault_Handler
+ 000010 01000000        .paddr  _UsageFault_Handler     ; UsageFault_Handler
+ 000014 00000000        .long   0                       ; ARM RESERVED
+ 000018 00000000        .long   0
+ 00001C 00000000        .long   0
+ 000020 00000000        .long   0
+ 000024 01000000        .paddr  _SVC_Handler    ; SVC_Handler
+ 000028 01000000        .paddr  _DebugMon_Handler       ; DebugMon_Handler
+ 00002C 00000000        .long   0                       ;
+ 000030 01000000        .paddr  _PendSV_Handler ; PendSV_Handler
+ 000034 01000000        .paddr  _JSAPI_SysTick_Handler  ; SysTick_Handler
+ 000038                 ; IRQ0 to IRQ31
+ 000038 01000000        .paddr  _Default_Handler    ; 0
+ 00003C 01000000        .paddr  _Default_Handler    ; 1
+ 000040 01000000        .paddr  _Default_Handler    ; 2
+ 000044 01000000        .paddr  _Default_Handler    ; 3
+ 000048 01000000        .paddr  _Default_Handler    ; 4
+ 00004C 01000000        .paddr  _Default_Handler    ; 5
+ 000050 01000000        .paddr  _JSAPI_EXTI0_Handler      ; 6
+ 000054 01000000        .paddr  _JSAPI_EXTI1_Handler      ; 7
+ 000058 01000000     .paddr     _JSAPI_EXTI2_Handler      ; 8
+ 00005C 01000000        .paddr  _JSAPI_EXTI3_Handler      ; 9
+ 000060 01000000        .paddr  _JSAPI_EXTI4_Handler      ; 10
+ 000064 01000000        .paddr  _Default_Handler    ; 11
+ 000068 01000000        .paddr  _Default_Handler    ; 12
+ 00006C 01000000        .paddr  _Default_Handler    ; 13
+ 000070 01000000        .paddr  _Default_Handler    ; 14
+ 000074 01000000        .paddr  _Default_Handler    ; 15
+ 000078 01000000        .paddr  _Default_Handler    ; 16
+ 00007C 01000000        .paddr  _Default_Handler    ; 17
+ 000080 01000000        .paddr  _Default_Handler    ; 18
+ 000084 01000000        .paddr  _Default_Handler    ; 19
+ 000088 01000000        .paddr  _Default_Handler    ; 20
+ 00008C 01000000        .paddr  _Default_Handler    ; 21
+ 000090 01000000        .paddr  _Default_Handler    ; 22
+ 000094 01000000        .paddr  _JSAPI_EXTI9_5_Handler      ; 23
+ 000098 01000000        .paddr  _Default_Handler    ; 24
+ 00009C 01000000        .paddr  _JSAPI_TIM1_UP_TIM10_Handler; 25
+ 0000A0 01000000        .paddr  _Default_Handler    ; 26
+ 0000A4 01000000        .paddr  _Default_Handler    ; 27
+ 0000A8 01000000        .paddr  _Default_Handler    ; 28
+ 0000AC 01000000        .paddr  _Default_Handler    ; 29
+ 0000B0 01000000        .paddr  _Default_Handler    ; 30
+ 0000B4 01000000        .paddr  _JSAPI_I2C1_EV_Handler      ; 31
+ 0000B8 01000000        .paddr  _Default_Handler    ; 32
+ 0000BC 01000000        .paddr  _JSAPI_I2C2_EV_Handler      ; 33
+ 0000C0 01000000        .paddr  _Default_Handler    ; 34
+ 0000C4 01000000        .paddr  _Default_Handler    ; 35
+ 0000C8 01000000        .paddr  _Default_Handler    ; 36
+ 0000CC 01000000        .paddr  _JSAPI_USART1_IntrHandler   ; 37
+ 0000D0 01000000        .paddr  _JSAPI_USART2_IntrHandler   ; 38
+ 0000D4 01000000        .paddr  _JSAPI_USART3_IntrHandler   ; 39
+ 0000D8 01000000        .paddr  _JSAPI_EXTI15_10_Handler    ; 40
+ 0000DC 01000000        .paddr  _Default_Handler    ; 41
+ 0000E0 01000000        .paddr  _Default_Handler    ; 42
+ 0000E4 01000000        .paddr  _Default_Handler    ; 43
+ 0000E8 01000000        .paddr  _Default_Handler    ; 44
+ 0000EC 01000000        .paddr  _Default_Handler    ; 45
+ 0000F0 01000000        .paddr  _Default_Handler    ; 46
+ 0000F4 01000000        .paddr  _Default_Handler    ; 47
+ 0000F8 01000000        .paddr  _Default_Handler    ; 48
+ 0000FC 01000000        .paddr  _Default_Handler    ; 49
+ 000100 01000000        .paddr  _Default_Handler    ; 50
+ 000104 01000000        .paddr  _Default_Handler    ; 51
+ 000108 01000000        .paddr  _JSAPI_USART4_IntrHandler    ; 52
+ 00010C 01000000        .paddr  _JSAPI_USART5_IntrHandler    ; 53
+ 000110 01000000        .paddr  _Default_Handler    ; 54
+ 000114 01000000        .paddr  _Default_Handler    ; 55
+ 000118 01000000        .paddr  _Default_Handler    ; 56
+ 00011C 01000000        .paddr  _Default_Handler    ; 57
+ 000120 01000000        .paddr  _Default_Handler    ; 58
+ 000124 01000000        .paddr  _Default_Handler    ; 59
+ 000128 01000000        .paddr  _Default_Handler    ; 60
+ 00012C 01000000        .paddr  _Default_Handler    ; 61
+ 000130 01000000        .paddr  _Default_Handler    ; 62
+ 000134 01000000        .paddr  _Default_Handler    ; 63
+ 000138 01000000        .paddr  _Default_Handler    ; 64
+ 00013C 01000000        .paddr  _Default_Handler    ; 65
+ 000140 01000000        .paddr  _Default_Handler    ; 66
+ 000144 01000000        .paddr  _Default_Handler    ; 67
+ 000148 01000000        .paddr  _Default_Handler    ; 68
+ 00014C 01000000        .paddr  _Default_Handler    ; 69
+ 000150 01000000        .paddr  _Default_Handler    ; 70
+ 000154 01000000        .paddr  _JSAPI_USART6_IntrHandler   ; 71
+ 000158 01000000        .paddr  _JSAPI_I2C3_EV_Handler      ; 72
+ 00015C 01000000        .paddr  _Default_Handler    ; 73
+ 000160 01000000        .paddr  _Default_Handler    ; 74
+ 000164 01000000        .paddr  _Default_Handler    ; 75
+ 000168 01000000        .paddr  _Default_Handler    ; 76
+ 00016C 01000000        .paddr  _Default_Handler    ; 77
+ 000170 01000000        .paddr  _Default_Handler    ; 78
+ 000174 01000000        .paddr  _Default_Handler    ; 79
+ 000178 01000000        .paddr  _Default_Handler    ; 80
+ 00017C 01000000        .paddr  _Default_Handler    ; 81
+ 000180 01000000        .paddr  _JSAPI_USART7_IntrHandler   ; 82
+ 000184 01000000        .paddr  _JSAPI_USART8_IntrHandler   ; 83
+ 000188         
+                        .area text(rom,con)
+ 000000         _HardFault_Handler::
+ 000000 4FF00001     mov R1,#0
+ 000004 1EF0040F     tst     LR,#4
+ 000008 04D1        bne    .ne
+ 00000A EFF3088C     mrs   r12,msp
+ 00000E 6FF00001     mvn R1,#0
+ 000012 01E0        b       .next
+ 000014         .ne:
+ 000014 EFF3098C     mrs   r12,psp
+ 000018         .next:
+ 000018 DCF81800     ldr     r0,[r12,#24]    ; stacked pc
+ 00001C DCF81C20     ldr     r2,[r12,#28]    ; psr
+ 000020 00F000B8     b       _yHardFault_Handler

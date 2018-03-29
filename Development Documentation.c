@@ -1,4 +1,11 @@
 // How I developed this application port documentation file.
+This was my 1rst git so this is a stub... The link to real (ie complete) repo is:
+https://github.com/cwpjr/STMF407_Disco_Spi1FDM1NSS
+# IAR-Smart-IO-Port-STM407-Disco
+This is a port of the Smart-IO Command Demo-ST32F411-JumpStartC and Host_Interface_Layer, to IAR EWARM, on the STM32F407vg Discovery board, For Nathans Bedbug Intelligence Group.
+By Clyde W. Phillips Jr cwpjr02@gmail.com
+
+// How I developed this application port documentation file.
 
 /* This is a port of the Smart-IO board software from a custom compiler.
 The custom compiler and IDE is called Jumpstart-C.
@@ -16,8 +23,15 @@ For Nathans BB group.
 Bedbug Intelligence Group
 */
 
+/*
+STM32Cubemx is used to generate initialization code and supplies HAL routines.
+http://www.st.com/en/development-tools/stm32cubemx.html
+http://www.st.com/content/ccc/resource/technical/document/user_manual/10/c5/1a/43/3a/70/43/7d/DM00104712.pdf/files/DM00104712.pdf/jcr:content/translations/en.DM00104712.pdf
+*?
+
 // Here are the peripherals and protocols used for this project.
-// The Smart-IO board is attached to a BBFing Group potentiostat circuit
+// The Smart-IO board will be attached to a BIG potentiostat pcb
+// Designed by Micheal Simon msimon6808@yahoo.com
 // Bedbug Intelligence Group @ 2018
 /*
 RCC (CLOCK) Section:
@@ -52,7 +66,7 @@ The short is if I poll for the interrupt I need to be sure
 there are no program flow considerations that would require using interrupts.
 Interrupts should be chosen to enable data thruput in code flow.
 Otherwise polling (blocking) is clearer.
-If so then use the HAL RX/TX interrupt/DMA routines.
+If using interruots then use the HAL RX/TX interrupt routines.
 */
 
 /*
@@ -60,7 +74,7 @@ Smart-IO Section:
 Command Demo-ST32F411-JumpStartC is a startup stand alone demo (ithink)
 The command line portion uses uart2 as a command line interface.
 
-I am implementing this on the STM32F$07vg Disco Board to
+I am implementing this on the STM32F407vg Disco Board to
 understand better whether It can handle muxing with FISH on uart3.
 */
 
@@ -103,3 +117,4 @@ RESET - resetting the Smart.IO module, active low om PC7.
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi1.Init.CRCPolynomial = 10;
+

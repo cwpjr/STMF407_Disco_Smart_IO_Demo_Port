@@ -1,87 +1,87 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.22.1.15669/W32 for ARM                28/Mar/2018  23:31:28
+# IAR ELF Linker V8.22.1.15669/W32 for ARM                29/Mar/2018  11:19:29
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Exe\STMF407_Disco_Spi1FDM1NSS.out
+#        C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Exe\STMF407_Disco_Spi1FDM1NSS.out
 #    Map file     =  
-#        C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\List\STMF407_Disco_Spi1FDM1NSS.map
+#        C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\List\STMF407_Disco_Spi1FDM1NSS.map
 #    Command line =  
-#        -f C:\Users\CLYDEW~1\AppData\Local\Temp\EW8F8D.tmp ("C:\Users\Clyde W
-#        Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\gpio.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\main.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\main_IAR_Smart-IO_STM32F407_port.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\rtc.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_api.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_hardware_interface.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_interface.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\spi.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\startup_stm32f407xx.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_cortex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma_ex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ramfunc.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_gpio.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_msp.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr_ex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc_ex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc_ex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_spi.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim_ex.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_uart.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_it.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\system_stm32f4xx.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\tim.o"
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\usart.o"
+#        -f C:\Users\CLYDEW~1\AppData\Local\Temp\EWC269.tmp ("C:\Users\Clyde W
+#        Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\gpio.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\main.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\main_IAR_Smart-IO_STM32F407_port.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\rtc.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_api.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_hardware_interface.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\smartio_interface.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\spi.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\startup_stm32f407xx.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_cortex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_dma_ex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_flash_ramfunc.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_gpio.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_msp.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_pwr_ex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rcc_ex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_rtc_ex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_spi.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_tim_ex.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_hal_uart.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\stm32f4xx_it.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\system_stm32f4xx.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\tim.o"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj\usart.o"
 #        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull -o
-#        "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Exe\STMF407_Disco_Spi1FDM1NSS.out"
-#        --map "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\List\STMF407_Disco_Spi1FDM1NSS.map"
-#        --config "C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH
-#        IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM/stm32f407xx_flash.icf"
+#        "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Exe\STMF407_Disco_Spi1FDM1NSS.out"
+#        --map "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\List\STMF407_Disco_Spi1FDM1NSS.map"
+#        --config "C:\Users\Clyde W Phillips
+#        Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM/stm32f407xx_flash.icf"
 #        --semihosting --entry __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
@@ -389,7 +389,7 @@ Copy/lz77 (__iar_lz77_init_single3)
 
     Module                              ro code  ro data  rw data
     ------                              -------  -------  -------
-C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj: [1]
+C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj: [1]
     gpio.o                                  740
     main.o                                  520        4       12
     main_IAR_Smart-IO_STM32F407_port.o    3 876                 4
@@ -872,7 +872,7 @@ uwTickFreq              0x20000014    0x1  Data  Gb  stm32f4xx_hal.o [1]
 uwTickPrio              0x2000001c    0x4  Data  Gb  stm32f4xx_hal.o [1]
 
 
-[1] = C:\Users\Clyde W Phillips Jr\Documents\FISH-Forth\FISH IAR\FISH_IAR+STMCUBE32F4_Smart-IO\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj
+[1] = C:\Users\Clyde W Phillips Jr\Documents\STMF407_Disco_Spi1FDM1NSS\EWARM\STMF407_Disco_Spi1FDM1NSS\Obj
 [2] = command line
 [3] = dl7M_tlf.a
 [4] = m7M_tls.a

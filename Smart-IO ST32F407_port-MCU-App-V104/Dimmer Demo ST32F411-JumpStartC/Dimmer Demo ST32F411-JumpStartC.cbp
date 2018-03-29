@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Dimmer Demo ST32F411-JumpStartC" />
+		<Option pch_mode="2" />
+		<Option compiler="icccortex" />
+		<Build>
+			<Target title="default">
+				<Option output="./Dimmer Demo ST32F411-JumpStartC" prefix_auto="0" extension_auto="0" />
+				<Option object_output="./.objs" />
+				<Option type="1" />
+				<Option compiler="icccortex" />
+				<Option use_console_runner="0" />
+				<Option projectCompilerOptionsRelation="1" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectIncludeDirsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-e" />
+					<Add option="-D__ICC_VERSION=82101" />
+					<Add option="-DST" />
+					<Add option="-DSTM32F411RE" />
+					<Add option="-l" />
+					<Add option="-A" />
+					<Add option="-g" />
+					<Add option="-MM4" />
+					<Add option="-D__BUILD=3" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/jsapi/ST.com-Files/CMSIS/Device/ST/STM32F4xx/Include" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/jsapi/ST.com-Files/StdPeriph_Lib/stm32f4xx/inc" />
+					<Add directory="$(TARGET_COMPILER_DIR)/include/jsapi/STM32F4" />
+					<Add directory="../Host_Interface_Layer" />
+				</Compiler>
+				<Linker>
+					<Add option="-mSTM32F411RE" />
+					<Add option="-g" />
+					<Add option="-bvectors:0x8000000.0x8000200" />
+					<Add option="-btext:0x8000200.0x8080000" />
+					<Add option="-bdata:0x20000000.0x20020000" />
+					<Add option="-dinit_sp:0x20020000" />
+					<Add option="-fintelhex" />
+					<Add option="-nb:3" />
+					<Add library="jsapi-stm32f4" />
+					<Add library="SmartIO-ST32F4xx-JumpStartC" />
+					<Add library="fpcortex" />
+					<Add library="ccortex" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-e" />
+			<Add option="-D__ICC_VERSION=82101" />
+			<Add option="-DST" />
+			<Add option="-DSTM32F411RE" />
+			<Add option="-l" />
+			<Add option="-A" />
+			<Add option="-g" />
+			<Add option="-MM4" />
+			<Add option="-D__BUILD=3" />
+			<Add directory="$(TARGET_COMPILER_DIR)/include/jsapi/ST.com-Files/CMSIS/Device/ST/STM32F4xx/Include" />
+			<Add directory="$(TARGET_COMPILER_DIR)/include/jsapi/ST.com-Files/StdPeriph_Lib/stm32f4xx/inc" />
+			<Add directory="$(TARGET_COMPILER_DIR)/include/jsapi/STM32F4" />
+			<Add directory="../Host_Interface_Layer" />
+		</Compiler>
+		<Linker>
+			<Add option="-mSTM32F411RE" />
+			<Add option="-g" />
+			<Add option="-bvectors:0x8000000.0x8000200" />
+			<Add option="-btext:0x8000200.0x8080000" />
+			<Add option="-bdata:0x20000000.0x20020000" />
+			<Add option="-dinit_sp:0x20020000" />
+			<Add option="-fintelhex" />
+			<Add option="-nb:3" />
+			<Add library="jsapi-stm32f4" />
+			<Add library="SmartIO-ST32F4xx-JumpStartC" />
+			<Add library="fpcortex" />
+			<Add library="ccortex" />
+		</Linker>
+		<Unit filename="STM32F411-ICCV8/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="STM32F411-ICCV8/stm32f4_vectors.s" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

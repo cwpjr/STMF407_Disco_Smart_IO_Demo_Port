@@ -1,0 +1,672 @@
+NOTE: Code bytes are displayed in order matching the disassembly format in ARM documentation.
+  For example, 'BL #-0x84' (example only, only labels should normally be used) is displayed as
+  0xF7FFFFBE rather than FFF7BEFF little endian byte order.
+
+_exit:
+    0800022A E7FE    	B	_exit
+    0800022C 0AB4    	LSRS	R4,R6,#10
+    0800022E 2000    	MOVS	R0,#0
+    08000230 0D30    	LSRS	R0,R6,#20
+    08000232 2000    	MOVS	R0,#0
+    08000234 6DD8    	LDR	R0,[R3,#0x5C]
+    08000236 0800    	LSRS	R0,R0,#0
+    08000238 788C    	LDRB	R4,[R1,#2]
+    0800023A 0800    	LSRS	R0,R0,#0
+    0800023C 0000    	MOVS	R0,R0
+    0800023E 2000    	MOVS	R0,#0
+FILE: C:\Work\newtech\Smart.IO\MCU-App\Dimmer Demo ST32F411-JumpStartC\STM32F411-ICCV8\main.c
+(0001)  /* Copyright 2017 ImageCraft Creations Inc., All rights reserved.
+(0002)  * Smart.IO Host Interface Layer
+(0003)  * https://imagecraft.com/smartio/
+(0004)  */
+(0005) /*
+(0006)  *
+(0007)  * Test driver for Smart.IO. Set up to use ST-Nucleo (411) and ImageCraft JumpStart C for Cortex
+(0008)  * compiler. Using a terminal emulator, you can type the commands
+(0009)  *  128 <x>
+(0010)  * where <x> is 0 to 8, to create sample UI pages.
+(0011)  *
+(0012)  * While you may also send individual commands to Smart.IO, but that process is not documented. You
+(0013)  * should use the API functions (smartio_api.h) instead.
+(0014)  */
+(0015) #include <stdio.h>
+(0016) #include <ctype.h>
+(0017) #include <string.h>
+(0018) #include <stdlib.h>
+(0019) #include <jsapi.h>
+(0020) #include "smartio_interface.h"
+(0021) #include "smartio_api.h"
+(0022) 
+(0023) #define PA2_CHANNO  3
+(0024) #define LIGHT_INITIAL_VALUE     50
+(0025) 
+(0026) #define PRODUCT_ID  1
+(0027) #define BUILD_ID    3
+(0028) 
+(0029) #define BUFLEN      1024
+(0030) 
+(0031) #define printf      my_printf
+(0032) 
+(0033) int connected = 0;
+(0034) static int cached = 0;
+(0035) static int current_light_value = LIGHT_INITIAL_VALUE;
+(0036) // Hardware setup and initialization
+(0037) static void Setup(void);
+(0038) 
+(0039) int my_printf(char *fmt, ...) {}
+_my_printf:
+  fmt                  --> R11,+0
+    08000240 4770    	BX	LR
+_Button1:
+  val                  --> R5
+    08000242 E92D4830	PSH	{R4,R5,R11,LR}
+    08000246 46EB    	MOV	R11,SP
+    08000248 4605    	MOV	R5,R0
+(0040) 
+(0041) void Button1(uint16_t val)
+(0042)     {
+(0043)     printf("Button1 gets %d\n", val);
+    0800024A 4815    	LDR	R0,[PC,#0x54]
+    0800024C B2A9    	UXTH	R1,R5
+    0800024E F7FFFFF7	BL	_my_printf
+(0044)     if (val == 0)
+    08000252 B2AC    	UXTH	R4,R5
+    08000254 B964    	CBNZ	R4,0x08000270
+(0045)         {
+(0046)         timer2.Disable();
+    08000256 4810    	LDR	R0,[PC,#0x40]
+    08000258 F003FB07	BL	JSAPI_TIMER::Disable
+(0047)         porta.MakeOutput(2, OSPEED_HIGH);
+    0800025C 480F    	LDR	R0,[PC,#0x3C]
+    0800025E 2102    	MOVS	R1,#2
+    08000260 2202    	MOVS	R2,#2
+    08000262 F001FA21	BL	JSAPI_GPIO::MakeOutput
+(0048)         porta.Clear(2);
+    08000266 480D    	LDR	R0,[PC,#0x34]
+    08000268 2102    	MOVS	R1,#2
+    0800026A F001FAFE	BL	JSAPI_GPIO::Clear
+(0049)         }
+    0800026E E00E    	B	0x0800028E
+(0050)     else
+(0051)         {
+(0052)         porta.MakeAltFunction(2, 1, OSPEED_HIGH);
+    08000270 480A    	LDR	R0,[PC,#0x28]
+    08000272 2102    	MOVS	R1,#2
+    08000274 2201    	MOVS	R2,#1
+    08000276 2302    	MOVS	R3,#2
+    08000278 F001FA37	BL	JSAPI_GPIO::MakeAltFunction
+(0053)         timer2.Enable();
+    0800027C 4806    	LDR	R0,[PC,#24]
+    0800027E F003FAED	BL	JSAPI_TIMER::Enable
+(0054)         timer2.ChangePWMDutyCycle(PA2_CHANNO, current_light_value);
+    08000282 4805    	LDR	R0,[PC,#20]
+    08000284 2103    	MOVS	R1,#3
+    08000286 4C03    	LDR	R4,[PC,#12]
+    08000288 6822    	LDR	R2,[R4,#0]
+    0800028A F003F870	BL	JSAPI_TIMER::ChangePWMDutyCycle
+    0800028E E8BD8830	POP	{R4,R5,R11,PC}
+(0055)         }
+(0056)     }
+    08000294 LITERALS: 08000020 08070020 34020020 176A0008 
+_Button2:
+  val                  --> R4
+    080002A4 E92D4810	PSH	{R4,R11,LR}
+    080002A8 46EB    	MOV	R11,SP
+    080002AA 4604    	MOV	R4,R0
+(0057) 
+(0058) void Button2(uint16_t val)
+(0059)     {
+(0060)     printf("Button2 gets %d\n", val);
+    080002AC 4802    	LDR	R0,[PC,#8]
+    080002AE B2A1    	UXTH	R1,R4
+    080002B0 F7FFFFC6	BL	_my_printf
+    080002B4 E8BD8810	POP	{R4,R11,PC}
+(0061)     }
+    080002B8 LITERALS: 066A0008 
+_OK1:
+  val                  --> R4
+    080002BC E92D4810	PSH	{R4,R11,LR}
+    080002C0 46EB    	MOV	R11,SP
+    080002C2 4604    	MOV	R4,R0
+(0062) 
+(0063) void OK1(uint16_t val)
+(0064)     {
+(0065)     printf("OK1 gets %d\n", val);
+    080002C4 4802    	LDR	R0,[PC,#8]
+    080002C6 B2A1    	UXTH	R1,R4
+    080002C8 F7FFFFBA	BL	_my_printf
+    080002CC E8BD8810	POP	{R4,R11,PC}
+(0066)     }
+    080002D0 LITERALS: F9690008 
+_Slider1:
+  val                  --> R6
+    080002D4 E92D4870	PSH	{R4,R5,R6,R11,LR}
+    080002D8 46EB    	MOV	R11,SP
+    080002DA 4606    	MOV	R6,R0
+(0067) 
+(0068) void Slider1(uint16_t val)
+(0069)     {
+(0070)     printf("Slider1 gets %d\n", val);
+    080002DC 480A    	LDR	R0,[PC,#0x28]
+    080002DE B2B1    	UXTH	R1,R6
+    080002E0 F7FFFFAE	BL	_my_printf
+(0071)     current_light_value = val;
+    080002E4 B2B4    	UXTH	R4,R6
+    080002E6 4D06    	LDR	R5,[PC,#24]
+    080002E8 602C    	STR	R4,[R5,#0]
+(0072)     timer2.ChangePWMDutyCycle(PA2_CHANNO, current_light_value);
+    080002EA 4806    	LDR	R0,[PC,#24]
+    080002EC 2103    	MOVS	R1,#3
+    080002EE 4C04    	LDR	R4,[PC,#16]
+    080002F0 6822    	LDR	R2,[R4,#0]
+    080002F2 F003F83C	BL	JSAPI_TIMER::ChangePWMDutyCycle
+(0073)     SmartIO_ToggleLED(3);
+    080002F6 2003    	MOVS	R0,#3
+    080002F8 F004FDDD	BL	_SmartIO_ToggleLED
+    080002FC E8BD8870	POP	{R4,R5,R6,R11,PC}
+(0074)     }
+    08000300 LITERALS: 08000020 08070020 E8690008 
+_text_entry1:
+  s                    --> R4
+    0800030C E92D4810	PSH	{R4,R11,LR}
+    08000310 46EB    	MOV	R11,SP
+    08000312 4604    	MOV	R4,R0
+(0075) 
+(0076) void text_entry1(char *s)
+(0077)     {
+(0078)     printf("text1 entered:[%s]\n", s);
+    08000314 4802    	LDR	R0,[PC,#8]
+    08000316 4621    	MOV	R1,R4
+    08000318 F7FFFF92	BL	_my_printf
+    0800031C E8BD8810	POP	{R4,R11,PC}
+(0079)     }
+    08000320 LITERALS: D4690008 
+_text_entry2:
+  s                    --> R4
+    08000324 E92D4810	PSH	{R4,R11,LR}
+    08000328 46EB    	MOV	R11,SP
+    0800032A 4604    	MOV	R4,R0
+(0080) 
+(0081) void text_entry2(char *s)
+(0082)     {
+(0083)     printf("text2 entered:[%s]\n", s);
+    0800032C 4802    	LDR	R0,[PC,#8]
+    0800032E 4621    	MOV	R1,R4
+    08000330 F7FFFF86	BL	_my_printf
+    08000334 E8BD8810	POP	{R4,R11,PC}
+(0084)     }
+    08000338 LITERALS: C0690008 
+_number_entry1:
+  s                    --> R4
+    0800033C E92D4810	PSH	{R4,R11,LR}
+    08000340 46EB    	MOV	R11,SP
+    08000342 4604    	MOV	R4,R0
+(0085) 
+(0086) void number_entry1(char *s)
+(0087)     {
+(0088)     printf("number entered:[%s]\n", s);
+    08000344 4802    	LDR	R0,[PC,#8]
+    08000346 4621    	MOV	R1,R4
+    08000348 F7FFFF7A	BL	_my_printf
+    0800034C E8BD8810	POP	{R4,R11,PC}
+(0089)     }
+    08000350 LITERALS: AB690008 
+_password_entry1:
+  s                    --> R4
+    08000354 E92D4810	PSH	{R4,R11,LR}
+    08000358 46EB    	MOV	R11,SP
+    0800035A 4604    	MOV	R4,R0
+(0090) void password_entry1(char *s)
+(0091)     {
+(0092)     printf("password entered:[%s]\n", s);
+    0800035C 4802    	LDR	R0,[PC,#8]
+    0800035E 4621    	MOV	R1,R4
+    08000360 F7FFFF6E	BL	_my_printf
+    08000364 E8BD8810	POP	{R4,R11,PC}
+(0093)     }
+    08000368 LITERALS: 94690008 
+_calendar_selector1:
+  s                    --> R4
+    0800036C E92D4810	PSH	{R4,R11,LR}
+    08000370 46EB    	MOV	R11,SP
+    08000372 4604    	MOV	R4,R0
+(0094) 
+(0095) void calendar_selector1(char *s)
+(0096)     {
+(0097)     printf("calendar selected: %s\n", s);
+    08000374 4802    	LDR	R0,[PC,#8]
+    08000376 4621    	MOV	R1,R4
+    08000378 F7FFFF62	BL	_my_printf
+    0800037C E8BD8810	POP	{R4,R11,PC}
+(0098)     }
+    08000380 LITERALS: 7D690008 
+_number_selector1:
+  n                    --> R4
+    08000384 E92D4810	PSH	{R4,R11,LR}
+    08000388 46EB    	MOV	R11,SP
+    0800038A 4604    	MOV	R4,R0
+(0099) void number_selector1(uint32_t n)
+(0100)     {
+(0101)     printf("number selected: %d\n", n);
+    0800038C 4802    	LDR	R0,[PC,#8]
+    0800038E 4621    	MOV	R1,R4
+    08000390 F7FFFF56	BL	_my_printf
+    08000394 E8BD8810	POP	{R4,R11,PC}
+(0102)     }
+    08000398 LITERALS: 68690008 
+_time_selector1:
+  mm                   --> R4
+  hh                   --> R5
+    0800039C E92D4830	PSH	{R4,R5,R11,LR}
+    080003A0 46EB    	MOV	R11,SP
+    080003A2 4605    	MOV	R5,R0
+    080003A4 460C    	MOV	R4,R1
+(0103) 
+(0104) void time_selector1(uint16_t hh, uint16_t mm)
+(0105)     {
+(0106)     printf("time1 selected %d:%d\n", hh, mm);
+    080003A6 4803    	LDR	R0,[PC,#12]
+    080003A8 B2A9    	UXTH	R1,R5
+    080003AA B2A2    	UXTH	R2,R4
+    080003AC F7FFFF48	BL	_my_printf
+    080003B0 E8BD8830	POP	{R4,R5,R11,PC}
+(0107)     }
+    080003B4 LITERALS: 52690008 
+_time_selector2:
+  mm                   --> R4
+  hh                   --> R5
+    080003B8 E92D4830	PSH	{R4,R5,R11,LR}
+    080003BC 46EB    	MOV	R11,SP
+    080003BE 4605    	MOV	R5,R0
+    080003C0 460C    	MOV	R4,R1
+(0108) 
+(0109) void time_selector2(uint16_t hh, uint16_t mm)
+(0110)     {
+(0111)     printf("time2 selected %d:%d\n", hh, mm);
+    080003C2 4803    	LDR	R0,[PC,#12]
+    080003C4 B2A9    	UXTH	R1,R5
+    080003C6 B2A2    	UXTH	R2,R4
+    080003C8 F7FFFF3A	BL	_my_printf
+    080003CC E8BD8830	POP	{R4,R5,R11,PC}
+(0112)     }
+    080003D0 LITERALS: 3C690008 
+_time_selector3:
+  mm                   --> R4
+  hh                   --> R5
+    080003D4 E92D4830	PSH	{R4,R5,R11,LR}
+    080003D8 46EB    	MOV	R11,SP
+    080003DA 4605    	MOV	R5,R0
+    080003DC 460C    	MOV	R4,R1
+(0113) 
+(0114) void time_selector3(uint16_t hh, uint16_t mm)
+(0115)     {
+(0116)     printf("time3 selected %d:%d\n", hh, mm);
+    080003DE 4803    	LDR	R0,[PC,#12]
+    080003E0 B2A9    	UXTH	R1,R5
+    080003E2 B2A2    	UXTH	R2,R4
+    080003E4 F7FFFF2C	BL	_my_printf
+    080003E8 E8BD8830	POP	{R4,R5,R11,PC}
+(0117)     }
+    080003EC LITERALS: 26690008 
+_time_selector4:
+  mm                   --> R4
+  hh                   --> R5
+    080003F0 E92D4830	PSH	{R4,R5,R11,LR}
+    080003F4 46EB    	MOV	R11,SP
+    080003F6 4605    	MOV	R5,R0
+    080003F8 460C    	MOV	R4,R1
+(0118) 
+(0119) void time_selector4(uint16_t hh, uint16_t mm)
+(0120)     {
+(0121)     printf("time4 selected %d:%d\n", hh, mm);
+    080003FA 4803    	LDR	R0,[PC,#12]
+    080003FC B2A9    	UXTH	R1,R5
+    080003FE B2A2    	UXTH	R2,R4
+    08000400 F7FFFF1E	BL	_my_printf
+    08000404 E8BD8830	POP	{R4,R5,R11,PC}
+(0122)     }
+    08000408 LITERALS: 10690008 
+_CreateUI:
+  u10                  --> R11,+3
+  u6                   --> R11,+3
+  p3                   --> R11,+3
+  p2                   --> R11,+3
+  p1                   --> R11,+3
+  u2                   --> R5
+  u7                   --> R8
+  u3                   --> R5
+  p0                   --> R11,+2
+  u1                   --> R5
+  u9                   --> R6
+  u8                   --> R7
+  u5                   --> R9
+  u4                   --> R10
+  u0                   --> R6
+    0800040C E92D4FF0	PSH	{R4,R5,R6,R7,R8,R9,R10,R11,LR}
+    08000410 F1AD0B04	SUB	R11,SP,#4
+    08000414 B085    	SUB	SP,#20
+(0123) 
+(0124) void CreateUI()
+(0125)     {
+(0126)     tHandle p0, p1, p2, p3;
+(0127)     tHandle u0, u1, u2, u3, u4, u5, u6, u7, u8, u9, u10;
+(0128) 
+(0129)     SmartIO_LoadCache(PRODUCT_ID, BUILD_ID);
+    08000416 2001    	MOVS	R0,#1
+    08000418 2103    	MOVS	R1,#3
+    0800041A F003FDC3	BL	_SmartIO_LoadCache
+(0130)     p0 = SmartIO_MakePage();
+    0800041E F003FE0D	BL	_SmartIO_MakePage
+    08000422 F8AB0002	STRH	R0,[R11,#2]
+(0131)     SmartIO_AppTitle("Smart Wall Plug");
+    08000426 485A    	LDR	R0,[PC,#0x168]
+    08000428 F003FDDD	BL	_SmartIO_AppTitle
+(0132)     u0 = SmartIO_MakeOnOffButton(0, 0, 1, Button1);
+    0800042C 2400    	MOVS	R4,#0
+    0800042E 4620    	MOV	R0,R4
+    08000430 4621    	MOV	R1,R4
+    08000432 2201    	MOVS	R2,#1
+    08000434 4B55    	LDR	R3,[PC,#0x154]
+    08000436 F003FEB8	BL	_SmartIO_MakeOnOffButton
+    0800043A 4606    	MOV	R6,R0
+(0133)     SmartIO_AddText(u0, "Power");
+    0800043C 4952    	LDR	R1,[PC,#0x148]
+    0800043E F004FAB3	BL	_SmartIO_AddText
+(0134)     SmartIO_SetSliceIcon(u0, SMARTIO_ICON_POWER);
+    08000442 4630    	MOV	R0,R6
+    08000444 2106    	MOVS	R1,#6
+    08000446 F004FA69	BL	_SmartIO_SetSliceIcon
+(0135)     u1 = SmartIO_MakeSlider(1, 0, 30, Slider1);
+    0800044A 2001    	MOVS	R0,#1
+    0800044C 2100    	MOVS	R1,#0
+    0800044E 221E    	MOVS	R2,#30
+    08000450 4B4C    	LDR	R3,[PC,#0x130]
+    08000452 F003FF13	BL	_SmartIO_MakeSlider
+    08000456 4605    	MOV	R5,R0
+(0136)     SmartIO_UpdateSlider(u1+1, current_light_value);
+    08000458 B2AC    	UXTH	R4,R5
+    0800045A 1C64    	ADDS	R4,R4,#1
+    0800045C 4620    	MOV	R0,R4
+    0800045E 4C48    	LDR	R4,[PC,#0x120]
+    08000460 6824    	LDR	R4,[R4,#0]
+    08000462 4621    	MOV	R1,R4
+    08000464 F004FB76	BL	_SmartIO_UpdateSlider
+(0137) 
+(0138)     SmartIO_EnableIf(u0+1, u1+1, 0);
+    08000468 B2B4    	UXTH	R4,R6
+    0800046A 1C64    	ADDS	R4,R4,#1
+    0800046C 4620    	MOV	R0,R4
+    0800046E B2AC    	UXTH	R4,R5
+    08000470 1C64    	ADDS	R4,R4,#1
+    08000472 4621    	MOV	R1,R4
+    08000474 2200    	MOVS	R2,#0
+    08000476 F003FE5D	BL	_SmartIO_EnableIf
+(0139) 
+(0140)     SmartIO_MakeSpacerSlice(2);
+    0800047A 2002    	MOVS	R0,#2
+    0800047C F004FC63	BL	_SmartIO_MakeSpacerSlice
+(0141)     u2 = SmartIO_MakeLabel(0, 1, "Auto On/Off Schedule");
+    08000480 2000    	MOVS	R0,#0
+    08000482 2101    	MOVS	R1,#1
+    08000484 4A3D    	LDR	R2,[PC,#0xF4]
+    08000486 F004FCC0	BL	_SmartIO_MakeLabel
+    0800048A 4605    	MOV	R5,R0
+(0142)     u3 = SmartIO_MakeLabel(0, 0, " Weekdays");
+    0800048C 2400    	MOVS	R4,#0
+    0800048E 4620    	MOV	R0,R4
+    08000490 4621    	MOV	R1,R4
+    08000492 4A39    	LDR	R2,[PC,#0xE4]
+    08000494 F004FCB9	BL	_SmartIO_MakeLabel
+    08000498 4605    	MOV	R5,R0
+(0143)     u4 = SmartIO_MakeTimeSelector(0, 0, "17:00", 0);
+    0800049A 4620    	MOV	R0,R4
+    0800049C 4621    	MOV	R1,R4
+    0800049E 4A35    	LDR	R2,[PC,#0xD4]
+    080004A0 4B2E    	LDR	R3,[PC,#0xB8]
+    080004A2 F003FF95	BL	_SmartIO_MakeTimeSelector
+    080004A6 4682    	MOV	R10,R0
+(0144)         SmartIO_AddText(u4, "ON at");
+    080004A8 492E    	LDR	R1,[PC,#0xB8]
+    080004AA F004FA7D	BL	_SmartIO_AddText
+(0145)         SmartIO_SetSliceIcon(u4, SMARTIO_ICON_QUERY);
+    080004AE 4650    	MOV	R0,R10
+    080004B0 2108    	MOVS	R1,#8
+    080004B2 F004FA33	BL	_SmartIO_SetSliceIcon
+(0146)     u5 = SmartIO_MakeTimeSelector(0, 0, "0:00", 0);
+    080004B6 4620    	MOV	R0,R4
+    080004B8 4621    	MOV	R1,R4
+    080004BA 4A2D    	LDR	R2,[PC,#0xB4]
+    080004BC 4B27    	LDR	R3,[PC,#0x9C]
+    080004BE F003FF87	BL	_SmartIO_MakeTimeSelector
+    080004C2 4681    	MOV	R9,R0
+(0147)     SmartIO_AddText(u5, "OFF at");
+    080004C4 4924    	LDR	R1,[PC,#0x90]
+    080004C6 F004FA6F	BL	_SmartIO_AddText
+(0148)     SmartIO_SetSliceIcon(u5, SMARTIO_ICON_QUERY);
+    080004CA 4648    	MOV	R0,R9
+    080004CC 2108    	MOVS	R1,#8
+    080004CE F004FA25	BL	_SmartIO_SetSliceIcon
+(0149)     SmartIO_MakeSpacerSlice(1);
+    080004D2 2001    	MOVS	R0,#1
+    080004D4 F004FC37	BL	_SmartIO_MakeSpacerSlice
+(0150) // no chekbox
+(0151)     u7 = SmartIO_MakeLabel(0, 0, " Weekend");
+    080004D8 4620    	MOV	R0,R4
+    080004DA 4621    	MOV	R1,R4
+    080004DC 4A23    	LDR	R2,[PC,#0x8C]
+    080004DE F004FC94	BL	_SmartIO_MakeLabel
+    080004E2 4680    	MOV	R8,R0
+(0152)     u8 = SmartIO_MakeTimeSelector(0, 0, "18:00", 0);
+    080004E4 4620    	MOV	R0,R4
+    080004E6 4621    	MOV	R1,R4
+    080004E8 4A1F    	LDR	R2,[PC,#0x7C]
+    080004EA 4B1C    	LDR	R3,[PC,#0x70]
+    080004EC F003FF70	BL	_SmartIO_MakeTimeSelector
+    080004F0 4607    	MOV	R7,R0
+(0153)         SmartIO_AddText(u8, "ON at");
+    080004F2 491C    	LDR	R1,[PC,#0x70]
+    080004F4 F004FA58	BL	_SmartIO_AddText
+(0154)         SmartIO_SetSliceIcon(u8, SMARTIO_ICON_QUERY);
+    080004F8 4638    	MOV	R0,R7
+    080004FA 2108    	MOVS	R1,#8
+    080004FC F004FA0E	BL	_SmartIO_SetSliceIcon
+(0155)     u9 = SmartIO_MakeTimeSelector(0, 0, "1:00", 0);
+    08000500 4620    	MOV	R0,R4
+    08000502 4621    	MOV	R1,R4
+    08000504 4A16    	LDR	R2,[PC,#0x58]
+    08000506 4B15    	LDR	R3,[PC,#0x54]
+    08000508 F003FF62	BL	_SmartIO_MakeTimeSelector
+    0800050C 4606    	MOV	R6,R0
+(0156)         SmartIO_AddText(u9, "OFF at");
+    0800050E 4912    	LDR	R1,[PC,#0x48]
+    08000510 F004FA4A	BL	_SmartIO_AddText
+(0157)         SmartIO_SetSliceIcon(u9, SMARTIO_ICON_QUERY);
+    08000514 4630    	MOV	R0,R6
+    08000516 2108    	MOVS	R1,#8
+    08000518 F004FA00	BL	_SmartIO_SetSliceIcon
+(0158)     SmartIO_GroupObjects(0, u3, u4, u5, u7, u8, u9, 0);
+    0800051C 2000    	MOVS	R0,#0
+    0800051E 4629    	MOV	R1,R5
+    08000520 FA1FF28A	UXTH	R2,R10
+    08000524 FA1FF389	UXTH	R3,R9
+    08000528 FA1FF488	UXTH	R4,R8
+    0800052C 9400    	STR	R4,[SP,#0]
+    0800052E B2BC    	UXTH	R4,R7
+    08000530 9401    	STR	R4,[SP,#4]
+    08000532 B2B4    	UXTH	R4,R6
+    08000534 9402    	STR	R4,[SP,#8]
+    08000536 2400    	MOVS	R4,#0
+    08000538 9403    	STR	R4,[SP,#12]
+    0800053A F003FDCB	BL	_SmartIO_GroupObjects
+(0159)     SmartIO_MakeSpacerSlice(3);
+    0800053E 2003    	MOVS	R0,#3
+    08000540 F004FC01	BL	_SmartIO_MakeSpacerSlice
+(0160)     SmartIO_AutoBalance(p0);
+    08000544 F8BB0002	LDRH	R0,[R11,#2]
+    08000548 F004FC0D	BL	_SmartIO_AutoBalance
+(0161)     SmartIO_SaveCache();
+    0800054C F003FD40	BL	_SmartIO_SaveCache
+    08000550 B005    	ADD	SP,#20
+    08000552 E8BD8FF0	POP	{R4,R5,R6,R7,R8,R9,R10,R11,PC}
+(0162)     }
+    08000558 LITERALS: C3680008 00000000 AF680008 CF680008 B4680008 BA680008 CA680008 D5680008 DB680008 E5680008 08000020 D5020008 FA680008 43020008 00690008 
+_Connect_CB:
+    08000594 E92D4830	PSH	{R4,R5,R11,LR}
+    08000598 46EB    	MOV	R11,SP
+(0163) 
+(0164) void Connect_CB(void)
+(0165)     {
+(0166)     printf("BLE connected\n");
+    0800059A 4805    	LDR	R0,[PC,#20]
+    0800059C F7FFFE50	BL	_my_printf
+(0167)     connected = 1;
+    080005A0 2401    	MOVS	R4,#1
+    080005A2 4D02    	LDR	R5,[PC,#8]
+    080005A4 602C    	STR	R4,[R5,#0]
+    080005A6 E8BD8830	POP	{R4,R5,R11,PC}
+(0168)     }
+    080005AC LITERALS: 00000020 A0680008 
+_Disconnect_CB:
+    080005B4 E92D4830	PSH	{R4,R5,R11,LR}
+    080005B8 46EB    	MOV	R11,SP
+(0169) 
+(0170) void Disconnect_CB(void)
+(0171)     {
+(0172)     printf("BLE disconnected\n");
+    080005BA 4809    	LDR	R0,[PC,#0x24]
+    080005BC F7FFFE40	BL	_my_printf
+(0173)     SPI_State = SPI_IDLE;
+    080005C0 2401    	MOVS	R4,#1
+    080005C2 4D06    	LDR	R5,[PC,#24]
+    080005C4 702C    	STRB	R4,[R5,#0]
+(0174)     connected = 0;
+    080005C6 2400    	MOVS	R4,#0
+    080005C8 4D03    	LDR	R5,[PC,#12]
+    080005CA 602C    	STR	R4,[R5,#0]
+(0175)     cached = 0;
+    080005CC 4D01    	LDR	R5,[PC,#4]
+    080005CE 602C    	STR	R4,[R5,#0]
+    080005D0 E8BD8830	POP	{R4,R5,R11,PC}
+(0176)     }
+    080005D4 LITERALS: 04000020 00000020 2C0D0020 8E680008 
+_main:
+  last_state           --> R5
+    080005E4 B500    	PSH	{LR}
+(0177) 
+(0178) int main(void)
+(0179)     {
+(0180)     Setup();
+    080005E6 F000F830	BL	main.c:Setup
+(0181)     printf("Smart.IO Version %s\n", SmartIO_GetVersion());
+    080005EA F003FCD7	BL	_SmartIO_GetVersion
+    080005EE 4604    	MOV	R4,R0
+    080005F0 4813    	LDR	R0,[PC,#0x4C]
+    080005F2 4621    	MOV	R1,R4
+    080005F4 F7FFFE24	BL	_my_printf
+(0182) 
+(0183)     SmartIO_Init(Connect_CB, Disconnect_CB);
+    080005F8 4810    	LDR	R0,[PC,#0x40]
+    080005FA 490F    	LDR	R1,[PC,#0x3C]
+    080005FC F004FDD6	BL	_SmartIO_Init
+(0184)     int last_state = 0;
+    08000600 2500    	MOVS	R5,#0
+    08000602 E013    	B	0x0800062C
+(0185)     while (1)
+(0186)         {
+(0187)         while (last_state == connected)
+(0188)             if (SPI_State == SPI_SMARTIO_ASYNC_REQUEST)
+    08000604 4C0B    	LDR	R4,[PC,#0x2C]
+    08000606 7824    	LDRB	R4,[R4,#0]
+    08000608 2C04    	CMP	R4,#4
+    0800060A D101    	BNE	0x08000610
+(0189)                 SmartIO_ProcessUserInput();
+    0800060C F004FEAA	BL	_SmartIO_ProcessUserInput
+    08000610 4C07    	LDR	R4,[PC,#28]
+    08000612 6824    	LDR	R4,[R4,#0]
+    08000614 42A5    	CMP	R5,R4
+    08000616 D0F5    	BEQ	0x08000604
+(0190) 
+(0191)         if (connected)
+    08000618 4C05    	LDR	R4,[PC,#20]
+    0800061A 6824    	LDR	R4,[R4,#0]
+    0800061C B124    	CBZ	R4,0x08000628
+(0192)             {
+(0193)             DelayTenth(5);
+    0800061E 2005    	MOVS	R0,#5
+    08000620 F000F9AC	BL	_DelayTenth
+(0194)             CreateUI();
+    08000624 F7FFFEF2	BL	_CreateUI
+(0195)             }
+(0196)         last_state = connected;
+    08000628 4C01    	LDR	R4,[PC,#4]
+    0800062A 6825    	LDR	R5,[R4,#0]
+    0800062C E7F0    	B	0x08000610
+(0197)         }
+(0198) 
+(0199)     return 0;
+(0200)     }
+    0800062E BD00    	POP	{PC}
+    08000630 LITERALS: 00000020 2C0D0020 B5050008 95050008 79680008 
+(0201) 
+(0202) int putchar(unsigned char ch)
+(0203)     {
+(0204)     return ch;
+_putchar:
+  ch                   --> R0
+    08000644 B2C0    	UXTB	R0,R0
+    08000646 4770    	BX	LR
+(0205)     }
+(0206) 
+(0207) int getchar(void)
+(0208)     {
+_getchar:
+    08000648 4770    	BX	LR
+(0209)     }
+main.c:Setup:
+    0800064A E92D4830	PSH	{R4,R5,R11,LR}
+    0800064E 46EB    	MOV	R11,SP
+    08000650 B082    	SUB	SP,#8
+(0210) 
+(0211) static void Setup(void)
+(0212)     {
+(0213)     jsapi_clock.SetSystemClock(16, 0, false, 84, 5);
+    08000652 4818    	LDR	R0,[PC,#0x60]
+    08000654 2110    	MOVS	R1,#16
+    08000656 2200    	MOVS	R2,#0
+    08000658 2300    	MOVS	R3,#0
+    0800065A 2454    	MOVS	R4,#0x54
+    0800065C 9400    	STR	R4,[SP,#0]
+    0800065E 2405    	MOVS	R4,#5
+    08000660 9401    	STR	R4,[SP,#4]
+    08000662 F000FA6F	BL	JSAPI_CLOCK::SetSystemClock
+(0214)     jsapi_cortex_core.SysTick_Timer(SYSTICK_MILLISECOND);
+    08000666 4814    	LDR	R0,[PC,#0x50]
+    08000668 2102    	MOVS	R1,#2
+    0800066A F000F8F3	BL	JSAPI_CORTEX_CORE::SysTick_Timer
+(0215) /*
+(0216)     usart2.SetPins(&porta, 2, 7, &porta, 3, 7);
+(0217)     usart2.MakeUSART(9600, 8, 1, 0);
+(0218)  */
+(0219)     printf("\r\nImageCraft STM32F411 ST-Nucleo... System running at %dMhz\n", jsapi_clock.GetSysClkFreq() / 1000000);
+    0800066E 4811    	LDR	R0,[PC,#0x44]
+    08000670 F000FB96	BL	JSAPI_CLOCK::GetSysClkFreq
+    08000674 4604    	MOV	R4,R0
+    08000676 480E    	LDR	R0,[PC,#0x38]
+    08000678 4D0C    	LDR	R5,[PC,#0x30]
+    0800067A FBB4F1F5	UDIV	R1,R4,R5
+    0800067E F7FFFDDF	BL	_my_printf
+(0220)     timer2.MakePWM(PA2_CHANNO, 10000, LIGHT_INITIAL_VALUE);
+    08000682 4809    	LDR	R0,[PC,#0x24]
+    08000684 2103    	MOVS	R1,#3
+    08000686 F2427210	MOV	R2,#0x2710
+    0800068A 2332    	MOVS	R3,#0x32
+    0800068C F002FDA4	BL	JSAPI_TIMER::MakePWM
+(0221)     timer2.SetPinsForPWM(&porta, 2, 1);
+    08000690 4805    	LDR	R0,[PC,#20]
+    08000692 4904    	LDR	R1,[PC,#16]
+    08000694 2202    	MOVS	R2,#2
+    08000696 2301    	MOVS	R3,#1
+    08000698 F003F8C8	BL	JSAPI_TIMER::SetPinsForPWM
+    0800069C B002    	ADD	SP,#8
+    0800069E E8BD8830	POP	{R4,R5,R11,PC}
+(0222)     }

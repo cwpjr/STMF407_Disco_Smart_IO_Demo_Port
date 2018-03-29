@@ -1,0 +1,595 @@
+EL
+H 3 areas 6F global symbols
+M main.c
+S _SmartIO_AddText#FstPc Ref0000
+S _SmartIO_AppTitle#FsPc Ref0000
+S _SmartIO_SaveCache#Fsv Ref0000
+S _SmartIO_MakeOnOffButton#FttttPFvtE Ref0000
+S __Xm_11_JSAPI_USART7_putchar#FiPus11_JSAPI_USARTi Ref0000
+S _SmartIO_MakeLabel#FtttPc Ref0000
+S _SPI_State#h Ref0000
+S _SmartIO_MakeSlider#FttttPFvtE Ref0000
+S _printf#FiPKcz Ref0000
+S _SmartIO_ProcessUserInput#Fvv Ref0000
+S __Xm_17_JSAPI_CORTEX_CORE13_SysTick_Timer#FvPus17_JSAPI_CORTEX_COREh Ref0000
+S __Xm_11_JSAPI_USART7_SetPins#FvPus11_JSAPI_USARTPus10_JSAPI_GPIOjjPus10_JSAPI_GPIOjj Ref0000
+S _porta#us10_JSAPI_GPIO Ref0000
+S _SmartIO_MakeTimeSelector#FtttPcPFvttE Ref0000
+S _SmartIO_Init#FvPFvvEPFvvE Ref0000
+S __Xm_11_JSAPI_CLOCK14_SetSystemClock#FiPus11_JSAPI_CLOCKjjijj Ref0000
+S _SmartIO_MakeCheckboxes#FtttPFvtE Ref0000
+S _SmartIO_LoadCache#Fsjt Ref0000
+S _SmartIO_MakeSpacerSlice#Fti Ref0000
+S _SmartIO_GroupObjects#Fsttz Ref0000
+S _jsapi_cortex_core#us17_JSAPI_CORTEX_CORE Ref0000
+S __Xm_11_JSAPI_USART9_MakeUSART#FvPus11_JSAPI_USARTjjjh Ref0000
+S _SmartIO_EnableIf#Fsttz Ref0000
+S _SmartIO_AddListItem#FttPc Ref0000
+S _DelayTenth#Fvj Ref0000
+S _SmartIO_MakePage#Ftv Ref0000
+S __Xm_11_JSAPI_USART7_getchar#FiPus11_JSAPI_USART Ref0000
+S __Xm_11_JSAPI_CLOCK13_GetSysClkFreq#FjPus11_JSAPI_CLOCK Ref0000
+S _SmartIO_SetSliceIcon#Fstt Ref0000
+S _SmartIO_AutoBalance#Fst Ref0000
+S _jsapi_clock#us11_JSAPI_CLOCK Ref0000
+S _usart2#us11_JSAPI_USART Ref0000
+S _SmartIO_GetVersion#FPcv Ref0000
+A text size 4E4 flags 0
+dbfile "C:\Work\newtech\Smart.IO\MCU-App\UI Demo ST32F411-JumpStartC\STM32F411-ICCV8\main.c"
+dbfunc e Button1 0 fV 14
+dbprevlr 8
+dbsym r val 4 s p0
+dbblock 15 8
+dbline 16 8
+dbblkend 17 10
+dbfuncend 14
+dbfunc e Button2 18 fV 19
+dbprevlr 8
+dbsym r val 4 s p0
+dbblock 1A 20
+dbline 1B 20
+dbblkend 1C 28
+dbfuncend 2C
+dbfunc e OK1 30 fV 1E
+dbprevlr 8
+dbsym r val 4 s p0
+dbblock 1F 38
+dbline 20 38
+dbblkend 21 40
+dbfuncend 44
+dbfunc e Slider1 48 fV 23
+dbprevlr 8
+dbsym r val 4 s p0
+dbblock 24 50
+dbline 25 50
+dbblkend 26 58
+dbfuncend 5C
+dbfunc e text_entry1 60 fV 28
+dbprevlr 8
+dbsym r s 4 pc p0
+dbblock 29 68
+dbline 2A 68
+dbblkend 2B 70
+dbfuncend 74
+dbfunc e menu_entry 78 fV 2D
+dbprevlr 8
+dbsym r i 4 s p0
+dbblock 2E 80
+dbline 2F 80
+dbblkend 30 88
+dbfuncend 8C
+dbfunc e checkbox1 90 fV 32
+dbprevlr 8
+dbsym r i 4 s p0
+dbblock 33 98
+dbline 34 98
+dbblkend 35 A0
+dbfuncend A4
+dbfunc e radio_buttons1 A8 fV 37
+dbprevlr 8
+dbsym r i 4 s p0
+dbblock 38 B0
+dbline 39 B0
+dbblkend 3A B8
+dbfuncend BC
+dbfunc e text_entry2 C0 fV 3C
+dbprevlr 8
+dbsym r s 4 pc p0
+dbblock 3D C8
+dbline 3E C8
+dbblkend 3F D0
+dbfuncend D4
+dbfunc e number_entry1 D8 fV 41
+dbprevlr 8
+dbsym r s 4 pc p0
+dbblock 42 E0
+dbline 43 E0
+dbblkend 44 E8
+dbfuncend EC
+dbfunc e password_entry1 F0 fV 45
+dbprevlr 8
+dbsym r s 4 pc p0
+dbblock 46 F8
+dbline 47 F8
+dbblkend 48 100
+dbfuncend 104
+dbfunc e calendar_selector1 108 fV 4A
+dbprevlr 8
+dbsym r s 4 pc p0
+dbblock 4B 110
+dbline 4C 110
+dbblkend 4D 118
+dbfuncend 11C
+dbfunc e number_selector1 120 fV 4E
+dbprevlr 8
+dbsym r n 4 i p0
+dbblock 4F 128
+dbline 50 128
+dbblkend 51 130
+dbfuncend 134
+dbfunc e time_selector1 138 fV 53
+dbprevlr 12
+dbsym r mm 4 s p1
+dbsym r hh 5 s p0
+dbblock 54 142
+dbline 55 142
+dbblkend 56 14C
+dbfuncend 150
+dbfunc e time_selector2 154 fV 58
+dbprevlr 12
+dbsym r mm 4 s p1
+dbsym r hh 5 s p0
+dbblock 59 15E
+dbline 5A 15E
+dbblkend 5B 168
+dbfuncend 16C
+dbfunc e time_selector3 170 fV 5D
+dbprevlr 12
+dbsym r mm 4 s p1
+dbsym r hh 5 s p0
+dbblock 5E 17A
+dbline 5F 17A
+dbblkend 60 184
+dbfuncend 188
+dbfunc e time_selector4 18C fV 62
+dbprevlr 12
+dbsym r mm 4 s p1
+dbsym r hh 5 s p0
+dbblock 63 196
+dbline 64 196
+dbblkend 65 1A0
+dbfuncend 1A4
+dbfunc e _3pos_buttons1 1A8 fV 67
+dbprevlr 8
+dbsym r i 4 s p0
+dbblock 68 1B0
+dbline 69 1B0
+dbblkend 6A 1B8
+dbfuncend 1BC
+dbfunc e expandable_list1 1C0 fV 6C
+dbprevlr 8
+dbsym r i 4 s p0
+dbblock 6D 1C8
+dbline 6E 1C8
+dbblkend 6F 1D0
+dbfuncend 1D4
+dbfunc e CreateUI 1D8 fV 71
+dbprevlr 36
+dbsym l u10 3 s
+dbsym l p3 3 s
+dbsym l p2 3 s
+dbsym l p1 3 s
+dbsym r u2 5 s
+dbsym r u7 8 s
+dbsym r u6 6 s
+dbsym r u3 5 s
+dbsym r u1 5 s
+dbsym l p0 2 s
+dbsym r u9 6 s
+dbsym r u8 7 s
+dbsym r u5 9 s
+dbsym r u4 A s
+dbsym r u0 6 s
+dbblock 72 1E2
+dbline 76 1E2
+dbline 77 1EA
+dbline 78 1F2
+dbline 79 1F8
+dbline 7A 208
+dbline 7B 20E
+dbline 7C 216
+dbline 7D 224
+dbline 7F 236
+dbline 80 23C
+dbline 81 248
+dbline 82 256
+dbline 83 264
+dbline 84 26A
+dbline 85 272
+dbline 86 280
+dbline 87 286
+dbline 88 28E
+dbline 8A 294
+dbline 8B 2A2
+dbline 8D 2AE
+dbline 8E 2BC
+dbline 8F 2CA
+dbline 90 2D0
+dbline 91 2D8
+dbline 92 2E6
+dbline 93 2EC
+dbline 94 2F4
+dbline 95 316
+dbline 96 31C
+dbline 97 324
+dbblkend 98 328
+dbfuncend 32E
+dbfunc e Connect_CB 37C fV 9A
+dbprevlr 12
+dbblock 9B 382
+dbline 9C 382
+dbline 9D 388
+dbblkend 9E 38E
+dbfuncend 392
+dbfunc e Disconnect_CB 39C fV A0
+dbprevlr 12
+dbblock A1 3A2
+dbline A2 3A2
+dbline A3 3A8
+dbline A4 3AE
+dbblkend A5 3B4
+dbfuncend 3B8
+dbfunc e main 3C4 fI A7
+dbprevlr 0
+dbsym r last_state 5 I
+dbblock A8 3C6
+dbline A9 3C6
+dbline AA 3CA
+dbline AC 3D8
+dbblock AD 3E0
+dbline AD 3E0
+dbline B1 3E4
+dbline B2 3EC
+dbline B0 3F0
+dbline B4 3F8
+dbline B6 3FE
+dbline B7 404
+dbline B9 408
+dbline AE 40C
+dbblkend BC 40E
+dbblkend BC 40E
+dbfuncend 410
+dbfunc s Setup 424 fV BE
+dbprevlr 12
+dbblock BF 42C
+dbline C0 42C
+dbline C1 440
+dbline C3 448
+dbline C4 460
+dbline C6 472
+dbblkend C7 486
+dbfuncend 48C
+dbfunc e putchar 4A4 fI C9
+dbprevlr 12
+dbsym r ch 5 c p0
+dbblock CA 4AC
+dbline CB 4AC
+dbline CC 4B2
+dbline CD 4BA
+dbline CE 4C2
+dbblkend CF 4C4
+dbfuncend 4C8
+dbfunc e getchar 4CC fI D1
+dbprevlr 8
+dbblock D2 4D2
+dbline D3 4D2
+dbblkend D4 4DA
+dbfuncend 4DE
+S $lb$LIT_time_selector3 Def0188
+S $lb$LIT_time_selector4 Def01A4
+S $le$LIT_time_selector1 Def0154
+S $le$LIT_time_selector2 Def0170
+S $lb$LIT_main Def0410
+S $le$LIT_time_selector3 Def018C
+S $le$LIT_time_selector4 Def01A8
+S $le$LIT_main Def0424
+S $lb$LIT_Button1 Def0014
+S $lb$LIT_Connect_CB Def0394
+S $lb$LIT_radio_buttons1 Def00BC
+S $lb$LIT_Button2 Def002C
+S $le$LIT_Button1 Def0018
+S $le$LIT_Connect_CB Def039C
+S $le$LIT_radio_buttons1 Def00C0
+S $le$LIT_Button2 Def0030
+S _expandable_list1#Fvt Def01C0
+S _calendar_selector1#FvPc Def0108
+S _number_selector1#Fvj Def0120
+S _password_entry1#FvPc Def00F0
+S $lb$LIT_OK1 Def0044
+S _checkbox1#Fvt Def0090
+S $le$LIT_OK1 Def0048
+S __3pos_buttons1#Fvt Def01A8
+S $lb$LIT_getchar Def04E0
+S $lb$LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_UI_Demo_ST32F411_JumpStartC_STM32F411_ICCV8_main Def048C
+S _number_entry1#FvPc Def00D8
+S $le$LIT_getchar Def04E4
+S $le$LIT_Setup$C__Work_newtech_Smart.IO_MCU_App_UI_Demo_ST32F411_JumpStartC_STM32F411_ICCV8_main Def04A4
+S _Slider1#Fvt Def0048
+S _main#Fiv Def03C4
+S $lb$LIT_Disconnect_CB Def03B8
+S $le$LIT_Disconnect_CB Def03C4
+S $lb$LIT_CreateUI Def0330
+S $le$LIT_CreateUI Def037C
+S $lb$LIT_putchar Def04C8
+S $le$LIT_putchar Def04CC
+S _Button1#Fvt Def0000
+S _radio_buttons1#Fvt Def00A8
+S _Button2#Fvt Def0018
+S _Connect_CB#Fvv Def037C
+S _text_entry1#FvPc Def0060
+S _text_entry2#FvPc Def00C0
+S _OK1#Fvt Def0030
+S _getchar#Fiv Def04CC
+S $lb$LIT_calendar_selector1 Def011C
+S $le$LIT_calendar_selector1 Def0120
+S _putchar#Fih Def04A4
+S $lb$LIT_password_entry1 Def0104
+S $le$LIT_password_entry1 Def0108
+S _Disconnect_CB#Fvv Def039C
+S $lb$LIT_menu_entry Def008C
+S _CreateUI#Fvv Def01D8
+S $le$LIT_menu_entry Def0090
+S $lb$LIT_number_entry1 Def00EC
+S $le$LIT_number_entry1 Def00F0
+S $lb$LIT_expandable_list1 Def01D4
+S $le$LIT_expandable_list1 Def01D8
+S _time_selector1#Fvtt Def0138
+S _time_selector2#Fvtt Def0154
+S _time_selector3#Fvtt Def0170
+S _time_selector4#Fvtt Def018C
+S $lb$LIT_checkbox1 Def00A4
+S $lb$LIT_number_selector1 Def0134
+S $le$LIT_checkbox1 Def00A8
+S $le$LIT_number_selector1 Def0138
+S $lb$LIT__3pos_buttons1 Def01BC
+S $le$LIT__3pos_buttons1 Def01C0
+S $lb$LIT_text_entry1 Def0074
+S $lb$LIT_text_entry2 Def00D4
+S $le$LIT_text_entry1 Def0078
+S $le$LIT_text_entry2 Def00D8
+S $lb$LIT_Slider1 Def005C
+S $le$LIT_Slider1 Def0060
+S _menu_entry#Fvt Def0078
+S $lb$LIT_time_selector1 Def0150
+S $lb$LIT_time_selector2 Def016C
+A bss size 4 flags 0
+dbfile "C:\Work\newtech\Smart.IO\MCU-App\UI Demo ST32F411-JumpStartC\STM32F411-ICCV8\main.c"
+dbsym e connected 0 I
+S _connected#i Def0000
+A lit size 290 flags 0
+T 00 00 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8 BD E8 10 88
+R 00 00 00 00 0E 10 08 00
+T 14 00 00 00 7F 02 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 28 00 00 00 BD E8 10 88
+R 00 00 00 00
+T 2C 00 00 00 6E 02 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 40 00 00 00 BD E8 10 88
+R 00 00 00 00
+T 44 00 00 00 61 02 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 58 00 00 00 BD E8 10 88
+R 00 00 00 00
+T 5C 00 00 00 50 02 00 00 2D E9 10 48 EB 46 04 46 02 48 21 46 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 70 00 00 00 BD E8 10 88
+R 00 00 00 00
+T 74 00 00 00 3C 02 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 88 00 00 00 BD E8 10 88
+R 00 00 00 00
+T 8C 00 00 00 26 02 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T A0 00 00 00 BD E8 10 88
+R 00 00 00 00
+T A4 00 00 00 02 02 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T B8 00 00 00 BD E8 10 88
+R 00 00 00 00
+T BC 00 00 00 E8 01 00 00 2D E9 10 48 EB 46 04 46 02 48 21 46 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T D0 00 00 00 BD E8 10 88
+R 00 00 00 00
+T D4 00 00 00 D4 01 00 00 2D E9 10 48 EB 46 04 46 02 48 21 46 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T E8 00 00 00 BD E8 10 88
+R 00 00 00 00
+T EC 00 00 00 BF 01 00 00 2D E9 10 48 EB 46 04 46 02 48 21 46 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 00 01 00 00 BD E8 10 88
+R 00 00 00 00
+T 04 01 00 00 A8 01 00 00 2D E9 10 48 EB 46 04 46 02 48 21 46 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 18 01 00 00 BD E8 10 88
+R 00 00 00 00
+T 1C 01 00 00 91 01 00 00 2D E9 10 48 EB 46 04 46 02 48 21 46 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T 30 01 00 00 BD E8 10 88
+R 00 00 00 00
+T 34 01 00 00 7C 01 00 00 2D E9 30 48 EB 46 05 46 0C 46 03 48 A9 B2 A2 B2
+R 00 00 00 00 60 04 02 00
+T 48 01 00 00 00 F0 00 F8 BD E8 30 88
+R 00 00 00 00 0E 04 08 00
+T 50 01 00 00 66 01 00 00 2D E9 30 48 EB 46 05 46 0C 46 03 48 A9 B2 A2 B2
+R 00 00 00 00 60 04 02 00
+T 64 01 00 00 00 F0 00 F8 BD E8 30 88
+R 00 00 00 00 0E 04 08 00
+T 6C 01 00 00 50 01 00 00 2D E9 30 48 EB 46 05 46 0C 46 03 48 A9 B2 A2 B2
+R 00 00 00 00 60 04 02 00
+T 80 01 00 00 00 F0 00 F8 BD E8 30 88
+R 00 00 00 00 0E 04 08 00
+T 88 01 00 00 3A 01 00 00 2D E9 30 48 EB 46 05 46 0C 46 03 48 A9 B2 A2 B2
+R 00 00 00 00 60 04 02 00
+T 9C 01 00 00 00 F0 00 F8 BD E8 30 88
+R 00 00 00 00 0E 04 08 00
+T A4 01 00 00 24 01 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T B8 01 00 00 BD E8 10 88
+R 00 00 00 00
+T BC 01 00 00 0A 01 00 00 2D E9 10 48 EB 46 04 46 02 48 A1 B2 00 F0 00 F8
+R 00 00 00 00 60 04 02 00 0E 14 08 00
+T D0 01 00 00 BD E8 10 88
+R 00 00 00 00
+T D4 01 00 00 E7 00 00 00 2D E9 F0 4F AD F1 04 0B 85 B0 64 20 03 21
+R 00 00 00 00 60 04 02 00
+T E6 01 00 00 00 F0 00 F8 00 F0 00 F8 AB F8 02 00 61 48 00 F0 00 F8 00 24
+R 00 00 00 00 0E 04 11 00 0E 08 19 00 0E 12 01 00
+T FA 01 00 00 20 46 21 46 01 22 5C 4B 00 F0 00 F8 06 46 59 49 00 F0 00 F8
+R 00 00 00 00 0E 0C 03 00 0E 14 00 00
+T 0E 02 00 00 30 46 06 21 00 F0 00 F8 01 20 00 21 1E 22 53 4B 00 F0 00 F8
+R 00 00 00 00 0E 08 1C 00 0E 14 07 00
+T 22 02 00 00 05 46 B4 B2 64 1C 20 46 AC B2 64 1C 21 46 00 22 00 F0 00 F8
+R 00 00 00 00 0E 14 16 00
+T 36 02 00 00 02 20 00 F0 00 F8 00 20 01 21 49 4A 00 F0 00 F8 05 46 00 24
+R 00 00 00 00 0E 06 12 00 0E 10 05 00
+T 4A 02 00 00 20 46 21 46 45 4A 00 F0 00 F8 05 46 20 46 21 46 41 4A 3F 4B
+R 00 00 00 00 0E 0A 05 00
+T 5E 02 00 00 00 F0 00 F8 82 46 35 49 00 F0 00 F8 50 46 08 21 00 F0 00 F8
+R 00 00 00 00 0E 04 0D 00 0E 0C 00 00 0E 14 1C 00
+T 72 02 00 00 20 46 21 46 38 4A 36 4B 00 F0 00 F8 81 46 2B 49 00 F0 00 F8
+R 00 00 00 00 0E 0C 0D 00 0E 14 00 00
+T 86 02 00 00 48 46 08 21 00 F0 00 F8 01 20 00 F0 00 F8 01 24 20 46 21 46
+R 00 00 00 00 0E 08 1C 00 0E 0E 12 00
+T 9A 02 00 00 2D 4A 00 F0 00 F8 06 46 B4 B2 64 1C 20 46 28 49 00 F0 00 F8
+R 00 00 00 00 0E 06 10 00 0E 14 17 00
+T AE 02 00 00 00 24 20 46 21 46 24 4A 00 F0 00 F8 80 46 20 46 21 46 20 4A
+R 00 00 00 00 0E 0C 05 00
+T C2 02 00 00 1F 4B 00 F0 00 F8 07 46 1C 49 00 F0 00 F8 38 46 08 21
+R 00 00 00 00 0E 06 0D 00 0E 0E 00 00
+T D4 02 00 00 00 F0 00 F8 20 46 21 46 16 4A 15 4B 00 F0 00 F8 06 46 12 49
+R 00 00 00 00 0E 04 1C 00 0E 10 0D 00
+T E8 02 00 00 00 F0 00 F8 30 46 08 21 00 F0 00 F8 00 20 29 46 1F FA 8A F2
+R 00 00 00 00 0E 04 00 00 0E 0C 1C 00
+T FC 02 00 00 1F FA 89 F3 1F FA 88 F4 00 94 BC B2 01 94 B4 B2 02 94 00 24
+R 00 00 00 00
+T 10 03 00 00 03 94 00 F0 00 F8 03 20 00 F0 00 F8 BB F8 02 00 00 F0 00 F8
+R 00 00 00 00 0E 06 13 00 0E 0C 12 00 0E 14 1D 00
+T 24 03 00 00 00 F0 00 F8 05 B0 BD E8 F0 8F
+R 00 00 00 00 0E 04 02 00
+T 30 03 00 00 9A 00 00 00 8D 01 00 00 73 00 00 00 A6 00 00 00 71 01 00 00
+R 00 00 00 00 60 04 02 00 60 08 00 00 60 0C 02 00 60 10 02 00 60 14 00 00
+T 44 03 00 00 78 00 00 00 7E 00 00 00 87 00 00 00 00 00 00 00 55 01 00 00
+R 00 00 00 00 60 04 02 00 60 08 02 00 60 0C 02 00 60 14 00 00
+T 58 03 00 00 A1 00 00 00 39 01 00 00 AC 00 00 00 B2 00 00 00 BC 00 00 00
+R 00 00 00 00 60 04 02 00 60 08 00 00 60 0C 02 00 60 10 02 00 60 14 02 00
+T 6C 03 00 00 49 00 00 00 D1 00 00 00 01 00 00 00 D7 00 00 00 2D E9 30 48
+R 00 00 00 00 60 04 00 00 60 08 02 00 60 0C 00 00 60 10 02 00
+T 80 03 00 00 EB 46 05 48 00 F0 00 F8 01 24 02 4D 2C 60 BD E8 30 88
+R 00 00 00 00 0E 08 08 00
+T 94 03 00 00 00 00 00 00 64 00 00 00 2D E9 30 48 EB 46 07 48 00 F0 00 F8
+R 00 00 00 00 60 04 01 00 60 08 02 00 0E 14 08 00
+T A8 03 00 00 01 24 04 4D 2C 70 00 24 01 4D 2C 60 BD E8 30 88
+R 00 00 00 00
+T B8 03 00 00 00 00 00 00 00 00 00 00 52 00 00 00 00 B5 00 F0 2D F8
+R 00 00 00 00 60 04 01 00 62 08 06 00 60 0C 02 00
+T CA 03 00 00 00 F0 00 F8 04 46 13 48 21 46 00 F0 00 F8 10 48 0F 49
+R 00 00 00 00 0E 04 20 00 0E 0E 08 00
+T DC 03 00 00 00 F0 00 F8 00 25 13 E0 0B 4C 24 78 04 2C 01 D1 00 F0 00 F8
+R 00 00 00 00 0E 04 0E 00 0E 14 09 00
+T F0 03 00 00 07 4C 24 68 A5 42 F5 D0 05 4C 24 68 24 B1 03 20 00 F0 00 F8
+R 00 00 00 00 0E 14 18 00
+T 04 04 00 00 FF F7 E8 FE 01 4C 25 68 F0 E7 00 BD
+R 00 00 00 00
+T 10 04 00 00 00 00 00 00 00 00 00 00 9D 03 00 00 7D 03 00 00 3D 00 00 00
+R 00 00 00 00 60 04 01 00 62 08 06 00 60 0C 00 00 60 10 00 00 60 14 02 00
+T 24 04 00 00 2D E9 30 48 EB 46 83 B0 19 48 10 21 00 22 00 23 54 24 00 94
+R 00 00 00 00
+T 38 04 00 00 05 24 01 94 00 F0 00 F8 17 48 02 21 00 F0 00 F8 13 48 14 4C
+R 00 00 00 00 0E 08 0F 00 0E 10 0A 00
+T 4C 04 00 00 21 46 02 22 07 25 2B 46 00 94 03 24 01 94 02 95 00 F0 00 F8
+R 00 00 00 00 0E 14 0B 00
+T 60 04 00 00 0D 48 4F F4 16 51 08 22 01 23 00 24 00 94 00 F0 00 F8 08 48
+R 00 00 00 00 0E 12 15 00
+T 74 04 00 00 00 F0 00 F8 04 46 05 48 03 4D B4 FB F5 F1 00 F0 00 F8 03 B0
+R 00 00 00 00 0E 04 1B 00 0E 12 08 00
+T 88 04 00 00 BD E8 30 88
+R 00 00 00 00
+T 8C 04 00 00 40 42 0F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+R 00 00 00 00 60 08 02 00 62 0C 1E 00 62 10 1F 00 62 14 0C 00
+T A0 04 00 00 00 00 00 00 2D E9 30 48 EB 46 05 46 EC B2 0A 2C 03 D1 05 48
+R 00 00 00 00 62 04 14 00
+T B4 04 00 00 0D 21 00 F0 00 F8 03 48 E9 B2 00 F0 00 F8 E8 B2 BD E8 30 88
+R 00 00 00 00 0E 06 04 00 0E 0E 04 00
+T C8 04 00 00 00 00 00 00 2D E9 10 48 EB 46 03 48 00 F0 00 F8 04 46 BD E8
+R 00 00 00 00 62 04 1F 00 0E 10 1A 00
+T DC 04 00 00 10 88
+R 00 00 00 00
+T E0 04 00 00 00 00 00 00
+R 00 00 00 00 62 04 1F 00
+T 00 00 00 00 0D 0A 49 6D 61 67 65 43 72 61 66 74 20 53 54 4D 33 32 46 34
+R 00 00 02 00
+T 14 00 00 00 31 31 20 53 54 2D 4E 75 63 6C 65 6F 2E 2E 2E 20 53 79 73 74
+R 00 00 02 00
+T 28 00 00 00 65 6D 20 72 75 6E 6E 69 6E 67 20 61 74 20 25 64 4D 68 7A 0A
+R 00 00 02 00
+T 3C 00 00 00 00 53 6D 61 72 74 2E 49 4F 20 56 65 72 73 69 6F 6E 20 25 73
+R 00 00 02 00
+T 50 00 00 00 0A 00 42 4C 45 20 64 69 73 63 6F 6E 6E 65 63 74 65 64 0A 00
+R 00 00 02 00
+T 64 00 00 00 42 4C 45 20 63 6F 6E 6E 65 63 74 65 64 0A 00 31 3A 30 30 00
+R 00 00 02 00
+T 78 00 00 00 31 38 3A 30 30 00 20 57 65 65 6B 65 6E 64 00 53 61 6D 65 20
+R 00 00 02 00
+T 8C 00 00 00 61 73 20 27 57 65 65 6B 64 61 79 73 27 00 4F 46 46 20 61 74
+R 00 00 02 00
+T A0 00 00 00 00 30 3A 30 30 00 4F 4E 20 61 74 00 31 37 3A 30 30 00 20 57
+R 00 00 02 00
+T B4 00 00 00 65 65 6B 64 61 79 73 00 41 75 74 6F 20 4F 6E 2F 4F 66 66 20
+R 00 00 02 00
+T C8 00 00 00 53 63 68 65 64 75 6C 65 00 50 6F 77 65 72 00 53 6D 61 72 74
+R 00 00 02 00
+T DC 00 00 00 20 57 61 6C 6C 20 50 6C 75 67 00 65 78 70 61 6E 64 61 62 6C
+R 00 00 02 00
+T F0 00 00 00 65 20 6C 69 73 74 20 65 6E 74 72 79 20 25 64 20 73 65 6C 65
+R 00 00 02 00
+T 04 01 00 00 63 74 65 64 0A 00 33 20 70 6F 73 20 62 75 74 74 6F 6E 20 25
+R 00 00 02 00
+T 18 01 00 00 64 20 73 65 6C 65 63 74 65 64 0A 00 74 69 6D 65 34 20 73 65
+R 00 00 02 00
+T 2C 01 00 00 6C 65 63 74 65 64 20 25 64 3A 25 64 0A 00 74 69 6D 65 33 20
+R 00 00 02 00
+T 40 01 00 00 73 65 6C 65 63 74 65 64 20 25 64 3A 25 64 0A 00 74 69 6D 65
+R 00 00 02 00
+T 54 01 00 00 32 20 73 65 6C 65 63 74 65 64 20 25 64 3A 25 64 0A 00 74 69
+R 00 00 02 00
+T 68 01 00 00 6D 65 31 20 73 65 6C 65 63 74 65 64 20 25 64 3A 25 64 0A 00
+R 00 00 02 00
+T 7C 01 00 00 6E 75 6D 62 65 72 20 73 65 6C 65 63 74 65 64 3A 20 25 64 0A
+R 00 00 02 00
+T 90 01 00 00 00 63 61 6C 65 6E 64 61 72 20 73 65 6C 65 63 74 65 64 3A 20
+R 00 00 02 00
+T A4 01 00 00 25 73 0A 00 70 61 73 73 77 6F 72 64 20 65 6E 74 65 72 65 64
+R 00 00 02 00
+T B8 01 00 00 3A 5B 25 73 5D 0A 00 6E 75 6D 62 65 72 20 65 6E 74 65 72 65
+R 00 00 02 00
+T CC 01 00 00 64 3A 5B 25 73 5D 0A 00 74 65 78 74 32 20 65 6E 74 65 72 65
+R 00 00 02 00
+T E0 01 00 00 64 3A 5B 25 73 5D 0A 00 72 61 64 69 6F 20 62 75 74 74 6F 6E
+R 00 00 02 00
+T F4 01 00 00 20 25 64 20 73 65 6C 65 63 74 65 64 0A 00 63 68 65 63 6B 62
+R 00 00 02 00
+T 08 02 00 00 6F 78 65 73 20 28 62 69 74 6D 61 73 6B 29 20 30 78 25 78 20
+R 00 00 02 00
+T 1C 02 00 00 73 65 6C 65 63 74 65 64 0A 00 6D 65 6E 75 20 65 6E 74 72 79
+R 00 00 02 00
+T 30 02 00 00 20 25 64 20 63 61 6C 6C 65 64 0A 00 74 65 78 74 31 20 65 6E
+R 00 00 02 00
+T 44 02 00 00 74 65 72 65 64 3A 5B 25 73 5D 0A 00 53 6C 69 64 65 72 31 20
+R 00 00 02 00
+T 58 02 00 00 67 65 74 73 20 25 64 0A 00 4F 4B 31 20 67 65 74 73 20 25 64
+R 00 00 02 00
+T 6C 02 00 00 0A 00 42 75 74 74 6F 6E 32 20 67 65 74 73 20 25 64 0A 00 42
+R 00 00 02 00
+T 80 02 00 00 75 74 74 6F 6E 31 20 67 65 74 73 20 25 64 0A 00
+R 00 00 02 00

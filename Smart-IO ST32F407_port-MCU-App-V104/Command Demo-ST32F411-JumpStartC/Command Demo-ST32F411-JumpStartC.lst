@@ -1,0 +1,1541 @@
+NOTE: Code bytes are displayed in order matching the disassembly format in ARM documentation.
+  For example, 'BL #-0x84' (example only, only labels should normally be used) is displayed as
+  0xF7FFFFBE rather than FFF7BEFF little endian byte order.
+
+_Button1:
+  val                  --> R4
+    08000240 E92D4810	PSH	{R4,R11,LR}
+    08000244 46EB    	MOV	R11,SP
+    08000246 4604    	MOV	R4,R0
+FILE: C:\Work\newtech\Smart.IO\MCU-App\Command Demo-ST32F411-JumpStartC\main.c
+(0001)  /* Copyright 2017 ImageCraft Creations Inc., All rights reserved.
+(0002)  * Smart.IO Host Interface Layer
+(0003)  * Version 1.03 2017/11/9
+(0004)  * https://imagecraft.com/smartio/
+(0005)  */
+(0006) /*
+(0007)  *
+(0008)  * Test driver for Smart.IO. Set up to use ST-Nucleo (411) and ImageCraft JumpStart C for Cortex
+(0009)  * compiler. Using a terminal emulator, you can type the commands
+(0010)  *  128 <x>
+(0011)  * where <x> is 0 to 8, to create sample UI pages.
+(0012)  *
+(0013)  * While you may also send individual commands to Smart.IO, but that process is not documented. You
+(0014)  * should use the API functions (smartio_api.h) instead.
+(0015)  */
+(0016) #include <stdio.h>
+(0017) #include <ctype.h>
+(0018) #include <string.h>
+(0019) #include <stdlib.h>
+(0020) #include <jsapi.h>
+(0021) #include "smartio_interface.h"
+(0022) #include "smartio_api.h"
+(0023) 
+(0024) #define BUILD_ID    101
+(0025) #define PRODUCT_ID  2
+(0026) 
+(0027) #define BUFLEN      1024
+(0028) 
+(0029) int connected;
+(0030) 
+(0031) // Hardware setup and initialization
+(0032) static void Setup(void);
+(0033) int GetCommandLine(char *buf, int len);
+(0034) 
+(0035) void Button1(uint16_t val)
+(0036)     {
+(0037)     printf("Button1 gets %d\n", val);
+    08000248 4802    	LDR	R0,[PC,#8]
+    0800024A B2A1    	UXTH	R1,R4
+    0800024C F005FF18	BL	_printf
+    08000250 E8BD8810	POP	{R4,R11,PC}
+(0038)     }
+    08000254 LITERALS: 96670008 
+_Button2:
+  val                  --> R4
+    08000258 E92D4810	PSH	{R4,R11,LR}
+    0800025C 46EB    	MOV	R11,SP
+    0800025E 4604    	MOV	R4,R0
+(0039) 
+(0040) void Button2(uint16_t val)
+(0041)     {
+(0042)     printf("Button2 gets %d\n", val);
+    08000260 4802    	LDR	R0,[PC,#8]
+    08000262 B2A1    	UXTH	R1,R4
+    08000264 F005FF0C	BL	_printf
+    08000268 E8BD8810	POP	{R4,R11,PC}
+(0043)     }
+    0800026C LITERALS: 85670008 
+_OK1:
+  val                  --> R4
+    08000270 E92D4810	PSH	{R4,R11,LR}
+    08000274 46EB    	MOV	R11,SP
+    08000276 4604    	MOV	R4,R0
+(0044) 
+(0045) void OK1(uint16_t val)
+(0046)     {
+(0047)     printf("OK1 gets %d\n", val);
+    08000278 4802    	LDR	R0,[PC,#8]
+    0800027A B2A1    	UXTH	R1,R4
+    0800027C F005FF00	BL	_printf
+    08000280 E8BD8810	POP	{R4,R11,PC}
+(0048)     }
+    08000284 LITERALS: 78670008 
+_Slider1:
+  val                  --> R4
+    08000288 E92D4810	PSH	{R4,R11,LR}
+    0800028C 46EB    	MOV	R11,SP
+    0800028E 4604    	MOV	R4,R0
+(0049) 
+(0050) void Slider1(uint16_t val)
+(0051)     {
+(0052)     printf("Slider1 gets %d\n", val);
+    08000290 4802    	LDR	R0,[PC,#8]
+    08000292 B2A1    	UXTH	R1,R4
+    08000294 F005FEF4	BL	_printf
+    08000298 E8BD8810	POP	{R4,R11,PC}
+(0053)     }
+    0800029C LITERALS: 67670008 
+_text_entry1:
+  s                    --> R4
+    080002A0 E92D4810	PSH	{R4,R11,LR}
+    080002A4 46EB    	MOV	R11,SP
+    080002A6 4604    	MOV	R4,R0
+(0054) 
+(0055) void text_entry1(char *s)
+(0056)     {
+(0057)     printf("text1 entered:[%s]\n", s);
+    080002A8 4802    	LDR	R0,[PC,#8]
+    080002AA 4621    	MOV	R1,R4
+    080002AC F005FEE8	BL	_printf
+    080002B0 E8BD8810	POP	{R4,R11,PC}
+(0058)     }
+    080002B4 LITERALS: 53670008 
+_menu_entry:
+  i                    --> R4
+    080002B8 E92D4810	PSH	{R4,R11,LR}
+    080002BC 46EB    	MOV	R11,SP
+    080002BE 4604    	MOV	R4,R0
+(0059) 
+(0060) void menu_entry(uint16_t i)
+(0061)     {
+(0062)     printf("menu entry %d called\n", i);
+    080002C0 4802    	LDR	R0,[PC,#8]
+    080002C2 B2A1    	UXTH	R1,R4
+    080002C4 F005FEDC	BL	_printf
+    080002C8 E8BD8810	POP	{R4,R11,PC}
+(0063)     }
+    080002CC LITERALS: 3D670008 
+_checkbox1:
+  i                    --> R4
+    080002D0 E92D4810	PSH	{R4,R11,LR}
+    080002D4 46EB    	MOV	R11,SP
+    080002D6 4604    	MOV	R4,R0
+(0064) 
+(0065) void checkbox1(uint16_t i)
+(0066)     {
+(0067)     printf("checkboxes (bitmask) 0x%x selected\n", i);
+    080002D8 4802    	LDR	R0,[PC,#8]
+    080002DA B2A1    	UXTH	R1,R4
+    080002DC F005FED0	BL	_printf
+    080002E0 E8BD8810	POP	{R4,R11,PC}
+(0068)     }
+    080002E4 LITERALS: 19670008 
+_radio_buttons1:
+  i                    --> R4
+    080002E8 E92D4810	PSH	{R4,R11,LR}
+    080002EC 46EB    	MOV	R11,SP
+    080002EE 4604    	MOV	R4,R0
+(0069) 
+(0070) void radio_buttons1(uint16_t i)
+(0071)     {
+(0072)     printf("radio button %d selected\n", i);
+    080002F0 4802    	LDR	R0,[PC,#8]
+    080002F2 B2A1    	UXTH	R1,R4
+    080002F4 F005FEC4	BL	_printf
+    080002F8 E8BD8810	POP	{R4,R11,PC}
+(0073)     }
+    080002FC LITERALS: FF660008 
+_text_entry2:
+  s                    --> R4
+    08000300 E92D4810	PSH	{R4,R11,LR}
+    08000304 46EB    	MOV	R11,SP
+    08000306 4604    	MOV	R4,R0
+(0074) 
+(0075) void text_entry2(char *s)
+(0076)     {
+(0077)     printf("text2 entered:[%s]\n", s);
+    08000308 4802    	LDR	R0,[PC,#8]
+    0800030A 4621    	MOV	R1,R4
+    0800030C F005FEB8	BL	_printf
+    08000310 E8BD8810	POP	{R4,R11,PC}
+(0078)     }
+    08000314 LITERALS: EB660008 
+_number_entry1:
+  s                    --> R4
+    08000318 E92D4810	PSH	{R4,R11,LR}
+    0800031C 46EB    	MOV	R11,SP
+    0800031E 4604    	MOV	R4,R0
+(0079) 
+(0080) void number_entry1(char *s)
+(0081)     {
+(0082)     printf("number entered:[%s]\n", s);
+    08000320 4802    	LDR	R0,[PC,#8]
+    08000322 4621    	MOV	R1,R4
+    08000324 F005FEAC	BL	_printf
+    08000328 E8BD8810	POP	{R4,R11,PC}
+(0083)     }
+    0800032C LITERALS: D6660008 
+_password_entry1:
+  s                    --> R4
+    08000330 E92D4810	PSH	{R4,R11,LR}
+    08000334 46EB    	MOV	R11,SP
+    08000336 4604    	MOV	R4,R0
+(0084) void password_entry1(char *s)
+(0085)     {
+(0086)     printf("password entered:[%s]\n", s);
+    08000338 4802    	LDR	R0,[PC,#8]
+    0800033A 4621    	MOV	R1,R4
+    0800033C F005FEA0	BL	_printf
+    08000340 E8BD8810	POP	{R4,R11,PC}
+(0087)     }
+    08000344 LITERALS: BF660008 
+_calendar_selector1:
+  s                    --> R4
+    08000348 E92D4810	PSH	{R4,R11,LR}
+    0800034C 46EB    	MOV	R11,SP
+    0800034E 4604    	MOV	R4,R0
+(0088) 
+(0089) void calendar_selector1(char *s)
+(0090)     {
+(0091)     printf("calendar selected: %s\n", s);
+    08000350 4802    	LDR	R0,[PC,#8]
+    08000352 4621    	MOV	R1,R4
+    08000354 F005FE94	BL	_printf
+    08000358 E8BD8810	POP	{R4,R11,PC}
+(0092)     }
+    0800035C LITERALS: A8660008 
+_number_selector1:
+  n                    --> R4
+    08000360 E92D4810	PSH	{R4,R11,LR}
+    08000364 46EB    	MOV	R11,SP
+    08000366 4604    	MOV	R4,R0
+(0093) void number_selector1(uint32_t n)
+(0094)     {
+(0095)     printf("number selected: %d\n", n);
+    08000368 4802    	LDR	R0,[PC,#8]
+    0800036A 4621    	MOV	R1,R4
+    0800036C F005FE88	BL	_printf
+    08000370 E8BD8810	POP	{R4,R11,PC}
+(0096)     }
+    08000374 LITERALS: 93660008 
+_time_selector1:
+  mm                   --> R4
+  hh                   --> R5
+    08000378 E92D4830	PSH	{R4,R5,R11,LR}
+    0800037C 46EB    	MOV	R11,SP
+    0800037E 4605    	MOV	R5,R0
+    08000380 460C    	MOV	R4,R1
+(0097) 
+(0098) void time_selector1(uint16_t hh, uint16_t mm)
+(0099)     {
+(0100)     printf("time1 selected %d:%d\n", hh, mm);
+    08000382 4803    	LDR	R0,[PC,#12]
+    08000384 B2A9    	UXTH	R1,R5
+    08000386 B2A2    	UXTH	R2,R4
+    08000388 F005FE7A	BL	_printf
+    0800038C E8BD8830	POP	{R4,R5,R11,PC}
+(0101)     }
+    08000390 LITERALS: 7D660008 
+_time_selector2:
+  mm                   --> R4
+  hh                   --> R5
+    08000394 E92D4830	PSH	{R4,R5,R11,LR}
+    08000398 46EB    	MOV	R11,SP
+    0800039A 4605    	MOV	R5,R0
+    0800039C 460C    	MOV	R4,R1
+(0102) 
+(0103) void time_selector2(uint16_t hh, uint16_t mm)
+(0104)     {
+(0105)     printf("time2 selected %d:%d\n", hh, mm);
+    0800039E 4803    	LDR	R0,[PC,#12]
+    080003A0 B2A9    	UXTH	R1,R5
+    080003A2 B2A2    	UXTH	R2,R4
+    080003A4 F005FE6C	BL	_printf
+    080003A8 E8BD8830	POP	{R4,R5,R11,PC}
+(0106)     }
+    080003AC LITERALS: 67660008 
+_time_selector3:
+  mm                   --> R4
+  hh                   --> R5
+    080003B0 E92D4830	PSH	{R4,R5,R11,LR}
+    080003B4 46EB    	MOV	R11,SP
+    080003B6 4605    	MOV	R5,R0
+    080003B8 460C    	MOV	R4,R1
+(0107) 
+(0108) void time_selector3(uint16_t hh, uint16_t mm)
+(0109)     {
+(0110)     printf("time3 selected %d:%d\n", hh, mm);
+    080003BA 4803    	LDR	R0,[PC,#12]
+    080003BC B2A9    	UXTH	R1,R5
+    080003BE B2A2    	UXTH	R2,R4
+    080003C0 F005FE5E	BL	_printf
+    080003C4 E8BD8830	POP	{R4,R5,R11,PC}
+(0111)     }
+    080003C8 LITERALS: 51660008 
+_time_selector4:
+  mm                   --> R4
+  hh                   --> R5
+    080003CC E92D4830	PSH	{R4,R5,R11,LR}
+    080003D0 46EB    	MOV	R11,SP
+    080003D2 4605    	MOV	R5,R0
+    080003D4 460C    	MOV	R4,R1
+(0112) 
+(0113) void time_selector4(uint16_t hh, uint16_t mm)
+(0114)     {
+(0115)     printf("time4 selected %d:%d\n", hh, mm);
+    080003D6 4803    	LDR	R0,[PC,#12]
+    080003D8 B2A9    	UXTH	R1,R5
+    080003DA B2A2    	UXTH	R2,R4
+    080003DC F005FE50	BL	_printf
+    080003E0 E8BD8830	POP	{R4,R5,R11,PC}
+(0116)     }
+    080003E4 LITERALS: 3B660008 
+__3pos_buttons1:
+  i                    --> R4
+    080003E8 E92D4810	PSH	{R4,R11,LR}
+    080003EC 46EB    	MOV	R11,SP
+    080003EE 4604    	MOV	R4,R0
+(0117) 
+(0118) void _3pos_buttons1(uint16_t i)
+(0119)     {
+(0120)     printf("3 pos button %d selected\n", i);
+    080003F0 4802    	LDR	R0,[PC,#8]
+    080003F2 B2A1    	UXTH	R1,R4
+    080003F4 F005FE44	BL	_printf
+    080003F8 E8BD8810	POP	{R4,R11,PC}
+(0121)     }
+    080003FC LITERALS: 21660008 
+_expandable_list1:
+  i                    --> R4
+    08000400 E92D4810	PSH	{R4,R11,LR}
+    08000404 46EB    	MOV	R11,SP
+    08000406 4604    	MOV	R4,R0
+(0122) 
+(0123) void expandable_list1(uint16_t i)
+(0124)     {
+(0125)     printf("expandable list entry %d selected\n", i);
+    08000408 4802    	LDR	R0,[PC,#8]
+    0800040A B2A1    	UXTH	R1,R4
+    0800040C F005FE38	BL	_printf
+    08000410 E8BD8810	POP	{R4,R11,PC}
+(0126)     }
+    08000414 LITERALS: FE650008 
+_doTest:
+  i                    --> R8
+  i                    --> R8
+  i                    --> R8
+  val2                 --> R9
+  addr                 --> R10
+  val1                 --> R11,+16
+  p                    --> R8
+  u10                  --> R11,+55
+  p3                   --> R11,+55
+  p2                   --> R11,+55
+  p1                   --> R11,+55
+  u6                   --> R7
+  u7                   --> R8
+  u3                   --> R11,+2
+  u2                   --> R11,+4
+  u9                   --> R10
+  u8                   --> R9
+  u5                   --> R11,+6
+  u4                   --> R11,+8
+  p0                   --> R11,+10
+  u1                   --> R11,+12
+  u0                   --> R11,+14
+  i                    --> R11,+56
+    08000418 E92D4FF1	PSH	{R0,R4,R5,R6,R7,R8,R9,R10,R11,LR}
+    0800041C F1AD0B38	SUB	R11,SP,#0x38
+    08000420 B092    	SUB	SP,#0x48
+(0127) 
+(0128) void doTest(int i)
+(0129)     {
+(0130)     tHandle p0, p1, p2, p3;
+(0131)     tHandle u0, u1, u2, u3, u4, u5, u6, u7, u8, u9, u10;
+(0132) 
+(0133)     if (i != 8)
+    08000422 F8DBC038	LDR	R12,[R11,#0x38]
+    08000426 F1BC0F08	CMP	R12,#8
+    0800042A D007    	BEQ	0x0800043C
+(0134)         SmartIO_LoadCache(PRODUCT_ID, (BUILD_ID << 4) | i);
+    0800042C 2002    	MOVS	R0,#2
+    0800042E F8DBC038	LDR	R12,[R11,#0x38]
+    08000432 F44C64CA	ORR	R4,R12,#0x650
+    08000436 4621    	MOV	R1,R4
+    08000438 F003FC8A	BL	_SmartIO_LoadCache
+(0135) 
+(0136)     p0 = SmartIO_MakePage();
+    0800043C F003FCD4	BL	_SmartIO_MakePage
+    08000440 F8AB000A	STRH	R0,[R11,#10]
+(0137)     switch (i)
+    08000444 F8DBC038	LDR	R12,[R11,#0x38]
+    08000448 F1BC0F00	CMP	R12,#0
+    0800044C F2C0833B	BLT	0x08000AC6
+    08000450 F8DBC038	LDR	R12,[R11,#0x38]
+    08000454 F1BC0F08	CMP	R12,#8
+    08000458 F3008335	BGT	0x08000AC6
+    0800045C F8DF4778	LDR	R4,[PC,#0x778]
+    08000460 F8DBC038	LDR	R12,[R11,#0x38]
+    08000464 EA4F058C	LSL	R5,R12,#2
+    08000468 592C    	LDR	R4,[R5,R4]
+    0800046A 46A7    	MOV	PC,R4
+(0138)         {
+(0139)     case 0:
+(0140)         u0 = SmartIO_AddMenu(   "Terms of Service", menu_entry);
+    0800046C F8DF0764	LDR	R0,[PC,#0x764]
+    08000470 F8DF175C	LDR	R1,[PC,#0x75C]
+    08000474 F003FC9A	BL	_SmartIO_AddMenu
+    08000478 F8AB000E	STRH	R0,[R11,#14]
+(0141)         SmartIO_AddListItem(u0, "Enable Flux Capacitor");
+    0800047C F8DF174C	LDR	R1,[PC,#0x74C]
+    08000480 F004F984	BL	_SmartIO_AddListItem
+(0142)         SmartIO_AddListItem(u0, "Enable Chameleon Circuit");
+    08000484 F8BB000E	LDRH	R0,[R11,#14]
+    08000488 F8DF173C	LDR	R1,[PC,#0x73C]
+    0800048C F004F97E	BL	_SmartIO_AddListItem
+(0143)         break;
+    08000490 E319    	B	0x08000AC6
+(0144)     case 1:
+(0145)         u0 = SmartIO_MakeTextBox(0, 200, 6, "%BFour score and seven years ago%b our fathers brought forth, upon this continent, a new nation, conceived in liberty...");
+    08000492 2000    	MOVS	R0,#0
+    08000494 21C8    	MOVS	R1,#0xC8
+    08000496 2206    	MOVS	R2,#6
+    08000498 F8DF3728	LDR	R3,[PC,#0x728]
+    0800049C F003FFD6	BL	_SmartIO_MakeTextBox
+    080004A0 F8AB000E	STRH	R0,[R11,#14]
+(0146)         SmartIO_AddText(u0, "Lincoln's address");
+    080004A4 F8DF1718	LDR	R1,[PC,#0x718]
+    080004A8 F004F954	BL	_SmartIO_AddText
+(0147)         SmartIO_SetSliceIcon(u0, SMARTIO_ICON_INFO);
+    080004AC F8BB000E	LDRH	R0,[R11,#14]
+    080004B0 2104    	MOVS	R1,#4
+    080004B2 F004F909	BL	_SmartIO_SetSliceIcon
+(0148)         break;
+    080004B6 E306    	B	0x08000AC6
+(0149)     case 2:
+(0150)         SmartIO_AppTitle("Smart Wall Plug");
+    080004B8 F8DF06DC	LDR	R0,[PC,#0x6DC]
+    080004BC F003FC69	BL	_SmartIO_AppTitle
+(0151)         u0 = SmartIO_MakeOnOffButton(0, 0, 1, Button1);
+    080004C0 2400    	MOVS	R4,#0
+    080004C2 4620    	MOV	R0,R4
+    080004C4 4621    	MOV	R1,R4
+    080004C6 2201    	MOVS	R2,#1
+    080004C8 F8DF36C8	LDR	R3,[PC,#0x6C8]
+    080004CC F003FD43	BL	_SmartIO_MakeOnOffButton
+    080004D0 F8AB000E	STRH	R0,[R11,#14]
+(0152)         SmartIO_AddText(u0, "Power");
+    080004D4 F8DF16B8	LDR	R1,[PC,#0x6B8]
+    080004D8 F004F93C	BL	_SmartIO_AddText
+(0153)         SmartIO_SetSliceIcon(u0, SMARTIO_ICON_POWER);
+    080004DC F8BB000E	LDRH	R0,[R11,#14]
+    080004E0 2106    	MOVS	R1,#6
+    080004E2 F004F8F1	BL	_SmartIO_SetSliceIcon
+(0154)         u1 = SmartIO_MakeSlider(1, 0, 30, Slider1);
+    080004E6 2001    	MOVS	R0,#1
+    080004E8 2100    	MOVS	R1,#0
+    080004EA 221E    	MOVS	R2,#30
+    080004EC F8DF3624	LDR	R3,[PC,#0x624]
+    080004F0 F003FD9A	BL	_SmartIO_MakeSlider
+    080004F4 F8AB000C	STRH	R0,[R11,#12]
+(0155) 
+(0156)         SmartIO_MakeSpacerSlice(2);
+    080004F8 2002    	MOVS	R0,#2
+    080004FA F004FAFA	BL	_SmartIO_MakeSpacerSlice
+(0157)         u2 = SmartIO_MakeLabel(0, 1, "Auto On/Off Schedule");
+    080004FE 2000    	MOVS	R0,#0
+    08000500 2101    	MOVS	R1,#1
+    08000502 F8DF2688	LDR	R2,[PC,#0x688]
+    08000506 F004FB56	BL	_SmartIO_MakeLabel
+    0800050A F8AB0004	STRH	R0,[R11,#4]
+(0158)         u3 = SmartIO_MakeLabel(0, 0, " Weekdays");
+    0800050E 4620    	MOV	R0,R4
+    08000510 4621    	MOV	R1,R4
+    08000512 F8DF2674	LDR	R2,[PC,#0x674]
+    08000516 F004FB4E	BL	_SmartIO_MakeLabel
+    0800051A F8AB0002	STRH	R0,[R11,#2]
+(0159)         u4 = SmartIO_MakeTimeSelector(0, 0, "17:00", time_selector1);
+    0800051E 4620    	MOV	R0,R4
+    08000520 4621    	MOV	R1,R4
+    08000522 F8DF2660	LDR	R2,[PC,#0x660]
+    08000526 F8DF3658	LDR	R3,[PC,#0x658]
+    0800052A F003FE27	BL	_SmartIO_MakeTimeSelector
+    0800052E F8AB0008	STRH	R0,[R11,#8]
+(0160)             SmartIO_AddText(u4, "ON at");
+    08000532 F8DF162C	LDR	R1,[PC,#0x62C]
+    08000536 F004F90D	BL	_SmartIO_AddText
+(0161)             SmartIO_SetSliceIcon(u4, SMARTIO_ICON_QUERY);
+    0800053A F8BB0008	LDRH	R0,[R11,#8]
+    0800053E 2108    	MOVS	R1,#8
+    08000540 F004F8C2	BL	_SmartIO_SetSliceIcon
+(0162)         u5 = SmartIO_MakeTimeSelector(0, 0, "0:00", time_selector2);
+    08000544 4620    	MOV	R0,R4
+    08000546 4621    	MOV	R1,R4
+    08000548 F8DF2630	LDR	R2,[PC,#0x630]
+    0800054C F8DF3628	LDR	R3,[PC,#0x628]
+    08000550 F003FE14	BL	_SmartIO_MakeTimeSelector
+    08000554 F8AB0006	STRH	R0,[R11,#6]
+(0163)         SmartIO_AddText(u5, "OFF at");
+    08000558 F8DF15F8	LDR	R1,[PC,#0x5F8]
+    0800055C F004F8FA	BL	_SmartIO_AddText
+(0164)         SmartIO_SetSliceIcon(u5, SMARTIO_ICON_QUERY);
+    08000560 F8BB0006	LDRH	R0,[R11,#6]
+    08000564 2108    	MOVS	R1,#8
+    08000566 F004F8AF	BL	_SmartIO_SetSliceIcon
+(0165)         SmartIO_MakeSpacerSlice(1);
+    0800056A 2001    	MOVS	R0,#1
+    0800056C F004FAC1	BL	_SmartIO_MakeSpacerSlice
+(0166) // no chekbox
+(0167)         u7 = SmartIO_MakeLabel(0, 0, " Weekend");
+    08000570 4620    	MOV	R0,R4
+    08000572 4621    	MOV	R1,R4
+    08000574 F8DF25F4	LDR	R2,[PC,#0x5F4]
+    08000578 F004FB1D	BL	_SmartIO_MakeLabel
+    0800057C 4680    	MOV	R8,R0
+(0168)         u8 = SmartIO_MakeTimeSelector(0, 0, "18:00", time_selector3);
+    0800057E 4620    	MOV	R0,R4
+    08000580 4621    	MOV	R1,R4
+    08000582 F8DF25E4	LDR	R2,[PC,#0x5E4]
+    08000586 F8DF35DC	LDR	R3,[PC,#0x5DC]
+    0800058A F003FDF7	BL	_SmartIO_MakeTimeSelector
+    0800058E 4681    	MOV	R9,R0
+(0169)             SmartIO_AddText(u8, "ON at");
+    08000590 F8DF15CC	LDR	R1,[PC,#0x5CC]
+    08000594 F004F8DE	BL	_SmartIO_AddText
+(0170)             SmartIO_SetSliceIcon(u8, SMARTIO_ICON_QUERY);
+    08000598 4648    	MOV	R0,R9
+    0800059A 2108    	MOVS	R1,#8
+    0800059C F004F894	BL	_SmartIO_SetSliceIcon
+(0171)         u9 = SmartIO_MakeTimeSelector(0, 0, "1:00", time_selector4);
+    080005A0 4620    	MOV	R0,R4
+    080005A2 4621    	MOV	R1,R4
+    080005A4 F8DF25B4	LDR	R2,[PC,#0x5B4]
+    080005A8 F8DF35AC	LDR	R3,[PC,#0x5AC]
+    080005AC F003FDE6	BL	_SmartIO_MakeTimeSelector
+    080005B0 4682    	MOV	R10,R0
+(0172)             SmartIO_AddText(u9, "OFF at");
+    080005B2 F8DF15A0	LDR	R1,[PC,#0x5A0]
+    080005B6 F004F8CD	BL	_SmartIO_AddText
+(0173)             SmartIO_SetSliceIcon(u9, SMARTIO_ICON_QUERY);
+    080005BA 4650    	MOV	R0,R10
+    080005BC 2108    	MOVS	R1,#8
+    080005BE F004F883	BL	_SmartIO_SetSliceIcon
+(0174)         SmartIO_GroupObjects(0, u3, u4, u5, u7, u8, u9, 0);
+    080005C2 2000    	MOVS	R0,#0
+    080005C4 F8BB1002	LDRH	R1,[R11,#2]
+    080005C8 F8BBC008	LDRH	R12,[R11,#8]
+    080005CC FA1FF28C	UXTH	R2,R12
+    080005D0 F8BBC006	LDRH	R12,[R11,#6]
+    080005D4 FA1FF38C	UXTH	R3,R12
+    080005D8 FA1FF488	UXTH	R4,R8
+    080005DC 9400    	STR	R4,[SP,#0]
+    080005DE FA1FF489	UXTH	R4,R9
+    080005E2 9401    	STR	R4,[SP,#4]
+    080005E4 FA1FF48A	UXTH	R4,R10
+    080005E8 9402    	STR	R4,[SP,#8]
+    080005EA 2400    	MOVS	R4,#0
+    080005EC 9403    	STR	R4,[SP,#12]
+    080005EE F003FC47	BL	_SmartIO_GroupObjects
+(0175)         SmartIO_MakeSpacerSlice(3);
+    080005F2 2003    	MOVS	R0,#3
+    080005F4 F004FA7D	BL	_SmartIO_MakeSpacerSlice
+(0176)         SmartIO_AutoBalance(p0);
+    080005F8 F8BB000A	LDRH	R0,[R11,#10]
+    080005FC F004FA89	BL	_SmartIO_AutoBalance
+(0177)         break;
+    08000600 E261    	B	0x08000AC6
+(0178)     case 3:
+(0179)         u0 = SmartIO_MakeCheckboxes(0, 5, checkbox1);
+    08000602 2000    	MOVS	R0,#0
+    08000604 2105    	MOVS	R1,#5
+    08000606 F8DF25B4	LDR	R2,[PC,#0x5B4]
+    0800060A F003FE8C	BL	_SmartIO_MakeCheckboxes
+    0800060E F8AB000E	STRH	R0,[R11,#14]
+(0180)         SmartIO_AddListItem(u0+1, "One");
+    08000612 F8BBC00E	LDRH	R12,[R11,#14]
+    08000616 FA1FF48C	UXTH	R4,R12
+    0800061A 1C64    	ADDS	R4,R4,#1
+    0800061C 4620    	MOV	R0,R4
+    0800061E F8DF158C	LDR	R1,[PC,#0x58C]
+    08000622 F004F8B3	BL	_SmartIO_AddListItem
+(0181)         SmartIO_AddListItem(u0+1, "Two");
+    08000626 F8BBC00E	LDRH	R12,[R11,#14]
+    0800062A FA1FF48C	UXTH	R4,R12
+    0800062E 1C64    	ADDS	R4,R4,#1
+    08000630 4620    	MOV	R0,R4
+    08000632 F8DF1574	LDR	R1,[PC,#0x574]
+    08000636 F004F8A9	BL	_SmartIO_AddListItem
+(0182)         SmartIO_AddListItem(u0+1, "Three");
+    0800063A F8BBC00E	LDRH	R12,[R11,#14]
+    0800063E FA1FF48C	UXTH	R4,R12
+    08000642 1C64    	ADDS	R4,R4,#1
+    08000644 4620    	MOV	R0,R4
+    08000646 F8DF155C	LDR	R1,[PC,#0x55C]
+    0800064A F004F89F	BL	_SmartIO_AddListItem
+(0183)         SmartIO_AddListItem(u0+1, "Four");
+    0800064E F8BBC00E	LDRH	R12,[R11,#14]
+    08000652 FA1FF48C	UXTH	R4,R12
+    08000656 1C64    	ADDS	R4,R4,#1
+    08000658 4620    	MOV	R0,R4
+    0800065A F8DF1544	LDR	R1,[PC,#0x544]
+    0800065E F004F895	BL	_SmartIO_AddListItem
+(0184)         SmartIO_AddListItem(u0+1, "Five");
+    08000662 F8BBC00E	LDRH	R12,[R11,#14]
+    08000666 FA1FF48C	UXTH	R4,R12
+    0800066A 1C64    	ADDS	R4,R4,#1
+    0800066C 4620    	MOV	R0,R4
+    0800066E F8DF1548	LDR	R1,[PC,#0x548]
+    08000672 F004F88B	BL	_SmartIO_AddListItem
+(0185) 
+(0186)         SmartIO_MakeMultilineBox(7, "Night will fall and drown the sun when a good man goes to war. Friendship dies and true love lies. Night will fall and the dark will rise when a good man goes to war. Demons run but count the cost; the battle's won but the child is lost. Demons run when a good man goes to war.");
+    08000676 2007    	MOVS	R0,#7
+    08000678 F8DF1538	LDR	R1,[PC,#0x538]
+    0800067C F003FF01	BL	_SmartIO_MakeMultilineBox
+(0187) 
+(0188)         u1 = SmartIO_MakeRadioButtons(0, 5, radio_buttons1);
+    08000680 2000    	MOVS	R0,#0
+    08000682 2105    	MOVS	R1,#5
+    08000684 F8DF2528	LDR	R2,[PC,#0x528]
+    08000688 F003FE6B	BL	_SmartIO_MakeRadioButtons
+    0800068C F8AB000C	STRH	R0,[R11,#12]
+(0189)         SmartIO_AddListItem(u1+1, "One");
+    08000690 F8BBC00C	LDRH	R12,[R11,#12]
+    08000694 FA1FF48C	UXTH	R4,R12
+    08000698 1C64    	ADDS	R4,R4,#1
+    0800069A 4620    	MOV	R0,R4
+    0800069C F8DF150C	LDR	R1,[PC,#0x50C]
+    080006A0 F004F874	BL	_SmartIO_AddListItem
+(0190)         SmartIO_AddListItem(u1+1, "Two");
+    080006A4 F8BBC00C	LDRH	R12,[R11,#12]
+    080006A8 FA1FF48C	UXTH	R4,R12
+    080006AC 1C64    	ADDS	R4,R4,#1
+    080006AE 4620    	MOV	R0,R4
+    080006B0 F8DF14F4	LDR	R1,[PC,#0x4F4]
+    080006B4 F004F86A	BL	_SmartIO_AddListItem
+(0191)         SmartIO_AddListItem(u1+1, "Three");
+    080006B8 F8BBC00C	LDRH	R12,[R11,#12]
+    080006BC FA1FF48C	UXTH	R4,R12
+    080006C0 1C64    	ADDS	R4,R4,#1
+    080006C2 4620    	MOV	R0,R4
+    080006C4 F8DF14DC	LDR	R1,[PC,#0x4DC]
+    080006C8 F004F860	BL	_SmartIO_AddListItem
+(0192)         SmartIO_AddListItem(u1+1, "Four");
+    080006CC F8BBC00C	LDRH	R12,[R11,#12]
+    080006D0 FA1FF48C	UXTH	R4,R12
+    080006D4 1C64    	ADDS	R4,R4,#1
+    080006D6 4620    	MOV	R0,R4
+    080006D8 F8DF14C4	LDR	R1,[PC,#0x4C4]
+    080006DC F004F856	BL	_SmartIO_AddListItem
+(0193)         SmartIO_AddListItem(u1+1, "Five012345678901234567");
+    080006E0 F8BBC00C	LDRH	R12,[R11,#12]
+    080006E4 FA1FF48C	UXTH	R4,R12
+    080006E8 1C64    	ADDS	R4,R4,#1
+    080006EA 4620    	MOV	R0,R4
+    080006EC F8DF14AC	LDR	R1,[PC,#0x4AC]
+    080006F0 F004F84C	BL	_SmartIO_AddListItem
+(0194)         break;
+    080006F4 E1E7    	B	0x08000AC6
+(0195)     case 4:
+(0196)         SmartIO_AppTitle("Smart Wall Plug");
+    080006F6 F8DF04A0	LDR	R0,[PC,#0x4A0]
+    080006FA F003FB4A	BL	_SmartIO_AppTitle
+(0197)         u0 = SmartIO_MakeOnOffButton(0, 0, 1, Button1);
+    080006FE 2400    	MOVS	R4,#0
+    08000700 4620    	MOV	R0,R4
+    08000702 4621    	MOV	R1,R4
+    08000704 2201    	MOVS	R2,#1
+    08000706 F8DF348C	LDR	R3,[PC,#0x48C]
+    0800070A F003FC24	BL	_SmartIO_MakeOnOffButton
+    0800070E F8AB000E	STRH	R0,[R11,#14]
+(0198)         SmartIO_AddText(u0, "Power");
+    08000712 F8DF147C	LDR	R1,[PC,#0x47C]
+    08000716 F004F81D	BL	_SmartIO_AddText
+(0199)         SmartIO_SetSliceIcon(u0, SMARTIO_ICON_POWER);
+    0800071A F8BB000E	LDRH	R0,[R11,#14]
+    0800071E 2106    	MOVS	R1,#6
+    08000720 F003FFD2	BL	_SmartIO_SetSliceIcon
+(0200)         u1 = SmartIO_MakeSlider(1, 0, 30, Slider1);
+    08000724 2001    	MOVS	R0,#1
+    08000726 2100    	MOVS	R1,#0
+    08000728 221E    	MOVS	R2,#30
+    0800072A 4BFA    	LDR	R3,[PC,#0x3E8]
+    0800072C F003FC7C	BL	_SmartIO_MakeSlider
+    08000730 F8AB000C	STRH	R0,[R11,#12]
+(0201)         SmartIO_EnableIf(u0+1, u1+1, 0);
+    08000734 F8BBC00E	LDRH	R12,[R11,#14]
+    08000738 FA1FF48C	UXTH	R4,R12
+    0800073C 1C64    	ADDS	R4,R4,#1
+    0800073E 4620    	MOV	R0,R4
+    08000740 F8BBC00C	LDRH	R12,[R11,#12]
+    08000744 FA1FF48C	UXTH	R4,R12
+    08000748 1C64    	ADDS	R4,R4,#1
+    0800074A 4621    	MOV	R1,R4
+    0800074C 2200    	MOVS	R2,#0
+    0800074E F003FBC7	BL	_SmartIO_EnableIf
+(0202) 
+(0203)         SmartIO_MakeSpacerSlice(2);
+    08000752 2002    	MOVS	R0,#2
+    08000754 F004F9CD	BL	_SmartIO_MakeSpacerSlice
+(0204)         u2 = SmartIO_MakeLabel(0, 1, "Auto On/Off Schedule");
+    08000758 2000    	MOVS	R0,#0
+    0800075A 2101    	MOVS	R1,#1
+    0800075C F8DF242C	LDR	R2,[PC,#0x42C]
+    08000760 F004FA29	BL	_SmartIO_MakeLabel
+    08000764 F8AB0004	STRH	R0,[R11,#4]
+(0205)         u3 = SmartIO_MakeLabel(0, 0, " Weekdays");
+    08000768 2400    	MOVS	R4,#0
+    0800076A 4620    	MOV	R0,R4
+    0800076C 4621    	MOV	R1,R4
+    0800076E F8DF2418	LDR	R2,[PC,#0x418]
+    08000772 F004FA20	BL	_SmartIO_MakeLabel
+    08000776 F8AB0002	STRH	R0,[R11,#2]
+(0206)         u4 = SmartIO_MakeTimeSelector(0, 0, "17:00", time_selector1);
+    0800077A 4620    	MOV	R0,R4
+    0800077C 4621    	MOV	R1,R4
+    0800077E F8DF2404	LDR	R2,[PC,#0x404]
+    08000782 4BFF    	LDR	R3,[PC,#0x3FC]
+    08000784 F003FCFA	BL	_SmartIO_MakeTimeSelector
+    08000788 F8AB0008	STRH	R0,[R11,#8]
+(0207)             SmartIO_AddText(u4, "ON at");
+    0800078C 49F4    	LDR	R1,[PC,#0x3D0]
+    0800078E F003FFE1	BL	_SmartIO_AddText
+(0208)             SmartIO_SetSliceIcon(u4, SMARTIO_ICON_QUERY);
+    08000792 F8BB0008	LDRH	R0,[R11,#8]
+    08000796 2108    	MOVS	R1,#8
+    08000798 F003FF96	BL	_SmartIO_SetSliceIcon
+(0209)         u5 = SmartIO_MakeTimeSelector(0, 0, "0:00", time_selector2);
+    0800079C 4620    	MOV	R0,R4
+    0800079E 4621    	MOV	R1,R4
+    080007A0 4AF6    	LDR	R2,[PC,#0x3D8]
+    080007A2 4BF5    	LDR	R3,[PC,#0x3D4]
+    080007A4 F003FCEA	BL	_SmartIO_MakeTimeSelector
+    080007A8 F8AB0006	STRH	R0,[R11,#6]
+(0210)         SmartIO_AddText(u5, "OFF at");
+    080007AC 49E9    	LDR	R1,[PC,#0x3A4]
+    080007AE F003FFD1	BL	_SmartIO_AddText
+(0211)         SmartIO_SetSliceIcon(u5, SMARTIO_ICON_QUERY);
+    080007B2 F8BB0006	LDRH	R0,[R11,#6]
+    080007B6 2108    	MOVS	R1,#8
+    080007B8 F003FF86	BL	_SmartIO_SetSliceIcon
+(0212)         SmartIO_MakeSpacerSlice(1);
+    080007BC 2001    	MOVS	R0,#1
+    080007BE F004F998	BL	_SmartIO_MakeSpacerSlice
+(0213) 
+(0214)         u6 = SmartIO_MakeCheckboxes(1, 1, 0);
+    080007C2 2401    	MOVS	R4,#1
+    080007C4 4620    	MOV	R0,R4
+    080007C6 4621    	MOV	R1,R4
+    080007C8 4AEA    	LDR	R2,[PC,#0x3A8]
+    080007CA F003FDAC	BL	_SmartIO_MakeCheckboxes
+    080007CE 4607    	MOV	R7,R0
+(0215)         SmartIO_AddListItem(u6+1, "Same as 'Weekdays'");
+    080007D0 B2BC    	UXTH	R4,R7
+    080007D2 1C64    	ADDS	R4,R4,#1
+    080007D4 4620    	MOV	R0,R4
+    080007D6 49E6    	LDR	R1,[PC,#0x398]
+    080007D8 F003FFD8	BL	_SmartIO_AddListItem
+(0216) 
+(0217)         u7 = SmartIO_MakeLabel(0, 0, " Weekend");
+    080007DC 2400    	MOVS	R4,#0
+    080007DE 4620    	MOV	R0,R4
+    080007E0 4621    	MOV	R1,R4
+    080007E2 4AE2    	LDR	R2,[PC,#0x388]
+    080007E4 F004F9E7	BL	_SmartIO_MakeLabel
+    080007E8 4680    	MOV	R8,R0
+(0218)         u8 = SmartIO_MakeTimeSelector(0, 0, "18:00", time_selector3);
+    080007EA 4620    	MOV	R0,R4
+    080007EC 4621    	MOV	R1,R4
+    080007EE 4ADE    	LDR	R2,[PC,#0x378]
+    080007F0 4BDC    	LDR	R3,[PC,#0x370]
+    080007F2 F003FCC3	BL	_SmartIO_MakeTimeSelector
+    080007F6 4681    	MOV	R9,R0
+(0219)             SmartIO_AddText(u8, "ON at");
+    080007F8 49D9    	LDR	R1,[PC,#0x364]
+    080007FA F003FFAB	BL	_SmartIO_AddText
+(0220)             SmartIO_SetSliceIcon(u8, SMARTIO_ICON_QUERY);
+    080007FE 4648    	MOV	R0,R9
+    08000800 2108    	MOVS	R1,#8
+    08000802 F003FF61	BL	_SmartIO_SetSliceIcon
+(0221)         u9 = SmartIO_MakeTimeSelector(0, 0, "1:00", time_selector4);
+    08000806 4620    	MOV	R0,R4
+    08000808 4621    	MOV	R1,R4
+    0800080A 4AD4    	LDR	R2,[PC,#0x350]
+    0800080C 4BD2    	LDR	R3,[PC,#0x348]
+    0800080E F003FCB5	BL	_SmartIO_MakeTimeSelector
+    08000812 4682    	MOV	R10,R0
+(0222)             SmartIO_AddText(u9, "OFF at");
+    08000814 49CF    	LDR	R1,[PC,#0x33C]
+    08000816 F003FF9D	BL	_SmartIO_AddText
+(0223)             SmartIO_SetSliceIcon(u9, SMARTIO_ICON_QUERY);
+    0800081A 4650    	MOV	R0,R10
+    0800081C 2108    	MOVS	R1,#8
+    0800081E F003FF53	BL	_SmartIO_SetSliceIcon
+(0224)         SmartIO_GroupObjects(0, u3, u4, u5, u7, u8, u9, 0);
+    08000822 2000    	MOVS	R0,#0
+    08000824 F8BB1002	LDRH	R1,[R11,#2]
+    08000828 F8BBC008	LDRH	R12,[R11,#8]
+    0800082C FA1FF28C	UXTH	R2,R12
+    08000830 F8BBC006	LDRH	R12,[R11,#6]
+    08000834 FA1FF38C	UXTH	R3,R12
+    08000838 FA1FF488	UXTH	R4,R8
+    0800083C 9400    	STR	R4,[SP,#0]
+    0800083E FA1FF489	UXTH	R4,R9
+    08000842 9401    	STR	R4,[SP,#4]
+    08000844 FA1FF48A	UXTH	R4,R10
+    08000848 9402    	STR	R4,[SP,#8]
+    0800084A 2400    	MOVS	R4,#0
+    0800084C 9403    	STR	R4,[SP,#12]
+    0800084E F003FB17	BL	_SmartIO_GroupObjects
+(0225)         SmartIO_MakeSpacerSlice(3);
+    08000852 2003    	MOVS	R0,#3
+    08000854 F004F94D	BL	_SmartIO_MakeSpacerSlice
+(0226)         SmartIO_AutoBalance(p0);
+    08000858 F8BB000A	LDRH	R0,[R11,#10]
+    0800085C F004F959	BL	_SmartIO_AutoBalance
+(0227)         break;
+    08000860 E131    	B	0x08000AC6
+(0228)     case 5:
+(0229)         SmartIO_PageTitle(p0, "Charging Status");
+    08000862 F8BB000A	LDRH	R0,[R11,#10]
+    08000866 49BA    	LDR	R1,[PC,#0x2E8]
+    08000868 F003FAEE	BL	_SmartIO_PageTitle
+(0230) 
+(0231)         SmartIO_MakeLabel(0, 0, "Input");
+    0800086C 2400    	MOVS	R4,#0
+    0800086E 4620    	MOV	R0,R4
+    08000870 4621    	MOV	R1,R4
+    08000872 4AB6    	LDR	R2,[PC,#0x2D8]
+    08000874 F004F99F	BL	_SmartIO_MakeLabel
+(0232)         u0 = SmartIO_Make3PosButton(0, 4, 1, _3pos_buttons1);
+    08000878 2000    	MOVS	R0,#0
+    0800087A 2104    	MOVS	R1,#4
+    0800087C 2201    	MOVS	R2,#1
+    0800087E 4BB2    	LDR	R3,[PC,#0x2C8]
+    08000880 F003FB8C	BL	_SmartIO_Make3PosButton
+    08000884 F8AB000E	STRH	R0,[R11,#14]
+(0233)         SmartIO_AddText(u0, "Slow/Normal/Fast");
+    08000888 49AE    	LDR	R1,[PC,#0x2B8]
+    0800088A F003FF63	BL	_SmartIO_AddText
+(0234)         SmartIO_MakeSpacerSlice(3);
+    0800088E 2003    	MOVS	R0,#3
+    08000890 F004F92F	BL	_SmartIO_MakeSpacerSlice
+(0235)         u1 = SmartIO_MakeHGauge(0, 0, 40);
+    08000894 4620    	MOV	R0,R4
+    08000896 4621    	MOV	R1,R4
+    08000898 2228    	MOVS	R2,#0x28
+    0800089A F003FE51	BL	_SmartIO_MakeHGauge
+    0800089E F8AB000C	STRH	R0,[R11,#12]
+(0236)         SmartIO_AddText(u1, "Current input level");
+    080008A2 49A7    	LDR	R1,[PC,#0x29C]
+    080008A4 F003FF56	BL	_SmartIO_AddText
+(0237)         SmartIO_MakeSpacerSlice(1);
+    080008A8 2001    	MOVS	R0,#1
+    080008AA F004F922	BL	_SmartIO_MakeSpacerSlice
+(0238)         SmartIO_MakeLabel(1, 0, "Battery level  ");
+    080008AE 2001    	MOVS	R0,#1
+    080008B0 2100    	MOVS	R1,#0
+    080008B2 4AA2    	LDR	R2,[PC,#0x288]
+    080008B4 F004F97F	BL	_SmartIO_MakeLabel
+(0239)         u2 = SmartIO_MakeBatteryLevel(0, 1, 80);
+    080008B8 2000    	MOVS	R0,#0
+    080008BA 2101    	MOVS	R1,#1
+    080008BC 2250    	MOVS	R2,#0x50
+    080008BE F003FE9F	BL	_SmartIO_MakeBatteryLevel
+    080008C2 F8AB0004	STRH	R0,[R11,#4]
+(0240)         SmartIO_ClearText(u2);
+    080008C6 F003FF54	BL	_SmartIO_ClearText
+(0241)         SmartIO_MakeSpacerSlice(4);
+    080008CA 2004    	MOVS	R0,#4
+    080008CC F004F911	BL	_SmartIO_MakeSpacerSlice
+(0242)         SmartIO_AutoBalance(p0);
+    080008D0 F8BB000A	LDRH	R0,[R11,#10]
+    080008D4 F004F91D	BL	_SmartIO_AutoBalance
+(0243)         break;
+    080008D8 E0F5    	B	0x08000AC6
+(0244)     case 6:
+(0245)         SmartIO_AppTitle("Pokemon Control");
+    080008DA 4897    	LDR	R0,[PC,#0x25C]
+    080008DC F003FA59	BL	_SmartIO_AppTitle
+(0246)         u0 = SmartIO_MakeExpandableList(0, 5, expandable_list1);
+    080008E0 2000    	MOVS	R0,#0
+    080008E2 2105    	MOVS	R1,#5
+    080008E4 4A93    	LDR	R2,[PC,#0x24C]
+    080008E6 F003FBC2	BL	_SmartIO_MakeExpandableList
+    080008EA F8AB000E	STRH	R0,[R11,#14]
+(0247)         SmartIO_AddListItem(u0+1, "Select a Pokemon");
+    080008EE F8BBC00E	LDRH	R12,[R11,#14]
+    080008F2 FA1FF48C	UXTH	R4,R12
+    080008F6 1C64    	ADDS	R4,R4,#1
+    080008F8 4620    	MOV	R0,R4
+    080008FA 498D    	LDR	R1,[PC,#0x234]
+    080008FC F003FF46	BL	_SmartIO_AddListItem
+(0248)         SmartIO_AddListItem(u0+1, "Pikachu");
+    08000900 F8BBC00E	LDRH	R12,[R11,#14]
+    08000904 FA1FF48C	UXTH	R4,R12
+    08000908 1C64    	ADDS	R4,R4,#1
+    0800090A 4620    	MOV	R0,R4
+    0800090C 4987    	LDR	R1,[PC,#0x21C]
+    0800090E F003FF3D	BL	_SmartIO_AddListItem
+(0249)         SmartIO_AddListItem(u0+1, "Magikarp");
+    08000912 F8BBC00E	LDRH	R12,[R11,#14]
+    08000916 FA1FF48C	UXTH	R4,R12
+    0800091A 1C64    	ADDS	R4,R4,#1
+    0800091C 4620    	MOV	R0,R4
+    0800091E 4982    	LDR	R1,[PC,#0x208]
+    08000920 F003FF34	BL	_SmartIO_AddListItem
+(0250)         SmartIO_AddListItem(u0+1, "Charmander");
+    08000924 F8BBC00E	LDRH	R12,[R11,#14]
+    08000928 FA1FF48C	UXTH	R4,R12
+    0800092C 1C64    	ADDS	R4,R4,#1
+    0800092E 4620    	MOV	R0,R4
+    08000930 497C    	LDR	R1,[PC,#0x1F0]
+    08000932 F003FF2B	BL	_SmartIO_AddListItem
+(0251)         SmartIO_AddListItem(u0+1, "Bulbasaur");
+    08000936 F8BBC00E	LDRH	R12,[R11,#14]
+    0800093A FA1FF48C	UXTH	R4,R12
+    0800093E 1C64    	ADDS	R4,R4,#1
+    08000940 4620    	MOV	R0,R4
+    08000942 4977    	LDR	R1,[PC,#0x1DC]
+    08000944 F003FF22	BL	_SmartIO_AddListItem
+(0252)         SmartIO_AddListItem(u0+1, "Snorlax");
+    08000948 F8BBC00E	LDRH	R12,[R11,#14]
+    0800094C FA1FF48C	UXTH	R4,R12
+    08000950 1C64    	ADDS	R4,R4,#1
+    08000952 4620    	MOV	R0,R4
+    08000954 4971    	LDR	R1,[PC,#0x1C4]
+    08000956 F003FF19	BL	_SmartIO_AddListItem
+(0253)         SmartIO_MakeSpacerSlice(4);
+    0800095A 2004    	MOVS	R0,#4
+    0800095C F004F8C9	BL	_SmartIO_MakeSpacerSlice
+(0254)         u2 = SmartIO_MakeHGauge(0, 1, 30);
+    08000960 2000    	MOVS	R0,#0
+    08000962 2101    	MOVS	R1,#1
+    08000964 221E    	MOVS	R2,#30
+    08000966 F003FDEB	BL	_SmartIO_MakeHGauge
+    0800096A F8AB0004	STRH	R0,[R11,#4]
+(0255)         SmartIO_AddText(u2, "current CP");
+    0800096E 496A    	LDR	R1,[PC,#0x1A8]
+    08000970 F003FEF0	BL	_SmartIO_AddText
+(0256)         SmartIO_MakeSpacerSlice(1);
+    08000974 2001    	MOVS	R0,#1
+    08000976 F004F8BC	BL	_SmartIO_MakeSpacerSlice
+(0257)         u1 = SmartIO_MakeSlider(0, 0, 70, Slider1);
+    0800097A 2400    	MOVS	R4,#0
+    0800097C 4620    	MOV	R0,R4
+    0800097E 4621    	MOV	R1,R4
+    08000980 2246    	MOVS	R2,#0x46
+    08000982 4B64    	LDR	R3,[PC,#0x190]
+    08000984 F003FB50	BL	_SmartIO_MakeSlider
+    08000988 F8AB000C	STRH	R0,[R11,#12]
+(0258)         SmartIO_AddText(u1, "Power Up!");
+    0800098C 4960    	LDR	R1,[PC,#0x180]
+    0800098E F003FEE1	BL	_SmartIO_AddText
+(0259)         SmartIO_EnableIf(u0+1, u2+1, u1+1, 0);
+    08000992 F8BBC00E	LDRH	R12,[R11,#14]
+    08000996 FA1FF48C	UXTH	R4,R12
+    0800099A 1C64    	ADDS	R4,R4,#1
+    0800099C 4620    	MOV	R0,R4
+    0800099E F8BBC004	LDRH	R12,[R11,#4]
+    080009A2 FA1FF48C	UXTH	R4,R12
+    080009A6 1C64    	ADDS	R4,R4,#1
+    080009A8 4621    	MOV	R1,R4
+    080009AA F8BBC00C	LDRH	R12,[R11,#12]
+    080009AE FA1FF48C	UXTH	R4,R12
+    080009B2 1C62    	ADDS	R2,R4,#1
+    080009B4 2300    	MOVS	R3,#0
+    080009B6 F003FA93	BL	_SmartIO_EnableIf
+(0260)         SmartIO_MakeSpacerSlice(1);
+    080009BA 2001    	MOVS	R0,#1
+    080009BC F004F899	BL	_SmartIO_MakeSpacerSlice
+(0261)         SmartIO_MakeOK(2, "Apply", OK1);
+    080009C0 2002    	MOVS	R0,#2
+    080009C2 4952    	LDR	R1,[PC,#0x148]
+    080009C4 4A50    	LDR	R2,[PC,#0x140]
+    080009C6 F003FC52	BL	_SmartIO_MakeOK
+(0262)         SmartIO_MakeSpacerSlice(1);
+    080009CA 2001    	MOVS	R0,#1
+    080009CC F004F891	BL	_SmartIO_MakeSpacerSlice
+(0263)         SmartIO_AutoBalance(p0);
+    080009D0 F8BB000A	LDRH	R0,[R11,#10]
+    080009D4 F004F89D	BL	_SmartIO_AutoBalance
+(0264)         break;
+    080009D8 E075    	B	0x08000AC6
+(0265)     case 7:
+(0266)         u0 = SmartIO_MakeTextEntry(0, 1, 0, text_entry1);
+    080009DA 2400    	MOVS	R4,#0
+    080009DC 4620    	MOV	R0,R4
+    080009DE 2101    	MOVS	R1,#1
+    080009E0 4622    	MOV	R2,R4
+    080009E2 4B48    	LDR	R3,[PC,#0x120]
+    080009E4 F003FCDB	BL	_SmartIO_MakeTextEntry
+    080009E8 F8AB000E	STRH	R0,[R11,#14]
+(0267)         u1 = SmartIO_MakeTextEntry(0, 1, 3, text_entry2);
+    080009EC 2000    	MOVS	R0,#0
+    080009EE 2101    	MOVS	R1,#1
+    080009F0 2203    	MOVS	R2,#3
+    080009F2 4B43    	LDR	R3,[PC,#0x10C]
+    080009F4 F003FCD3	BL	_SmartIO_MakeTextEntry
+    080009F8 F8AB000C	STRH	R0,[R11,#12]
+(0268)         break;
+    080009FC E063    	B	0x08000AC6
+(0269)     case 8:
+(0270)         printf("Unique ID is");
+    080009FE 483F    	LDR	R0,[PC,#0xFC]
+    08000A00 F005FB3E	BL	_printf
+(0271)         uint32_t *p = SmartIO_GetUniqueID();
+    08000A04 F004F946	BL	_SmartIO_GetUniqueID
+    08000A08 4604    	MOV	R4,R0
+    08000A0A 46A0    	MOV	R8,R4
+(0272)         printf(" %X %X\n", p[0], p[1]);
+    08000A0C 483A    	LDR	R0,[PC,#0xE8]
+    08000A0E F8D81000	LDR	R1,[R8,#0]
+    08000A12 F8D82004	LDR	R2,[R8,#4]
+    08000A16 F005FB33	BL	_printf
+(0273) #define NELEMENTS   10
+(0274)         uint32_t val1[NELEMENTS], *val2;
+(0275)         uint16_t addr = SmartIO_GenRandomNumber() % (SMARTIO_MAX_EEPROM_SIZE - sizeof(uint32_t)*NELEMENTS);
+    08000A1A F004F930	BL	_SmartIO_GenRandomNumber
+    08000A1E 4604    	MOV	R4,R0
+    08000A20 F44F61F7	MOV	R1,#0x7B8
+    08000A24 F005F938	BL	mod32u
+    08000A28 4682    	MOV	R10,R0
+(0276) 
+(0277)         for (int i = 0; i < NELEMENTS; i++)
+    08000A2A F05F0800	MOVS	R8,#0
+    08000A2E E008    	B	0x08000A42
+(0278)             val1[i] = SmartIO_GenRandomNumber();
+    08000A30 F004F925	BL	_SmartIO_GenRandomNumber
+    08000A34 EA4F0588	LSL	R5,R8,#2
+    08000A38 F10B0610	ADD	R6,R11,#16
+    08000A3C 51A8    	STR	R0,[R5,R6]
+    08000A3E F1080801	ADD	R8,R8,#1
+    08000A42 F1B80F0A	CMP	R8,#10
+    08000A46 DBF3    	BLT	0x08000A30
+(0279) 
+(0280)         printf("writing eeprom...");
+    08000A48 482A    	LDR	R0,[PC,#0xA8]
+    08000A4A F005FB19	BL	_printf
+(0281)         SmartIO_WriteEEPROM(addr, sizeof(uint32_t)*NELEMENTS, (unsigned char*)&val1[0]);
+    08000A4E 4650    	MOV	R0,R10
+    08000A50 2128    	MOVS	R1,#0x28
+    08000A52 F10B0210	ADD	R2,R11,#16
+    08000A56 F004F8D4	BL	_SmartIO_WriteEEPROM
+(0282)         printf("reading eeprom...");
+    08000A5A 4825    	LDR	R0,[PC,#0x94]
+    08000A5C F005FB10	BL	_printf
+(0283)         val2 = (uint32_t *)SmartIO_ReadEEPROM(addr, sizeof(uint32_t)*NELEMENTS);
+    08000A60 4650    	MOV	R0,R10
+    08000A62 2128    	MOVS	R1,#0x28
+    08000A64 F004F8BE	BL	_SmartIO_ReadEEPROM
+    08000A68 4681    	MOV	R9,R0
+(0284) 
+(0285)         printf("\ndone write/read %d bytes EEPROM @%d...\n", NELEMENTS*4, addr);
+    08000A6A 4820    	LDR	R0,[PC,#0x80]
+    08000A6C 2128    	MOVS	R1,#0x28
+    08000A6E FA1FF28A	UXTH	R2,R10
+    08000A72 F005FB05	BL	_printf
+(0286)         for (int i = 0; i < NELEMENTS; i++)
+    08000A76 F05F0800	MOVS	R8,#0
+    08000A7A E00C    	B	0x08000A96
+(0287)             printf("%d w:%X r:%X\n", i, val1[i], val2[i]);
+    08000A7C 481A    	LDR	R0,[PC,#0x68]
+    08000A7E 4641    	MOV	R1,R8
+    08000A80 EA4F0488	LSL	R4,R8,#2
+    08000A84 F10B0510	ADD	R5,R11,#16
+    08000A88 5962    	LDR	R2,[R4,R5]
+    08000A8A F8543009	LDR	R3,[R4,R9 LSL #0]
+    08000A8E F005FAF7	BL	_printf
+    08000A92 F1080801	ADD	R8,R8,#1
+    08000A96 F1B80F0A	CMP	R8,#10
+    08000A9A DBEF    	BLT	0x08000A7C
+(0288) 
+(0289)         printf("5 random numbers...");
+    08000A9C 4811    	LDR	R0,[PC,#0x44]
+    08000A9E F005FAEF	BL	_printf
+(0290)         for (int i = 0; i < 5; i++)
+    08000AA2 F05F0800	MOVS	R8,#0
+    08000AA6 E008    	B	0x08000ABA
+(0291)             printf("%X ", SmartIO_GenRandomNumber());
+    08000AA8 F004F8E9	BL	_SmartIO_GenRandomNumber
+    08000AAC 4604    	MOV	R4,R0
+    08000AAE 480C    	LDR	R0,[PC,#0x30]
+    08000AB0 4621    	MOV	R1,R4
+    08000AB2 F005FAE5	BL	_printf
+    08000AB6 F1080801	ADD	R8,R8,#1
+    08000ABA F1B80F05	CMP	R8,#5
+    08000ABE DBF3    	BLT	0x08000AA8
+(0292)         printf("\n");
+    08000AC0 4806    	LDR	R0,[PC,#24]
+    08000AC2 F005FADD	BL	_printf
+(0293)         break;
+(0294)         }
+(0295) 
+(0296)     if (i != 8)
+    08000AC6 F8DBC038	LDR	R12,[R11,#0x38]
+    08000ACA F1BC0F08	CMP	R12,#8
+    08000ACE D001    	BEQ	0x08000AD4
+(0297)         SmartIO_SaveCache();
+    08000AD0 F003F954	BL	_SmartIO_SaveCache
+    08000AD4 B013    	ADD	SP,#0x4C
+    08000AD6 E8BD8FF0	POP	{R4,R5,R6,R7,R8,R9,R10,R11,PC}
+(0298)     }
+    08000ADC LITERALS: 3B620008 3D620008 41620008 55620008 63620008 8C620008 9E620008 B0620008 B8620008 01030008 A1020008 71020008 C5620008 CB620008 89020008 D5620008 E0620008 E8620008 F2620008 FD620008 06630008 0E630008 01040008 1F630008 2F630008 3F630008 53630008 E9030008 64630008 6A630008 E6640008 CD030008 D2640008 F2640008 B1030008 D7640008 DD640008 7A630008 00000000 95030008 ED640008 79030008 F8640008 FE640008 08650008 1D650008 41020008 23650008 8D630008 BF640008 C4640008 CA640008 CE640008 E9020008 A4630008 BA640008 D1020008 33650008 45650008 BE650008 D7650008 B9020008 ED650008 2C610008 
+_Connect_CB:
+    08000BDC E92D4830	PSH	{R4,R5,R11,LR}
+    08000BE0 46EB    	MOV	R11,SP
+(0299) 
+(0300) void Connect_CB(void)
+(0301)     {
+(0302)     printf("BLE connected\n");
+    08000BE2 4805    	LDR	R0,[PC,#20]
+    08000BE4 F005FA4C	BL	_printf
+(0303)     connected = 1;
+    08000BE8 2401    	MOVS	R4,#1
+    08000BEA 4D02    	LDR	R5,[PC,#8]
+    08000BEC 602C    	STR	R4,[R5,#0]
+    08000BEE E8BD8830	POP	{R4,R5,R11,PC}
+(0304)     }
+    08000BF4 LITERALS: D8070020 2C620008 
+_Disconnect_CB:
+    08000BFC E92D4830	PSH	{R4,R5,R11,LR}
+    08000C00 46EB    	MOV	R11,SP
+(0305) 
+(0306) void Disconnect_CB(void)
+(0307)     {
+(0308)     printf("BLE disconnected\n");
+    08000C02 4807    	LDR	R0,[PC,#28]
+    08000C04 F005FA3C	BL	_printf
+(0309)     SPI_State = SPI_IDLE;
+    08000C08 2401    	MOVS	R4,#1
+    08000C0A 4D04    	LDR	R5,[PC,#16]
+    08000C0C 702C    	STRB	R4,[R5,#0]
+(0310)     connected = 0;
+    08000C0E 2400    	MOVS	R4,#0
+    08000C10 4D01    	LDR	R5,[PC,#4]
+    08000C12 602C    	STR	R4,[R5,#0]
+    08000C14 E8BD8830	POP	{R4,R5,R11,PC}
+(0311)     }
+    08000C18 LITERALS: D8070020 640C0020 1A620008 
+_main:
+  h                    --> R7
+  n                    --> R7
+  databuf              --> R11,+0
+  something_happened   --> R6
+    08000C24 B500    	PSH	{LR}
+    08000C26 F5AD6B80	SUB	R11,SP,#0x400
+    08000C2A 46DD    	MOV	SP,R11
+(0312) 
+(0313) int main(void)
+(0314)     {
+(0315)     Setup();
+    08000C2C F000F950	BL	main.c:Setup
+(0316)     SmartIO_Init(Connect_CB, Disconnect_CB);
+    08000C30 4834    	LDR	R0,[PC,#0xD0]
+    08000C32 4933    	LDR	R1,[PC,#0xCC]
+    08000C34 F004F990	BL	_SmartIO_Init
+(0317) 
+(0318)     printf("Command driver for Smart.IO %s\n", SmartIO_GetVersion());
+    08000C38 F003F886	BL	_SmartIO_GetVersion
+    08000C3C 4604    	MOV	R4,R0
+    08000C3E 482F    	LDR	R0,[PC,#0xBC]
+    08000C40 4621    	MOV	R1,R4
+    08000C42 F005FA1D	BL	_printf
+(0319)     SPI_State = SPI_IDLE;
+    08000C46 2401    	MOVS	R4,#1
+    08000C48 4D26    	LDR	R5,[PC,#0x98]
+    08000C4A 702C    	STRB	R4,[R5,#0]
+(0320)     int something_happened = 1;
+    08000C4C 2601    	MOVS	R6,#1
+    08000C4E E044    	B	0x08000CDA
+(0321) 
+(0322)     while (1)
+(0323)         {
+(0324)         unsigned char databuf[BUFLEN];
+(0325) 
+(0326)         if (something_happened)
+    08000C50 B136    	CBZ	R6,0x08000C60
+(0327)             {
+(0328)             putchar('>'); putchar(' ');
+    08000C52 203E    	MOVS	R0,#0x3E
+    08000C54 F000F858	BL	_putchar
+    08000C58 2020    	MOVS	R0,#0x20
+    08000C5A F000F855	BL	_putchar
+(0329)             something_happened = 0;
+    08000C5E 2600    	MOVS	R6,#0
+(0330)             }
+(0331)         if (SPI_State == SPI_IDLE && usart2.kbhit())
+    08000C60 4C20    	LDR	R4,[PC,#0x80]
+    08000C62 7824    	LDRB	R4,[R4,#0]
+    08000C64 2C01    	CMP	R4,#1
+    08000C66 D132    	BNE	0x08000CCE
+    08000C68 4823    	LDR	R0,[PC,#0x8C]
+    08000C6A F002FE8E	BL	JSAPI_USART::kbhit
+    08000C6E 2800    	CMP	R0,#0
+    08000C70 D02D    	BEQ	0x08000CCE
+(0332)             {
+(0333)             something_happened = 1;
+    08000C72 2601    	MOVS	R6,#1
+(0334)             int n = GetCommandLine(databuf, BUFLEN);
+    08000C74 4658    	MOV	R0,R11
+    08000C76 F44F6180	MOV	R1,#0x400
+    08000C7A F000F865	BL	_GetCommandLine
+    08000C7E 4607    	MOV	R7,R0
+(0335)             if (n == 0)
+    08000C80 2F00    	CMP	R7,#0
+(0336)                 continue;
+    08000C82 D02A    	BEQ	0x08000CDA
+(0337) 
+(0338)             if (databuf[0] == 255)
+    08000C84 F89B4000	LDRB	R4,[R11,#0]
+    08000C88 2CFF    	CMP	R4,#0xFF
+    08000C8A D102    	BNE	0x08000C92
+(0339)                 SmartIO_HardReset();
+    08000C8C F004FB6A	BL	_SmartIO_HardReset
+    08000C90 E023    	B	0x08000CDA
+(0340)             else if (!connected)
+    08000C92 4C18    	LDR	R4,[PC,#0x60]
+    08000C94 6824    	LDR	R4,[R4,#0]
+    08000C96 B91C    	CBNZ	R4,0x08000CA0
+(0341)                 printf("Not connected to Smart.IO/BLE. Command not sent\n");
+    08000C98 4815    	LDR	R0,[PC,#0x54]
+    08000C9A F005F9F1	BL	_printf
+    08000C9E E01C    	B	0x08000CDA
+(0342)             else if (databuf[0] == 128)
+    08000CA0 F89B4000	LDRB	R4,[R11,#0]
+    08000CA4 2C80    	CMP	R4,#0x80
+    08000CA6 D104    	BNE	0x08000CB2
+(0343)                 doTest(databuf[2]);
+    08000CA8 F89B0002	LDRB	R0,[R11,#2]
+    08000CAC F7FFFBB4	BL	_doTest
+    08000CB0 E013    	B	0x08000CDA
+(0344)             else
+(0345)                 {
+(0346)                 printf("sending %d bytes to SPI slave...", n);
+    08000CB2 480E    	LDR	R0,[PC,#0x38]
+    08000CB4 4639    	MOV	R1,R7
+    08000CB6 F005F9E3	BL	_printf
+(0347)                 tHandle h = SmartIO__SendBytes(databuf, n);
+    08000CBA 4658    	MOV	R0,R11
+    08000CBC 4639    	MOV	R1,R7
+    08000CBE F004F97B	BL	_SmartIO__SendBytes
+    08000CC2 4607    	MOV	R7,R0
+(0348)                 printf("return %d\n", h);
+    08000CC4 4808    	LDR	R0,[PC,#0x20]
+    08000CC6 B2B9    	UXTH	R1,R7
+    08000CC8 F005F9DA	BL	_printf
+(0349)                 }
+(0350)             }
+    08000CCC E005    	B	0x08000CDA
+(0351)         else if (SPI_State == SPI_SMARTIO_ASYNC_REQUEST)
+    08000CCE 4C05    	LDR	R4,[PC,#20]
+    08000CD0 7824    	LDRB	R4,[R4,#0]
+    08000CD2 2C04    	CMP	R4,#4
+    08000CD4 D101    	BNE	0x08000CDA
+(0352)             SmartIO_ProcessUserInput();
+    08000CD6 F004FA1D	BL	_SmartIO_ProcessUserInput
+    08000CDA E7B9    	B	0x08000C50
+(0353)         }
+(0354)     return 0;
+(0355)     }
+    08000CDC F50D6D80	ADD	SP,SP,#0x400
+    08000CE0 BD00    	POP	{PC}
+    08000CE4 LITERALS: 640C0020 9D610008 A8610008 C9610008 D8070020 B4070020 FA610008 FD0B0008 DD0B0008 
+_putchar:
+  ch                   --> R5
+    08000D08 E92D4830	PSH	{R4,R5,R11,LR}
+    08000D0C 46EB    	MOV	R11,SP
+    08000D0E 4605    	MOV	R5,R0
+(0356) 
+(0357) int putchar(unsigned char ch)
+(0358)     {
+(0359)     if (ch == '\n')
+    08000D10 B2EC    	UXTB	R4,R5
+    08000D12 2C0A    	CMP	R4,#10
+    08000D14 D103    	BNE	0x08000D1E
+(0360)         usart2.putchar('\r');
+    08000D16 4805    	LDR	R0,[PC,#20]
+    08000D18 210D    	MOVS	R1,#13
+    08000D1A F002FDF4	BL	JSAPI_USART::putchar
+(0361)     usart2.putchar(ch);
+    08000D1E 4803    	LDR	R0,[PC,#12]
+    08000D20 B2E9    	UXTB	R1,R5
+    08000D22 F002FDF0	BL	JSAPI_USART::putchar
+(0362)     return ch;
+    08000D26 B2E8    	UXTB	R0,R5
+    08000D28 E8BD8830	POP	{R4,R5,R11,PC}
+(0363)     }
+    08000D2C LITERALS: B4070020 
+_getchar:
+    08000D30 E92D4810	PSH	{R4,R11,LR}
+    08000D34 46EB    	MOV	R11,SP
+(0364) 
+(0365) int getchar(void)
+(0366)     {
+(0367)     return usart2.getchar();
+    08000D36 4803    	LDR	R0,[PC,#12]
+    08000D38 F002FE44	BL	JSAPI_USART::getchar
+    08000D3C 4604    	MOV	R4,R0
+    08000D3E E8BD8810	POP	{R4,R11,PC}
+(0368)     }
+    08000D44 LITERALS: B4070020 
+_GetCommandLine:
+  n                    --> R7
+  s                    --> R11,+4
+  c                    --> R10
+  cmdline              --> R11,+8
+  cmdline_index        --> R8
+  databuf_index        --> R11,+0
+  len                  --> R11,+1036
+  databuf              --> R9
+    08000D48 E92D4FF3	PSH	{R0,R1,R4,R5,R6,R7,R8,R9,R10,R11,LR}
+    08000D4C F5AD6B81	SUB	R11,SP,#0x408
+    08000D50 46DD    	MOV	SP,R11
+    08000D52 4681    	MOV	R9,R0
+(0369) 
+(0370) int GetCommandLine(char *databuf, int len)
+(0371)     {
+(0372)     unsigned char cmdline[BUFLEN];
+(0373)     int databuf_index = 0;
+    08000D54 F05F0C00	MOVS	R12,#0
+    08000D58 F8CBC000	STR	R12,[R11,#0]
+(0374)     int cmdline_index = 0;
+    08000D5C F05F0800	MOVS	R8,#0
+    08000D60 E0AB    	B	0x08000EBA
+(0375) 
+(0376)     while (cmdline_index < BUFLEN)
+(0377)         {
+(0378)         int c = getchar();
+    08000D62 F7FFFFE5	BL	_getchar
+    08000D66 4682    	MOV	R10,R0
+(0379)         putchar(c);
+    08000D68 F7FFFFCE	BL	_putchar
+(0380) 
+(0381)         if (c == '\b' || c == '\x7f')
+    08000D6C F1BA0F08	CMP	R10,#8
+    08000D70 D002    	BEQ	0x08000D78
+    08000D72 F1BA0F7F	CMP	R10,#0x7F
+    08000D76 D106    	BNE	0x08000D86
+(0382)             {
+(0383)             if (cmdline_index)
+    08000D78 F1B80F00	CMP	R8,#0
+    08000D7C F000809D	BEQ	0x08000EBA
+(0384)                 --cmdline_index;
+    08000D80 F1A80801	SUB	R8,R8,#1
+(0385)             }
+    08000D84 E099    	B	0x08000EBA
+(0386)         else if (c == '\r' || c == '\n')
+    08000D86 F1BA0F0D	CMP	R10,#13
+    08000D8A D003    	BEQ	0x08000D94
+    08000D8C F1BA0F0A	CMP	R10,#10
+    08000D90 F040808C	BNE	0x08000EAC
+(0387)             {
+(0388)             putchar('\n');
+    08000D94 200A    	MOVS	R0,#10
+    08000D96 F7FFFFB7	BL	_putchar
+(0389)             cmdline[cmdline_index] = 0;
+    08000D9A F10B0408	ADD	R4,R11,#8
+    08000D9E 2500    	MOVS	R5,#0
+    08000DA0 F8085004	STRB	R5,[R8,R4 LSL #0]
+(0390)             for (char *s = cmdline; *s && databuf_index < len; )
+    08000DA4 F10B0408	ADD	R4,R11,#8
+    08000DA8 F8CB4004	STR	R4,[R11,#4]
+    08000DAC E071    	B	0x08000E92
+(0391)                 {
+(0392)                 while (isspace(*s))
+(0393)                     s++;
+    08000DAE F8DB4004	LDR	R4,[R11,#4]
+    08000DB2 1C64    	ADDS	R4,R4,#1
+    08000DB4 F8CB4004	STR	R4,[R11,#4]
+    08000DB8 F8DB4004	LDR	R4,[R11,#4]
+    08000DBC 7820    	LDRB	R0,[R4,#0]
+    08000DBE F005F92F	BL	_isspace
+    08000DC2 2800    	CMP	R0,#0
+    08000DC4 D1F3    	BNE	0x08000DAE
+(0394)                 if (*s == 0)
+    08000DC6 F8DB4004	LDR	R4,[R11,#4]
+    08000DCA 7824    	LDRB	R4,[R4,#0]
+    08000DCC 2C00    	CMP	R4,#0
+(0395)                     break;
+    08000DCE D06A    	BEQ	0x08000EA6
+(0396) 
+(0397)                 if (isdigit(*s))
+    08000DD0 F8DB4004	LDR	R4,[R11,#4]
+    08000DD4 7820    	LDRB	R0,[R4,#0]
+    08000DD6 F005F913	BL	_isdigit
+    08000DDA B1D8    	CBZ	R0,0x08000E14
+(0398)                     {
+(0399)                     int n = strtol(s, &s, 0);
+    08000DDC F8DB0004	LDR	R0,[R11,#4]
+    08000DE0 F10B0104	ADD	R1,R11,#4
+    08000DE4 2200    	MOVS	R2,#0
+    08000DE6 F004FF8D	BL	_strtol
+    08000DEA 4607    	MOV	R7,R0
+(0400)                     databuf[databuf_index++] = n & 0xFF;
+    08000DEC F8DB4000	LDR	R4,[R11,#0]
+    08000DF0 F1040C01	ADD	R12,R4,#1
+    08000DF4 F8CBC000	STR	R12,[R11,#0]
+    08000DF8 F00705FF	AND	R5,R7,#0xFF
+    08000DFC F8045009	STRB	R5,[R4,R9 LSL #0]
+(0401)                     databuf[databuf_index++] = n >> 8;
+    08000E00 F8DB4000	LDR	R4,[R11,#0]
+    08000E04 F1040C01	ADD	R12,R4,#1
+    08000E08 F8CBC000	STR	R12,[R11,#0]
+    08000E0C 123D    	ASRS	R5,R7,#8
+    08000E0E F8045009	STRB	R5,[R4,R9 LSL #0]
+(0402)                     }
+    08000E12 E03E    	B	0x08000E92
+(0403)                 else
+(0404)                     {
+(0405)                     if (*s == '"')
+    08000E14 F8DB4004	LDR	R4,[R11,#4]
+    08000E18 7824    	LDRB	R4,[R4,#0]
+    08000E1A 2C22    	CMP	R4,#0x22
+    08000E1C D134    	BNE	0x08000E88
+(0406)                         {
+(0407)                         s++;
+    08000E1E F8DB4004	LDR	R4,[R11,#4]
+    08000E22 1C64    	ADDS	R4,R4,#1
+    08000E24 F8CB4004	STR	R4,[R11,#4]
+    08000E28 E00D    	B	0x08000E46
+(0408)                         while (*s && *s != '"')
+(0409)                             databuf[databuf_index++] = *s++;
+    08000E2A F8DB4000	LDR	R4,[R11,#0]
+    08000E2E F1040C01	ADD	R12,R4,#1
+    08000E32 F8CBC000	STR	R12,[R11,#0]
+    08000E36 F8DB5004	LDR	R5,[R11,#4]
+    08000E3A 1C6E    	ADDS	R6,R5,#1
+    08000E3C F8CB6004	STR	R6,[R11,#4]
+    08000E40 782D    	LDRB	R5,[R5,#0]
+    08000E42 F8045009	STRB	R5,[R4,R9 LSL #0]
+    08000E46 F8DB4004	LDR	R4,[R11,#4]
+    08000E4A 7824    	LDRB	R4,[R4,#0]
+    08000E4C B10C    	CBZ	R4,0x08000E52
+    08000E4E 2C22    	CMP	R4,#0x22
+    08000E50 D1EB    	BNE	0x08000E2A
+(0410) 
+(0411)                         if (*s != '"')
+    08000E52 F8DB4004	LDR	R4,[R11,#4]
+    08000E56 7824    	LDRB	R4,[R4,#0]
+    08000E58 2C22    	CMP	R4,#0x22
+    08000E5A D007    	BEQ	0x08000E6C
+(0412)                             {
+(0413)                             printf("Unterminated \"\n");
+    08000E5C 481B    	LDR	R0,[PC,#0x6C]
+    08000E5E F005F90F	BL	_printf
+(0414)                             databuf_index = 0;
+    08000E62 F05F0C00	MOVS	R12,#0
+    08000E66 F8CBC000	STR	R12,[R11,#0]
+(0415)                             break;
+    08000E6A E01C    	B	0x08000EA6
+(0416)                             }
+(0417) 
+(0418)                         if ((databuf_index & 1) != 0)
+    08000E6C F8DBC000	LDR	R12,[R11,#0]
+    08000E70 F01C0F01	TST	R12,#1
+    08000E74 D008    	BEQ	0x08000E88
+(0419)                             databuf[databuf_index++] = 0;
+    08000E76 F8DB4000	LDR	R4,[R11,#0]
+    08000E7A F1040C01	ADD	R12,R4,#1
+    08000E7E F8CBC000	STR	R12,[R11,#0]
+    08000E82 2500    	MOVS	R5,#0
+    08000E84 F8045009	STRB	R5,[R4,R9 LSL #0]
+(0420)                         }
+(0421)                     s++;
+    08000E88 F8DB4004	LDR	R4,[R11,#4]
+    08000E8C 1C64    	ADDS	R4,R4,#1
+    08000E8E F8CB4004	STR	R4,[R11,#4]
+    08000E92 F8DB4004	LDR	R4,[R11,#4]
+    08000E96 7824    	LDRB	R4,[R4,#0]
+    08000E98 B12C    	CBZ	R4,0x08000EA6
+    08000E9A F8DBC000	LDR	R12,[R11,#0]
+    08000E9E F8DB340C	LDR	R3,[R11,#0x40C]
+    08000EA2 459C    	CMP	R12,R3
+    08000EA4 DB88    	BLT	0x08000DB8
+(0422)                     }
+(0423)                 }
+(0424)             return databuf_index;
+    08000EA6 F8DB0000	LDR	R0,[R11,#0]
+    08000EAA E00B    	B	0x08000EC4
+(0425)             }
+(0426)         else
+(0427)             cmdline[cmdline_index++] = c;
+    08000EAC 4644    	MOV	R4,R8
+    08000EAE F1040801	ADD	R8,R4,#1
+    08000EB2 F10B0508	ADD	R5,R11,#8
+    08000EB6 4656    	MOV	R6,R10
+    08000EB8 5566    	STRB	R6,[R4,R5]
+    08000EBA F5B86F80	CMP	R8,#0x400
+    08000EBE F6FFAF50	BLT	0x08000D62
+(0428)         }
+(0429)     return 0;
+    08000EC2 2000    	MOVS	R0,#0
+    08000EC4 F50D6D82	ADD	SP,SP,#0x410
+    08000EC8 E8BD8FF0	POP	{R4,R5,R6,R7,R8,R9,R10,R11,PC}
+(0430)     }
+    08000ECC LITERALS: 8D610008 
+main.c:Setup:
+    08000ED0 E92D4830	PSH	{R4,R5,R11,LR}
+    08000ED4 46EB    	MOV	R11,SP
+    08000ED6 B083    	SUB	SP,#12
+(0431) 
+(0432) static void Setup(void)
+(0433)     {
+(0434)     jsapi_clock.SetSystemClock(16, 0, false, 84, 5);
+    08000ED8 4819    	LDR	R0,[PC,#0x64]
+    08000EDA 2110    	MOVS	R1,#16
+    08000EDC 2200    	MOVS	R2,#0
+    08000EDE 2300    	MOVS	R3,#0
+    08000EE0 2454    	MOVS	R4,#0x54
+    08000EE2 9400    	STR	R4,[SP,#0]
+    08000EE4 2405    	MOVS	R4,#5
+    08000EE6 9401    	STR	R4,[SP,#4]
+    08000EE8 F000FA76	BL	JSAPI_CLOCK::SetSystemClock
+(0435)     jsapi_cortex_core.SysTick_Timer(SYSTICK_MILLISECOND);
+    08000EEC 4817    	LDR	R0,[PC,#0x5C]
+    08000EEE 2102    	MOVS	R1,#2
+    08000EF0 F000F8FA	BL	JSAPI_CORTEX_CORE::SysTick_Timer
+(0436) 
+(0437)     usart2.SetPins(&porta, 2, 7, &porta, 3, 7);
+    08000EF4 4813    	LDR	R0,[PC,#0x4C]
+    08000EF6 4C14    	LDR	R4,[PC,#0x50]
+    08000EF8 4621    	MOV	R1,R4
+    08000EFA 2202    	MOVS	R2,#2
+    08000EFC 2507    	MOVS	R5,#7
+    08000EFE 462B    	MOV	R3,R5
+    08000F00 9400    	STR	R4,[SP,#0]
+    08000F02 2403    	MOVS	R4,#3
+    08000F04 9401    	STR	R4,[SP,#4]
+    08000F06 9502    	STR	R5,[SP,#8]
+    08000F08 F002FC44	BL	JSAPI_USART::SetPins
+(0438)     usart2.MakeUSART(9600, 8, 1, 0);
+    08000F0C 480D    	LDR	R0,[PC,#0x34]
+    08000F0E F44F5116	MOV	R1,#0x2580
+    08000F12 2208    	MOVS	R2,#8
+    08000F14 2301    	MOVS	R3,#1
+    08000F16 2400    	MOVS	R4,#0
+    08000F18 9400    	STR	R4,[SP,#0]
+    08000F1A F002FDE1	BL	JSAPI_USART::MakeUSART
+(0439) 
+(0440)     printf("\r\nImageCraft STM32F411 ST-Nucleo... System running at %dMhz\n", jsapi_clock.GetSysClkFreq() / 1000000);
+    08000F1E 4808    	LDR	R0,[PC,#0x20]
+    08000F20 F000FB88	BL	JSAPI_CLOCK::GetSysClkFreq
+    08000F24 4604    	MOV	R4,R0
+    08000F26 4805    	LDR	R0,[PC,#20]
+    08000F28 4D03    	LDR	R5,[PC,#12]
+    08000F2A FBB4F1F5	UDIV	R1,R4,R5
+    08000F2E F005F8A7	BL	_printf
+    08000F32 B003    	ADD	SP,#12
+    08000F34 E8BD8830	POP	{R4,R5,R11,PC}
+(0441)     }
+    08000F38 LITERALS: 40420F00 50610008 30000020 B4070020 28020020 DC070020 
