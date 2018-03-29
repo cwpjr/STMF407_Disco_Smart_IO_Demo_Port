@@ -18,8 +18,8 @@
 #include <string.h>
 #include <stdlib.h>
 //include <jsapi.h>
-#include "smartio_interface.h"
-#include "smartio_api.h"
+#include "../Host_Interface_Layer/smartio_interface.h"
+#include "../Host_Interface_Layer/smartio_api.h"
 #include "usart.h"
 #define BUILD_ID    101
 #define PRODUCT_ID  2
