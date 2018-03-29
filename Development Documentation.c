@@ -27,7 +27,8 @@ Bedbug Intelligence Group
 STM32Cubemx is used to generate initialization code and supplies HAL routines.
 http://www.st.com/en/development-tools/stm32cubemx.html
 http://www.st.com/content/ccc/resource/technical/document/user_manual/10/c5/1a/43/3a/70/43/7d/DM00104712.pdf/files/DM00104712.pdf/jcr:content/translations/en.DM00104712.pdf
-*?
+NOTE: Pins with labels append _PIN to the label ie label=Label_Name becomes Label_Name_Pin
+*/
 
 // Here are the peripherals and protocols used for this project.
 // The Smart-IO board will be attached to a BIG potentiostat pcb
