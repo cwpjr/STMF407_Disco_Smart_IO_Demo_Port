@@ -23,7 +23,9 @@ This is a port of the demos software to the STM32F407vg Discovery Board.
 
 /*
 STM32Cubemx is used to generate initialization code and supplies HAL routines.
+
 http://www.st.com/en/development-tools/stm32cubemx.html
+
 http://www.st.com/content/ccc/resource/technical/document/user_manual/10/c5/1a/43/3a/70/43/7d/DM00104712.pdf/files/DM00104712.pdf/jcr:content/translations/en.DM00104712.pdf
 *?
 
