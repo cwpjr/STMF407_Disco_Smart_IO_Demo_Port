@@ -1,4 +1,5 @@
 # STMF407_Disco_Spi1FDM1NSS
+<<<<<<< HEAD
 # IAR-Smart-IO-Port-STM407-Disco
 This is a port of the Smart-IO Demo-ST32F411-JumpStartC and Host_Interface_Layer,
 to IAR EWARM, on the STM32F407vg Discovery board, For Nathans Bedbug Intelligence Group.
@@ -115,3 +116,12 @@ RESET - resetting the Smart.IO module, active low om PC7.
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
   hspi1.Init.CRCPolynomial = 10;
 
+=======
+UART FIX Branch reason:
+huart3 stopped working after my PC crashed and I reloaded Win 10. Don't think that's the issue.
+The issue may be the "cmsis_air.h" file is obsolete warning.
+I triggered IAR's CMSIS-Pack to actually populate the Pack and tried again.
+Issue may be with STM32CubMX updating CMSIS constantly.
+
+May have to search forums for help.
+>>>>>>> 36c92716be9f1693952563f87386d4ef7c7ed8a4

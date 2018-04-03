@@ -43,7 +43,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN 0 */
-
+// huart3 stopped working after PC redo. Got CMSIS iar out of date warnings.
+// Triggers CMSIS-Pack to actually populate the PAck and trying again.
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart2;
