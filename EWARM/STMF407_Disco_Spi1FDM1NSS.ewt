@@ -1195,30 +1195,6 @@
         </group>
         <group>
             <name>User</name>
-            <group>
-                <name>Smart-IO ST32F407_port-MCU-App-V104</name>
-                <file>
-                    <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\main_IAR_Smart-IO_STM32F407_port.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.h</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\..\IAR Port Smart-IO STM32 MCU-App-V104\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.h</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.h</name>
-                </file>
-            </group>
             <file>
                 <name>$PROJ_DIR$\..\Src\gpio.c</name>
             </file>
@@ -1244,6 +1220,30 @@
                 <name>$PROJ_DIR$\..\Src\usart.c</name>
             </file>
         </group>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\main_IAR_Smart-IO_STM32F407_port.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_api.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_hardware_interface.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Command Demo-ST32F411-JumpStartC\smartio_interface.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Smart-IO ST32F407_port-MCU-App-V104\Host_Interface_Layer\smartio_interface.h</name>
+        </file>
     </group>
     <group>
         <name>Drivers</name>
@@ -1310,8 +1310,5 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</name>
             </file>
         </group>
-    </group>
-    <group>
-        <name>Jpgs2Illustrate</name>
     </group>
 </project>

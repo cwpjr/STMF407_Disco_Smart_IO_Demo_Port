@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/Clyde W Phillips Jr/Documents/FISH-Forth/FISH IAR/FISH_IAR+STMCUBE32F4_Smart-IO/STMF407_Disco_Spi1FDM1NSS/Inc
+HeaderPath=C:/Users/Clyde W Phillips Jr/Desktop/STMF407_Disco_Smart_IO_Demo_Port/Inc
 HeaderFiles=stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;gpio.h;spi.h;usart.h;rtc.h;tim.h;
-SourcePath=C:/Users/Clyde W Phillips Jr/Documents/FISH-Forth/FISH IAR/FISH_IAR+STMCUBE32F4_Smart-IO/STMF407_Disco_Spi1FDM1NSS/Src
+SourcePath=C:/Users/Clyde W Phillips Jr/Desktop/STMF407_Disco_Smart_IO_Demo_Port/Src
 SourceFiles=stm32f4xx_it.c;stm32f4xx_hal_msp.c;main.c;gpio.c;spi.c;usart.c;rtc.c;tim.c;
 
 [PreviousLibFiles]
